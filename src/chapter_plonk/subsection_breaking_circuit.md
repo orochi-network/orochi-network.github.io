@@ -1,0 +1,2 @@
+### Breaking Circuit
+For each 
