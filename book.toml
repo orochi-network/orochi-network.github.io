@@ -1,0 +1,8 @@
+[book]
+authors = ["Chiro Hiro"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Zero-Knowledge Proof Cookbook"
+[output.html]
+mathjax-support = true
