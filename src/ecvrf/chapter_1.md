@@ -1,24 +1,24 @@
 # Chapter 1
 ## Verifiable Random Function (VRF)
 ### Introduction
-In cryptography, a verifiable random function (VRF) is a public key version of a pseudorandom function. It produces a pseudorandom output and proofs that the output is computed correctly. 
+In cryptography, a verifiable random function (VRF) is a public key version of a pseudorandom function. It produces a pseudorandom output and a proof certifying that the output is computed correctly. 
 
-A VRF includes a pair of key, named secret key and public key. The secret key, along with the input is used by the holder to compute the value of a VRF and its proofs, while the public key is used by anyone to verify the correctness of the computation.
+A VRF includes a pair of key, named secret and public keys. The secret key, along with the input is used by the holder to compute the value of a VRF and its proof, while the public key is used by anyone to verify the correctness of the computation.
 
-The problem with traditional pseudorandom functions is that their output cannot be verified without the knowlegde of the seed, thus a malicious adversary can choose an output that benefits him and claim that it is the output of the function. VRF solve this by introducing a public key and proofs that can be verified publicly, yet no informations of the secrey key can be found, while the owner can keep secret key to produce numbers indistinguishable from random.
+The issue of traditional pseudorandom functions is that their output cannot be verified without the knowledge of the seed. Thus a malicious adversary can choose an output that benefits him and claim that it is the output of the function. VRF solves this by introducing a public key and proofs that can be verified publicly, yet no information about the secret key can be found, while the owner can keep secret key to produce numbers indistinguishable from randomly chosen ones.
 
-VRF has applications in many aspects. In Internet security, it is used to provide privacy against offline enumeration (e.g. dictionary attacks) on data stored in a hash-based data structure [irtf-vrf08]. 
+VRF has applications in various aspects. Among them, in internet security, it is used to provide privacy against offline enumeration (e.g. dictionary attacks) on data stored in a hash-based data structure [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08). 
 
 ### VRF Algorithms
-A Verifiable Random Function consists of three algorithms \\( (Gen, Eval, Verify)\\) where:
+A Verifiable Random Function (VRF) consists of three algorithms \\( (\mathsf{Gen}, \mathsf{Eval}, \mathsf{Verify})\\) where:
 
-**\\((sk,pk) \leftarrow Gen(1^{\lambda})\\):** This algorithm takes an input as a security parameter \\( \lambda \\) and
+**\\((sk,pk) \leftarrow \mathsf{Gen}(1^{\lambda})\\):** This algorithm takes as input a security parameter \\( \lambda \\) and
 outputs a key pair \\( (sk,pk)\\).
 
-**\\( (Y,\pi) \leftarrow Eval(X,sk)\\):** This algorithm takes an input a secret key \\(sk\\) and a value \\(X\\)
+**\\( (Y,\pi) \leftarrow \mathsf{Eval}(X,sk)\\):** This algorithm takes as input a secret key \\(sk\\) and a value \\(X\\)
 and outputs a value \\(Y \in {0,1}^{out(\lambda)} \\) and a proof \\( \pi \\).
 
-**\\( b \leftarrow Verify(pk,X,Y,\pi)\\):** This algorithm takes an input a public key \\(pk \\), a value \\(X\\), a value \\(Y\\), a proof \\(\pi\\) and outputs a bit \\(b\\) that determines whether \\(Y=Eval(X,sk)\\).
+**\\( b \leftarrow \mathsf{Verify}(pk,X,Y,\pi)\\):** This algorithm takes an input a public key \\(pk \\), a value \\(X\\), a value \\(Y\\), a proof \\(\pi\\) and outputs a bit \\(b\\) that determines whether \\(Y=\mathsf{Eval}(X,sk)\\).
 
 ### VRF Security Propeties
 We need a VRF to have the following properties:
