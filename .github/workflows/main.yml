@@ -3,8 +3,6 @@ name: Deploy Cookbook to S3
 on:
   push:
     branches: ['main']
-  pull_request:
-    branches: ['main']
 
 jobs:
   deploy:
@@ -30,9 +28,9 @@ jobs:
       - name: Delete current book in S3
         run: |
           sleep 5
-          aws s3 rm s3://orochi-cookbook-assets/ --recursive
+          aws s3 rm s3://${{ secrets.AWS_S3_STORAGE }}/ --recursive
 
       - name: Deploy build to S3
         run: |
           sleep 10
-          aws s3 cp ./book s3://orochi-cookbook-assets/ --recursive
+          aws s3 cp ./book s3://${{ secrets.AWS_S3_STORAGE }}/ --recursive
