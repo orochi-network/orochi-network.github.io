@@ -10,27 +10,27 @@ The issue with traditional pseudorandom functions is that their output cannot be
 VRF has applications in various aspects. Among them, in Internet security, it is used to provide privacy against offline enumeration (e.g. dictionary attacks) on data stored in a hash-based data structure [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08). VRF is also used in lottery systems [MR02] and e cashes [BCKL09].
 
 ### VRF Algorithms
-A Verifiable Random Function consists of three algorithms \\( (\mathsf{Gen}, \mathsf{Eval}, \mathsf{Verify})\\) where:
+A Verifiable random function consists of three algorithms \\( (\mathsf{Gen}, \mathsf{Eval}, \mathsf{Verify})\\) where:
 
-**\\((sk,pk) \leftarrow \mathsf{Gen}(1^{\lambda})\\):** This algorithm takes an input as a security parameter \\( \lambda \\) and
-outputs a key pair \\( (sk,pk)\\).
+**\\((pk,sk) \leftarrow \mathsf{Gen}(1^{\lambda})\\):** This algorithm takes as input as a security parameter \\( \lambda \\) and
+outputs a key pair \\( (pk,sk)\\).
 
 **\\( (Y,\pi) \leftarrow \mathsf{Eval}(X,sk)\\):** This algorithm takes as input a secret key \\(sk\\) and a value \\(X\\)
 and outputs a value \\(Y \in {0,1}^{out(\lambda)} \\) and a proof \\( \pi \\).
 
 **\\( b \leftarrow \mathsf{Verify}(pk,X,Y,\pi)\\):** This algorithm takes an input a public key \\(pk \\), a value \\(X\\), a value \\(Y\\), a proof \\(\pi\\) and outputs a bit \\(b\\) that determines whether \\(Y=Eval(X,sk)\\).
 
-### VRF Security Propeties
-We need a VRF to have the following properties:
+### VRF Security Properties
+We need a VRF to satisfy the following properties:
 
 **Correctness:** If \\((Y,\pi)=Eval(sk,X)\\) then \\(Verify(pk,X,Y,\pi)=1\\)
 
-**Uniqueness:** There does not exists tuples \\((Y,\pi)\\) and \\(Y',\pi'\\) with \\(Y \ne Y'\\) and:
+**Uniqueness:** There do not exist tuples \\((Y,\pi)\\) and \\(Y',\pi'\\) with \\(Y \ne Y'\\) and:
 \\(Verify(pk,X,Y,\pi)=Verify(pk,X,Y',\pi')=1\\)
 
-**Pseudorandom:** For any adversary \\(\mathcal{A}\\) the probability \\(|Pr[ExpRand^A_{VRF}(\lambda)=1]-\dfrac{1}{2}|\\) is negilible where \\(ExpRand^A_{VRF}(\lambda)\\) is defined as follow:
+**Pseudorandomess:** For any adversary \\(\mathcal{A}\\) the probability \\(|Pr[ExpRand^A_{VRF}(\lambda)=1]-\dfrac{1}{2}|\\) is negilible where \\(ExpRand_{VRF}^{\mathcal{A}}(1^\lambda)\\) is defined as follows:
 
-\\(ExpRand^A_{VRF}(\lambda)\\):
+\\(ExpRand_{VRF}^{\mathcal{A}}(1^\lambda)\\):
 
 - \\((sk,pk) \leftarrow Gen(1^{\lambda})\\)
 - \\((X^*,st) \leftarrow \mathcal{A}^{\mathcal{O_{VRF}}(.)}(pk)\\)
@@ -42,11 +42,11 @@ We need a VRF to have the following properties:
 
 In the paper of [PWHVNRG17], the authors stated that a VRF must also be collision resistant. This property is formally defined below:
 
-**Collision Resistant:** For any adversarial prover \\(\mathcal{A}=(\mathcal{A_1},\mathcal{A_2})\\) the probability \\(|Pr[ExpCol^A_{VRF}(\lambda)=1]\\) is negilible where \\(ExpCol^A_{VRF}(\lambda)\\) is defined as follow:
+**Collision Resistant:** **Collision Resistant:** For any adversarial prover \\(\mathcal{A}=(\mathcal{A_1},\mathcal{A_2})\\) the probability \\(Pr\left[ExpCol_{VRF}^\mathcal{A}(1^\lambda)=1\right]\\) is negligible where \\(ExpCol_{VRF}^\mathcal{A}(1^\lambda)\\) is defined as follows: 
 
-\\(ExpCol^A_{VRF}(\lambda)\\):
+\\(ExpCol_{VRF}^\mathcal{A}(1^\lambda)\\):
 
-- \\((sk,pk) \leftarrow \mathcal{A_1}(Gen(1^{\lambda}))\\)
+- \\((pk,sk) \leftarrow \mathcal{A_1}(Gen(1^{\lambda}))\\)
 - \\((X,X',st) \leftarrow \mathcal{A_2}(sk,pk)\\)
 - Return \\(X \ne X'\\) and \\(Eval(X,sk)=Eval(X',sk)\\)
 
