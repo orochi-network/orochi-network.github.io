@@ -7,7 +7,7 @@ A VRF includes a pair of key, named secret public keys. The secret key, along wi
 
 The issue with traditional pseudorandom functions is that their output cannot be verified without the knowledge of the seed. Thus a malicious adversary can choose an output that benefits him and claim that it is the output of the function. VRF solve this by introducing a public key and proofs that can be verified publicly, yet no informations about the secret key can be found, while the owner can keep secret key to produce numbers indistinguishable from randomly chosen ones.
 
-VRF has applications in various aspects. Among them, in Internet security, it is used to provide privacy against offline enumeration (e.g. dictionary attacks) on data stored in a hash-based data structure [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08). VRF is also used in lottery systems [] and e cashes [BCKL09].
+VRF has applications in various aspects. Among them, in Internet security, it is used to provide privacy against offline enumeration (e.g. dictionary attacks) on data stored in a hash-based data structure [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08). VRF is also used in lottery systems [MR02] and e cashes [BCKL09].
 
 ### VRF Algorithms
 A Verifiable Random Function consists of three algorithms \\( (\mathsf{Gen}, \mathsf{Eval}, \mathsf{Verify})\\) where:
