@@ -1,8 +1,8 @@
 # Summary
 
-- [ECVRF](./ecvrf/VRF.md)
-- [Introduction to Verifiable Random Function]
-- [VRF Based on Elliptic Curve]
+- [ECVRF](./ecvrf/verifiable_random_function.md)
+  - [Introduction to Verifiable Random Function](./ecvrf/introduction_to_vrf.md)
+  - [VRF Based on Elliptic Curve](./ecvrf/ecvrf_construction.md)
 - [PlonK](./chapter_plonk/chapter.md)
   - [PlonK's Arithmetization](./chapter_plonk/section_arithmetization.md)
     - [Circuit Specification](./chapter_plonk/subsection_circuit_specification.md)
