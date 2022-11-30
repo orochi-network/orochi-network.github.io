@@ -2,7 +2,7 @@
 
 - [ECVRF](./ecvrf/VRF.md)
 - [Introduction to Verifiable Random Function]
-- [Elliptic Curve VRF Construction]
+- [VRF Based on Elliptic Curve]
 - [PlonK](./chapter_plonk/chapter.md)
   - [PlonK's Arithmetization](./chapter_plonk/section_arithmetization.md)
     - [Circuit Specification](./chapter_plonk/subsection_circuit_specification.md)
