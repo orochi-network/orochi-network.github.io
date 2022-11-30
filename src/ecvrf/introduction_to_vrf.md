@@ -1,5 +1,5 @@
 # Chapter 1
-## Verifiable Random Function (VRF)
+## Introduction to Verifiable Random Function (VRF)
 ### Introduction
 In cryptography, a verifiable random function (VRF) is a public key version of a pseudorandom function. It produces a pseudorandom output and a proof certifying that the output is computed correctly. 
 
