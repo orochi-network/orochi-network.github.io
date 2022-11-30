@@ -96,7 +96,7 @@ The function \\(\mathsf{PointToString}\\) converts a point of an elliptic curve 
 
 The function \\(\mathsf{StringToPoint}\\) converts a string to a point of an elliptic curve. It is specified in section 2.3.4 of [SECG1]
 
-## Implelemtation
+### Implelemtation
 
 We implement the VRF in Rust using the library libsecp256k1.
 
