@@ -2,7 +2,7 @@
 
 - [ECVRF](./ecvrf/verifiable_random_function.md)
   - [Overview of VRF](./ecvrf/overview_of_vrf.md)
-    - [Introduction to Verifiable Random Function](./ecvrf/introduction_to_vrf.md)
+    - [Introduction to Verifiable Random Function](./ecvrf/introduction.md)
     - [VRF Algorithms](./ecvrf/vrf_syntax.md)
     - [VRF Security Properties](./ecvrf/vrf_properties.md)
     - [History of VRF](./ecvrf/vrf_history.md)
