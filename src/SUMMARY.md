@@ -20,3 +20,6 @@
     - [Breaking Circuit](./chapter_plonk/subsection_breaking_circuit.md)
     - [Gate Constraints](./chapter_plonk/subsection_gate_constraints.md)
     - [Copy Constraints](./chapter_plonk/subsection_copy_constraints.md)
+
+- [Distributed Key Generation](./dkg/dkg.md)
+
