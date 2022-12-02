@@ -31,6 +31,6 @@ In the paper of [PWHVNRG17], the authors stated that a VRF must also be collisio
 - Return \\(X \ne X'\\) and \\(\mathsf{Eval}(X,sk)=\mathsf{Eval}(X',sk)\\)
 
 
-It is interesting to see that, VRF can be used for signing messages. However, several signing algorithm such as ECDSA cannot be used to build a VRF. For a given message and a secret key, there can be multiple valid signatures, thus an adversiral prover could produce different valid outputs from a given input, and choose the one that benefits him. This contradict the uniqueness property of VRF. 
+It is interesting to see that, VRF can be used for signing messages. However, several signing algorithms such as ECDSA cannot be used to build a VRF. For a given message and a secret key, there can be multiple valid signatures, thus an adversiral prover could produce different valid outputs from a given input, and choose the one that benefits him. This contradict the uniqueness property of VRF. 
 
 
