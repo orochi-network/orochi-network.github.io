@@ -20,3 +20,4 @@
     - [Breaking Circuit](./plonk/arithmetization/breaking_circuit.md)
     - [Gate Constraints](./plonk/arithmetization/gate_constraints.md)
     - [Copy Constraints](./plonk/arithmetization/copy_constraints.md)
+  - [KZG Polynomial Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/section.md)
