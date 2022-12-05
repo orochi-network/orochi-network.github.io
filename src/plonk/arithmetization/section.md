@@ -1,4 +1,4 @@
-## Plonk's Arithmetization
+# Plonk's Arithmetization
 
 PlonK's arithmetization {{#cite GWC19}} breaks the circuit into a batch of gates, namely, multiplications, additions, multiplications with constants and additions with constants. For each gate, the operation is transformed into a unified form with respective selectors, uniquely determined by the gate without assigned inputs and output. On the other hand, since breaking circuit into gates introduces the inconsistencies among wires, we additionally apply copy constraints to wires to guarantee that such inconsistencies unavailable.
 
