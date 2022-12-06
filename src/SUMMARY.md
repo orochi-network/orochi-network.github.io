@@ -12,7 +12,7 @@
     - [Why using ECVRF](./ecvrf/why_using_ecvrf.md)
     - [ECVRF Construction](./ecvrf/ecvrf_construction.md)
     - [ECVRF Auxiliary Function](./ecvrf/ecvrf_auxiliary_function.md)
-    - [Implementation](./ecvrf/implementation.md)
+    - [Implementation](./ecvrf/implementation_python.md)
     - [References](./ecvrf/reference_2.md)
 - [PlonK](./chapter_plonk/chapter.md)
   - [PlonK's Arithmetization](./chapter_plonk/section_arithmetization.md)
