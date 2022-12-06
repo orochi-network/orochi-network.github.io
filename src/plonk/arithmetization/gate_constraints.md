@@ -1,4 +1,4 @@
-### Gate constraints
+# Gate constraints
 At this stage, for each \\(i \in \\{1,\dots, n\\}\\), we need to transform the computation of each gate to a unified form as follows:
 $$q^O_i \cdot x_{c_i} + q^L_i \cdot x_{a_i} + q^R_i \cdot x_{b_i} + q^M_i \cdot (x_{a_i} \cdot x_{b_i}) + q^C_i = 0$$
 where \\(q_i^O, q_i^L, q_i^R, q_i^M, q_i^C\\) are selectors uniquely determined by the corresponding gate. In particular,

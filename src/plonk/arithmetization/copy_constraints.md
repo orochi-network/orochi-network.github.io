@@ -1,4 +1,4 @@
-### Copy Constraints
+# Copy Constraints
 Recall that gate constraints do not enforce the equalities of wire values making inconsistencies across the circuit. We generalize copy constraints to the following problem.
 
 Let \\(k \in \\{1, \dots, 3n\\}\\) and \\(\\{i_1, \dots, i_k\\} \subseteq \mathcal{I}\\) satisfying \\(i_1 < i_2 < \dots < i_k\\). We would like to show that
