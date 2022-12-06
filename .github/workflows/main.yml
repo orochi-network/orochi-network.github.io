@@ -15,6 +15,9 @@ jobs:
       - name: Install mbbook cli
         run: cargo install mdbook
 
+      - name: Install mdbook-bib
+        run: cargo install mdbook-bib
+
       - name: Build mdbook
         run: mdbook build
 
