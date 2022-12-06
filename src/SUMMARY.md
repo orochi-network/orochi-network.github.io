@@ -8,7 +8,7 @@
     - [History of VRF](./ecvrf/vrf_history.md)
     - [VRF in Blockchain](./ecvrf/vrf_in_blockchain.md)
     - [References](./ecvrf/reference_1.md)
-  - [VRF Based on Elliptic Curve](./ecvrf/ecvrf_construction.md)
+  - [VRF Based on Elliptic Curve](./ecvrf/vrf_based_on_elliptic_curve.md)
     - [Why using ECVRF](./ecvrf/why_using_ecvrf.md)
     - [ECVRF Construction](./ecvrf/ecvrf_construction.md)
     - [ECVRF Auxiliary Function](./ecvrf/ecvrf_auxiliary_function.md)

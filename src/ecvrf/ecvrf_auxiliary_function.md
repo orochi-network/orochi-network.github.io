@@ -33,13 +33,13 @@
 
     - Update \\(str= str || \mathsf{PointToString}(P_i)\\)
     
-1. Update \\(str=\mathsf{SHA256}(str)\\)
+1. Update \\(str=\mathsf{keccak}(str)\\)
 
 1. Compute \\(c=\mathsf{StringToInt}(str)\\)
 
 1. Output \\(c\\)
 
-The function \\(\mathsf{PointToString}\\) converts a point of an elliptic curve to a string. It is specified in section 2.3.3 of [SECG1]
+The function \\(\mathsf{PointToString}\\) converts a point of an elliptic curve to a string. Many programming supports this function. For example, in python, we can use \\(str(G)\\) to return the string representation of a point\\(G\\).
 
 The function \\(\mathsf{StringToPoint}\\) converts a string to a point of an elliptic curve. It is specified in section 2.3.4 of [SECG1]
 
