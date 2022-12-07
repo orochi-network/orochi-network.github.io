@@ -1,0 +1,2 @@
+# Distributed Key Generation (DKG)
+We give an overview of Distributed Key Generation (DKG) and describe the DKG protocol used in the paper  [] . This, along with the ECVRF, will be two main components for the Distributed Verifiable Random Function (DVRF) protocol used for generating pseudorandom values.

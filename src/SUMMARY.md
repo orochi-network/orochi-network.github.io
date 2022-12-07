@@ -2,17 +2,17 @@
 
 - [ECVRF](./ecvrf/verifiable_random_function.md)
   - [Overview of VRF](./ecvrf/overview_of_vrf.md)
-    - [Introduction to Verifiable Random Function](./ecvrf/introduction.md)
+    - [Introduction to VRF](./ecvrf/introduction.md)
     - [VRF Algorithms](./ecvrf/vrf_syntax.md)
     - [VRF Security Properties](./ecvrf/vrf_properties.md)
     - [History of VRF](./ecvrf/vrf_history.md)
     - [VRF in Blockchain](./ecvrf/vrf_in_blockchain.md)
     - [References](./ecvrf/reference_1.md)
-  - [VRF Based on Elliptic Curve](./ecvrf/ecvrf_construction.md)
+  - [VRF Based on Elliptic Curve](./ecvrf/vrf_based_on_elliptic_curve.md)
     - [Why using ECVRF](./ecvrf/why_using_ecvrf.md)
     - [ECVRF Construction](./ecvrf/ecvrf_construction.md)
     - [ECVRF Auxiliary Function](./ecvrf/ecvrf_auxiliary_function.md)
-    - [Implementation](./ecvrf/implementation.md)
+    - [Implementation](./ecvrf/implementation_python.md)
     - [References](./ecvrf/reference_2.md)
 - [PlonK](./plonk/chapter.md)
   - [PlonK's Arithmetization](./plonk/arithmetization/section.md)
@@ -24,3 +24,4 @@
     - [Syntax and Security Requirements of Polynomial Commitment Schemes](./plonk/kzg_polynomial_commitment_scheme/pcs_definition.md)
     <!-- - [KZG Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/kzg_commitment.md)
     - [Customized KZG](./plonk/kzg_polynomial_commitment_scheme/kzg_customization.md) -->
+

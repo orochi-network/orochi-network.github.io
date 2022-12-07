@@ -1,6 +1,6 @@
 
 ### VRF Algorithms
-A Verifiable random function consists of three algorithms \\( (\mathsf{Gen}, \mathsf{Eval}, \mathsf{Verify})\\) where:
+Formally, a Verifiable random function consists of three algorithms \\( (\mathsf{Gen}, \mathsf{Eval}, \mathsf{Verify})\\) where:
 
 **\\((pk,sk) \leftarrow \mathsf{Gen}(1^{\lambda})\\):** This algorithm takes as input as a security parameter \\( \lambda \\) and
 outputs a key pair \\( (pk,sk)\\).
