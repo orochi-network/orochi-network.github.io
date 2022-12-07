@@ -1,4 +1,4 @@
-### Breaking Circuit
+# Breaking Circuit
 To break the circuit into gates with wires separated, namely, no wire involves to \\(2\\) or more gates, we use a set of labels \\(\mathcal{I} = \\{a_1, \dots, a_n, b_1, \dots, b_n, c_1, \dots, c_n\\}\\) to denote the wire label of each gate. Let \\(x : \mathcal{I} \to \mathbb{F}\\) be the function mapping wires to their respective wire values. Hence, \\(x(id)\\) represents the value at wire \\(id \in \mathcal{I}\\) For simplicity, we write \\(x_{id}\\), in place of \\(x(id)\\), for any \\(id \in \mathcal{I}\\).
 
 Specifically, for each \\(i \in \\{1, \dots, n\\}\\), we denote by
