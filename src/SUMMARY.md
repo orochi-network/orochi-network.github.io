@@ -1,6 +1,6 @@
 # Summary
 
-- [ECVRF](./ecvrf/verifiable_random_function.md)
+- [Elliptic Curve Verifiable Random Function (ECVRF)](./ecvrf/verifiable_random_function.md)
   - [Overview of VRF](./ecvrf/overview_of_vrf.md)
     - [Introduction to VRF](./ecvrf/introduction.md)
     - [VRF Algorithms](./ecvrf/vrf_syntax.md)
