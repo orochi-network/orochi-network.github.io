@@ -14,12 +14,14 @@
     - [ECVRF Auxiliary Function](./ecvrf/ecvrf_auxiliary_function.md)
     - [Implementation](./ecvrf/implementation_python.md)
     - [References](./ecvrf/reference_2.md)
-- [PlonK](./chapter_plonk/chapter.md)
-  - [PlonK's Arithmetization](./chapter_plonk/section_arithmetization.md)
-    - [Circuit Specification](./chapter_plonk/subsection_circuit_specification.md)
-    - [Breaking Circuit](./chapter_plonk/subsection_breaking_circuit.md)
-    - [Gate Constraints](./chapter_plonk/subsection_gate_constraints.md)
-    - [Copy Constraints](./chapter_plonk/subsection_copy_constraints.md)
-
-- [Distributed Key Generation](./dkg/dkg.md)
+- [PlonK](./plonk/chapter.md)
+  - [PlonK's Arithmetization](./plonk/arithmetization/section.md)
+    - [Circuit Specification](./plonk/arithmetization/circuit_specification.md)
+    - [Breaking Circuit](./plonk/arithmetization/breaking_circuit.md)
+    - [Gate Constraints](./plonk/arithmetization/gate_constraints.md)
+    - [Copy Constraints](./plonk/arithmetization/copy_constraints.md)
+  - [KZG Polynomial Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/section.md)
+    - [Syntax and Security Requirements of Polynomial Commitment Schemes](./plonk/kzg_polynomial_commitment_scheme/pcs_definition.md)
+    <!-- - [KZG Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/kzg_commitment.md)
+    - [Customized KZG](./plonk/kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 

@@ -6,3 +6,5 @@ src = "src"
 title = "Zero-Knowledge Proof Cookbook"
 [output.html]
 mathjax-support = true
+[preprocessor.bib]
+bibliography = "refs.bib"
