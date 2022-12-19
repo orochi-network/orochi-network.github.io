@@ -16,6 +16,7 @@
     - [References](./ecvrf/reference_2.md)
 - [KZG Polynomial Commitment Scheme](./kzg_polynomial_commitment_scheme/chapter.md)
   - [Syntax and Security Requirements of Polynomial Commitment Schemes](./kzg_polynomial_commitment_scheme/pcs_definition.md)
+  - [Technical Overview](./kzg_polynomial_commitment_scheme/technical_overview.md)
   - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment.md)
   <!-- - [Customized KZG](./kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 - [PlonK](./plonk/chapter.md)

@@ -34,4 +34,6 @@ A polynomial commitment scheme is said to be secure if it satisfies the followin
 - **Evaluation Binding.** The evaluation binding property says that a committed polynomial evaluating on an index \\(x\\) cannot produce two different outcomes \\(v\\) and \\(v'\\). More precisely, an adversary cannot provide an index \\(x\\) and \\(2\\) tuples \\((v, w_x)\\) and \\((v', w'_x)\\) satisfying \\(v \not= v'\\) such that \\(\mathsf{VerifyEval}(ck, c, x, v, w_x) = 1\\) and \\(\mathsf{VerifyEval}(ck, c, x, v', w'_x) = 1\\).
 
 - **Hiding.** An adversary \\(\mathcal{A}\\) who knows at most \\(\deg(f)\\) evaluations of a committed polynomial \\(f(X)\\) cannot determine any evaluation that it does not know before. 
-> We remind that knowing \\(\deg(f) + 1\\) different evaluations helps to determine polynomial, and hence all other evaluations. Therefore, we use the bound \\(\deg(f)\\) here as a maxmimum number of evaluations that the adversary is allowed to know in advance.
+> We remind that knowing \\(\deg(f) + 1\\) different evaluations helps to determine polynomial, and hence all other evaluations. Therefore, we use the bound \\(\deg(f)\\) here as a maxmimum number of evaluations that the adversary is allowed to know in order not to correctly obtain the evaluations of all other indices.
+
+We now proceed to discuss constructions of polynomial commitment schemes. The following, [Technical Overview](./technical_overview.md), is a high level idea of how the constructions are built deeming to satisfy the syntax and security requirements stated above.
