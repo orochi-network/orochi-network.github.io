@@ -22,7 +22,7 @@ We need a VRF to satisfy the following properties:
 
 The oracle \\(\mathcal{O_{VRF}}(.)\\) works as follow: Given an input \\(x\\), it outputs the VRF value computed by \\(x\\) and its proof.
 
-In the paper of \cite{PWHVNRG17}, the authors stated that a VRF must also be collision resistant. This property is formally defined below:
+In the paper of {{#cite PWHVNRG17}}, the authors stated that a VRF must also be collision resistant. This property is formally defined below:
 
 **Collision Resistant:** **Collision Resistant:** For any adversarial prover \\(\mathcal{A}=(\mathcal{A_1},\mathcal{A_2})\\) the probability \\(Pr\left[ExpCol_{VRF}^\mathcal{A}(1^\lambda)=1\right]\\) is negligible where \\(ExpCol_{VRF}^\mathcal{A}(1^\lambda)\\) is defined as follows: 
 

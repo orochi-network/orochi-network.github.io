@@ -4,7 +4,7 @@
 
 Let \\(\mathbb{G}\\) be a cyclic group of prime order \\(p\\) with generator \\(g\\). Denote \\(\mathbb{Z}_p\\) to be the set of integers modulo \\(p\\). Let \\(\mathsf{HashToCurve}\\) be a hash function mapping a bit string to an element in \\(\mathbb{G}\\). Let \\(\mathsf{HashPoints}\\) be a hash function mapping arbitary input length to a \\(256\\) bit integer.
 
-Note that, in the paper of \cite{PWHVNRG17}, the functions \\(\mathsf{HashToCurve}\\) and \\(\mathsf{HashPoint}\\) are modeled as random oracle model. This is used to prove the security of the VRF. 
+Note that, in the paper of {{#cite PWHVNRG17}}, the functions \\(\mathsf{HashToCurve}\\) and \\(\mathsf{HashPoint}\\) are modeled as random oracle model. This is used to prove the security of the VRF. 
 
 The cofactor parameter mentioned in the irtf draft is set to \\(1\\).
 

@@ -41,5 +41,5 @@
 
 The function \\(\mathsf{PointToString}\\) converts a point of an elliptic curve to a string. Many programming supports this function. For example, in python, we can use \\(str(G)\\) to return the string representation of a point\\(G\\).
 
-The function \\(\mathsf{StringToPoint}\\) converts a string to a point of an elliptic curve. It is specified in section 2.3.4 of [SECG1]
+The function \\(\mathsf{StringToPoint}\\) converts a string to a point of an elliptic curve. It is specified in section 2.3.4 of {{#cite SECG1}}
 
