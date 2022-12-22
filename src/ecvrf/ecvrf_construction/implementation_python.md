@@ -3,7 +3,7 @@
 
 ### ECVRF implementation in Python
 
-The implememtation of the ECVRF in python. The steps and details are written on the comments of the implementation. Below are the global variables. We use the ecdsa library, but the curve curve_256 of the library is replaced with the curve secp256k1. Instead of using SHA256 as in [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08), we use the keccak hash function.
+The implememtation of the ECVRF in python. The steps and details are written on the comments of the implementation. Below are the global variables. We use the ecdsa library, but the curve curve_256 of the library is replaced with the curve secp256k1. Instead of using SHA256 as in [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/), we use the keccak hash function.
 
 ```
 G = generator_256

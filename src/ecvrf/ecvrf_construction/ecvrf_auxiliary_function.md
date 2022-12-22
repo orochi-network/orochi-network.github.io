@@ -3,7 +3,7 @@
 
 ### ECVRF Auxiliary Functions
 
- In this section, we describe the construction of \\(HashToCurve\\) and \\(HashPoint\\) in the Internet-Draft of irtf. More details can be found in [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08). 
+ In this section, we describe the construction of \\(HashToCurve\\) and \\(HashPoint\\) in the Internet-Draft of irtf. More details can be found in [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/). 
 
  **\\(\mathsf{HashToCurve}(X,pk)\\):** Given two group elements \\(X, pk \in \mathbb{G}\\), the function output a hash value in \\(\mathbb{Z}_p\\) as follow:
 

@@ -1,0 +1,2 @@
+## VRF Based on Elliptic Curves (ECVRF)
+In this chapter, we describe a VRF Based on Elliptic Curves in the paper of  \cite{PWHVNRG17}. The Internet Research Task Force (IRTF) also describes this VRF in their Internet-Draft [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/). The security proof of the VRF is in \cite{PWHVNRG17}, we do not present it here. Then we will present our implementation of the VRF.
