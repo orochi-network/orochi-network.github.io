@@ -8,6 +8,8 @@ Note that, in the paper of {{#cite PWHVNRG17}}, the functions \\(\mathsf{EncodeT
 
 The cofactor parameter mentioned in the irtf draft is set to \\(1\\).
 
+The \\(\mathsf{Eval}\\) function is split into 2 functions: \\(\mathsf{Prove}\\) and \\(\mathsf{ProofToHash}\\). The \\(\mathsf{Prove}\\) function returns the proof of the ECVRF, and the \\(\mathsf{ProofToHash}\\), returns the ECVRF output.
+
 
 ### ECVRF Construction
 
@@ -18,7 +20,7 @@ The cofactor parameter mentioned in the irtf draft is set to \\(1\\).
 is  \\(pk=g^{sk}\\).                                                     
 
 
-**\\(\mathsf{Eval}(sk,X)\\):** Given the secret key \\(sk\\) and an input \\(X\\), the output \\(Y\\) and its proof \\(\pi\\) is computed as follow:
+**\\(\mathsf{Prove}(sk,X)\\):** Given the secret key \\(sk\\) and an input \\(X\\), the proof \\(\pi\\) of ECVRF is computed as follow:
 
 1. Compute \\(h=\mathsf{EncodeToCurve}(X,pk)\\).
 
@@ -30,12 +32,10 @@ is  \\(pk=g^{sk}\\).
 
 1. Compute \\(s \equiv k-c.sk \pmod{q}\\)
 
-1. The output Y of the VRF is computed as \\(Y=\mathsf{ProofToHash}(gamma)\\)
-
 1. The proof \\(\pi\\) of the VRF is computed as \\(\pi=(\gamma,c,s)\\) 
 
 
-**\\(\mathsf{ProofToHash}(gamma)\\):**  Given input \\(\gamma\\), this function maps \\(\gamma\\) to a hash value.
+**\\(\mathsf{ProofToHash}(gamma)\\):**  Given input \\(\gamma\\) that is calculated during the \\(\mathsf{Prove}\\) function, this function returns the output of ECVRF.
 
 1. Compute \\(gammastr=\mathsf{PointToString}(\gamma)\\)
 
@@ -61,5 +61,5 @@ is  \\(pk=g^{sk}\\).
 
 1. Compute \\(v=\gamma^ch^s\\)
 
-1. Check if \\(c=\mathsf{ChallengeGeneration}(h,pk,gamma,g^k,h^k)\\) and \\(Y=\mathsf{ProofToHash}(\gamma)\\)
+1. Check if \\(c=\mathsf{ChallengeGeneration}(h,pk,gamma,g^k,h^k)\\). If the check is valid, output \\(Y=\mathsf{ProofToHash}(\gamma)\\), otherwise output \\(Invalid\\).
 

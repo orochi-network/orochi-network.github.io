@@ -34,7 +34,7 @@ class ECVRF():
 
 ##### The Prove function
 
-The prove (or eval) function of the ECVRF. The function closely follow the steps in Section 5.1 of [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/)
+The prove function of the ECVRF. The function closely follow the steps in Section 5.1 of [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/)
 
 ```
 def prove(self, x):
@@ -63,7 +63,17 @@ def prove(self, x):
         pi = {'gamma': gamma, 'c': c,  's': s}
 
         # the output is the keccak hash of gamma
+        y=proof_to_hash(gamma)
 
+        return {'output': y, 'proof': pi, 'public key': self.pk}
+```
+
+##### The ProofToHash function
+The prove function of the ECVRF. The function closely follow the steps in Section 5.2 of [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/)
+```
+def proof_to_hash(gamma):
+
+        # the output is the keccak hash of gamma
         hash = keccak.new(digest_bits=256)
         hash.update(b"\x01")
         hash.update(b"\x03")
@@ -71,7 +81,6 @@ def prove(self, x):
         hash.update(b"\x00")
         y = int(hash.hexdigest(), 16)
 
-        return {'output': y, 'proof': pi, 'public key': self.pk}
 ```
 
 ##### The Verify function
@@ -112,7 +121,7 @@ def verify(self, x, y, pi, pk):
 
         #step 4 check if c=Hash_point(g,h,pk,gamma,u,v) and y=keccak(gamma)
 
-        return c == c2 and y == int(hash.hexdigest(), 16)
+        return c == c2 and y == hash_to_proof(gamma)
 ```
 
 #### ECVRF auxiliary functions
