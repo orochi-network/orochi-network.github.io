@@ -19,9 +19,10 @@
     - [Syntax](./kzg_polynomial_commitment_scheme/pcs_definition/syntax.md)
     - [Security Requirements](./kzg_polynomial_commitment_scheme/pcs_definition/security_requirement.md)
   - [Technical Overview](./kzg_polynomial_commitment_scheme/technical_overview/section.md)
-    - [Discrete Logarithm Problem and Pairing](./kzg_polynomial_commitment_scheme/technical_overview/discrete_logarithm_and_pairing.md)
+    <!-- - [Discrete Logarithm Problem and Pairing](./kzg_polynomial_commitment_scheme/technical_overview/discrete_logarithm_and_pairing.md) -->
     - [Commitment to Polynomial Without Hiding Property](./kzg_polynomial_commitment_scheme/technical_overview/commitment_without_hiding.md)
     - [Correct Evaluation from the Commitment](./kzg_polynomial_commitment_scheme/technical_overview/correct_evaluation_from_commitment.md)
+    - [Dealing with Hiding](./kzg_polynomial_commitment_scheme/technical_overview/dealing_with_hiding)
   - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment/section.md)
   <!-- - [Customized KZG](./kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 - [PlonK](./plonk/chapter.md)

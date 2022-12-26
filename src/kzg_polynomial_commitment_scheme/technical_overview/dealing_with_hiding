@@ -1,0 +1,6 @@
+# Dealing with Hiding
+The previous sections, <span style="color:red"> to be written later</span>, we discussed the high level idea of the construction of algorithms as well as the polynomial and evaluation binding properties. One remaining thing is the hiding property. In {{#cite KZG10}}, the authors proposed \\(2\\) constructions from discrete logarithm problem and Pedersen commitment.
+
+The former, namely, discrete logarithm problem, guarantees the hiding by its own hardness assumption. Therefore, the hiding here is conditional, i.e., against probabilistic polynomial time (PPT) adversaries. Here, PPT adversaries stand for the machines that attack the scheme with limited amount of time, and this amount of time is upper-bounded by a polynomial on input the security parameter given to the scheme.
+
+The latter, namely, Pedersen commitment, exploit the use of an 

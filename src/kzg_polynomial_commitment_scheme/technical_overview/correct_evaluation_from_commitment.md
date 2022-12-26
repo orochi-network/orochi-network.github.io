@@ -11,15 +11,29 @@ Equivalently, we can say that \\(v = f(i)\\) if and only if \\(X - i\\) divides 
 
 To show such divisibility holds, we can compute \\(\psi(X) = \frac{f(X) - v_i}{X - i}\\), where \\(v_i\\) is assumed to be \\(f(i)\\), and define witness \\(w_i = g^{\psi(x)}\\) by using \\(g^1, g^x, \dots, g^{x^d}\\) output by the algorithm \\(\textsf{Setup}\\). 
 
+At this point, for the verifier to verify, committer needs to show that \\(\psi(x) \cdot (x - i) + v_i = f(x)\\). Let's closely take a look at this formula. We observe the followings:
+1. No one knows \\(x\\). Hence, \\(\psi(x)\\) is not known to anyone. 
+2. Committer and verifier know \\(g^{\psi(x)}\\) which is equal to the commitment \\(c\\). Moreover, they also know \\(g^x, g^i, g^{v_i}\\) since \\(g^x\\) belongs to commitment key \\(ck\\), \\(i\\) is public and \\(v_i\\) is publicly claimed by committer.
+3. Verifier can easily compute \\(g^{x - i} = g^x / g^i\\).
+
+Clearly, having \\(g^{\psi(x)},g^{x - i}, g^{v_i}\\) and \\(g^{f(x)}\\), we do not know any efficient way to compute \\(g^{\psi(x)\cdot (x - i) + v_i}\\) since computing \\(g^{\psi(x)\cdot (x-i)}\\) is hard due to Diffie-Hellman assumption, explained as below.
+
+> **Remark.** Diffe-Helman problem <span style="color:red"> to be written later</span>
+
+## Using Bilinear Pairing to Handle Correct Multiplications
+
+> Recall the bilinear pairing \\(e : \mathbb{G}\times \mathbb{G} \to \mathbb{G}_T\\) where \\(\mathbb{G}\\) and \\(\mathbb{G}_T\\) are some groups of the same cardinality. This bilinear pairing has \\(2\\) properties: bilinearity and non-degeneracy. However, to avoid confusion, we only care about the bilinearity and temporarily skip the notice to non-degeneracy. 
+> - **Bilinearity.**  For \\(g \in \mathbb{G}\\) and \\(g_T \in \mathbb{G}_T\\), \\(e(g^a, g^b) = e(g, g)^{ab}\\) for any \\(a, b \in \mathbb{Z}_p\\) where \\(p=|\mathbb{G}|\\).
+
 The validity of the witness can be check easily by using pairing, namely, $$e(w_i, g^x / g^i)\cdot e(g,g)^{v_i} \stackrel{?}{=}e(c, g),$$ where \\(c\\) is the commitment to \\(f(X)\\).
 If the above identity holds, with non-negligible probability, it says that \\(v_i = f(i)\\).
 
 To show identity implies \\(v_i = f(i)\\) with non-negligible probability, we consider \\(w_i = g^{\psi(x)} = g^{\frac{f(x) - v_i}{x - i}}\\). Hence, 
 $$
-    \begin{eqnarray}
-        e(w_i, g^x / g^i)\cdot e(g, g)^{v_i} &=& e\left(g^{\frac{f(x) - v_i}{x - i}}, g^x / g^i\right)\cdot e(g, g)^{v_i}\\\\
-        &=& e(g, g)^{f(x) - v_i}\cdot e(g, g)^{v_i} = e(g^{f(x)}, g) = e(c, g).
-    \end{eqnarray}
+    \begin{align}
+        e(w_i, g^x / g^i)\cdot e(g, g)^{v_i} &= e\left(g^{\frac{f(x) - v_i}{x - i}}, g^x / g^i\right)\cdot e(g, g)^{v_i}\\\\
+        &= e(g, g)^{f(x) - v_i}\cdot e(g, g)^{v_i} = e(g^{f(x)}, g) = e(c, g).
+    \end{align}
 $$
 
 Notice that, if the person providing \\(w_i\\) and \\(v_i\\) does not know \\(f(X)\\), then we have the following possibilities:
