@@ -2,7 +2,7 @@
 A polynomial commitment scheme, for polynomials over a field \\(\mathbb{F}\\), is a tuple of \\(5\\) algorithms
 \\[(\mathsf{Setup}, \mathsf{Commit}, \mathsf{VerifyPoly}, \mathsf{CreateWitness}, \mathsf{VerifyEval})\\]
 working as follows:
-- \\(\mathsf{Setup}(1^\kappa, t):\\) On inputs security parameter \\(1^\kappa\\) and a degree bound \\(t\\), this algorithm returns a commitment key \\(ck\\). The key \\(ck\\) allows to commit any polynomial in \\(\mathbb{F}[X]\\) whose degree is at most \\(t\\). This algorithm is randomized
+- \\(\mathsf{Setup}(1^\kappa, t):\\) On inputs security parameter \\(1^\kappa\\) and a degree bound \\(t\\), this algorithm returns a commitment key \\(ck\\). The key \\(ck\\) allows to commit any polynomial in \\(\mathbb{F}[X]\\) whose degree is at most \\(t\\).
 > Above we use the notation \\(\mathbb{F}[X]\\) to denote the field extension of \\(\mathbb{F}\\). For intuition, this field extension contains every polynomial of the form \\(f(X) = \sum_{j = 0}^{\deg(f)} c_j \cdot X^j\\) where \\(\deg(f)\\) is the degree of \\(f(X)\\) and \\(c_j \in \mathbb{F}\\) for all \\(j \in \\{0, \dots, \deg(f)\\}\\). Hence, with the algorithm \\(\mathsf{Setup}\\) on input \\(t\\), we can assume that it allows to commit to any polynomial \\(f\\) satisfying \\(\deg(f) \leq t\\). 
 >
 > We may have a question about what will happen if we try to use \\(ck\\) to commit to a polynomial whose degree is larger than \\(t\\). In this case, the execution and correctness of the algorithms below or the security of the scheme are not guaranteed.
