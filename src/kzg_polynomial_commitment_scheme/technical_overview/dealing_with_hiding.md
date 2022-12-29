@@ -21,16 +21,23 @@ namely, the original conditional-hiding commitment to \\(f(X)\\) multiplying wit
 
 Since \\(c = g^{f(x)}\cdot h^{r(x)}\\), we can say that \\(c\\) is the multiplication of two parts, namely, the message part \\(g^{f(x)}\\) and the randomness part \\(h^{r(x)}\\).
 
-We now discuss how algorithms \\(\textsf{CreateWitness}\\) and \\(\textsf{VerifyEval}\\) work with respect to introductory of the additional part, namely, \\(h^{r(x)}\\).
+We now discuss how algorithms \\(\textsf{CreateWitness}\\) and \\(\textsf{VerifyEval}\\) work with respect to introductory of the additional part, namely, \\(h^{r(x)}\\). Then, we discuss the unconditional hiding once at most \\(d\\) evaluations of \\(f(X)\\) with respective witnesses are known.
 
 ### Creating witness in unconditional hiding mode
 For a given index \\(i\\), the witness output by algorithm \\(\textsf{CreateWitness}\\) is also a multiplication of \\(2\\) parts. We simply call the message evaluation and randomness evaluation parts. 
 
-The message evaluation part is computed identically to the conditional version of the commitment scheme. That is, we compute the formula \\(g^{\psi(x)}\\) where \\(\psi(X) = \frac{f(X) - v_i}{X - i}\\).
+The message evaluation part is computed identically to the conditional version of the commitment scheme. That is, we compute the formula \\(g^{\psi(x)}\\) where \\(\psi(X) = \frac{f(X) - f(i)}{X - i}\\).
 
-The randomness evaluation part is also conducted similarly. Notice that, since we employ \\(r(X)\\) as a polynomial of degree \\(d\\), we can compute witness part for the correct evaluation on the same index <span style="color:red"> to be written later, some error happened with the use of \\(x\\), please check again the previous section too</span>. 
+The randomness evaluation part is also conducted similarly. Notice that, since we employ \\(r(X)\\) as a polynomial of degree \\(d\\), we can compute witness for the correct evaluation on the same index \\(i\\), namely, \\(r(i)\\). This randomness evaluation part is equal to \\(h^{\varphi(x)}\\) where \\(\varphi(X) = \frac{r(X) - r(i)}{X - i}\\).
+
+> **Remark.** As previously said, \\(x\\) is unknown to committer. Therefore, the computation of \\(g^{\psi(x)}\\) and \\(h^{\varphi(x)}\\) must depend on the commitment key \\(ck\\) by employing the elements \\(g^1, \dots, g^{x^{d - 1}}, h^1, \dots, h^{x^{d - 1}}\\). Notice that we do not you \\(g^{x^d}\\) and \\(h^{x^d}\\) since \\(\psi(X)\\) and \\(\varphi(X)\\) are polynomials of degrees at most \\(d - 1\\).
+
+The output of algorithm \\(\textsf{CreateWitness}\\) is then equal to \\(w_i = (w^\star_i, s_i)\\) where \\(w^\star_i = g^{\psi(x)} \cdot h^{\varphi(x)}\\) is the multiplication of message evaluation and randomness evaluation parts and \\(s_i = r(i)\\). Notice that \\(r(i)\\) is attached to witness in order to help the evaluation verification algorithm, to be described below, work.
 
 ### Verifying correct evaluation in unconditional mode
+The evaluation verification algorithm \\(\textsf{VerifyEval}\\) receives as inputs the commitment key \\(ck = (g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\\), commitment \\(c\\) to \\(f(X)\\), index \\(i\\), value \\(v_i \in \mathbb{F}\\) assumed to be equal to \\(f(i)\\) and \\(w_i = (w^\star_i, s_i)\\). This algorithm is expected to return \\(1\\) is \\(v_i\\) is equal to \\(f(i)\\) with the use of associated witness \\(w_i\\).<span style="color:red"> to be written later</span>
+
+### Unconditional hiding once at most \\(d\\) evaluations are known
 We now assume that the committer allows the adversary to know \\(d\\) different evaluations on \\(f(X)\\), i.e., the evaluations are
 $$ \\{(i_1, f(i_1), w_{i_1}), \dots, (i_d, f(i_d), w_{i_d})\\}$$
 where, for each \\(j \in \\{1, \dots, d\\}\\), \\(\textsf{VerifyEval}(ck, c, i_j, f(i_j), w_j) = 1\\).<span style="color:red"> to be written later</span>
