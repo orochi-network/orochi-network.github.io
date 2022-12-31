@@ -35,8 +35,34 @@ The randomness evaluation part is also conducted similarly. Notice that, since w
 The output of algorithm \\(\textsf{CreateWitness}\\) is then equal to \\(w_i = (w^\star_i, s_i)\\) where \\(w^\star_i = g^{\psi(x)} \cdot h^{\varphi(x)}\\) is the multiplication of message evaluation and randomness evaluation parts and \\(s_i = r(i)\\). Notice that \\(r(i)\\) is attached to witness in order to help the evaluation verification algorithm, to be described below, work.
 
 ### Verifying correct evaluation in unconditional mode
-The evaluation verification algorithm \\(\textsf{VerifyEval}\\) receives as inputs the commitment key \\(ck = (g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\\), commitment \\(c\\) to \\(f(X)\\), index \\(i\\), value \\(v_i \in \mathbb{F}\\) assumed to be equal to \\(f(i)\\) and \\(w_i = (w^\star_i, s_i)\\). This algorithm is expected to return \\(1\\) is \\(v_i\\) is equal to \\(f(i)\\) with the use of associated witness \\(w_i\\).<span style="color:red"> to be written later</span>
+The evaluation verification algorithm \\(\textsf{VerifyEval}\\) receives as inputs the commitment key \\(ck = (g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\\), commitment \\(c\\) to \\(f(X)\\), index \\(i\\), value \\(v_i \in \mathbb{F}\\) assumed to be equal to \\(f(i)\\) and \\(w_i = (w^\star_i, s_i)\\). This algorithm is expected to return \\(1\\) is \\(v_i\\) is equal to \\(f(i)\\) with the use of associated witness \\(w_i\\).
 
+To verify whether \\(v_i = f(i)\\), it is worth to verify both correct computations of \\(f(i)\\) and \\(r(i)\\). More precisely, verifier needs to confirm that \\(v_i = f(i)\\) and \\(s_i = r(i)\\). To this end, again, we imitate the verification process of the conditional hiding case. Hence, we employ again bilinear pairing \\(e : \mathbb{G}\times \mathbb{G} \to \mathbb{G}_T\\) which maps \\((g^a, g^b)\\) to \\(e(g, g)^{ab}\\). However, there is an obstacle here. Observe that, in this pairing, we use only \\(1\\) generator \\(g\\) while our commitment employs \\(2\\) different generators \\(g\\) and \\(h\\) both generating \\(G\\). In order to enable the bilinear pairing, we enforce \\(h = g^\gamma\\) for some hidden \\(\gamma\\). This enforcement works because \\(g\\) is the generator of \\(\mathbb{G}\\) and \\(h\\) belongs to \\(\mathbb{G}\\). Hence, our commitment \\(c\\) can be alternatively written as 
+$$
+    c = g^{f(x)}\cdot h^{r(x)} = g^{f(x)}\cdot g^{\gamma \cdot r(x)} = g^{f(x) + \gamma\cdot r(x)}
+$$
+which is a conditional commitment to \\(f(X) + \gamma\cdot r(X)\\) with \\(\gamma\\) unknown to both committer and verifier.
+
+Moreover, the witness \\(w^\star_i = g^{\psi(x)}\cdot h^{\varphi(x)}\\) can also be interpreted as 
+$$
+    w^\star_i = g^{\psi(x)}\cdot h^{\varphi(x)}=g^{\psi(x)} \cdot g^{\gamma\cdot \varphi(x)} = g^{\psi(x) + \gamma\cdot \varphi(x)}
+$$ 
+which is also a witness for correct evaluation at index \\(i\\) with respect to polynomial \\(f(X) + \gamma\cdot r(X)\\) whose \\(\gamma\\) is not known to both parties, namely, committer and verifier.
+
+We now observe that \\(\psi(X) + \gamma\cdot \varphi(X) = \frac{f(X) - f(i)}{X - i} + \gamma\cdot \frac{r(X) - r(i)}{X - i}\\). Hence, it is worth to guarantee the following equation holds:
+$$
+    \left(\frac{f(X) - f(i)}{X - i} + \gamma\cdot \frac{r(X) - r(i)}{X - i}\right)\cdot\left((X - i) + \gamma\cdot (X - i)\right) - (f(i) + \gamma\cdot r(i)) = f(X) + \gamma \cdot r(X).
+$$
+
+We now describe the process for verifying the above equation by employing the bilinear pairing function \\(g : \mathbb{G}\times \mathbb{G} \to \mathbb{G}_T\\). Since the above equation has a multiplication, we apply the bilinear pairing by checking 
+$$
+    e\left(g^{\frac{f(x) - v_i}{x - i} + \gamma\cdot \frac{r(x) - s_i}{x - i}}, g^{(x - i) + \gamma\cdot (x - i)}\right)\cdot e\left(g^{-\left(v_i + \gamma\cdot s_i\right)}, g\right) = e\left(g^{f(x) + \gamma\cdot r(x)},g\right)
+$$
+where \\(x\\) and \\(\gamma\\) are unknown to both parties. Since \\(x\\) and \\(\gamma\\) are not known to both parties, it is inconvenient to evaluate the bilinear pairing function. However, since \\(ck = (g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\\) and \\(h = g^\gamma\\) are public inputs, we can replace the appearances of \\(x\\) and \\(\gamma\\) in the above equation by those of \\(ck\\) and \\(h\\). The above computation of bilinear pairing hence becomes
+$$
+    e\left(w^\star, \left(g^x / g^i\right) \cdot \left(h^x / h^i\right)\right)\cdot e\left(g^{-v_i}\cdot h^{-s_i}, g\right) = e(c, g)
+$$
+since \\(c = g^{f(x)}\cdot h^{r(x)} = g^{f(x) + \gamma\cdot r(x)}\\).
 ### Unconditional hiding once at most \\(d\\) evaluations are known
 We now assume that the committer allows the adversary to know \\(d\\) different evaluations on \\(f(X)\\), i.e., the evaluations are
 $$ \\{(i_1, f(i_1), w_{i_1}), \dots, (i_d, f(i_d), w_{i_d})\\}$$
