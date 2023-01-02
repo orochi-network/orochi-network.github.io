@@ -1,5 +1,5 @@
 
-We describe the DKG protocol in the paper Gennaro et al {{#cite GJKR99}}, which will be used in the dRNG protocol. This is the most widely used DKG protocol due to its simplicity and can withstand up to \\(\dfrac{n}{2}\\) dishonest participants, where \\(n\\) is the number of participants. The DKG protocol consists of two phases, namely, generating and extracting, working as follows:
+In this chapter, we describe the DKG protocol in the paper Gennaro et al {{#cite GJKR99}}, which will be used in the dRNG protocol. This is the most widely used DKG protocol due to its simplicity and can withstand up to \\(\dfrac{n}{2}\\) dishonest participants, where \\(n\\) is the number of participants. The DKG protocol consists of two phases, namely, generating and extracting, working as follows:
 
 **Public Parameters:** Let \\(p\\) be a prime number. Let \\(G\\) be a cyclic group of order \\(p\\) with generators \\(g\\) and \\(h\\). The public parameters of the system are \\(p,G,g,h\\).
 
