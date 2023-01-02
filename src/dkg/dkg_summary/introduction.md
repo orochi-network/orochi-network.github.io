@@ -1,0 +1,1 @@
+In this chapter, we discuss about Verifiable Secret Sharing (VSS), the main building block for a DKG protocol. We state the syntax and security properties of a VSS, then describe the VSS construction due to Pedersen.
