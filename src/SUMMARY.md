@@ -22,4 +22,7 @@
     - [Syntax and Security Requirements of Polynomial Commitment Schemes](./plonk/kzg_polynomial_commitment_scheme/pcs_definition.md)
     <!-- - [KZG Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/kzg_commitment.md)
     - [Customized KZG](./plonk/kzg_polynomial_commitment_scheme/kzg_customization.md) -->
-
+- [Halo 2 for Dummies](./halo2_for_dummies/chapter.md)
+  - [Overview](./halo2_for_dummies/overview/section.md)
+  - [PLONKish Arithemetization](./halo2_for_dummies/plonkish/section.md)
+  - [A Simple Halo 2 Program](./halo2_for_dummies/simple_example/section.md)
