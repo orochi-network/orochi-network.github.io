@@ -23,7 +23,7 @@
     - [Commitment to Polynomial Without Hiding Property](./kzg_polynomial_commitment_scheme/technical_overview/commitment_without_hiding.md)
     - [Correct Evaluation from the Commitment](./kzg_polynomial_commitment_scheme/technical_overview/correct_evaluation_from_commitment.md)
     - [Dealing with Hiding](./kzg_polynomial_commitment_scheme/technical_overview/dealing_with_hiding.md)
-  - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment/section.md)
+  <!-- - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment/section.md) -->
   <!-- - [Customized KZG](./kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 - [PlonK](./plonk/chapter.md)
   - [PlonK's Arithmetization](./plonk/arithmetization/section.md)
