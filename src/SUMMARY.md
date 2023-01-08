@@ -14,7 +14,6 @@
     - [Implementation](./ecvrf/ecvrf_construction/implementation_python.md)
 - [Distributed Key Generation (DKG)](./dkg/dkg.md)
   - [Overview of DKG](./dkg/dkg_summary/chapter.md)
-    - [DKG Syntax](./dkg/dkg_summary/dkg_syntax.md)
     - [DKG Properties](./dkg/dkg_summary/dkg_properties.md)
     - [DKG Application](./dkg/dkg_summary/dkg_application.md)
   - [Verifiable Secret Sharing (VSS)](./dkg/verifiable_secret_sharing/chapter.md)

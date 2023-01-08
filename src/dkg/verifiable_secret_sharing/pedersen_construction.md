@@ -1,5 +1,5 @@
 ### Pedersen's Construction
-We describe a VSS scheme from Pedersen {{#cite Ped91}}.
+We describe a VSS scheme from Pedersen {{#cite Ped91}}. This scheme provides perfect information theoretic security against any adversary with unbounded computational power.
 
 **Share** The dealer chooses two polynomials \\(p(x)=a_0+a_1x+a_2x^2+...+a_tx^t\\) and \\(p'(x)=b_0+b_1x+b_2x^2+...+b_tx^t\\) such that \\(a_0=s\\). Then he compute \\(s_i=p(i)\\) and \\(s_i'=p'(i)\\). The dealer then broadcasts \\(C_i=g^{s_i}h^{s_i'}\\). Then he gives the party \\(P_i\\) the tuple \\((s_i,s_i')\\). This allows \\(P_i\\) to check if \\((s_i,s_i')\\) really defines a secret by checking that
 $$g^{s_{i}}h^{s_{i}'}=\prod_{k=0}^{t}(C_{k})^{i^k} (1).$$
