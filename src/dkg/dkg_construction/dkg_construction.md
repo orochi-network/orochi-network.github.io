@@ -21,8 +21,8 @@ If the check fails for some \\(i\\), \\(P_j\\) complains against \\(P_i\\).
 1. Each participant \\(P_j\\) verifies \\(A_{ij}\\) for each \\(i\\). Specifically, \\(P_j\\) checks whether
 $$g^{s_{ij}}\stackrel{?}{=} \prod_{k=0}^{t}A_{ik}^{j^k}.$$
 If the check fails for some \\(i\\), \\(P_j\\) complains against \\(P_i\\).
-1. For each \\(i\\) that \\(P_i\\) receives at least one valid complaint, all other parties run Pedersen VSS to reconstruct \\(f_i(z)\\), and restore \\(s_{i0}\\) and \\(A_{ij}\\) for \\(j=0,1,...,t\\). The public key is equal to \\(pk= \prod_{i \in \qual}A_{i0}\\) 
+1. For each \\(i\\) that \\(P_i\\) receives at least one valid complaint, all other parties run Pedersen VSS to reconstruct \\(f_i(z)\\), and restore \\(s_{i0}\\) and \\(A_{ij}\\) for \\(j=0,1,...,t\\). The public key is equal to \\(pk= \prod_{i \in \mathcal{QUAL}}A_{i0}\\) 
 1. The public key \\(pk_i\\) of \\(P_i\\) is calculated as 
-\\(pk_i=g^{sk_i}=\prod_{j \in \qual}g^{s_{ji}}= \prod_{j \in \qual}\prod_{k=0}^{t}A_{jk}^{i^k}\\)
+\\(pk_i=g^{sk_i}=\prod_{j \in \mathcal{QUAL}}g^{s_{ji}}= \prod_{j \in \mathcal{QUAL}}\prod_{k=0}^{t}A_{jk}^{i^k}\\)
 
 The security proof of the DKG protocol can be found in {{#cite GJKR99}}.
