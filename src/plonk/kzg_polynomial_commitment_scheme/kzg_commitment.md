@@ -1,1 +1,0 @@
-# KZG Commitment Scheme
