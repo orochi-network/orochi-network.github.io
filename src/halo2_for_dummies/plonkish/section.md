@@ -6,3 +6,5 @@ PLONKish arithmetization can be pictured as a table of the following types of co
 - Instant columns for putting public inputs,
 - Advice columns for putting private inputs, literally known as witnesses,
 - Selector columns for putting selectors.
+
+For simplicity, in this section, we present a transformation from a program, represented by an arithmetic circuit to the form of PLONKish arithmetization. <span style="color:red">continue here</span>
