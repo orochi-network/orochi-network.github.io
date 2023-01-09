@@ -1,9 +1,7 @@
 # Technical Overview
 
-To discuss the construction, we first sketch its high level idea. We separate the idea into \\(3\\) little parts. 
+From the syntax of polynomial commitment scheme presented in [Polynomial Commitment Scheme - Syntax](./../pcs_definition/syntax.md), a realization, or equivalently, a construction, can be separated into \\(2\\) components:
+- Commiting polynomial includes the algorithms \\(\mathsf{Commit}\\) and \\(\mathsf{VerifyPoly}\\).
+- Evaluating polynomial includes the algorithms \\(\mathsf{CreateWitness}\\) and \\(\mathsf{VerifyEval}\\).
 
-First, we recall a well-known and long-standing cryptographic assumption named *discrete logarithm*. This assumption helps to guarantee the security of the scheme by applying some black-box reduction, i.e., a technique guaranteeing that, if an adversary can break some security property of the scheme, then we can use that broken piece to find a solution of the discrete logarithm problem. The term ``black-box'' to imply that we do not care about how the adversary does to break some security property of the scheme. Instead, we only care about the result that adversary achieves to solve the hard problem, namely, discrete logarithm problem.
-
-Second, we discuss how to construct a commitment to a polynomial \\(f(X)\\) without explaining hiding property. This part covers the construction of algorithms \\(\mathsf{Setup}, \mathsf{Commit}, \mathsf{VerifyPoly}\\) and the polynomial binding property.
-
-Then, in the third part, we discuss the construction of algorithms that guarantee the correct evaluation of polynomial for a given index. This includes the algorithms \\(\mathsf{CreateWitness}, \mathsf{VerifyEval}\\) and hiding and evaluation binding properties.
+Based on those components, we present the high level idea of \\(2\\) constructions, namely, conditional and unconditional, of polynomial commitment scheme separated into \\(3\\) little parts. The first and second parts, to be presented in [Commitment to Polynomial Without Hiding Property](./commitment_without_hiding.md) and [Correct Evaluation from the Commitment](./correct_evaluation_from_commitment.md), respectively, focus on constructing the realization of conditional version. And, in the third part, to be presented in [Dealing with Hiding](./dealing_with_hiding.md), regarding condition and unconditional hidings, we discuss the modification of conditional version to achieve the unconditional one.

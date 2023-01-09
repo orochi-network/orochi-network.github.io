@@ -1,5 +1,5 @@
 # Dealing with Hiding
-In the previous sections, <span style="color:red"> to be written later</span>, we discussed the high level idea of the construction of algorithms as well as the polynomial and evaluation binding properties. One remaining thing is the hiding property. In {{#cite KZG10}}, the authors proposed \\(2\\) constructions from discrete logarithm assumption, for conditional hiding, and Pedersen commitment, for unconditional hiding.
+In the previous sections, namely, [Commitment to Polynomial Without Hiding Property](./commitment_without_hiding.md) and [Correct Evaluation from the Commitment](./correct_evaluation_from_commitment.md), we discussed the high level idea of the construction of algorithms as well as the polynomial and evaluation binding properties. One remaining thing is the hiding property. In {{#cite KZG10}}, the authors proposed \\(2\\) constructions from discrete logarithm assumption, for conditional hiding, and Pedersen commitment, for unconditional hiding.
 
 > **Remark.** We now make clear the \\(2\\) notions here, namely, conditional hiding and unconditional hiding.
 >
@@ -21,7 +21,8 @@ namely, the original conditional-hiding commitment to \\(f(X)\\) multiplying wit
 
 Since \\(c = g^{f(x)}\cdot h^{r(x)}\\), we can say that \\(c\\) is the multiplication of two parts, namely, the message part \\(g^{f(x)}\\) and the randomness part \\(h^{r(x)}\\).
 
-We now discuss how algorithms \\(\textsf{CreateWitness}\\) and \\(\textsf{VerifyEval}\\) work with respect to introductory of the additional part, namely, \\(h^{r(x)}\\). Then, we discuss the unconditional hiding once at most \\(d\\) evaluations of \\(f(X)\\) with respective witnesses are known.
+We now discuss how algorithms \\(\textsf{CreateWitness}\\) and \\(\textsf{VerifyEval}\\) work with respect to introductory of the additional part, namely, \\(h^{r(x)}\\). 
+<!-- Then, we discuss the unconditional hiding once at most \\(d\\) evaluations of \\(f(X)\\) with respective witnesses are known. -->
 
 ### Creating witness in unconditional hiding mode
 For a given index \\(i\\), the witness output by algorithm \\(\textsf{CreateWitness}\\) is also a multiplication of \\(2\\) parts. We simply call the message evaluation and randomness evaluation parts. 
@@ -63,8 +64,8 @@ $$
     e\left(w^\star, g^x / g^i\right)\cdot e\left(g^{-v_i}\cdot h^{-s_i}, g\right) = e(c, g)
 $$
 since \\(c = g^{f(x)}\cdot h^{r(x)} = g^{f(x) + \gamma\cdot r(x)}\\).
-### Unconditional hiding once at most \\(d\\) evaluations are known
-We now assume that the committer allows the adversary to know \\(d\\) different evaluations on \\(f(X)\\), i.e., the evaluations are
+<!-- ### Unconditional hiding once at most \\(d\\) evaluations are known -->
+<!-- We now assume that the committer allows the adversary to know \\(d\\) different evaluations on \\(f(X)\\), i.e., the evaluations are
 $$ \\{(i_1, f(i_1), w_1), \dots, (i_d, f(i_d), w_d)\\}$$
 where, for each \\(j \in \\{1, \dots, d\\}\\), \\(\textsf{VerifyEval}(ck, c, i_j, f(i_j), w_j) = 1\\) and \\(w_j = (w_j^\star, s_j)\\).
 
@@ -80,4 +81,4 @@ We see clearly that \\(\frac{f(x) - f(i_j)}{x - i_j} + \gamma\cdot \frac{r(x) - 
 $$\begin{align}
 \frac{f(x) + \gamma\cdot r(x) + f(i_j) + \gamma\cdot r(i_j)}{x - i_j} \&= \frac{f(x) - \gamma\cdot r(x) + v_j + \gamma\cdot s_j}{x - i_j}\\\\
 \&= \frac{f'(x) + \gamma\cdot r'(x) + f(i_j) + \gamma\cdot r(i_j)}{x - i_j}
-\end{align}$$<span style="color:red">continue here</span>
+\end{align}$$<span style="color:red">continue here</span> -->

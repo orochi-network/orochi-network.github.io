@@ -16,9 +16,7 @@ At this point, for the verifier to verify, committer needs to show that \\(\psi(
 2. Committer and verifier know \\(g^{\psi(x)}\\) which is equal to the commitment \\(c\\). Moreover, they also know \\(g^x, g^i, g^{v_i}\\) since \\(g^x\\) belongs to commitment key \\(ck\\), \\(i\\) is public and \\(v_i\\) is publicly claimed by committer.
 3. Verifier can easily compute \\(g^{x - i} = g^x / g^i\\).
 
-Clearly, having \\(g^{\psi(x)},g^{x - i}, g^{v_i}\\) and \\(g^{f(x)}\\), we do not know any efficient way to compute \\(g^{\psi(x)\cdot (x - i) + v_i}\\) since computing \\(g^{\psi(x)\cdot (x-i)}\\) is hard due to Diffie-Hellman assumption, explained as below.
-
-> **Remark.** Diffe-Helman problem <span style="color:red"> to be written later</span>
+Clearly, having \\(g^{\psi(x)},g^{x - i}, g^{v_i}\\) and \\(g^{f(x)}\\), we do not know any efficient way to compute \\(g^{\psi(x)\cdot (x - i) + v_i}\\) since computing \\(g^{\psi(x)\cdot (x-i)}\\) is hard due to Diffie-Hellman assumption.
 
 ## Using Bilinear Pairing to Handle Correct Multiplications
 
