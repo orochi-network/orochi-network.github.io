@@ -3,9 +3,9 @@
 
 ### ECVRF implementation in Python
 
-The implememtation of the ECVRF in python. The steps and details are written on the comments of the implementation. Below are the global variables. We use the ecdsa library, but the curve curve_256 of the library is replaced with the curve secp256k1. Instead of using SHA256 as in [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08), we use the keccak hash function.
+The implememtation of the ECVRF in python. The steps and details are written on the comments of the implementation. Below are the global variables. We use the ecdsa library, but the curve curve_256 of the library is replaced with the curve secp256k1. Instead of using SHA256 as in [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/), we use the keccak hash function.
 
-```
+```python
 G = generator_256
 ORDER = G.order()
 order_minus_one=0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364140
@@ -20,28 +20,32 @@ The main functions of the ECVRF.
 ##### The Key generation function
 
 We create an ECVRF class and use the key generation function as the constructor of the class.
-```
+```python
 class ECVRF():
 
-    def __init__(self):
+    def __init__(self,sk=None):
+    if sk==None:
             self.sk = random.randint(0,order_minus_one)
-            self.pk = G*self.sk 
+            self.pk = G*self.sk
+    else:
+        self.sk = sk
+        self.pk = G*self.sk
 ```
 
 ##### The Prove function
 
-The prove (or eval) function of the ECVRF. The function closely follow the steps in Section 5.1 of [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08)
+The prove function of the ECVRF. The function closely follow the steps in Section 5.1 of [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/)
 
-```
-def prove(self, x, sk):
+```python
+def prove(self, x):
         # the evaluation function, based on the paper [PWHVNRG17]
         # step 1 compute h
 
-        H = ECVRF_hash_to_curve_try_and_increment(self.pk,x,suite_string)
+        H = ECVRF_encode_to_curve_try_and_increment(self.pk,x,suite_string)
 
-        #step 2 let gamma=h^sk
+        #step 2 let gamma=h^self.sk
 
-        gamma = H*sk
+        gamma = H*self.sk
 
         #step 3 choose a random k
 
@@ -49,8 +53,8 @@ def prove(self, x, sk):
 
         #step 4 compute c=Hash_point(g,h,g^sk,h^sk,g^k,h^k)
 
-        point_list=[G, H, self.pk, gamma, G*k, H*k]
-        c = ECVRF_hash_points(point_list)
+        point_list=[H, self.pk, gamma, G*k, H*k]
+        c = ECVRF_challenge_generation(point_list)
 
         #step 5 compute s=k-c*sk (mod order)
         s = (k - c*sk)% ORDER
@@ -59,19 +63,31 @@ def prove(self, x, sk):
         pi = {'gamma': gamma, 'c': c,  's': s}
 
         # the output is the keccak hash of gamma
-
-        hash = keccak.new(digest_bits=256)
-        hash.update(str(gamma).encode())
-        y = int(hash.hexdigest(), 16)
+        y=proof_to_hash(gamma)
 
         return {'output': y, 'proof': pi, 'public key': self.pk}
 ```
 
-##### The Verify function
+##### The ProofToHash function
+The prove function of the ECVRF. The function closely follow the steps in Section 5.2 of [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/)
+```python
+def proof_to_hash(gamma):
 
-The verify function of the ECVRF. The function closely follow the steps in Section 5.3 of [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08)
+        # the output is the keccak hash of gamma
+        hash = keccak.new(digest_bits=256)
+        hash.update(b"\x01")
+        hash.update(b"\x03")
+        hash.update(str(gamma).encode())
+        hash.update(b"\x00")
+        y = int(hash.hexdigest(), 16)
 
 ```
+
+##### The Verify function
+
+The verify function of the ECVRF. The function closely follow the steps in Section 5.3 of [irtf-vrf15](https://datatracker.ietf.org/doc/draft-irtf-cfrg-vrf/)
+
+```python
 def verify(self, x, y, pi, pk):
         # this function, given an input x, a value y, a proof pi and 
         # the public key pk,
@@ -87,7 +103,7 @@ def verify(self, x, y, pi, pk):
 
         #step 2 compute V=c*gamma+H*s
 
-        H = ECVRF_hash_to_curve_try_and_increment(pk,x,suite_string)
+        H = ECVRF_encode_to_curve_try_and_increment(pk,x,suite_string)
 
         #step 3 compute V=c*gamma+h*s
 
@@ -95,8 +111,8 @@ def verify(self, x, y, pi, pk):
 
         #calculate the value Hash_point(G,H,pk,gamma,U,V)
 
-        point_list=[G,H,pk,gamma,U,V]
-        c2 = ECVRF_hash_points(point_list)
+        point_list=[H,pk,gamma,U,V]
+        c2 = ECVRF_challenge_generation(point_list)
 
         #calculate the keccak hash of gamma
 
@@ -105,7 +121,7 @@ def verify(self, x, y, pi, pk):
 
         #step 4 check if c=Hash_point(g,h,pk,gamma,u,v) and y=keccak(gamma)
 
-        return c == c2 and y == int(hash.hexdigest(), 16)
+        return c == c2 and y == hash_to_proof(gamma)
 ```
 
 #### ECVRF auxiliary functions
@@ -116,8 +132,8 @@ The auxiliary functions  of the ECVRF.
 
 The HashToCurve of the converts a 256 bit integer into a point of the curve secp256k1. We ignore the cofactor check in [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08), since the cofactor value is set to be 1.
 
-```
-def ECVRF_hash_to_curve_try_and_increment(pk, x, suite_string):
+```python
+def ECVRF_encode_to_curve_try_and_increment(pk, x, suite_string):
     #follow the ecvrf irtf draft
 
     ctr=0
@@ -149,20 +165,22 @@ def ECVRF_hash_to_curve_try_and_increment(pk, x, suite_string):
 
 ##### The HashPoint function
 The HashPoint function converts a list of point into a 256 bit integer. The function closely follow the steps in Section 5.4.3 of [irtf-vrf08](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vrf-08)
-```
-def ECVRF_hash_points(point_list):
+```python
+def ECVRF_challenge_generation(point_list):
         # based on the irtf internet draft
         #we use the keccak instead of sha256
 
         hash = keccak.new(digest_bits=256)
+        hash.update(b"\x02")
         for i in point_list:
             hash.update(str(i).encode())
+        hash.update(b"\x00")
         return int(hash.hexdigest(), 16) % ORDER
 ```
 
 ##### The StringToCurve function
-The StringtoCurve converts a string into a point of secp256k1. We only need to implement Step 1, Step 2.2 and Step 2.4.1 in [SECG1], since we use the curve secp256k1.
-```
+The StringtoCurve converts a string into a point of secp256k1. We only need to implement Step 1, Step 2.2 and Step 2.4.1 in {{#cite SECG1}}, since we use the curve secp256k1.
+```python
 def string_to_curve(string):
     #specified in 2.3.4 of https://www.secg.org/sec1-v2.pdf
     #since the curve is secp256k1, then q=p is an odd prime
@@ -199,9 +217,9 @@ def string_to_curve(string):
 ```
 
 ##### The StringToField function
-The StringtoCurve converts a string into an element in \\(\mathcal{Z}_p\\), where \\(p=2^256-2^32-977\\). We only need to implement Step 1 and Step 2.3.6 in [SECG1].
+The StringtoCurve converts a string into an element in \\(\mathcal{Z}_p\\), where \\(p=2^{256}-2^{32}-977\\). We only need to implement Step 1 and Step 2.3.6 in {{#cite SECG1}}.
 
-```
+```python
 def string_to_field(string): 
     #specified in 2.3.6 of https://www.secg.org/sec1-v2.pdf
     #since i just want to implement for secp256k1, i will just implement step 1
