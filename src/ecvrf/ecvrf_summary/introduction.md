@@ -1,4 +1,4 @@
-# Introduction
+### Introduction
 In cryptography, a verifiable random function (VRF) is a public key version of a pseudorandom function. It produces a pseudorandom output and a proof certifying that the output is computed correctly. 
 
 A VRF includes a pair of keys, named public and secret keys. The secret key, along with the input is used by the holder to compute the value of a VRF and its proof, while the public key is used by anyone to verify the correctness of the computation.
