@@ -23,14 +23,21 @@
   - [Construction](./dkg/dkg_construction/chapter.md)
     - [Why Gennaro et al's Construction?](./dkg/dkg_construction/why_gennaro.md)
     - [Gennaro et al's Construction](./dkg/dkg_construction/dkg_construction.md)
+- [KZG Polynomial Commitment Scheme](./kzg_polynomial_commitment_scheme/chapter.md)
+  - [Polynomial Commitment Scheme - Definition](./kzg_polynomial_commitment_scheme/pcs_definition/section.md)
+    - [Syntax](./kzg_polynomial_commitment_scheme/pcs_definition/syntax.md)
+    - [Security Requirements](./kzg_polynomial_commitment_scheme/pcs_definition/security_requirement.md)
+  - [Technical Overview](./kzg_polynomial_commitment_scheme/technical_overview/section.md)
+    <!-- - [Discrete Logarithm Problem and Pairing](./kzg_polynomial_commitment_scheme/technical_overview/discrete_logarithm_and_pairing.md) -->
+    - [Commitment to Polynomial Without Hiding Property](./kzg_polynomial_commitment_scheme/technical_overview/commitment_without_hiding.md)
+    - [Correct Evaluation from the Commitment](./kzg_polynomial_commitment_scheme/technical_overview/correct_evaluation_from_commitment.md)
+    - [Dealing with Hiding](./kzg_polynomial_commitment_scheme/technical_overview/dealing_with_hiding.md)
+  <!-- - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment/section.md) -->
+  <!-- - [Customized KZG](./kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 - [PlonK](./plonk/chapter.md)
   - [PlonK's Arithmetization](./plonk/arithmetization/section.md)
     - [Circuit Specification](./plonk/arithmetization/circuit_specification.md)
     - [Breaking Circuit](./plonk/arithmetization/breaking_circuit.md)
     - [Gate Constraints](./plonk/arithmetization/gate_constraints.md)
     - [Copy Constraints](./plonk/arithmetization/copy_constraints.md)
-  - [KZG Polynomial Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/section.md)
-    - [Syntax and Security Requirements of Polynomial Commitment Schemes](./plonk/kzg_polynomial_commitment_scheme/pcs_definition.md)
-    <!-- - [KZG Commitment Scheme](./plonk/kzg_polynomial_commitment_scheme/kzg_commitment.md)
-    - [Customized KZG](./plonk/kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 
