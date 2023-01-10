@@ -1,47 +1,52 @@
 # Transforming to PLONKish Arithmetization
-To setup the above sequence of computations into PLONKish arithmetization, we specify a table to contain all possible variables appeared during the computing the arithmetic circuit fir \\(u^2 + 3uv + v + 5\\). Then, for each row, we setup a few gates, or equivalently gate constraints, that applies to the row. Specificially, we define the following tuple of columns
+To setup the above sequence of computations, in [A Simple Arithmetic Circuit](./simple_arithmetic_circuit.md), into PLONKish arithmetization, we specify a table to contain all possible variables appeared during the computing the arithmetic circuit fir \\(u^2 + 3uv + v + 5\\). Then, for each row, we setup a the set gates, or equivalently gate constraints, that applies to the row. 
+
+## Specifying columns
+We define the following tuple of columns
 $$
     (\mathsf{advice} _0, \mathsf{advice} _1, \mathsf{advice} _2, \mathsf{constant}, \mathsf{selector} _{\mathsf{add}}, \mathsf{selector} _{\mathsf{mul}}, \mathsf{selector} _{\mathsf{addc}}, \mathsf{selector} _{\mathsf{mulc}})
 $$
 where
 - \\(\mathsf{advice}_0, \mathsf{advice}_1, \mathsf{advice}_2\\) are columns containing private inputs, i.e., values belonging to these columns are hidden to any verifier,
 - \\(\mathsf{constant}\\) is the column containing public constants appearing during the computation,
-- \\(\mathsf{selector} _{\mathsf{add}}, \mathsf{selector} _{\mathsf{mul}}, \mathsf{selector} _{\mathsf{addc}}, \mathsf{selector} _{\mathsf{mulc}}\\) contain public selectors.
+- \\(\mathsf{selector} _{\mathsf{add}}, \mathsf{selector} _{\mathsf{mul}}, \mathsf{selector} _{\mathsf{addc}}, \mathsf{selector} _{\mathsf{mulc}}\\) contain public selectors corresponding to addition, multiplication, addition with constant, multiplication with constant, respectively, gates.
 
-We now explain the intuition to the above setting of columns. To do this, we need to transform the sequence of computations, from step 3, in [A Simple Arithmetic Circuit](./simple_arithmetic_circuit.md) into \\(2\\) parts, namely, gate constraints (or gate identities) and wire constraints (or wire identities). In particular, we transform
+## Transforming to Constraints and Explaining Meaning of Columns
+We now explain the intuition to the above setting of columns. To do this, we need to transform the sequence of computations in [A Simple Arithmetic Circuit](./simple_arithmetic_circuit.md) into \\(2\\) parts, namely, gate constraints (or gate identities) and wire constraints (or wire identities). In particular, we transform
 $$
-    \begin{cases}   
-        t_1 = u^2,\\\\
-        t_2 = u v,\\\\
-        t_3 = t_2 \cdot 3 = 3uv,\\\\
-        t_4 = t_1 + t_3 = u^2 + 3uv,\\\\
-        t_5 = t_4 + v = u^2 + 3uv + v,\\\\
-        t_6 = t_5 + 5 = u^2 + 3uv + v + 5
-    \end{cases}
+    \begin{align}   
+        t^{(1)} &= u^2,  &t^{(3)} &= t^{(2)} \cdot 3 = 3uv, & t^{(5)} &= t^{(4)} + v = u^2 + 3uv + v,\\\\
+        t^{(2)} &= u v, & t^{(4)} &= t^{(1)} + t^{(3)} = u^2 + 3uv, &t^{(6)} &= t^{(5)} + 5 = u^2 + 3uv + v + 5
+    \end{align}
 $$
- to gate constraints
+to gate constraints
+
 $$
-    \begin{cases}
-        x_{c_1} = x_{a_1} x_{b_1},\\\\
-        x_{c_2} = x_{a_2}  x_{b_2},\\\\
-        x_{c_3} = x_{a_3} \cdot 3,\\\\
-        x_{c_4} = x_{a_4} + x_{b_4},\\\\
-        x_{c_5} = x_{a_5} + x_{b_5},\\\\
-        x_{c_6} = x_{a_6} + 5
-    \end{cases}
+    \begin{align}
+        x ^{(1)} _{c} &= x ^{(1)} _{a} \cdot x ^{(1)} _{b},  & x ^{(3)} _{c} &= x ^{(3)} _{a} \cdot 3,         & x ^{(5)} _{c} &= x ^{(5)} _{a} + x ^{(5)} _{b},\\\\
+        x ^{(2)} _{c} &= x ^{(2)} _{a} \cdot  x ^{(2)} _{b}, & x ^{(4)} _{c} &= x ^{(4)} _{a} + x ^{(4)} _{b}, & x ^{(6)} _{c} &= x ^{(6)} _{a} + 5
+    \end{align}
 $$
+
 and wire constraints
+
 $$
-    \begin{cases}
-        u = x_{a_1} = x_{a_2} = x_{b_1},\\\\
-        v = x_{b_2} = x_{b_5},\\\\
-        t_1 = x_{a_4} = x_{c_1},\\\\
-        t_2 = x_{a_3} = x_{c_2},\\\\
-        t_3 = x_{b_4} = x_{c_3},\\\\
-        t_4 = x_{a_5} = x_{c_4},\\\\
-        t_5 = x_{a_6} = x_{c_5},\\\\
-        t_6 = x_{c_6}.
-    \end{cases}
+    \begin{align}
+        u &= x_{a}^{(1)} = x_{a}^{(2)} = x_{b}^{(1)}, &t^{(1)} &= x_{a}^{(4)} = x_{c}^{(1)}, &t^{(3)} &= x_{b}^{(4)} = x_{c}^{(3)}, &t^{(5)} &= x_{a}^{(6)} = x_{c}^{(5)},\\\\
+        v &= x_{b}^{(2)} = x_{b}^{(5)}, &t^{(2)} &= x_{a}^{(3)} = x_{c}^{(2)}, &t^{(4)} &= x_{a}^{(5)} = x_{c}^{(4)}, &t^{(6)} &= x_{c}^{(6)}.
+    \end{align}
 $$
 
-Hence, for <span style="color:red">continue writing here<span>
+We note that \\(x_b^{(3)}, x_b^{(6)}\\) are not set. To deal with these values, we simple set them to be equal to any random vales, since they do not affect the constraints defined above.
+<span style = "color:red"> explaining the choice of columns here</span>
+
+## Specifying Table Values
+Hence, for each row \\(i \in \\{1, \dots,  6\\}\\) of the table, we denote by the tuple 
+$$
+    (x_{a}^{(i)}, x_{b}^{(i)}, x_{c}^{(i)}, c^{(i)}, s_{\mathsf{add}}^{(i)}, s_{\mathsf{mul}}^{(i)}, s_{\mathsf{addc}}^{(i)}, s_{\mathsf{mulc}}^{(i)})
+$$
+corresponding to the tuple of columns 
+$$
+    (\mathsf{advice} _0, \mathsf{advice} _1, \mathsf{advice} _2, \mathsf{constant}, \mathsf{selector} _{\mathsf{add}}, \mathsf{selector} _{\mathsf{mul}}, \mathsf{selector} _{\mathsf{addc}}, \mathsf{selector} _{\mathsf{mulc}})
+$$
+devised above.
