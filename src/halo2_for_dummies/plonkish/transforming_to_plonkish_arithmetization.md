@@ -54,4 +54,16 @@ $$
 $$
 devised above.
 
-For each of those rows, we set the following \\(4\\) constraints
+For each row \\(i \in \\{1,\dots, 6\\}\\), we set the following \\(4\\) constraints
+$$
+    \begin{align}
+        s_\mathsf{add}^{(i)}\cdot (x_{a}^{(i)} + x_{b}^{(i)} - x_{c}^{(i)}) &= 0, & s_\mathsf{mul}^{(i)}\cdot (x_{a}^{(i)} \cdot x_{b}^{(i)} - x_{c}^{(i)}) &= 0,\\\\
+        s_\mathsf{addc}^{(i)}\cdot (x_{a}^{(i)} + c^{(i)} - x_{c}^{(i)}) &= 0, & s_\mathsf{mulc}^{(i)}\cdot (x_{a}^{(i)} \cdot c^{(i)} - x_{c}^{(i)}) &= 0.
+    \end{align}
+$$
+
+> **Example.** Assume that the \\(i\\)-th row corresponds to a multiplication gate. Hence, in this case, we set \\((s_{\mathsf{add}}^{(i)}, s_{\mathsf{mul}}^{(i)}, s_{\mathsf{addc}}^{(i)}, s_{\mathsf{mulc}}^{(i)}) = (0, 1, 0, 0)\\). We can see that only \\(s_{\mathsf{mul}}^{(i)} = 1\\) while remaining selectors are set to \\(0\\). 
+>
+> Therefore, whatever the values \\(x_{a}^{(i)}, x_{b}^{(i)}, x_{c}^{(i)}, c^{(i)}\\) are set, the results always hold with respect to the gates \\(s_\mathsf{add}^{(i)}\cdot (x_{a}^{(i)} + x_{b}^{(i)} - x_{c}^{(i)}) = 0, s_\mathsf{addc}^{(i)}\cdot (x_{a}^{(i)} + c^{(i)} - x_{c}^{(i)}) = 0\\) and \\(s_\mathsf{mulc}^{(i)}\cdot (x_{a}^{(i)} \cdot c^{(i)} - x_{c}^{(i)}) = 0\\). 
+>
+> However, since \\(s_{\mathsf{mul}}^{(i)} = 1\\), we can see that the gate \\(s_\mathsf{mul}^{(i)}\cdot (x_{a}^{(i)} \cdot x_{b}^{(i)} - x_{c}^{(i)}) = 0\\) must guarantee \\(x_{a}^{(i)} \cdot x_{b}^{(i)} = x_{c}^{(i)}\\).
