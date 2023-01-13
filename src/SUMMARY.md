@@ -6,7 +6,6 @@
     - [VRF Algorithms](./ecvrf/ecvrf_summary/vrf_syntax.md)
     - [VRF Security Properties](./ecvrf/ecvrf_summary/vrf_properties.md)
     - [History of VRF](./ecvrf/ecvrf_summary/vrf_history.md)
-    - [VRF in Blockchain](./ecvrf/ecvrf_summary/vrf_in_blockchain.md)
   - [VRF Based on Elliptic Curve (ECVRF)](./ecvrf/ecvrf_construction/vrf_based_on_elliptic_curve.md)
     - [Why using ECVRF](./ecvrf/ecvrf_construction/why_using_ecvrf.md)
     - [ECVRF Construction](./ecvrf/ecvrf_construction/ecvrf_construction.md)

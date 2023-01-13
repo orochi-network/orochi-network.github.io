@@ -14,5 +14,5 @@ In 2017, {{#cite PWHVNRG17}} construct an efficient VRF based on elliptic curve 
 
 In 2019, Nir Bitansky {{#cite Bit19}} showed that VRF can be constructed from non-interactive witness-indistinguishable proof (NIWI).
 
-In 2020, Esgin et al {{#cite EKSSZSC20}} was the first to construct a VRF based on lattice based cryptography, which is resistant to attack from quantum computers.
+In 2020, Esgin et al {{#cite EKSSZSC20}} was the first to construct a VRF based on lattice based cryptography, which is resistant to attack from quantum computers. Thus, VRF remains as a good candidate for generating randomness in the future.
 
