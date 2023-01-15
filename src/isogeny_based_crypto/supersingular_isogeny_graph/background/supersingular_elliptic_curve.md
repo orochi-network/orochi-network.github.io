@@ -2,7 +2,11 @@
 
 #### Definition
 
-Let \\(E\\) be an elliptic curve over \\(\mathbb{F}_q\\). If \\(E[p]={0}\\), then \\(E\\) is a supersingular elliptic curve, if \\(E[p]=\mathbb{Z}/p\mathbb{Z}\\) then \\(E\\) is an ordinary elliptic curve.
+Let \\(p\\) is a prime and let \\(q\\) be a power of \\(p\\). Let \\(E\\) be an elliptic curve over \\(\mathbb{F}_q\\). If \\(E[p]=\mathcal{O}\\), then \\(E\\) is a supersingular elliptic curve, if \\(E[p]=\mathbb{Z}/p\mathbb{Z}\\) then \\(E\\) is an ordinary elliptic curve.
+
+#### Example
+
+For \\(p=3\\), the curve \\(E: y^2=x^3-x\\) is supersingular over the field \\(\bar{F}_3\\). [Here](https://math.stackexchange.com/questions/3607389/find-all-points-order-3-on-an-elliptic-curve) we see that \\([3]*(x,y)=\mathcal{O}\\) for \\((x,y) \neq \mathcal{O}\\) if and only if \\(3x^4-6x^2-1=0\\), but such \\(x\\) does not exist since \\(\bar{F}_3\\) has characteristic \\(3\\). Thus \\(E[3]=\mathcal{O}\\)
 
 #### Properties
 

@@ -28,7 +28,7 @@
     - [Isogenies](./isogeny_based_crypto/supersingular_isogeny_graph/background/isogeny.md)
     - [Supersingular Elliptic Curves](./isogeny_based_crypto/supersingular_isogeny_graph/background/supersingular_elliptic_curve.md)
     - [Supersingular Isogeny Graph (Pizer Graphs)](./isogeny_based_crypto/supersingular_isogeny_graph/graph/supersingular_isogeny_graph.md)
-    - [Applications of Pizer Graphs](./isogeny_based_crypto/supersingular_isogeny_graph/graph/supersingular_isogeny_graph.md)
+    - [Applications of Pizer Graphs](./isogeny_based_crypto/supersingular_isogeny_graph/graph/application.md)
 - [KZG Polynomial Commitment Scheme](./kzg_polynomial_commitment_scheme/chapter.md)
   - [Polynomial Commitment Scheme - Definition](./kzg_polynomial_commitment_scheme/pcs_definition/section.md)
     - [Syntax](./kzg_polynomial_commitment_scheme/pcs_definition/syntax.md)
