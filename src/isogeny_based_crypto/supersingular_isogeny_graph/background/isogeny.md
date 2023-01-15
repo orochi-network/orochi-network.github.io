@@ -9,7 +9,7 @@ That means \\(\alpha(P+Q)=\alpha(P)+\alpha(Q)\\) for all \\(P,Q \in E_1\\) and t
 In fact, it can be proved that we can write \\(\alpha\\) in the form \\(\alpha(x_1, y_1)=(r_1(x_1), y_1r_2(x_1))\\).
 
 If \\(r_1(x)=\dfrac{p(x)}{q(x)}\\) for polynomials 
-\\(p\\) and \\(q\\) without common roots, define the degree of \\(alpha\\) to be \\(Max(deg(p(x)),deg(q(x)))\\). 
+\\(p\\) and \\(q\\) without common roots, define the degree of \\(\alpha\\) to be \\(Max(deg(p(x)),deg(q(x)))\\). 
 
 We say an isogeny is seperable if \\(q(x)\\) have no repeated roots.
 
