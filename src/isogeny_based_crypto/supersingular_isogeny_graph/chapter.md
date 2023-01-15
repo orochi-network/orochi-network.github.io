@@ -1,0 +1,3 @@
+## Supersingular Isogeny Graph
+
+In this chapter, we introduce supersingular isogeny graph and its properties to see why this graph is used in isogeny based cryptography. The vertices of the graph represent the supersingular elliptic curves, and the edges of the graph represent the isogenies between these curves. We will state the definitions of supersingular elliptic curves and isogenies, then describe the structure of the graph and its nice properties in cryptography.
