@@ -1,4 +1,4 @@
-### Applications 
+### Pizer Graph Applications 
 
 Supersingular Isogeny Graph has applications in both mathematics and cryptography. We list several of their applications below.
 

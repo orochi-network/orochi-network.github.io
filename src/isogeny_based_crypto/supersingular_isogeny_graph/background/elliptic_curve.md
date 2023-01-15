@@ -1,4 +1,4 @@
-### Elliptic Curve
+### Elliptic Curves
 
 #### Definition
 Let \\(K\\) be a field. An elliptic curve \\(E\\) is a plane curve defined over the field \\(K\\) as follows:

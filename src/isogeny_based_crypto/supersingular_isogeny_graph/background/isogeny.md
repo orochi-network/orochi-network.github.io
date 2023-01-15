@@ -1,4 +1,4 @@
-### Isogeny
+### Isogenies
 
 #### Definition
 
@@ -6,10 +6,12 @@ Let \\(E_1:y^2=x^3+a_1x+b_1\\) and \\(E_2:y^2=x^3+a_2x+b_2\\) be elliptic curves
 
 That means \\(\alpha(P+Q)=\alpha(P)+\alpha(Q)\\) for all \\(P,Q \in E_1\\) and there are rational functions \\(R_1, R_2\\) such that if \\(\alpha(x_1, y_1)=(x_2, y_2)\\) then \\((x_2, y_2)=(R_1(x_1, y_1),R_2(x_1, y_1))\\).\\
 
+In fact, it can be proved that we can write \\(\alpha\\) in the form \\(\alpha(x_1, y_1)=(r_1(x_1), y_1r_2(x_1))\\).\\
+
 If \\(r_1(x)=\dfrac{p(x)}{q(x)}\\) for polynomials 
 \\(p\\) and \\(q\\) without common roots, define the degree of \\(alpha\\) to be (\\Max(deg(p(x)),deg(q(x)))\\). 
 
-We say an isogeny is seperable if does not have repeated roots.
+We say an isogeny is seperable if \\(q(x)\\) have no repeated roots.
 
 #### Properties
 
