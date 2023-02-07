@@ -1,6 +1,6 @@
 # Verifiable Random Function (VRF)
 
-We present an overview of verifiable random functions (VRF) and describe a construction a VRF based on elliptic curves in \cite{PWHVNRG17}.
+We present an overview of verifiable random functions (VRF) and describe a construction a VRF based on elliptic curves in {{#cite PWHVNRG17}}.
 
 Informally speaking, a VRF is a function that generates values that looks indistinguishable from random, and these values can be verified if they were computed correctly. Later, we discuss a few cryptographic applications that VRF possibly plays an important building blocks in constructing them.
 
