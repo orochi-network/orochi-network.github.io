@@ -4,7 +4,7 @@
 ### History of Verifiable Random Function
 Verifiable Random Function is introduced by Micali, Rabin and Vadhan {{#cite MRV99}}. They defined a Verifiable Unpredictable Function (VUF) and gave a construction based on the RSA assumption {{#cite MRV99}}, then proved that a VRF can be constructed from a VUF {{#cite MRV99}}. 
 
-In 2002, Lysyanskaya {{#cite Lys02}} also followed the same path by constructing a VUF instead VRF. However, Lysyanskaya's VUF is based on Diffie-Hellman assumption instead, and it is the first construction that is based on Diffie-Hellman assumption. 
+In 2002, Lysyanskaya {{#cite DBLP:conf/crypto/Lysyanskaya02}} also followed the same path by constructing a VUF instead VRF. However, Lysyanskaya's VUF is based on Diffie-Hellman assumption instead, and it is the first construction that is based on Diffie-Hellman assumption. 
 
 In 2005, Dodis and Yampolsky {{#cite DY05}} gave a direct and efficient construction using bilinear map, then improved. Later, during the 2010s, many constructions {{#cite HW10,BMR10,Jag15}} also used bilinear map, all of them used non standard assumptions to prove the security of their VRF. 
 
