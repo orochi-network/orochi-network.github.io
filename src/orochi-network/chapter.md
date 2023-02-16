@@ -28,7 +28,7 @@ This is considered to be the core component of Orochi Network that provides semi
 
 ### zkDatabase: A Verifiable Database
 
-[zkDatabase](https://github.com/orochi-network/zkDatabase) is a database that utilize Zero-Knowledge Proof (ZKP) to prove the correctness of the data and data processing. As far as we know, every zkApp need to manage their own on-chain and off-chain state themselves, this is costly and inefficient depend on the complexity of data's structure. We want to help other team to build their zkApp by provide the most critical component, the database.
+[zkDatabase](https://github.com/orochi-network/zkDatabase) is a database that utilizes ZKPs to prove the correctness of the data and data processing. As far as we know, every zkApp needs to manage their own on-chain and off-chain state itself. This process is costly and inefficient depending on the complexity of data's structure. We want to provide other teams the most critical component, namely, the database, to build their zkApps.
 
 ### Orand: A Decentralized Random Number Generator
 
