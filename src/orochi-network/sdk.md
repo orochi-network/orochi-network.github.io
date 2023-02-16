@@ -4,7 +4,7 @@ Orochi Network SDK provides client-side tools that allow you to interact with th
 
 ## Installation
 
-You could install Orochi Network sdk by running:
+You can install Orochi Network sdk by running:
 
 ```bash
 npm install @orochi-network/sdk
