@@ -32,7 +32,7 @@ This is considered to be the core component of Orochi Network that provides semi
 
 ### Orand: A Decentralized Random Number Generator
 
-We do various research around [VRF](../ecvrf/verifiable_random_function.md) and [ECVRF](../ecvrf/ecvrf_summary/introduction.md) to develop a solutions for mass adoption of verifiable randomness. Verifiable randomness must be consider as a essential primitive of Web3 gaming.
+We are conducting various research attempts around [VRF](../ecvrf/verifiable_random_function.md) and [ECVRF](../ecvrf/ecvrf_summary/introduction.md) to develop a solution for mass adoption of verifiable randomness. Verifiable randomness must be considered an essential primitive of Web3 gaming.
 
 Orand was implemented as a core library of [Orochimaru](https://github.com/orochi-network/orochimaru) a full-node client of Orochi Network.
 
