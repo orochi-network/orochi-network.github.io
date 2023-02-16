@@ -44,6 +44,6 @@ A highly secured solution based on Multi-Party Computations (MPC) that helps you
 
 ## Orochi ❤️ Open Source
 
-All projects are open source and public, we built everything for common good.
+All projects are open-sourced and public. We build everything for common good.
 
 <!-- Expect us -->
