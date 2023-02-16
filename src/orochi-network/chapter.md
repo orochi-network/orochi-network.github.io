@@ -34,7 +34,7 @@ This is considered to be the core component of Orochi Network that provides semi
 
 We are conducting various research attempts around [VRF](../ecvrf/verifiable_random_function.md) and [ECVRF](../ecvrf/ecvrf_summary/introduction.md) to develop a solution for mass adoption of verifiable randomness. Verifiable randomness must be considered an essential primitive of Web3 gaming.
 
-Orand was implemented as a core library of [Orochimaru](https://github.com/orochi-network/orochimaru) a full-node client of Orochi Network.
+Orand is implemented as a core library of [Orochimaru](https://github.com/orochi-network/orochimaru), a full-node client of Orochi Network.
 
 We're also implement the [on-chain verification](https://github.com/orochi-network/orochimaru/tree/main/contracts), allow the randomness to be verified without a third party service. The verifier was implemented in `Solidity` and it's EVM compatible at this time. In the future, we're planned to support any blockchains that supported smart contracts.
 
