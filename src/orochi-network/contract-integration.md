@@ -65,6 +65,6 @@ contract ExampleDice is IOrandConsumerV1 {
 }
 ```
 
-In this example the `DiceExample` was deployed at [0x66681298BBbdf30a0B3Ec98cAbf41AA7669dc201](https://testnet.bscscan.com/address/0x66681298BBbdf30a0B3Ec98cAbf41AA7669dc201#code)
+In this example, the `DiceExample` was deployed at [0x66681298BBbdf30a0B3Ec98cAbf41AA7669dc201](https://testnet.bscscan.com/address/0x66681298BBbdf30a0B3Ec98cAbf41AA7669dc201#code)
 
 The method `consumeRandomness(uint256 randomness)` should be restricted to `OrandProviderV1`. Here is its address on BNB Chain testnet [0xF3455Bb39e8C9228f8701ECb5D5A177A77096593](https://testnet.bscscan.com/address/0xF3455Bb39e8C9228f8701ECb5D5A177A77096593#code)
