@@ -22,7 +22,7 @@ The game is quite easy. You roll the dice and `Orand` will give you the verifiab
 pragma solidity ^0.8.0;
 import '../interfaces/IOrandConsumerV1.sol';
 
-// Application should be an implement of IOrandConsumerV1 interface
+// Application should be an implementation of IOrandConsumerV1 interface
 contract ExampleDice is IOrandConsumerV1 {
   // Provider address
   address internal orandProviderV1;
