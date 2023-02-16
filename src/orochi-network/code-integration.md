@@ -88,4 +88,4 @@ console.log([ecdsaProof, epoch]);
 await orandProviderV1.publish(ecdsaProof, epoch);
 ```
 
-Don't might to contact us on Telegram if you need support [https://t.me/OrochiNetwork](https://t.me/OrochiNetwork).
+Don't mind to contact us on Telegram if you need support [https://t.me/OrochiNetwork](https://t.me/OrochiNetwork).
