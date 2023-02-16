@@ -51,7 +51,7 @@ import { ethers } from "ethers";
 })();
 ```
 
-- **ORAND_SERVICE_URL:** We will provider you the service URL
+- **ORAND_SERVICE_URL:** We will provide you the service URL
 - **ORAND_USER_NAME:** The username that you registered with Orand service, _e.g: "Navi"_
 - **ORAND_USER_HMAC_SECRET:** The random secret key that used to authenticate yourself, _e.g: 6b1ab607287f5379db8b70bb7515feaa_
 - **ORAND_USER_CONSUMER_ADDRESS**: The consumer smart contract address _e.g: "0x66681298BBbdf30a0B3Ec98cAbf41AA7669dc201"_
