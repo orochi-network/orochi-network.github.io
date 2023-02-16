@@ -1,5 +1,9 @@
 # Summary
 
+- [Orochi Network](./orochi-network/chapter.md)
+  - [Orochi Network SDK](./orochi-network/sdk.md)
+  - [Orand Contract Integration](./orochi-network/contract-integration.md)
+  - [Orand Code Integration](./orochi-network/code-integration.md)
 - [Verifiable Random Function (VRF)](./ecvrf/verifiable_random_function.md)
   - [Overview of VRF](./ecvrf/ecvrf_summary/overview_of_vrf.md)
     - [Introduction to VRF](./ecvrf/ecvrf_summary/introduction.md)
@@ -34,12 +38,12 @@
     - [Syntax](./kzg_polynomial_commitment_scheme/pcs_definition/syntax.md)
     - [Security Requirements](./kzg_polynomial_commitment_scheme/pcs_definition/security_requirement.md)
   - [Technical Overview](./kzg_polynomial_commitment_scheme/technical_overview/section.md)
-    <!-- - [Discrete Logarithm Problem and Pairing](./kzg_polynomial_commitment_scheme/technical_overview/discrete_logarithm_and_pairing.md) -->
+      <!-- - [Discrete Logarithm Problem and Pairing](./kzg_polynomial_commitment_scheme/technical_overview/discrete_logarithm_and_pairing.md) -->
     - [Commitment to Polynomial Without Hiding Property](./kzg_polynomial_commitment_scheme/technical_overview/commitment_without_hiding.md)
     - [Correct Evaluation from the Commitment](./kzg_polynomial_commitment_scheme/technical_overview/correct_evaluation_from_commitment.md)
     - [Dealing with Hiding](./kzg_polynomial_commitment_scheme/technical_overview/dealing_with_hiding.md)
-  <!-- - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment/section.md) -->
-  <!-- - [Customized KZG](./kzg_polynomial_commitment_scheme/kzg_customization.md) -->
+      <!-- - [KZG Commitment Scheme](./kzg_polynomial_commitment_scheme/kzg_commitment/section.md) -->
+      <!-- - [Customized KZG](./kzg_polynomial_commitment_scheme/kzg_customization.md) -->
 - [PlonK](./plonk/chapter.md)
   - [PlonK's Arithmetization](./plonk/arithmetization/section.md)
     - [Circuit Specification](./plonk/arithmetization/circuit_specification.md)

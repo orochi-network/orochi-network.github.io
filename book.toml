@@ -3,8 +3,10 @@ authors = ["Chiro Hiro"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Zero-Knowledge Proof Cookbook"
+title = "Orochi Network's Cookbook"
 [output.html]
 mathjax-support = true
+[output.html.fold]
+enable = true
 [preprocessor.bib]
 bibliography = "refs.bib"
