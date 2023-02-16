@@ -4,7 +4,7 @@
 
 ## What is Orochi Network?
 
-Orochi Network is a project that utilized cryptography, especially Zero-Knowledge Proof to build up an operating system (UnityOS) for the next generation of the internet.
+Orochi Network is a project that utilizes cryptography, especially Zero-Knowledge Proofs (ZKP) to build up an operating system (UnityOS) for the next generation of the internet.
 
 UnityOS manages a pool of computation power. It allows High Performance Decentralized Applications to be hosted and processed without any centralized server. UnityOS runs in a server-less fashion with the underlying technology that can handle almost everything. Hence, the developers only need to focus on designing the logic of their dApps. This layer is built with distributed computing using [zkWASM](https://github.com/orochi-network/zkWASM-specs).
 
