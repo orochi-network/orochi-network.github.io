@@ -56,7 +56,7 @@ import { ethers } from "ethers";
 - **ORAND_USER_HMAC_SECRET:** The random secret key used to authenticate yourself, _for instance, 6b1ab607287f5379db8b70bb7515feaa_
 - **ORAND_USER_CONSUMER_ADDRESS**: The consumer smart contract address _for instance, "0x66681298BBbdf30a0B3Ec98cAbf41AA7669dc201"_
 
-**Note:** `ChainId` is a predefined value, you could check [the chain list here](https://chainlist.org/).
+**Note:** `ChainId` is a predefined value, you can check [the chain list here](https://chainlist.org/).
 
 ### Submit The Randomness To Your Smart Contract
 
