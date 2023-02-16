@@ -36,7 +36,7 @@ We are conducting various research attempts around [VRF](../ecvrf/verifiable_ran
 
 Orand is implemented as a core library of [Orochimaru](https://github.com/orochi-network/orochimaru), a full-node client of Orochi Network.
 
-We're also implement the [on-chain verification](https://github.com/orochi-network/orochimaru/tree/main/contracts), allow the randomness to be verified without a third party service. The verifier was implemented in `Solidity` and it's EVM compatible at this time. In the future, we're planned to support any blockchains that supported smart contracts.
+We are also implementing the [on-chain verification](https://github.com/orochi-network/orochimaru/tree/main/contracts) allowing the randomness to be verified without any third-party service. The verifier is implemented in `Solidity` and is EVM-compatible at the moment. In the future, we are planning to support other blockchains that support smart contracts.
 
 ### Orosign: A Passport of Web3
 
