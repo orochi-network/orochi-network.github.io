@@ -1,6 +1,6 @@
 # Orochi Network SDK
 
-Orochi Network SDK provides client side tools that allowed you to interactive with the whole Orochi Network ecosystem. We supported browser and Node.js at the first place.
+Orochi Network SDK provides client-side tools that allow you to interact with the whole Orochi Network ecosystem. We supported browser and Node.js at the first place.
 
 ## Installation
 
