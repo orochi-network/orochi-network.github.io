@@ -8,7 +8,7 @@ Orochi Network is a project that utilizes cryptography, especially Zero-Knowledg
 
 UnityOS manages a pool of computation power. It allows High Performance Decentralized Applications to be hosted and processed without any centralized server. UnityOS runs in a server-less fashion with the underlying technology that can handle almost everything. Hence, the developers only need to focus on designing the logic of their dApps. This layer is built with distributed computing using [zkWASM](https://github.com/orochi-network/zkWASM-specs).
 
-The dApp can be implemented by popular programming languages namely C++, Rust, Go, etc, and processed with semi-native performance. Computation power will be allocated dynamically and thus, saves operational costs and computational waste.
+The dApps can be implemented by popular programming languages, e.g., C++, Rust, Go, etc, and processed with semi-native performance. Computation power will be allocated dynamically and thus, saves operational costs and computational waste.
 
 ## Our Vision
 
