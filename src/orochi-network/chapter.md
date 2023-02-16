@@ -18,7 +18,7 @@ At Orochi Network, we believe that Verifiable Computation is a essential cryptog
 
 - **Data correctness:** _There is no way to prove the correctness of data since all data pipelines are stored in a blackbox. We have no idea how data are processed._
 
-- **Data availability:** _Smart contract executor and application executor are isolated from the internet that prevent data to be accessible from the run-time environment. It alway requires a third party service to feed necessary data. This approach is broken since we can not verify the data. Moreover, the latency from the third parties is unacceptable._
+- **Data availability:** _That smart contract and application executors are isolated from the internet prevents data to be accessible from the run-time environment. One can require a third-party service to feed necessary data. This approach is broken since we cannot verify the data. Moreover, the latency from the third-party services is unacceptable._
 
 ## What Are We Building Toward To That vision?
 
