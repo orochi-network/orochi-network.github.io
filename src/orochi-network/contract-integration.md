@@ -15,7 +15,7 @@ interface IOrandConsumerV1 {
 
 ### Dice Game Example
 
-The game is quite easy, you roll the dice and `Orand` will give you the verifiable randomness so you can calculate the dice number.
+The game is quite easy. You roll the dice and `Orand` will give you the verifiable randomness so you can calculate the dice number.
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
