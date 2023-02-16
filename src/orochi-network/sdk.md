@@ -31,6 +31,6 @@ const orandInstance = new orand.Orand({
 });
 ```
 
-In the example above, we init an instance of `Orand` which provides verifiable randomness based on [ECVRF](../ecvrf/verifiable_random_function.md).
+In the example above, we initiated an instance of `Orand` which provides verifiable randomness based on [ECVRF](../ecvrf/verifiable_random_function.md).
 
 To learn about Orand integration please check [next section](./contract-integration.md).
