@@ -24,7 +24,7 @@ At Orochi Network, we believe that Verifiable Computation is a essential cryptog
 
 ### zkWASM: An Universal Verifiable WebAssembly Run-time
 
-This consider to be a core component of Orochi Network that provides semi-native execution and proving the computation in ZKP. We booted with [zkWASM specifications](https://github.com/orochi-network/zkWASM-specs).
+This is considered to be the core component of Orochi Network that provides semi-native executions and proves the computations in ZKPs. We booted this aspect with [zkWASM specifications](https://github.com/orochi-network/zkWASM-specs).
 
 ### zkDatabase: A Verifiable Database
 
