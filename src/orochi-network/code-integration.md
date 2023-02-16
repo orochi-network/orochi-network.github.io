@@ -2,7 +2,7 @@
 
 ### Randomness Feeding Process
 
-Your application can request the verifiable randomness directly from Orand. Then you can publish the randomness yourself by calling the method `publish()` on `OrandProviderV1` smart contract. Higher tier of service establish the ability so submit the randomness from Oran service but the deal will cover the cost for each randomness.
+Your application can request the verifiable randomness directly from Orand. Then you can publish the randomness yourself by calling the method `publish()` on `OrandProviderV1` smart contract. Higher tier of service establishes the ability so submit the randomness from Orand service but the deal will cover the cost for each randomness.
 
 ```plain
 ┌───────────┐         ┌─────┐      ┌──────────────┐
