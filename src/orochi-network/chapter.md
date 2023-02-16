@@ -12,7 +12,7 @@ The dApps can be implemented by popular programming languages, e.g., C++, Rust, 
 
 ## Our Vision
 
-At Orochi Network, we believe that Verifiable Computation is a critical primitive to establish Web3 and Decentralized Autonomous Economy. However, in order to reach this stage, there are still a number of major challenges of this industry to overcome.
+At Orochi Network, we believe that Verifiable Computation is a essential cryptographic system to establish Web3 and Decentralized Autonomous Economy. However, in order to reach this stage, there are still a number of major challenges of this industry to overcome.
 
 - **The limits of computation:** _EVM can not guarantee semi-native performance, in addition to the extremely high cost and latency to perform computation. dApps nowadays are unfriendly to the mass, unstable, expensive and slow. In other word, they are currently unusable and we can not replace an ordinary application by a dApp yet._
 
