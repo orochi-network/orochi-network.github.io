@@ -10,7 +10,7 @@ You could install Orochi Network sdk by running:
 npm install @orochi-network/sdk
 ```
 
-Please take note that, `@orochi-network/sdk` required `es2018` to be worked as expected.
+Please take note that `@orochi-network/sdk` requires `es2018` to work as expected.
 
 ## Usage
 
