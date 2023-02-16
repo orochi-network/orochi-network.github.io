@@ -1,6 +1,6 @@
 ## Smart Contract Integration
 
-You smart contract that consume Orand's randomness need to implement the interface of `IOrandConsumerV1` which was described below:
+Your smart contract that consumes Orand's randomness needs the interface of `IOrandConsumerV1` to be implemented, which was described below:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
