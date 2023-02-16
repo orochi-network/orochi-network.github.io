@@ -40,7 +40,7 @@ We are also implementing the [on-chain verification](https://github.com/orochi-n
 
 ### Orosign: A Passport of Web3
 
-A high security solution based on Multi-Party Computation that helps you secure your digital assets and your digital identity. The product is available on Apple Store and Google Play.
+A highly secured solution based on Multi-Party Computations (MPC) that helps you secure your digital assets and digital identities. The product is available on Apple Store and Google Play.
 
 ## Orochi ❤️ Open Source
 
