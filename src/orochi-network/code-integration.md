@@ -2,7 +2,7 @@
 
 ### Randomness Feeding Process
 
-Your application can request the verifiable randomness directly from Orand. Then you can publish the randomness yourself by calling the method `publish()` on `OrandProviderV1` smart contract. Higher tier of service establishes the ability so submit the randomness from Orand service but the deal will cover the cost for each randomness.
+Your application can request the verifiable randomness directly from Orand. Then you can publish the randomness yourself by calling the method `publishValidityProof()` on `OrandProviderV1` smart contract. Higher tier of service establishes the ability so submit the randomness from Orand service but the deal will cover the cost for each randomness.
 
 ```plain
 ┌───────────┐         ┌─────┐      ┌──────────────┐
@@ -74,7 +74,7 @@ const data: IOrandEpoch = await orandInstance.newPrivateEpoch();
 const orandProviderV1 = (<OrandProviderV1>(
   (<any>(
     new ethers.Contract(
-      "0xF3455Bb39e8C9228f8701ECb5D5A177A77096593",
+      "0x75C0e60Ca5771dd58627ac8c215661d0261D5D76",
       abiOrandProviderV1
     )
   ))
@@ -85,7 +85,9 @@ const [ecdsaProof, epoch] = orandInstance.transformProof(data);
 console.log([ecdsaProof, epoch]);
 
 // Publish the proof
-await orandProviderV1.publish(ecdsaProof, epoch);
+await orandProviderV1.publishValidityProof(ecdsaProof, epoch);
 ```
+
+Testing result of feeding `10` randomnesses to dice game contract [https://testnet.bscscan.com/tx/0x55c21d5c93c7ad314d25d28f49d7c6dc129bbc47a4df1c10b62dcdf579c385f2](https://testnet.bscscan.com/tx/0x55c21d5c93c7ad314d25d28f49d7c6dc129bbc47a4df1c10b62dcdf579c385f2).
 
 Don't mind to contact us on Telegram if you need support [https://t.me/OrochiNetwork](https://t.me/OrochiNetwork).
