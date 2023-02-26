@@ -4,7 +4,7 @@ Orand project was built based on Elliptic Curve Verifiable Random Function (ECVR
 
 To optimize operation costs and improve security we provided following features:
 
-- **Verifiable:** An Orand's epoch can be verified independently outside our system or can be verified by smart contract.
+- **Verifiable:** An Orand's epoch can be verified independently outside our system or can be verified by smart contracts.
 
 - **Hybrid Proof System:** Our customers can choose between Fraud Proof or Validity Proof to feeding the randomness
 
