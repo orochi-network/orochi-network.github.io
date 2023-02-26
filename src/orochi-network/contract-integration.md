@@ -160,6 +160,6 @@ contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
 }
 ```
 
-In this example, the `ExampleValidityProofDice` was deployed at [0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D](https://testnet.bscscan.com/address/0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D#code)
+In this example, the smart contract `ExampleValidityProofDice` was deployed at [0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D](https://testnet.bscscan.com/address/0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D#code)
 
 The method `consumeRandomness(uint256 randomness)` should be restricted to `OrandProviderV1`. Here is its address on BNB Chain testnet [0x75C0e60Ca5771dd58627ac8c215661d0261D5D76](https://testnet.bscscan.com/address/0x75C0e60Ca5771dd58627ac8c215661d0261D5D76#code)
