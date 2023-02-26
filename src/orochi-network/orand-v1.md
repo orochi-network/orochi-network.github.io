@@ -6,7 +6,7 @@ To optimize operation costs and improve security we provided following features:
 
 - **Verifiable:** An Orand's epoch can be verified independently outside our system or can be verified by smart contracts.
 
-- **Hybrid Proof System:** Our customers can choose between Fraud Proof or Validity Proof to feeding the randomness
+- **Hybrid Proof System:** Our customers can choose between Fraud Proof or Validity Proof to feed the randomness.
 
 - **Dual Proof:** An ECDSA proof will be combine with ECVRF proof to secure the feeding process, allow the feeding process to be done by any third party but the result still verifiable and immutable.
 
