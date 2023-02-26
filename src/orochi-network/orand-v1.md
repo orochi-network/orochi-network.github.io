@@ -1,6 +1,6 @@
 # Orand V1
 
-Orand project was built based on Elliptic Curve Verifiable Random Function (ECVRF). It is deterministic and verifiable based on assumptions from elliptic curves. Administrators of Orochi Network are unable to manipulate the results.
+Orand project was built based on Elliptic Curve Verifiable Random Function (ECVRF). It is deterministic, verifiable and secured based on assumptions from elliptic curves. Administrators of Orochi Network are unable to manipulate the results.
 
 To optimize operation costs and improve security we provided following features:
 
