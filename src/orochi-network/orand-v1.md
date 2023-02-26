@@ -8,7 +8,7 @@ To optimize operation costs and improve security we provided following features:
 
 - **Hybrid Proof System:** Our customers can choose between Fraud Proof or Validity Proof to feed the randomness.
 
-- **Dual Proof:** An ECDSA proof will be combine with ECVRF proof to secure the feeding process, allow the feeding process to be done by any third party but the result still verifiable and immutable.
+- **Dual Proof:** An ECDSA proof will be combined with an ECVRF proof to secure the feeding process, allowing it to be done by any third party while still guaranteeing the result to be verifiable and immutable.
 
 - **Batching:** We allowed you to set the batching limit for one epoch, e.g: We can batching 1000 randomness for one single epoch. The cost will be reduced significantly.
 
