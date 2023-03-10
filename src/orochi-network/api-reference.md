@@ -100,7 +100,7 @@ Allowed you to generate a new private epoch that related to `consumerAddress`. T
 await orandInstance.getPrivateEpoch(3);
 ```
 
-Allowed you to get a list of private epoch the starting `epoch`, it will return an array of `IOrandEpoch`. The result will be limited to 20 records to prevent Denial of Service. These result will be bound to `receiverAddress`.
+Allowed you to get a list of private epochs at the starting `epoch`, it will return an array of `IOrandEpoch`. The result will be limited to 20 records to prevent Denial of Service. These result will be bounded to `receiverAddress`.
 
 **Result:**
 
