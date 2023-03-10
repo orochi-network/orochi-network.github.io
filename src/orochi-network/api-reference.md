@@ -28,7 +28,7 @@ Some results will be return in `BigInt` due to new update from `ethers.js`.
 await orandInstance.getPublicEpoch(0);
 ```
 
-Allowed you to get a list of public epoch at the starting `epoch`, it will return an array of `IOrandEpoch`. The result will be limited to 20 records to prevent Denial of Service.
+Allowed you to get a list of public epochs at the starting `epoch`, it will return an array of `IOrandEpoch`. The result will be limited to 20 records to prevent Denial of Service.
 
 Public epoch has `receiverAddress` is `0x0000000000000000000000000000000000000000`, submit public epoch to `OrandProviderV1` won't have any affect since the consumer address is `0x0000000000000000000000000000000000000000`.
 
