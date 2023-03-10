@@ -2,7 +2,7 @@
 
 ## Initial
 
-We assumed that you have an initialized instance of Orand
+We assume that you have an initialized instance of Orand.
 
 ```ts
 import { orand } from "@orochi-network/sdk";
