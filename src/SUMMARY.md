@@ -59,7 +59,7 @@
     - [VDF Algorithms](./vdf/vdf-summary/definition.md)
     - [VDF Properties](./vdf/vdf-summary/properties.md)
     - [VDF Applications](./vdf/vdf-summary/application.md)
-  - [A survey of VDF constructions](./vdf/vdf-candidates/existing-construction.md)
+   <!-- - - [A survey of VDF constructions](./vdf/vdf-candidates/existing-construction.md)
     - [Group of Unknown Order based VDF](./vdf/vdf-candidates/rsa-time-lock-construction.md)
     - [Isogeny based VDF](./vdf/vdf-candidates/isogeny-construction.md)
     - [Verifiable Computation based VDF](./vdf/vdf-candidates/vc-based-construction.md)
