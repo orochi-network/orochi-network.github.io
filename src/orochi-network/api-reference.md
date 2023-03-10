@@ -173,7 +173,7 @@ Allowed you to read the data of current active chain.
 await orandInstance.getOperatorAddress();
 ```
 
-Get the operator's address that going to sign the ECDSA Proof.
+Get the operator's address that is going to sign the ECDSA Proof.
 
 **Result:**
 
