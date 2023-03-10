@@ -20,7 +20,7 @@ const orandInstance = new orand.Orand({
 
 To prevent replay attack, we're required you to input `consumerAddress`. It's a smart contract address that will consume the randomness. Each `consumerAddress` will have different epoch target, you only able to to submit the epoch which has the matched epoch with target epoch on `OrandProviderV1` smart contract.
 
-Some results will be return in `BigInt` due to new update from `ethers.js`.
+Some results will be returned in `BigInt` due to new update from `ethers.js`.
 
 ### .getPublicEpoch()
 
