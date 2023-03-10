@@ -129,7 +129,7 @@ Allowed you to get a list of private epoch the starting `epoch`, it will return 
 await orandInstance.verifyECDSAProof(epochData);
 ```
 
-Allowed you verify the ECDSA proof of any given epoch.
+Allowed you to verify the ECDSA proof of any given epoch.
 
 **Result:**
 
