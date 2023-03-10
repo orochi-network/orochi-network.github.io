@@ -219,7 +219,7 @@ Get current `epoch` of receiver, this value will be increased after a new epoch 
 await orandInstance.verifyECVRFProof(epochData);
 ```
 
-Allowed you to verify the correctness of any epoch, it will return `true` if the given epoch is valid otherwise it returns `false`.
+Allowed you to verify the correctness of any epoch, it will return `true` if the given epoch is valid, otherwise it will return `false`.
 
 **Result:**
 
