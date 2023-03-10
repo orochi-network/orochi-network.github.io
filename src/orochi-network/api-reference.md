@@ -153,7 +153,7 @@ Allowed you to verify the ECDSA proof of any given epoch.
 await orandInstance.getActiveChain();
 ```
 
-Allowed you read the data of current active chain.
+Allowed you to read the data of current active chain.
 
 **Result:**
 
