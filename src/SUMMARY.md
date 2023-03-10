@@ -1,10 +1,11 @@
 # Summary
 
-- [Orochi Network](./orochi-network/chapter.md)
+- [Orochi Network](./orochi-network/orochi-network.md)
   - [Orand V1](./orochi-network/orand-v1.md)
   - [Orochi Network SDK](./orochi-network/sdk.md)
   - [Orand Contract Integration](./orochi-network/contract-integration.md)
   - [Orand Code Integration](./orochi-network/code-integration.md)
+  - [API Reference](./orochi-network/api-reference.md)
 - [Verifiable Random Function (VRF)](./ecvrf/verifiable-random-function.md)
   - [Overview of VRF](./ecvrf/ecvrf-summary/overview-of-vrf.md)
     - [Introduction to VRF](./ecvrf/ecvrf-summary/introduction.md)
