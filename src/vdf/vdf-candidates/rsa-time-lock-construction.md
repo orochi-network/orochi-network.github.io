@@ -1,9 +1,12 @@
 ### Group of Unknown Order based Constructions
 
-The drawback of the RSW time-lock puzzle assumption is that the prover is not allowed to know the factorization of \\(N\\). Thus, a trusted third party is required to sample \\(N\\).
+Most constructions require the prover to calculate the value \\(y=g^{2^t}\\) and provide a proof \\(\pi\\) of \\(y\\) that allows efficient verification. Without the knowledge of \\(|G|\\), calculating \\(y\\) requires \\(O(t)\\) steps.
 
-To avoid trusted setup, we can choose \\(G\\) to be the class group of an imaginary quadratic field.
-For a large \\(d \equiv 3 \pmod{4}\\), it is assumed that the order of the class group of \\(\mathbb{Q}(\sqrt(d))\\) is hard to compute.
+There are two candidates for such group: The **RSA group** and the **Class Group of Imaginary Quadratic Number Field**.
+
+The RSA group \\((\mathbb{Z},.)\\) where \\(N\\) is a product of two primes with unknown factorization. The problem of the RSA group is that we require a trusted party to generate \\(N\\).
+
+To avoid trusted setup, the Class Group of Imaginary Quadratic Number Field is considered. For a large positive integer \\(d \equiv 3 \pmod{4}\\), 
 
 ### Pietrzak's Construction
 
