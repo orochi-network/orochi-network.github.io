@@ -1,16 +1,16 @@
 ### Group of Unknown Order based Constructions
 
-Most constructions require the prover to calculate the value \\(y=g^{2^t}\\) and provide a proof \\(\pi\\) of \\(y\\) that allows efficient verification. Without the knowledge of \\(|G|\\), calculating \\(y\\) requires \\(O(t)\\) steps.
+As its name suggests, most constructions follow this direction uses a group \\(G\\) such that \\(|G|\\) is unknown. These constructions require the prover to calculate the value \\(y=g^{2^t}\\) and provide a proof \\(\pi\\) of \\(y\\) that allows efficient verification. Without the knowledge of \\(|G|\\), calculating \\(y\\) requires \\(O(t)\\) steps.
 
-There are two candidates for such group: The **RSA group** and the **Class Group of Imaginary Quadratic Number Field**.
+There are two candidates for such a group: The **RSA group** and the **Class Group of Imaginary Quadratic Number Field**.
 
-The RSA group \\((\mathbb{Z},.)\\) where \\(N\\) is a product of two primes with unknown factorization. The problem of the RSA group is that we require a trusted party to generate \\(N\\).
+The RSA group is the group \\G=((\mathbb{Z}^\times,.)\\) where \\(N\\) is a product of two primes with unknown factorization. Computing the group order of \\(N\\) is as hard as factoring \\(N\\), so \\(G\\) can be seen as a Group of Unknown Order. However, the problem of the RSA group is that we require a trusted party to generate \\(N\\).
 
-To avoid trusted setup, the Class Group of Imaginary Quadratic Number Field is considered. For a large positive integer \\(d \equiv 3 \pmod{4}\\), 
+To avoid trusted setup, the Class Group of Imaginary Quadratic Number Field is considered.  Consider a large negative squarefree integer \\(d \equiv 1 \pmod{4}\\), and let \\(\mathcal{O}=\mathbb{Z}+\mathbb{Z}(d+sqrt(d))\2\\). It is the maximal order of \\(\mathbb{Q}(sqrt(d))\\). We say two fractional ideals \\(I,J\\) in \\(\mathcal{O}\\) is equavilent if \\(I=\alpha J\\) for some \\(\alpha \in \mathbb{Q}(sqrt(d))\\). The set of equavilence classes forms an abelian group under ideal multiplication, and this group is called the Class Group of \\(\mathbb{Q}(sqrt(d))\\). The order of the group is always finite. When \\(d\\) is large the order of the \\(Cls(d)\\)  is believed to be hard to compute {{#cite BH01}}. For more informations of the choice of parameters, we refer the readers to see {{#cite BH01}}.
 
 ### Pietrzak's Construction
 
-In the construction, we assume that \\(t\\) is a power of two.
+Pietrzak {{#cite Pie18}} proposed a VDF based on a Group of Unknown Order. His idea for generating the proof for \\(y=g^{2^t}\\) is to use the identity \\(z^ry=(g^rz)^{2^{T/2}}\\) for any \\(r\\) where \\(z=g^{2^{T/2}}\\). His construction is described below.
 
 **\\(\mathsf{Gen}(1^\lambda)\\)**: The algoritms outputs  \\(pp=(G,H)\\), where: 
 
@@ -24,7 +24,7 @@ In the construction, we assume that \\(t\\) is a power of two.
 
 ### Wesolowski's Construction
 
-Wesolowski introduced constructed a trapdoor VDF.
+Independently from Pietrzak, Wesolowski {{#cite W18}} also constructed a VDF based on a Group of Unknown Order. Unlike Pietrzak's, Wesolowski's construction has shorter proof size and allows faster verification. However, the proving time is slower, as it require \\(\mathcal{O}(t)\\)  computation steps compared to \\(\mathcal{O}(sqrt(t))\\) in Pietrzak's construction.
 
 **\\(\mathsf{Gen}(1^\lambda)\\)**: The algoritms outputs \\((pk,sk)\\)=\\(((G,H_1,H_2),|G|)\\) where:  
 
