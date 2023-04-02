@@ -1,4 +1,4 @@
-isogeny-construction.md
+
 ### Isogeny based Constructions
 
 In 2019, Luca de Feo et al {{#cite FMPS19}} constructed a VDF based on isogenies of supersingular elliptic curves and pairing. Their construction is motivated by the BLS signature, which uses a bilinear pairing. {{#cite FMPS19}}.

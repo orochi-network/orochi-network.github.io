@@ -1,6 +1,6 @@
 ### Modular Square Root based Construction
 
-One of the early example of VDF can be found in the paper of Dwork and Naor. Their construction require a prover, to compute \\(Y=\sqrt(X) \pmod{p}\\) for a prime \\(p\\) and input \\(X\\). When \\(p \equiv 3 \pmod{4}\\) we see that \\(Y=X^{\dfrac{p+1}{4}} \pmod{p}\\), and thus computing \\(Y\\) requires \\(\mathcal{O}(log(p))\\) computation steps. Verifying only require one multiplication by checking \\(Y^2 \equiv X \pmod{p}\\).
+One of the early example of VDF can be found in the paper of Dwork and Naor {{#cite DN92}}. Their construction require a prover, to compute \\(Y=\sqrt(X) \pmod{p}\\) for a prime \\(p\\) and input \\(X\\). When \\(p \equiv 3 \pmod{4}\\) we see that \\(Y=X^{\dfrac{p+1}{4}} \pmod{p}\\), and thus computing \\(Y\\) requires \\(\mathcal{O}(log(p))\\) computation steps. Verifying only require one multiplication by checking \\(Y^2 \equiv X \pmod{p}\\).
 
 The construction is formally described as follow.
 

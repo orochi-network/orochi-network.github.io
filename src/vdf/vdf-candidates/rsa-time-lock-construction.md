@@ -1,4 +1,4 @@
-rsa-time-lock-construction.md
+
 ### Group of Unknown Order based Constructions
 
 As its name suggests, most constructions follow this direction uses a group \\(G\\) such that \\(|G|\\) is unknown. These constructions require the prover to calculate the value \\(y=g^{2^t}\\) and provide a proof \\(\pi\\) of \\(y\\) that allows efficient verification. Without the knowledge of \\(|G|\\), calculating \\(y\\) requires \\(O(t)\\) steps.
@@ -12,7 +12,7 @@ For a large \\(d \equiv 3 \pmod{4}\\), it is assumed that the order of the class
 
 ### Pietrzak's Construction
 
-Pietrzak {{#cite Pie18}} proposed a VDF based on a Group of Unknown Order. His idea for generating the proof for \\(y=g^{2^t}\\) is to use the identity \\(z^ry=(g^rz)^{2^{T/2}}\\) for any \\(r\\) where \\(z=g^{2^{T/2}}\\). His construction is described below.
+Pietrzak {{#cite Pie19}} proposed a VDF based on a Group of Unknown Order. His idea for generating the proof for \\(y=g^{2^t}\\) is to use the identity \\(z^ry=(g^rz)^{2^{T/2}}\\) for any \\(r\\) where \\(z=g^{2^{T/2}}\\). His construction is described below.
 
 **\\(\mathsf{Gen}(1^\lambda)\\)**: The algoritms outputs  \\(pp=(G,H)\\), where: 
 
@@ -26,7 +26,7 @@ Pietrzak {{#cite Pie18}} proposed a VDF based on a Group of Unknown Order. His i
 
 ### Wesolowski's Construction
 
-Wesolowski introduced constructed a trapdoor VDF.
+Independently from Pietrzak, Wesolowski {{#cite Wes19}} also constructed a VDF based on a Group of Unknown Order. Unlike Pietrzak's, Wesolowski's construction has shorter proof size and allows faster verification. However, the proving time is slower, as it require \\(\mathcal{O}(t)\\)  computation steps compared to \\(\mathcal{O}(\sqrt(t))\\) in Pietrzak's construction.
 
 **\\(\mathsf{Gen}(1^\lambda)\\)**: The algoritms outputs \\((pk,sk)\\)=\\(((G,H_1,H_2),|G|)\\) where:  
 
