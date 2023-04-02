@@ -19,4 +19,3 @@ Now we move to describe the VDF Construction.
 
 In the construction, to compute the isogeny the map \\(\hat{\phi}\\), we are expected to walk \\(t\\) times between some vertices in the isogeny graph \\(G_{F_q}(l)\\). Currently, there is efficient algorithm to find shortcut between these vertices of the graph. 
 
-The drawback of the construction is that it requires huge storage. It comes from the evaluation process, after computing the isogeny, a large number of kenrel points are needed to be stored to compute \\(\hat{\phi}\\). {{#cite FMPS19}}. 

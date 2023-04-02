@@ -7,7 +7,8 @@ There are two candidates for such a group: The **RSA group** and the **Class Gro
 
 The RSA group is the group \\G=((\mathbb{Z}^\times,.)\\) where \\(N\\) is a product of two primes with unknown factorization. Computing the group order of \\(N\\) is as hard as factoring \\(N\\), so \\(G\\) can be seen as a Group of Unknown Order. However, the problem of the RSA group is that we require a trusted party to generate \\(N\\).
 
-To avoid trusted setup, the Class Group of Imaginary Quadratic Number Field is considered.  Consider a large negative squarefree integer \\(d \equiv 1 \pmod{4}\\), and let \\(\mathcal{O}=\mathbb{Z}+\mathbb{Z}(d+\sqrt(d))\2\\). It is the maximal order of \\(\mathbb{Q}(\sqrt(d))\\). We say two fractional ideals \\(I,J\\) in \\(\mathcal{O}\\) is equavilent if \\(I=\alpha J\\) for some \\(\alpha \in \mathbb{Q}(\sqrt(d))\\). The set of equavilence classes forms an abelian group under ideal multiplication, and this group is called the Class Group of \\(\mathbb{Q}(\sqrt(d))\\). The order of the group is always finite. When \\(d\\) is large the order of the \\(Cls(d)\\)  is believed to be hard to compute {{#cite BH01}}. For more informations of the choice of parameters, we refer the readers to see {{#cite BH01}}.
+To avoid trusted setup, we can choose \\(G\\) to be the class group of an imaginary quadratic field.
+For a large \\(d \equiv 3 \pmod{4}\\), it is assumed that the order of the class group of \\(\mathbb{Q}(\sqrt(d))\\) is hard to compute.
 
 ### Pietrzak's Construction
 
@@ -25,7 +26,7 @@ Pietrzak {{#cite Pie18}} proposed a VDF based on a Group of Unknown Order. His i
 
 ### Wesolowski's Construction
 
-Independently from Pietrzak, Wesolowski {{#cite W18}} also constructed a VDF based on a Group of Unknown Order. Unlike Pietrzak's, Wesolowski's construction has shorter proof size and allows faster verification. However, the proving time is slower, as it require \\(\mathcal{O}(t)\\)  computation steps compared to \\(\mathcal{O}(\sqrt(t))\\) in Pietrzak's construction.
+Wesolowski introduced constructed a trapdoor VDF.
 
 **\\(\mathsf{Gen}(1^\lambda)\\)**: The algoritms outputs \\((pk,sk)\\)=\\(((G,H_1,H_2),|G|)\\) where:  
 
