@@ -16,11 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Install mdbook cli
-        run: cargo install mdbook && cargo install mdbook-bib
-
       - name: Prepare SSH environment
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -42,4 +37,4 @@ jobs:
         env:
           HOME_DIR: ${{ env.HOME_DIR }}
         run: |
-          ssh prod "cd $HOME_DIR && sh run.sh"
+          ssh prod "$HOME_DIR/run.sh"
