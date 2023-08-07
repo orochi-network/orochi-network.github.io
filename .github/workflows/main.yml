@@ -1,42 +1,32 @@
-name: Deploy Cookbook to S3
-
+name: Deploy
 on:
   push:
-    branches: ['main']
-
-env:
-  HOME_DIR: /home/ubuntu/prod/cookbook
+    branches:
+      - main
 
 jobs:
   deploy:
-    name: deploy
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write # To push a branch
+      pull-requests: write # To create a PR from that branch
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install mdbook cli
+        with:
+          fetch-depth: 0
+      - name: Install latest mdbook
         run: cargo install mdbook && cargo install mdbook-bib
-
-      - name: Prepare SSH environment
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_USER: ${{ secrets.SSH_USER }}
+      - name: Deploy GitHub Pages
         run: |
-          mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/private.key
-          sudo chmod 600 ~/.ssh/private.key
-          cat >>~/.ssh/config <<END
-          Host prod
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile ~/.ssh/private.key
-            StrictHostKeyChecking no
-          END
-
-      - name: Deploy
-        env:
-          HOME_DIR: ${{ env.HOME_DIR }}
-        run: |
-          ssh prod "cd $HOME_DIR && sudo rm -rf ./book && mdbook build"
+          mdbook build
+          git worktree add gh-pages
+          git config user.name "Deploy from CI"
+          git config user.email ""
+          cd gh-pages
+          # Delete the ref to avoid keeping history.
+          git update-ref -d refs/heads/gh-pages
+          rm -rf *
+          mv ../book/* .
+          git add .
+          git commit -m "Deploy $GITHUB_SHA to gh-pages"
+          git push --force --set-upstream origin gh-pages
