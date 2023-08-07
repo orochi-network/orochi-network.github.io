@@ -37,4 +37,4 @@ jobs:
         env:
           HOME_DIR: ${{ env.HOME_DIR }}
         run: |
-          ssh prod "$HOME_DIR/run.sh"
+          ssh prod "/home/ubuntu/prod/cookbook/run.sh"
