@@ -3,6 +3,9 @@ name: Deploy Cookbook to S3
 on:
   push:
     branches: ['main']
+  pull_request:
+    branches:
+      - main
 
 env:
   HOME_DIR: /home/ubuntu/prod/cookbook
