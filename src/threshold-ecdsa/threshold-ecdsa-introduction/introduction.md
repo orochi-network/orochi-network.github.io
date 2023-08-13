@@ -1,0 +1,2 @@
+### Introduction
+A \((t-n)\) threshold signature protocol allows distributed signing among \(n\) participants  such that any group of \(t+1\) participants can produce a valid signature, while any group of fewer that \(t\) participants cannot.
