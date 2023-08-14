@@ -1,6 +1,6 @@
 ### Verification
 
-We describe the **Verify** algorithm of tbe threshold ECDSA below.
+Recall that the verification algorithm in threshold ECDSA remain identical to an ordinary ECDSA verification algorithm. Hence, it is sufficient to describe the **Verify** algorithm of the threshold ECDSA below.
 
 **Verify\\((msg,(\rho,\sigma),pk)\\):** This is just the standard ECDSA verify algorithm. It works as follow: 
 

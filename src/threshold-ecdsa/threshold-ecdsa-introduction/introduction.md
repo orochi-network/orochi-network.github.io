@@ -1,2 +1,4 @@
 ## Introduction
-A \\((t-n)\\) threshold signature protocol allows distributed signing among \\(n\\) participants  such that any group of \\(t+1\\) participants can produce a valid signature, while any group of fewer that \\(t\\) participants cannot.
+A \\((t-n)\\) threshold signature protocol allows distributed signing among \\(n\\) participants  such that any group of \\(t+1\\) participants can produce a valid signature, while any group of fewer that \\(t\\) participants cannot. The goal is to produce signatures that are compatible with an existing centralized signature scheme. Compared to an ordinary signature scheme, the setup and signing algorithms  are replaced by interactive protocol between participants, while the signing algorithm remains identical to the verification of a signature issued by a centralized party. 
+
+With the advance of blockchain, threshold signature has received increased attention from the community. This is beacause transactions in blockchain are made possible via digital signatures.
