@@ -20,9 +20,11 @@ We recall that after the **KeyGen** protocol, the secret state each participants
 
 This algorithm is used by each participant to produce the final signature. Each \\(P_i\\) do the following:
 
--  Compute \\(\delta_i=\gamma_ik_i\\).
+- Set \\(r\\) to be the \\(x\\)-coordinate of \\(R\\) and compute \\(\sigma_i=k_iM+r\chi_i\\)
 
 - Set \\(\sigma=\sum_{i}\sigma_i\\) check if 
 (\\(\rho,\sigma\\)) is a valid signature using **Verify** alorithm.
 
 - Output \\((\rho,\sigma)\\).
+
+Note that the signing algorithm above can fail if **Verify** returns False. In this case, we need to track down the curprit who failed to follow the protocol as follow:
