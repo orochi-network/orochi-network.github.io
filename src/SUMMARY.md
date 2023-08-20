@@ -59,7 +59,7 @@
 - [Threshold Signature](./threshold-ecdsa/chapter.md)
     - [Introduction](./threshold-ecdsa/threshold-ecdsa-introduction/introduction.md)
       - [Definition](./threshold-ecdsa/threshold-ecdsa-introduction/definition.md)
-      - [Security](./threshold-ecdsa/threshold-ecdsa-introduction/security.md)
+      - [Application](./threshold-ecdsa/threshold-ecdsa-introduction/application.md)
     - [Construction](./threshold-ecdsa/threshold-ecdsa-construction/introduction.md)
       - [Technical Overview](./threshold-ecdsa/threshold-ecdsa-construction/technical-overview/technical-overview.md)
       - [Key Generation](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/keygen.md)
