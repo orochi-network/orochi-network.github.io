@@ -67,3 +67,4 @@
       - [Verification](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.md)
       - [Analysis](./threshold-ecdsa/threshold-ecdsa-construction/analysis/analysis.md)
     - [Our Intended Implementation](./threshold-ecdsa/intended-implementation/our-intended-implementation.md)
+    - [Security Consideration](./threshold-ecdsa/intended-implementation/security-consideration.md)

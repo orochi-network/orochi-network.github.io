@@ -1,5 +1,7 @@
 ### Analysis
 
+In this section, we provide the complexity analysis of the protocol.
+
 **Key Generation:**
 
 **Signing:**
