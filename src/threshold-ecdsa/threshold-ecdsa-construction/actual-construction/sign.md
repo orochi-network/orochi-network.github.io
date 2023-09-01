@@ -1,30 +1,13 @@
 ### Signing
 
-We describe the sign procedure of threshold ECDSA construction in. The procedure is divided into four smaller round below
+In this section, we describe the signing process of the protocol.
 
-**Pre-sign:**
+- Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_q\\) and compute \\(C_i=\mathsf{Com}(g^{\gamma_i})\\) and broadcasts \\(C_i\\).
 
-We recall that after the **KeyGen** protocol, the secret state each participants \\(P_i\\) consists of \\(sk_i,p_i,q_i\\) such that \\(N_i=p_i \cdot q_i\\). 
+- Each participant \\(P_i\\) broadcasts \\(\Gamma_i=g^{\gamma_i}\\), then compute \\(Gamma=\prod_i \Gamma_i\\) and 
 
-- **Round 1:**
- - Sample \\(k_i\\) and \\(\gamma_i\\) uniformly in \\(\mathbb{Z}_q\\).
+$$R=\Gamma^{\delta^{-1}}=g^{\sum_i\gamma_ik^{-1}\gamma^{-1}}=g^{k^{-1}}$$
 
-- **Round 2:**
+- Each participant \\(P_i\\) broadcasts \\(S_i=R^{\sigma_i}\\). If \\(pk \neq \prod_i S_i\\) then the protocol aborts.
 
-- **Round 3:**
-
- 
- - Set \\(\delta=\sum_i\delta_i\\), then check if \\(g^\delta=\prod_i\Delta_i\\)and set \\(\rho=\Gamma^{\delta^{-1}}\\).
-
-**Sign(\\(msg,\rho,\\{\sigma_i\\}_{i=1}^{t+1}\\)):** 
-
-This algorithm is used by each participant to produce the final signature. Each \\(P_i\\) do the following:
-
-- Set \\(r\\) to be the \\(x\\)-coordinate of \\(R\\) and compute \\(\sigma_i=k_iM+r\chi_i\\)
-
-- Set \\(\sigma=\sum_{i}\sigma_i\\) check if 
-(\\(\rho,\sigma\\)) is a valid signature using **Verify** alorithm.
-
-- Output \\((\rho,\sigma)\\).
-
-Note that the signing algorithm above can fail if **Verify** returns False. In this case, we need to track down the curprit who failed to follow the protocol as follow:
+- Each participants \\(P_i\\) broadcasts \\(\rho_i=m k_i+r \sigma_i\\). The final signature \\(\rho\\) of \\(m\\) is equal to be \\(\rho=\sum_{i} \rho_i\\).

@@ -2,9 +2,7 @@
 
 In this section we briefly describe the threshold ECDSA protocol of Gennaro etal in. This is the protocol that provide the best security and efficiency so far. As the title suggest, the protocol provide the following features:
 
-- **Non Interactive:** Gennaro etal's protocol achieves non-interactive in the following sense: The signing protocol consists of a preprocessing phase before the  message \\(M\\) is known, followed by a non-interactive signing phase, where each participant can generate his own signature of \\(M\\) using the preprocessed information.
-- **Universal Composable Security:** The security of the protocol can be proven with the Universal Composable framework. The framework can realize protocol execution in a realistic enviromnent, compared to the traditional game based security.
-- **Proactive Security:** 
+- **Non Interactive online phase:** Gennaro etal's protocol achieves non-interactive in the following sense: The signing protocol consists of a preprocessing phase before the  message \\(M\\) is known, followed by a non-interactive signing phase, where each participant can generate his own signature of \\(M\\) using the preprocessed information.
 - **Identifiable Abort:** The protocol contains additional mechanisms that allow participants to detect any signers who fail to participate in the signing process, or deviate from it.
 
-To see how the protocol achieve the abovementioned properties, we will move to construction of the protocol and analyse it.
+To see how the protocol achieve the abovementioned properties, we now move to construction of the protocol and analyse it.

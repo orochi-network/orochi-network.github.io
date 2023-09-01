@@ -1,22 +1,9 @@
 ### Key Generation
 
-We describe the key generation process in the construction of Gennaro et al. This protocol is divided into two sub protocols: **KeyGen** and **KeyRefresh**. In the **KeyGen** protocol, participants jointly follow the protocol to generate the common public key \\(pk\\) for vefification and a list of secret keys \\(\\{sk_i\\}_{i=1}^n\\) for each participant. The **KeyRefresh** protocol is used to renew the keys of the participants.
+In this section, we describe the key generation process in the construction of Gennaro et al. The key generation process is follow.
 
-**KeyGen:**
-- Each \\(P_i\\) sample \\(sk_i\\) and sets \\(pk_i=g^{sk_i}\\)
+- Each participant \\(P_i\\) select \\(s_i \in \mathbb{Z}_p\\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\) and broadcasts \\(E_i\\), the public key for Pallier's cryptosystem.
 
-- Each \\(P_i\\) broadcast a Schnoor proof that he know the exponent \\(sk_i\\) given the public key \\(pk_i\\). 
+- Each participant \\(P_i\\) broadcasts \\(y_i=g^{s_i}\\). The public key \\(pk\\) is set to be \\(pk=\prod_{i=1}^ny_i\\). \\(P_i\\) then performs Feldman's VSS to share \\(s_i\\).  Each \\(P_j\\) add the secret shares received as his secret key, i.e, \\(sk_j=\sum_i s_{ij}\\). The values \\(sk_i\\) are the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\).
 
-- The public key \\(pk\\) is set to \\(pk=\prod_{i=1}^npk_i\\).
-
-**KeyRefresh:**
-
-Each participant \\(P_i\\) does the following:
-
-- Sample two safe primes \\(p_i,q_i\\) and let \\(N_i=p_i\cdot q_i\\).
-
-- Sample \\(\mathbf{x_i}=(x_{i,1},x_{i,2},\dots,x_{i,n})\\) satisfying \\(\sum_{j=1}^{n}x_{i,j}=0\\) and set \\(\mathbf{X_i}=(X_{i,1}=g^{x_{i,1}},\dots,X_{i,n}=g^{x_{i,n}})\\)
-
-- Finally, the new secret key \\(sk^*_i\\) of \\(P_i\\) is set to be:
-
-$$sk_i^*=sk_i+\sum_{j=1}^{n}x_{j,i}$$
+- Each participant \\(P_i\\) use Schnorr's protocol to prove that he knows the secret key \\(sk_i\\).

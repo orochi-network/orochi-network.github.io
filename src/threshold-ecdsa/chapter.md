@@ -1,1 +1,3 @@
 # Threshold Signature
+
+In this chapter, we give an overview of threshold signatures and describe the construction of Gennaro et al in . The chapter is separated into \\(3\\) major parts. In the first part, we give a brief introduction to threshold signatures and state its syntax and security properties. In the second part, we give a brief description of the construction in . Finally, we briefly discuss our intended implementation and security concern of the implementation.
