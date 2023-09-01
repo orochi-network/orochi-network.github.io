@@ -11,7 +11,7 @@ Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that
 
 2. Each pair of participant \\(P_i,P_j\\) engages in two sub-protocols that converts multiplicative shares into additive shares as follow:
 
-    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,\gamma_j\\)  to obtain secret outputs \\(\alpha_{ij},\beta_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=\alpha_{ij}+\beta_{ij}\\)
+    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,\gamma_j\\) (see [Supporting Protocols](./supporting-algorithms.md)) to obtain secret outputs \\(\alpha_{ij},\beta_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=\alpha_{ij}+\beta_{ij}\\)
 
     - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,w_j\\)  to obtain secret outputs \\(u_{ij},v_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=u_{ij}+v_{ij}\\)
 
@@ -20,7 +20,7 @@ Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that
 3. Each participant \\(P_i\\) broadcasts the following:
 
     - \\(\delta_i\\) and reconstructs \\(\delta=\sum_i\delta_i=k\gamma\\).
-    - \\(T_i=g^{\sigma_i}h^{\ell_i}\\) and proves that he knows \\(\sigma_i,\ell_i\\).
+    - \\(T_i=g^{\sigma_i}h^{\ell_i}\\) and proves that he knows \\(\sigma_i,\ell_i\\) (see [Supporting Protocols](./supporting-algorithms.md)).
 
 4. Each participant \\(P_i\\) broadcasts \\(\Gamma_i=g^{\gamma_i}\\), then compute \\(\Gamma=\prod_i \Gamma_i\\) and 
 
@@ -28,6 +28,6 @@ $$R=\Gamma^{\delta^{-1}}=g^{\sum_i\gamma_ik^{-1}\gamma^{-1}}=g^{k^{-1}}$$
 
 5. Each participant \\(P_i\\) broadcasts \\(V_i=R^{k_i}\\). If \\(g \neq \prod_{i} V_i\\) then the protocol aborts. 
 
-6. Each participant \\(P_i\\) broadcasts \\(S_i=R^{\sigma_i}\\) and a zero  knowledge proof of consistency between \\(S_i\\) and \\(T_i\\) . If \\(pk \neq \prod_i S_i\\) then the protocol aborts.
+6. Each participant \\(P_i\\) broadcasts \\(S_i=R^{\sigma_i}\\) and a zero  knowledge proof of consistency between \\(S_i\\) and \\(T_i\\) (see [Supporting Protocols](./supporting-algorithms.md)). If \\(pk \neq \prod_i S_i\\) then the protocol aborts.
 
 7. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\) and broadcasts \\(s_i=m k_i+r \sigma_i\\). FInally, the signature \\(s\\) of \\(M\\) is equal to be \\(s=\sum_{i} s_i\\).
