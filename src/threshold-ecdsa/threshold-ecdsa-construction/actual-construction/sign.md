@@ -11,9 +11,9 @@ Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that
 
 2. Each pair of participant \\(P_i,P_j\\) engages in two sub-protocols that converts multiplicative shares into additive shares as follow:
 
-    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,\gamma_j\\)  to obtain \\(\alpha_{ij},\beta_{ij}\\) satisfying \\(k_i\gamma_j=\alpha_{ij}+\beta_{ij}\\)
+    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,\gamma_j\\)  to obtain secret outputs \\(\alpha_{ij},\beta_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=\alpha_{ij}+\beta_{ij}\\)
 
-    - \\(P_i,P_j\\) run \\(\mathsf{MtAwC}\\) with shares \\(k_i,w_j\\)  to obtain \\(u_{ij},v_{ij}\\) satisfying \\(k_i\gamma_j=u_{ij}+v_{ij}\\)
+    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,w_j\\)  to obtain secret outputs \\(u_{ij},v_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=u_{ij}+v_{ij}\\)
 
     - Each \\(P_i\\) sets \\(\delta_i=k_i\gamma_i+\sum_{j \neq i}(\alpha_{ij}+\beta_{ji})\\) and \\(\sigma_i=k_iw_i+\sum_{j \neq i}(u_{ij}+v_{ji})\\). Note that \\(k\gamma=\sum_i\delta_i\\) and \\(k\cdot sk=\sum_i \sigma_i\\).
 

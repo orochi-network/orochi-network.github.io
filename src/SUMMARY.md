@@ -65,5 +65,5 @@
       - [Signing](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.md)
       - [Verification](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.md)
       - [Supporting Algorithms](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.md)
-    - [Our Intended Implementation](./threshold-ecdsa/intended-implementation/our-intended-implementation.md)
+    - [Implementation Specification](./threshold-ecdsa/intended-implementation/our-intended-implementation.md)
       - [Security Consideration](./threshold-ecdsa/intended-implementation/security-consideration.md)
