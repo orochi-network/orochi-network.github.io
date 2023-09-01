@@ -1,6 +1,6 @@
 ### Signing
 
-In this section, we describe the signing process of the protocol. For any set \\(S \in \{1,\dots,n\}\\) of \\(t+1\\) participants who participate to sign a message \\(M\\), we denote \\(\lambda_{i,S}\\) to be the Lagrange coefficient w.r.t \\(S\\) and \\(w_i=\lambda_{i,S}sk_i\\). Note that by Feldman's VSS, \\(sk=\sum_{i \in S} w_i\\). The signing protocol follows a  \\(7\\) steps process below:
+In this section, we describe the signing process of the protocol. For any set \\(S \in \\{1,\dots,n\\}\\) of \\(t+1\\) participants who participate to sign a message \\(M\\), we denote \\(\lambda_{i,S}\\) to be the Lagrange coefficient w.r.t \\(S\\) and \\(w_i=\lambda_{i,S}sk_i\\). Note that by Feldman's VSS, \\(sk=\sum_{i \in S} w_i\\). The signing protocol follows a  \\(7\\) steps process below:
 
 **Sign\\((M)\langle \\{P_i(sk_i)\\}_{i=1}^n\rangle\\):** 
 

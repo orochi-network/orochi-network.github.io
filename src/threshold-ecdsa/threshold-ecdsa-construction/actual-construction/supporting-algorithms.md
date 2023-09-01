@@ -4,7 +4,9 @@ In this section, we specify the supporting protocols that support the signing pr
 
 #### Multiplicative to additive share conversion protocols 
 
-In Step 2 of the signing protocol, participants \\(P_1\\) and \\(P_2\\) who holds secrets \\(a,b\\) respectively, must follow the \\(\mathsf{MtA}\\) protocol to receive secret outputs \\(\alpha,\beta\\) for \\(P_1\\) and \\(P_2\\) such that \\(ab=\alpha+\beta \pmod{p}\\). The protocol proceeds as follow:
+In Step 2 of the signing protocol, participants \\(P_1\\) and \\(P_2\\) who holds secrets \\(a,b\\) respectively, must follow the \\(\mathsf{MtA}\\) protocol to receive secret outputs \\(\alpha,\beta\\) for \\(P_1\\) and \\(P_2\\) such that \\(ab=\alpha+\beta \pmod{p}\\). 
+
+Assume that \\(P_1\\) is equipped with a homomorphic encryption scheme \\(\mathcal{E}=(\mathsf{Enc},\mathsf{Dec})\\), in particular the Pallier cryptosystem is used in this protocol. The protocol proceeds as follow:
 
 1. \\(P_1\\) computes \\(c_A=\mathsf{Enc}(a)\\) and a proof \\(\pi_A\\) certifying the correctness of \\(c_A\\) and \\(a\le p^3\\). \\(P_1\\) then sends \\((c_A,\pi_A)\\) to \\(P_2\\).
 2. \\(P_2\\) verifies \\(\pi_A\\) and aborts if it fails to verify. Otherwise, it does the following:
