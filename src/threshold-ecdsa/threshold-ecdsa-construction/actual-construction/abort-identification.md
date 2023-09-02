@@ -1,0 +1,5 @@
+## Identifying Aborts
+
+Identifying misbehaving participants efficiently is a key contribution of “GG20”. An abort will happen if any player deviates from the protocol in a clearly identifiable way by not complying with instructions. In the case of such an abort, the guilty party would have to be identified and removed. In this section, we analyse how the protocol can identify abortion and remove mmisbehaving participants.
+
+Within “GG20”’s Sign protocol, there are eight instances in which an abort can occur, according to {{#cite GG20}}. Five of these eight instances involve a player failing a zero knowledge proof (Step 2,3,5,6) or a commitment opening (Step 4) and are easily concluded.
