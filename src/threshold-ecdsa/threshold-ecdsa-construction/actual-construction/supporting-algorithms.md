@@ -29,3 +29,7 @@ In Step 6 of the signing protocol, a participant who broadcasts \\(S=R^{\sigma},
 2. The verifier sends a challenge \\(c \in \mathbb{Z}_p\\).
 3. The prover sends \\(u=a+c\sigma\\) and \\(v=b+c\ell\\).
 4. The verifier checks if \\(g^uh^v=\alpha T^c\\) and \\(R^u=\beta S^c\\).
+
+#### Commitment Scheme
+
+In Step 1 of the Key Generation and Signing protocol, we require participants to commit their messages using a commitment scheme \\(\mathsf{Com}\\). In practice, one can use a cryptographic hash function \\(H\\) and define the commitment of \\(X\\) to be \\(H(X,r)\\) where \\(r\\) is chosen uniformly.

@@ -1,6 +1,6 @@
 ### Key Generation
 
-In this section, we describe the key generation process in the construction of Gennaro et al. The key generation process is follow.
+In this section, we describe the key generation process in the construction of Gennaro et al. In the protocol, we denote \\(\mathsf{Com}\\) to be a secure bindning and information theoretic hiding commitment scheme. The key generation process is follow.
 
 **Keygen \\((1^\lambda)\langle \\{P_i\\}_{i=1}^n\rangle\\):**
 

@@ -9,4 +9,4 @@ In this section, we are going to specify our implementation. We are going to spe
  - **edd25519:** Our implelemtation also intend to support the curve edd25519. It is one of the fastest curve for elliptic curve cryptography.
  - **sr25519:** This is
 
-**The Choice of Hash Function:** Finally, the commitment scheme \\(\mathsf{Com}\\) used in the signing protocol involves using a hash function in practice. We intend to use the **keccak** hash function.
+**The Choice of Hash Function:** Finally, the commitment scheme \\(\mathsf{Com}\\) used in the signing protocol involves using a hash function in practice, as mentioned in [Supporting Protocols](./supporting-algorithms.md). We intend to use the **keccak** hash function.
