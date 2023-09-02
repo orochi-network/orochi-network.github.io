@@ -30,4 +30,4 @@ $$R=\Gamma^{\delta^{-1}}=g^{\sum_i\gamma_ik^{-1}\gamma^{-1}}=g^{k^{-1}}$$ as wel
 
 6. Each participant \\(P_i\\) broadcasts \\(S_i=R^{\sigma_i}=g^{k^{-1}\sigma_i}\\) and a zero  knowledge proof of consistency between \\(S_i\\) and \\(T_i\\) (see [Supporting Protocols](./supporting-algorithms.md)). If \\(pk \neq \prod_i S_i\\) then the protocol aborts.
 
-7. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\) and broadcasts \\(s_i=m k_i+r \sigma_i\\). Finally, the signature \\(s\\) of \\(M\\) is equal to be \\(s=\sum_{i} s_i=k(m+r\cdot sk)\\).
+7. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\), then broadcasts \\(s_i=m k_i+r \sigma_i\\). and set \\(s=\sum_{i} s_i=k(m+r\cdot sk)\\). Finally, if **Verify\\((M,(r,s),pk)\\)=1**, then \\((r,s)\\) is a valid signature of \\(M\\), otherwise aborts.
