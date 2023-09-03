@@ -9,4 +9,4 @@ Recall that the verification algorithm in threshold ECDSA remain identical to an
 3. Compute \\(R=g^{u_1}pk^{u_2}\\).
 4. Check if \\(r=R.\mathsf{x}\\). If the check passes, return \\(1\\), otherwise return \\(0\\).
 
-One can see that, if \\((r,s)\\) is a valid ECDSA signature scheme, which has the form \\(r=g^{k^{-1}}\\) and \\(s=k(m+r\cdot sk)\\), then the verification algorithm above returns \\(1\\). 
+One can see that, if \\((r,s)\\) is a valid ECDSA signature scheme, which has the form \\(r=g^{k^{-1}}.\mathsf{x}\\) and \\(s=k(m+r\cdot sk)\\), then the verification algorithm above returns \\(1\\) since \\(R=g^{u_1}pk^{u_2}=g^{s^{-1}(m+r\cdot sk)}=g^{k^{-1}}\\). 
