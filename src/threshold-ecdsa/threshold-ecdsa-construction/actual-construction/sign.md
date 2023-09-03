@@ -1,10 +1,10 @@
 ### Signing
 
-In this section, we describe the signing process of the protocol. For any set \\(S \in \\{1,\dots,n\\}\\) of \\(t+1\\) participants who participate to sign a message \\(M\\), we denote \\(\lambda_{i,S}\\) to be the Lagrange coefficient w.r.t \\(S\\) and \\(w_i=\lambda_{i,S}sk_i\\). Note that by Feldman's VSS, \\(sk=\sum_{i \in S} w_i\\). The signing protocol follows a  \\(7\\) steps process below:
+In this section, we describe the signing process of the protocol. For any set \\(S \in \\{1,\dots,n\\}\\) of \\(t+1\\) participants who participate to sign a message \\(M\\), let \\(w_i=\lambda_{i,S}\cdot sk_i\\). Note that by Feldman's VSS, \\(sk=\sum_{i \in S} w_i\\). Note that since \\(pk_i=g^{sk_i} \\) is public after the key generation process, hence the value \\(W_i=g^{w_i}=pk_i^{\lambda_{i,\mathcal{S}}}\\) can also be publicly computed. The signing protocol follows a  \\(7\\) steps process below:
 
 **Sign\\((M)\langle \\{P_i(sk_i)\\}_{i=1}^n\rangle\\):** 
 
-1. Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_q\\) and compute \\(C_i=\mathsf{Com}(g^{\gamma_i})\\) and broadcasts \\(C_i\\).
+1. Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_p\\) and compute \\(C_i=\mathsf{Com}(g^{\gamma_i})\\) and broadcasts \\(C_i\\).
 
 Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that 
 \\(k\gamma=\sum _{i,j} k_i \gamma_j\\) and \\(k\cdot sk=\sum _{i,j} k_i w_j\\).
@@ -22,7 +22,7 @@ Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that
     - \\(\delta_i\\) and reconstructs \\(\delta=\sum_i\delta_i=k\gamma\\).
     - \\(T_i=g^{\sigma_i}h^{\ell_i}\\) and proves that he knows \\(\sigma_i,\ell_i\\) (see [Supporting Protocols](./supporting-algorithms.md)).
 
-4. Each participant \\(P_i\\) broadcasts \\(\Gamma_i=g^{\gamma_i}\\), then compute \\(\Gamma=\prod_i \Gamma_i\\) and 
+4. Each participant \\(P_i\\) broadcasts \\(\Gamma_i=g^{\gamma_i}\\), which can be verified from its commitment \\(C_i\\). \\(P_i\\) then compute \\(\Gamma=\prod_i \Gamma_i\\) and 
 
 $$R=\Gamma^{\delta^{-1}}=g^{\sum_i\gamma_ik^{-1}\gamma^{-1}}=g^{k^{-1}}$$ as well as \\(r=R.\mathsf{x}\\)
 
@@ -30,4 +30,5 @@ $$R=\Gamma^{\delta^{-1}}=g^{\sum_i\gamma_ik^{-1}\gamma^{-1}}=g^{k^{-1}}$$ as wel
 
 6. Each participant \\(P_i\\) broadcasts \\(S_i=R^{\sigma_i}=g^{k^{-1}\sigma_i}\\) and a zero  knowledge proof of consistency between \\(S_i\\) and \\(T_i\\) (see [Supporting Protocols](./supporting-algorithms.md)). If \\(pk \neq \prod_i S_i\\) then the protocol aborts.
 
-7. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\), then broadcasts \\(s_i=m k_i+r \sigma_i\\). and set \\(s=\sum_{i} s_i=k(m+r\cdot sk)\\). Finally, if **Verify\\((M,(r,s),pk)\\)=1**, then \\((r,s)\\) is a valid signature of \\(M\\), otherwise aborts.
+7. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\), then broadcasts \\(s_i=m k_i+r \sigma_i\\). and set \\(s=\sum_{i} s_i=k(m+r\cdot sk)\\). Finally, if **Verify\\((M,(r,s),pk)\\)**\\(=1\\), then \\((r,s)\\) is a valid signature of \\(M\\), otherwise aborts.
+
