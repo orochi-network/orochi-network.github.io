@@ -8,7 +8,7 @@ Now, the key generation process is follow.
 
 **Keygen \\((1^\lambda)\langle \\{P_i\\}_{i=1}^n\rangle\\):**
 
-1. Each participant \\(P_i\\) select \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\) and broadcasts \\(E_i=(N_i,h_{i1},h_{i2})\\), the public key of Pallier's cryptosystem, where \\(N_i>p^8\\). The Pallier's cryptosystem will be used in the \\(\mathcal{MtA}\\) protocol in [Supporting Protocols](./supporting-algorithms.md).
+1. Each participant \\(P_i\\) select \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\) and broadcasts \\(E_i=(N_i,h_{i1},h_{i2})\\), the public key of Pallier's cryptosystem, where \\(N_i>p^8\\). The Pallier's cryptosystem will be used in the \\(\mathsf{MtA}\\) protocol in [Supporting Protocols](./supporting-algorithms.md).
 
 2. Each participant \\(P_i\\) broadcasts \\(y_i=g^{s_i}\\). The public key \\(pk\\) is set to be \\(pk=\prod_{i=1}^ny_i\\). \\(P_i\\) then performs Feldman's Verifiable Secret Sharing scheme (see [Supporting Protocols](./supporting-algorithms.md)) to share \\(s_i\\) to other participants.  Each \\(P_j\\) add the secret shares received as his secret key, i.e, \\(sk_j=\sum_i s_{ij}\\). The values \\(sk_i\\) are the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\).
 
