@@ -14,7 +14,7 @@ Now, the key generation process is follow.
 
 3. Let \\(N_i\\) be the  RSA modulus associated with \\(E_i\\). Each participant \\(P_i\\) do the following:
  - Use Schnorr's protocol {{#cite S91}} to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
- - Prove that \\(N_i\\) is **a product of two safe primes** using the proof system of Gennaro, Micciancio, and Rabin {{#cite GMR98}} and that\\(h_{i1},h_{i2}\\) generate the same group modulo \\(N_i\\). 
+ - Prove that \\(N_i\\) is **a product of two safe primes** using the proof system of Gennaro, Micciancio, and Rabin {{#cite GMR98}} and that\\(h_{i1},h_{i2}\\) generate the same group modulo \\(N_i\\). Note that this differ from the orginial protocol, where participant \\(P_i\\) only need to prove that \\(N_i\\) is squarefree.
  
 
 By the property of Feldman's VSS, it can be proven that the public key \\(pk\\) is also equal to \\(g^{sk}\\), hence the key pair \\((pk,sk)\\) generated using the key generation protocol above has the same form of a key pair in an ECDSA signature scheme.
