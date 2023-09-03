@@ -13,7 +13,7 @@ Now, the key generation process is follow.
 2. Each participant \\(P_i\\) broadcasts \\(y_i=g^{s_i}\\). The public key \\(pk\\) is set to be \\(pk=\prod_{i=1}^ny_i\\). \\(P_i\\) then performs Feldman's Verifiable Secret Sharing scheme (see [Supporting Protocols](./supporting-algorithms.md)) to share \\(s_i\\) to other participants.  Each \\(P_j\\) add the secret shares received as his secret key, i.e, \\(sk_j=\sum_i s_{ij}\\). The values \\(sk_i\\) are the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\).
 
 3. Let \\(N_i\\) be the  RSA modulus associated with \\(E_i\\). Each participant \\(P_i\\) do the following:
- - Use Schnorr's protocol {{#cite S91}} to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
+ - Use Schnorr's protocol {{#cite S91}} (see [Supporting Protocols](./supporting-algorithms.md)) to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
  - Prove that \\(N_i\\) is **a product of two safe primes** using the proof system of Gennaro, Micciancio, and Rabin {{#cite GMR98}} and that\\(h_{i1},h_{i2}\\) generate the same group modulo \\(N_i\\). Note that this differ from the orginial protocol, where participant \\(P_i\\) only need to prove that \\(N_i\\) is squarefree.
  
 
