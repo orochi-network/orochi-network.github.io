@@ -16,7 +16,7 @@ In Step 2 of the signing protocol, participants \\(P_1\\) and \\(P_2\\) who hold
 
 Assume that \\(P_1\\) is equipped with the Pallier encryption scheme \\(\mathcal{E}=(\mathsf{Enc},\mathsf{Dec})\\), described in {{#cite P99}}. The protocol proceeds as follow:
 
-1. \\(P_1\\) computes \\(c_A=\mathsf{Enc}(a)\\) and a proof \\(\pi_A\\) certifying the correctness of \\(c_A\\) and \\(a\le p^3\\). \\(P_1\\) then sends \\((c_A,\pi_A)\\) to \\(P_2\\).
+1. \\(P_1\\) computes \\(c_A=\mathsf{Enc}(a)\\) and a proof \\(\pi_A\\) certifying the correctness of \\(c_A\\) and \\(a\le p^3\\) (the proof \\(\pi_A\\) can be generated using the public parameters N,h_1,h_2 in {{#cite MR04}}). \\(P_1\\) then sends \\((c_A,\pi_A)\\) to \\(P_2\\).
 2. \\(P_2\\) verifies \\(\pi_A\\) and aborts if it fails to verify. Otherwise, it does the following:
     - Choose \\(\beta \in \mathbb{Z}_{q^5}\\) and compute \\(\beta_2=-\beta \pmod{p}\\).
     - Compute \\(c_B=b*c_A+\mathsf{Enc}(\beta_2)=\mathsf{Enc}(ab+\beta')\\) and a proof \\(\pi_B\\) certifying the correctness of \\(c_B\\) and \\(b \le p^3\\) and \\(\beta_2 \le q^7\\). Finally, send \\((c_B,\pi_B)\\) to \\(P_1\\).
