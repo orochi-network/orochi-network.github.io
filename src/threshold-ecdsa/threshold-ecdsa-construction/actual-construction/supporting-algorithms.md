@@ -41,7 +41,7 @@ In Step 3.3 of the key refresh process, a participant who broadcasts \\(h_1,h_2\
 
 **Proof of Product of Two Primes:**
 
-In Step 3.3 of the key refresh process, a participant must prove that the RSA modulus \\(N\\) is a product of two primes \\(p,q\\) such that \\(N=pq\\) and \\(p \equiv q \equiv 3 \pmod{4}\\) and \\(gcd(N,\phi(N))=1\\). The protocol process as follow:
+In Step 3.2 of the key refresh process, a participant must prove that the RSA modulus \\(N\\) is a product of two primes \\(p,q\\) such that \\(N=pq\\) and \\(p \equiv q \equiv 3 \pmod{4}\\) and \\(gcd(N,\phi(N))=1\\). The protocol process as follow:
 
 1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(()\\) denotes the Jacobian symbol.
 
@@ -59,7 +59,7 @@ In Step 3.3 of the key refresh process, a participant must prove that the RSA mo
 
 **Pallier Encryption Range Proof:** 
 
-In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}(k_i)\\) has to provide a proof \\(pi\\) certifying \\(k_i<2^{3\lambda}\\). The protocol for providing \\(pi\\)  proceeds as follow:
+In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}(k_i)\\) has to provide a proof \\(\pi\\) certifying \\(k_i<2^{3\lambda}\\). The protocol for providing \\(\pi\\)  proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
@@ -81,9 +81,9 @@ In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}
 
 **Proof of Paillier Encryption given Group Commitment:**
 
-In Step 2.4 of the signing process, each participant has public input \\((C,X,F)\\) and secret input \\(x\\) and has to provide a proof \\(\pi\\) for the relation
+In Step 2.4 of the signing process, each participant has public input \\((C,X)\\) and secret input \\(x\\) and has to provide a proof \\(\pi\\) which proves that \\(((C,X),x) \in \mathcal{R}\\), where
 
-\\(\mathcal{R}=\\{((C,X),(x,y))~|~\land~X=g^{x}~\land~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X),x)~|~\land~X=g^{x}~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
@@ -99,9 +99,9 @@ In Step 2.4 of the signing process, each participant has public input \\((C,X,F)
 
 **Proof of Paillier Operation given Group Commitment:**
 
-In Step 2.5 and 2.6 of the signing process, each participant has public input \\((C,X,K,F)\\) and secret input \\((x,y)\\) and has to provide a proof \\(\pi\\) for the relation
+In Step 2.5 and 2.6 of the signing process, each participant has public input \\((C,X,K,Y)\\) and secret input \\((x,y)\\) and has to provide a proof \\(\pi\\) which proves that \\(((C,X,K,Y),(x,y)) \in \mathcal{R}\\), where
 
-\\(\mathcal{R}=\\{((C,X,K,Y),(x,y))~|~C=x\cdot K-\mathsf{Enc_1}(y)~\land~X=g^{x}~\land~Y=\mathsf{Enc_2}(y)~\land~\land~x<2^{3\lambda}~\land ~y \le 2^{7\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X,K,Y),(x,y))~|~C=x\cdot K-\mathsf{Enc_1}(y)~\land~X=g^{x}~\land~Y=\mathsf{Enc_2}(y)~\land~\land~x<2^{3\lambda}~\land ~y \le 2^{7\lambda}\\}\\) The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
