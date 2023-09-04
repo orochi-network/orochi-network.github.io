@@ -8,7 +8,7 @@ In this section, we describe the signing process of the protocol. For any set \\
 
     1. Compute \\(K_i=\mathsf{Enc}_i(k_i), G_i=\mathsf{Enc}_i(\gamma_i)\\) 
 
-    2. Compute a proof \\(\pi_i\\) certifying \\(k_i \in [1,2^{\lambda+\epsilon}]\\) (see [Supporting Protocols](./supporting-algorithms.md)).
+    2. Compute a proof \\(\pi_i\\) certifying \\(k_i \in [1,2^{3\lambda}]\\) (see [Supporting Protocols](./supporting-algorithms.md)).
 
     3. Send \\((K_i,G_i,\pi_i)\\) to all participants. 
  
@@ -19,20 +19,16 @@ In this section, we describe the signing process of the protocol. For any set \\
 
     1. Verify the validity of \\(\pi_j\\). If any check fails, the protocol aborts.
 
-    2. Sample \\(\beta_{ij},v_{ij} \in [1,\dots,2^{\lambda+\epsilon}]\\)
+    2. Sample \\(\beta_{ij},v_{ij} \in [1,\dots,2^{7\lambda}]\\)
 
     3. Comute \\(C_{ji}=\mathsf{Enc_j}(\gamma_ik_j-\beta_{ij})=\gamma_i\cdot K_j-\mathsf{Enc_j}(\beta_{ij})\\) and \\(C_{ji}'=\mathsf{Enc_j}(w_ik_j-v_{ij})=w_i\cdot K_j-\mathsf{Enc_j}(v_{ij})\\)
 
     4. Compute \\(F_{ji}=\mathsf{Enc_i}(\beta_{ij})\\), \\(F_{ji}'=\mathsf{Enc_i}(v_{ij})\\), \\(\Gamma_i=g^{\gamma_i}\\) and a proof \\(\pi_i^1\\) for the relation \\(\mathcal{R}_1=\\{(G_i,\Gamma_i,\gamma_i)~|~G_i=\mathsf{Enc_j}(\gamma_i)~\land~\Gamma_i=g^{\gamma_i}\\}\\) (see [Supporting Protocols](./supporting-algorithms.md))
 
-    5. Compute the proof \\(pi_i^2\\) for the relation \\(\mathcal{R_2}=\\{((C_{ji},W_i,K_j,F_{ji}),(\gamma_i,\beta_{ij}))~|~C_{ji}=\gamma_i\cdot K_j-\mathsf{Enc_j}(\beta_{ij})~\land~\Gamma_i=g^{\gamma_i}\\)
-
-        \\(\land~F_{ji}=\mathsf{Enc_2}(\beta_{ij})~\land~\beta_{ij},\gamma_i \le 2^{\lambda+\epsilon}\\}\\) (see [Supporting Protocols](./supporting-algorithms.md))
+    5. Compute the proof \\(pi_i^2\\) for the relation \\(\mathcal{R_2}=\\{((C_{ji},W_i,K_j,F_{ji}),(\gamma_i,\beta_{ij}))~|~C_{ji}=\gamma_i\cdot K_j-\mathsf{Enc_j}(\beta_{ij})~\land~\Gamma_i=g^{\gamma_i}~\land~F_{ji}=\mathsf{Enc_2}(\beta_{ij})~\land~\beta_{ij} \le 2^{7\lambda}~\land~\gamma_i \le 2^{3\lambda}\\}\\) (see [Supporting Protocols](./supporting-algorithms.md))
      
 
-    6. Compute the proof \\(pi_i^3\\) for the relation \\(\mathcal{R_3}=\\{((C_{ji}',\Gamma_i,K_j,F_{ji}'),(w_i,v_{ij}))~|~C_{ji}'=w_i\cdot K_j-\mathsf{Enc_j}(v_{ij})~\land~W_i=g^{w_i}\\)
-
-        \\(\land~F_{ji}'=\mathsf{Enc_2}(v_{ij})~\land~v_{ij},w_i \le 2^{\lambda+\epsilon} \\}\\). This can be done similarly to the step above.
+    6. Compute the proof \\(pi_i^3\\) for the relation \\(\mathcal{R_3}=\\{((C_{ji}',\Gamma_i,K_j,F_{ji}'),(w_i,v_{ij}))~|~C_{ji}'=w_i\cdot K_j-\mathsf{Enc_j}(v_{ij})~\land~W_i=g^{w_i}~\land~F_{ji}'=\mathsf{Enc_2}(v_{ij})~\land~v_{ij}<2^{7\lambda} ~\land~ w_i \le 2^{3\lambda} \\}\\). This can be done similarly to the step above.
 
     7. Sends \\(C_{ji},C_{ji}',F_{ji},F_{ji}',\Gamma_i,\pi_i^1,\pi_i^2, \pi_i^3\\) to all participants.
 

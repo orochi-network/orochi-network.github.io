@@ -4,7 +4,7 @@ In this section, we describe the key generation process in the construction of G
 The initial key generation process is executed exactly once to produce a public-secret key pair \\(pk,sk\\), while the key refresh process is executed whenever participants would like to change their partial secret keys in the way that \\(pk\\) and \\(sk\\) remains the same.
  Before moving to the protocol, we provide several notations that will be used in the protocol description below.  
 
-**Notation:** Let \\(\lambda\\) to be the security parameter. Let \\(\mathbb{G}\\) to be a cyclic group whose order is a prime number. Let \\(p \in (2^\lambda,2^{\lambda+\epsilon})\\) to be the order of \\(\mathbb{G}\\) and let \\(g,h\\) to be two generators of \\(\mathbb{G}\\). We denote \\(\mathsf{Com}\\) to be a secure binding and information theoretic hiding commitment scheme and \\(\mathsf{H}\\) to be a cryptographic hash function. For any set \\(\mathcal{S}\\) and for any \\(i \in \mathcal{S}\\) we denote \\(\lambda_{i,S}=\prod_{j\in \mathcal{S},j \neq i}\dfrac{j}{j-i}\\) to be the Lagrange coefficient w.r.t \\(S\\).
+**Notation:** Let \\(\lambda\\) to be the security parameter. Let \\(\mathbb{G}\\) to be a cyclic group whose order is a prime number. Let \\(p \in (2^{\lambda-1},2^\lambda)\\) to be the order of \\(\mathbb{G}\\) and let \\(g,h\\) to be two generators of \\(\mathbb{G}\\). We denote \\(\mathsf{Com}\\) to be a secure binding and information theoretic hiding commitment scheme and \\(\mathsf{H}\\) to be a cryptographic hash function. For any set \\(\mathcal{S}\\) and for any \\(i \in \mathcal{S}\\) we denote \\(\lambda_{i,S}=\prod_{j\in \mathcal{S},j \neq i}\dfrac{j}{j-i}\\) to be the Lagrange coefficient w.r.t \\(S\\).
 
 Now, the initial key generation and key-refresh process is follow.
 
@@ -22,7 +22,7 @@ The initial key generation is executed once at the beginning.
 **Key Refresh:**
 The key refreshment process is executed after a certain number of epochs whenever participants have to reset their partial secret keys.
  
-1. Each participant \\(P_i\\) samples \\(E_i=(N_i,h_{i1},h_{i2})\\), the public key of Pallier Cryptosystem.
+1. Each participant \\(P_i\\) samples \\(E_i=(N_i,h_{i1},h_{i2})\\), the public key of Pallier Cryptosystem {{#cite P91}} satisfying \\(N_i>2^{8\lambda}\\).
 
 2. Each participant \\(P_i\\) performs Feldman's Verifiable Secret Sharing scheme to distribute the shares \\(s_{ij}'\\) of \\(0\\) to other participants. Each participant \\(P_i\\) set his new secret key to be \\(sk_i'=sk_i+\sum_i s_{ji}'\\). The secret key \\(sk\\) remains the same and are unknown to other participants and the values \\(sk_i'\\) are still the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\)
 

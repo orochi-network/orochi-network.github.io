@@ -59,11 +59,11 @@ In Step 3.3 of the key refresh process, a participant must prove that the RSA mo
 
 **Pallier Encryption Range Proof:** 
 
-In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}(k_i)\\) has to provide a proof \\(pi\\) certifying \\(k_i<2^{\lambda+\epsilon}\\). The protocol for providing \\(pi\\)  proceeds as follow:
+In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}(k_i)\\) has to provide a proof \\(pi\\) certifying \\(k_i<2^{3\lambda}\\). The protocol for providing \\(pi\\)  proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
-2. The prover sample \\(\alpha \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\), \\(\delta \in [-2^{\lambda+\epsilon}\cdot N,\dots,2^{\lambda+\epsilon}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
+2. The prover sample \\(\alpha \in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
 
 3. The prover compute \\(S=h_1^k h_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^{N_1} \pmod {N_1^2}\\) and \\(C=h_1^\alpha h_2^\delta \pmod{N}\\)
 
@@ -77,17 +77,17 @@ In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}
 
 8. The verifier check if \\((1+N_1)^{z_1}z_2^{N_1}=AK^e \pmod{N_1^2}\\) and \\(h_1^{z_1}h_2^{z_3}=CS^e \pmod{N}\\)
 
-9 The verifier check that \\(z_i \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\)
+9 The verifier check that \\(z_i \in [-2^{3\lambda},\dots,2^{3\lambda}]\\)
 
 **Proof of Paillier Encryption given Group Commitment:**
 
 In Step 2.4 of the signing process, each participant has public input \\((C,X,F)\\) and secret input \\(x\\) and has to provide a proof \\(\pi\\) for the relation
 
-\\(\mathcal{R}=\\{((C,X),(x,y))~|~\land~X=g^{x}~\land~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{\lambda+\epsilon}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X),(x,y))~|~\land~X=g^{x}~\land~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
-2. The prover sample \\(\alpha \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\), \\(\delta \in [-2^{\lambda+\epsilon}\cdot N,\dots,2^{\lambda+\epsilon}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
+2. The prover sample \\(\alpha \in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
 
 3. The prover compute \\(S=h_1^xh_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^N_1 \pmod{N_1^2}\\), \\(Y=g^\alpha\\), \\(D=h_1^\alpha h_2^\gamma \pmod{N}\\)
 4. The prover sends \\(S,A,Y,D,F\\) to the verifier.
@@ -95,17 +95,17 @@ In Step 2.4 of the signing process, each participant has public input \\((C,X,F)
 6. The prover computes \\(z_1=\alpha+ek\\), \\(z_2=r\rho^e \pmod{N_1}\\) and \\(z_3=\gamma+eu\\)
 7. The prover sends \\(\pi=(z_1,z_2,z_3\\) to the verifier.
 8. The verifier checks that \\((1+N_1)^{z_1}z_2^{N_1}=AC^e \pmod{N_1^2}\\), \\(g^{z_1}=YX^e\\) and \\(h_1^{z_1}h_2^{z_3}=DS^e \pmod{N}\\)
-9. The verifier check that \\(z_1 \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\)
+9. The verifier check that \\(z_1 \in [-2^{3\lambda},\dots,2^{3\lambda}]\\)
 
 **Proof of Paillier Operation given Group Commitment:**
 
 In Step 2.5 and 2.6 of the signing process, each participant has public input \\((C,X,K,F)\\) and secret input \\((x,y)\\) and has to provide a proof \\(\pi\\) for the relation
 
-\\(\mathcal{R}=\\{((C,X,K,Y),(x,y))~|~C=x\cdot K-\mathsf{Enc_1}(y)~\land~X=g^{x}~\land~Y=\mathsf{Enc_2}(y)~\land~y \le 2^{\lambda+\epsilon}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X,K,Y),(x,y))~|~C=x\cdot K-\mathsf{Enc_1}(y)~\land~X=g^{x}~\land~Y=\mathsf{Enc_2}(y)~\land~\land~x<2^{3\lambda}~\land ~y \le 2^{7\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
-2. The prover sample \\(\alpha,\beta \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\), \\(\gamma, \delta \in [-2^{\lambda+\epsilon}\cdot N,\dots,2^{\lambda+\epsilon}\cdot N]\\), \\(m, u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\) and \\(r_y \in \mathbb{Z_{N_2}}\\)
+2. The prover sample \\(\alpha\in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\beta\in [-2^{7\lambda},\dots,2^{7\lambda}]\\), \\(\gamma, \delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(m, u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\) and \\(r_y \in \mathbb{Z_{N_2}}\\)
 
 3. The prover compute \\(A=K^\alpha((1+N_1)^\beta r^{N_1}) \pmod {N_1^2}\\), \\(B_x=g^\alpha\\), \\(B_y=(1+N_2)^\beta r_y\\), \\(E=h_1^\alpha h_2^\gamma \pmod{N}\\), \\(F=h_1^\beta h_2^\gamma \pmod{N}\\), \\(S=h_1^xh_2^m \pmod{N}\\), \\(T=h_1^yh_2^u \pmod{N}\\)
 4. The prover sends \\(S,T,A,B_x,B_y,E,F\\) to the verifier.
@@ -113,7 +113,7 @@ In Step 2.5 and 2.6 of the signing process, each participant has public input \\
 6. The prover compute \\(z_1=\alpha+ex\\), \\(z_2=\beta+ey\\), \\(z_3=\gamma+em\\), \\(z_4=\delta+eu\\), \\(w=r \rho^e \pmod{N_1}\\), \\(w_y=r \rho_y^e \pmod{N_2}\\)
 7. The prover sends \\(\pi=(z_1,z_2,z_3,z_4,w,w_y\\) to the verifier.
 8. The verifier checks that \\(K^{z_1}(1+N_1)^{z_2}w^{N_1} = A C^e \pmod{N}\\), \\(g^{z_1}=B_xX^e\\), \\((1+N_2)^{z_2}w_y^{N_2}=B_yY^e \pmod{N_2}\\), \\(h_1^{z_1}h_2^{z_3}=ES^e \pmod{N}\\), \\(h_1^{z_2}h_2^{z_4}=FT^e \pmod{N}\\)
-9. The verifier check that \\(z_1,z_2 \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\)
+9. The verifier check that \\(z_1 \in [-2^{3\lambda},\dots,2^{3\lambda}]\\) and \\(z_1 \in [-2^{7\lambda},\dots,2^{7\lambda}]\\)
 
 
 #### Commitment Scheme
