@@ -3,24 +3,29 @@
 Identifying misbehaving participants efficiently is a key contribution of “GG20”. An abort will happen if any player deviates from the protocol in a clearly identifiable way by not complying with instructions. In the case of such an abort, the guilty party would have to be identified and removed. In this section, we analyse how the protocol can identify abortion and remove mmisbehaving participants.
 
 ### Abort Instances
-Within “GG20”’s Sign protocol, there are eight instances in which an abort can occur, according to {{#cite GG20}}. They can be summarized as follow.
+Within “GG20”’s Sign protocol, there are 3 instances that the protocol can abort. They can be summarized as follow.
 
-1. In Step 2,3,5,6, the protocol aborts a participant \\(P_i\\) failed to produce a valid zero knowledge proof or valid opening of commitments.
+1. In step 2 of the signing process, when an invalid proof \\(pi_i\\) is detected.
 
-2. In step 7 the protocol aborts when \\(r,s\\) is not a valid signature of \\(M\\)
+2. In step 3 of the signing process, when an invalid proof \\(pi_i^1\\) or \\(pi_j^2\\) or \\(pi_k^3\\) is detected for some \\(i,j,k\\).
 
-3. In step 5, the protocol aborts when \\(g \neq \prod_{i} V_i\\).
+3. In step 5 of the signing proces, when \\(g^{\delta}=\sum_i\Delta_i\\)
 
-4. In step 6, the protocol aborts when \\(pk \neq \prod_i S_i\\).
+4. In step 6 of the signing process, when \\((r,s)\\) is not a valid signature of \\(M\\)
 
-### How to Identify Abortations
+### How to Identify Abortions
 
 Now, we show that how to identify the misbehaving participants that cause the protocol to abort in each cases above.
 
-1. The first case happens when a player failing a zero knowledge proof (Step 2,3,4,5,6) or a commitment opening (Step 4) and are easily concluded. 
+1. The first and second instances are straightforward. Whoever submits the wrong proof will be identified as malicious.
 
-2. In the second case, when \\((r, s)\\) is not a valid signature for \\(M\\), identification is slightly more complicated. In this case, Each \\(P_i\\) would thus be asked to confirm \\(R^{S_i}=V^mS_i^r\\). Whoever fails is identified as the malicious participant.
+2. The third and fourth instance are much more complicated. At a high level, the identification of these two instances proceed as follow:
 
-3. In the third case, when \\(g \neq \prod_{i} V_i\\) and, participants will be forced to open their private input and output of the \\(\mathsf{MtA}\\) protocol (the values \\(k_i,\gamma_i,\alpha_{ij},\beta_{ij}\\)), which need not to be kept secret after the signature has been created. Other participants can compute \\(\delta_i\\), then check if \\(G^{\delta_i}=V_i\\) and the malicious participant will be identified.
+    1. Each participant \\(P_i\\) is asked to reprove that the ciphertexts \\(C_{ij}\\) are well formed for each \\(j \neq i\\). 
+ 
+    2. Each participant \\(P_i\\) is asked to reveal \\(H_i=\mathsf{Enc_i}(k_i \gamma_i)\\) and \\(H_i'=\mathsf{Enc_i}(k_i w_i)\\) and prove their correctness given \\(K_i,G_i\\) and \\(X_i\\).
 
-4. Finally, when \\(pk \neq \prod_i S_i\\) participants will be forced to open \\(u_{ij}\\) and \\(k_i\\). Other participants can verify the correctness of \\(u_{ij}\\) then compute \\(g^{\sigma_i}\\) from \\(g^{w_i},k_i\\) and \\(u_{ij}\\). Given \\(S_i=R^{\sigma_i}\\), each participant \\(P_i\\) is required to prove the consistency of \\(sigma_i\\) from \\(S_i\\) and \\(g^{\sigma_i}\\). Anyone fails to do this will be identified as the malicious participant.
+    3. Each participant \\(P_i\\) prove that \\(\delta_i\\) is the plaintext obtained via the ciphertext \\(U_i=H_i\prod_{j \neq i}C_{ij}F_{ji}=\mathsf{Enc_i}(k_i\gamma_i+\sum_{j \neq i}(\alpha_{ij}+\beta_{ij}))\\)
+    
+    4. Similarly, each participant \\(P_i\\) prove that \\(s_i\\) is the plaintext obtained via the ciphertext \\(V_i=K_i^m(H_i'\prod_{j \neq i}C_{ij}'F_{ji}')^r=\mathsf{Enc_i}(mk_i+r(k_iw_i+\sum_{j \neq i}(u_{ij}+v_{ij})))=\mathsf{Enc_i}(mk_i+r\sigma_i)\\)
+    5. Whoever fails to prove will be identified as the malicious participant.

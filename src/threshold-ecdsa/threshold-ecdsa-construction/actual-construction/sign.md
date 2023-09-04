@@ -1,34 +1,54 @@
 ### Signing
 
-In this section, we describe the signing process of the protocol. For any set \\(S \in \\{1,\dots,n\\}\\) of \\(t+1\\) participants who participate to sign a message \\(M\\), let \\(w_i=\lambda_{i,S}\cdot sk_i\\). Note that by Feldman's VSS, \\(sk=\sum_{i \in S} w_i\\). Note that since \\(pk_i=g^{sk_i} \\) is public after the key generation process, hence the value \\(W_i=g^{w_i}=pk_i^{\lambda_{i,\mathcal{S}}}\\) can also be publicly computed. The signing protocol follows a  \\(7\\) steps process below:
+In this section, we describe the signing process of the protocol. For any set \\(S \in \\{1,\dots,n\\}\\) of \\(t+1\\) participants who participate to sign a message \\(M\\), let \\(w_i=\lambda_{i,S}\cdot sk_i\\). Note that by Feldman's VSS, \\(sk=\sum_{i \in S} w_i\\). Note that since \\(pk_i=g^{sk_i} \\) is public after the key generation process, hence the value \\(W_i=g^{w_i}=pk_i^{\lambda_{i,\mathcal{S}}}\\) can also be publicly computed. The signing protocol follows a  \\(6\\) steps process below:
 
 **Sign\\((M)\langle \\{P_i(sk_i)\\}_{i=1}^n\rangle\\):** 
 
-1. Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_p\\) and compute \\(C_i=\mathsf{Com}(g^{\gamma_i})\\) and broadcasts \\(C_i\\).
+1. Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_p\\) and do the following:
 
-Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that 
+    1. Compute \\(K_i=\mathsf{Enc}_i(k_i), G_i=\mathsf{Enc}_i(\gamma_i)\\) 
+
+    2. Compute a proof \\(\pi_i\\) certifying \\(k_i \in [1,2^{\lambda+\epsilon}]\\) (see [Supporting Protocols](./supporting-algorithms.md)).
+
+    3. Send \\((K_i,G_i,\pi_i)\\) to all participants. 
+ 
+ Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that 
 \\(k\gamma=\sum _{i,j} k_i \gamma_j\\) and \\(k\cdot sk=\sum _{i,j} k_i w_j\\).
 
-2. Each pair of participant \\(P_i,P_j\\) engages in two sub-protocols that converts multiplicative shares into additive shares as follow:
+2. For each \\(j \neq i\\), each participant \\(P_i\\) do the following:
 
-    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,\gamma_j\\) (see [Supporting Protocols](./supporting-algorithms.md)) to obtain secret outputs \\(\alpha_{ij},\beta_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=\alpha_{ij}+\beta_{ij}\\)
+    1. Verify the validity of \\(\pi_j\\). If any check fails, the protocol aborts.
 
-    - \\(P_i,P_j\\) run \\(\mathsf{MtA}\\) with shares \\(k_i,w_j\\)  to obtain secret outputs \\(u_{ij},v_{ij}\\) for \\(P_i,P_j\\) respectively satisfying \\(k_i\gamma_j=u_{ij}+v_{ij}\\)
+    2. Sample \\(\beta_{ij},v_{ij} \in [1,\dots,2^{\lambda+\epsilon}]\\)
 
-    - Each \\(P_i\\) sets \\(\delta_i=k_i\gamma_i+\sum_{j \neq i}(\alpha_{ij}+\beta_{ji})\\) and \\(\sigma_i=k_iw_i+\sum_{j \neq i}(u_{ij}+v_{ji})\\). Note that \\(k\gamma=\sum_i\delta_i\\) and \\(k\cdot sk=\sum_i \sigma_i\\).
+    3. Comute \\(C_{ji}=\mathsf{Enc_j}(\gamma_ik_j-\beta_{ij})=\gamma_i\cdot K_j-\mathsf{Enc_j}(\beta_{ij})\\) and \\(C_{ji}'=\mathsf{Enc_j}(w_ik_j-v_{ij})=w_i\cdot K_j-\mathsf{Enc_j}(v_{ij})\\)
 
-3. Each participant \\(P_i\\) broadcasts the following:
+    4. Compute \\(F_{ji}=\mathsf{Enc_i}(\beta_{ij})\\), \\(F_{ji}'=\mathsf{Enc_i}(v_{ij})\\), \\(\Gamma_i=g^{\gamma_i}\\) and a proof \\(\pi_i^1\\) for the relation \\(\mathcal{R}_1=\\{(G_i,\Gamma_i,\gamma_i)~|~G_i=\mathsf{Enc_j}(\gamma_i)~\land~\Gamma_i=g^{\gamma_i}\\}\\) (see [Supporting Protocols](./supporting-algorithms.md))
 
-    - \\(\delta_i\\) and reconstructs \\(\delta=\sum_i\delta_i=k\gamma\\).
-    - \\(T_i=g^{\sigma_i}h^{\ell_i}\\) and proves that he knows \\(\sigma_i,\ell_i\\) (see [Supporting Protocols](./supporting-algorithms.md)).
+    5. Compute the proof \\(pi_i^2\\) for the relation \\(\mathcal{R_2}=\\{((C_{ji},W_i,K_j,F_{ji}),(\gamma_i,\beta_{ij}))~|~C_{ji}=\gamma_i\cdot K_j-\mathsf{Enc_j}(\beta_{ij})~\land~\Gamma_i=g^{\gamma_i}\\)
 
-4. Each participant \\(P_i\\) broadcasts \\(\Gamma_i=g^{\gamma_i}\\), which can be verified from its commitment \\(C_i\\). \\(P_i\\) then compute \\(\Gamma=\prod_i \Gamma_i\\) and 
+        \\(\land~F_{ji}=\mathsf{Enc_2}(\beta_{ij})~\land~\beta_{ij},\gamma_i \le 2^{\lambda+\epsilon}\\}\\) (see [Supporting Protocols](./supporting-algorithms.md))
+     
 
-$$R=\Gamma^{\delta^{-1}}=g^{\sum_i\gamma_ik^{-1}\gamma^{-1}}=g^{k^{-1}}$$ as well as \\(r=R.\mathsf{x}\\)
+    6. Compute the proof \\(pi_i^3\\) for the relation \\(\mathcal{R_3}=\\{((C_{ji}',\Gamma_i,K_j,F_{ji}'),(w_i,v_{ij}))~|~C_{ji}'=w_i\cdot K_j-\mathsf{Enc_j}(v_{ij})~\land~W_i=g^{w_i}\\)
 
-5. Each participant \\(P_i\\) broadcasts \\(V_i=R^{k_i}=g^{k^{-1}k_i}\\). If \\(g \neq \prod_{i} V_i\\) then the protocol aborts. 
+        \\(\land~F_{ji}'=\mathsf{Enc_2}(v_{ij})~\land~v_{ij},w_i \le 2^{\lambda+\epsilon} \\}\\). This can be done similarly to the step above.
 
-6. Each participant \\(P_i\\) broadcasts \\(S_i=R^{\sigma_i}=g^{k^{-1}\sigma_i}\\) and a zero  knowledge proof of consistency between \\(S_i\\) and \\(T_i\\) (see [Supporting Protocols](./supporting-algorithms.md)). If \\(pk \neq \prod_i S_i\\) then the protocol aborts.
+    7. Sends \\(C_{ji},C_{ji}',F_{ji},F_{ji}',\Gamma_i,\pi_i^1,\pi_i^2, \pi_i^3\\) to all participants.
 
-7. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\), then broadcasts \\(s_i=m k_i+r \sigma_i\\). and set \\(s=\sum_{i} s_i=k(m+r\cdot sk)\\). Finally, if **Verify\\((M,(r,s),pk)\\)**\\(=1\\), then \\((r,s)\\) is a valid signature of \\(M\\), otherwise aborts.
+3. For each \\(j \neq i\\), each participant \\(P_i\\) do the following:
+
+    1. Verify the validity of \\(\pi_j^1,\pi_j^2,\pi_j^3\\). If any check fails, then the protocol aborts.
+
+    2. Compute \\(\alpha_{ij}=\mathsf{Dec_i}(C_{ij})\\) and \\(u_{ij}=\mathsf{Dec_i}(C_{ij}')\\). Note that \\(\alpha_{ij}+\beta_{ij}=\gamma_i k_j\\) and \\(u_{ij}+v_{ij}=w_i k_j\\).
+  
+    3. Set \\(\delta_i=k_i\gamma_i+\sum_{j \neq i}(\alpha_{ij}+\beta_{ij})\\) and \\(\sigma_i=k_iw_i+\sum_{j \neq i}(u_{ij}+v_{ij})\\). Note that \\(k\gamma=\sum_i\delta_i\\) and \\(k\cdot sk=\sum_i \sigma_i\\).
+
+
+4. Each participant \\(P_i\\) computes \\(\Gamma=\prod_i \Gamma_i=g^\gamma\\), \\(\Delta_i=\Gamma^{k_i}=g^{\gamma k_i}\\) and send \\(\delta_i,\Delta_i\\) to all participants.
+
+5. Each participant \\(P_i\\) sets \\(\delta=\sum_i\delta_i=k\gamma\\) and verify that \\(g^{\delta}=\sum_i\Delta_i\\). If any check fails, the protocol aborts. Otherwise, set \\(R=\Gamma^{\delta^{-1}}=g^{\gamma(k\gamma)^{-1}}=g^{k^{-1}}\\) and \\(r=R.\mathsf{x}\\).
+
+
+6. Each participants \\(P_i\\) computes \\(m=\mathsf{H}(M)\\), then broadcasts \\(s_i=m k_i+r \sigma_i\\). and set \\(s=\sum_{i} s_i=k(m+r\cdot sk)\\). If **Verify\\(((M,(r,s),pk)=1\\)** then \\((r,s)\\) is a valid signature of \\(M\\), otherwise aborts.
 

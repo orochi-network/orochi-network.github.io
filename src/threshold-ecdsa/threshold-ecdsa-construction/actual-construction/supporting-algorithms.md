@@ -10,42 +10,112 @@ Recall that in Step 2 of the key generation protocol, each participant \\(P\\) h
 
 2. Each participant \\(P_i\\) can verify the correctness of his share \\(s_i\\) by checking \\(g^{s_i}=\prod_{j=0}^tA_j^{i^j}\\). If the check fails, \\(P_i\\) broadcasts a complaint to \\(P\\). If \\(P\\) receives a complaint he will be disqualified. 
 
-#### Multiplicative to additive share conversion protocols 
-
-In Step 2 of the signing protocol, participants \\(P_1\\) and \\(P_2\\) who holds secrets \\(a,b\\) respectively, must follow the \\(\mathsf{MtA}\\) protocol to receive secret outputs \\(\alpha,\beta\\) for \\(P_1\\) and \\(P_2\\) such that \\(ab=\alpha+\beta \pmod{p}\\). 
-
-Assume that \\(P_1\\) is equipped with the Pallier encryption scheme \\(\mathcal{E}=(\mathsf{Enc},\mathsf{Dec})\\), described in {{#cite P99}}. The protocol proceeds as follow:
-
-1. \\(P_1\\) computes \\(c_A=\mathsf{Enc}(a)\\) and a proof \\(\pi_A\\) certifying the correctness of \\(c_A\\) and \\(a\le p^3\\) (the proof \\(\pi_A\\) can be generated using the public parameters \\(N,h_1,h_2\\) in {{#cite MR04}}). \\(P_1\\) then sends \\((c_A,\pi_A)\\) to \\(P_2\\).
-2. \\(P_2\\) verifies \\(\pi_A\\) and aborts if it fails to verify. Otherwise, it does the following:
-    - Choose \\(\beta \in \mathbb{Z}_{q^5}\\) and compute \\(\beta_2=-\beta \pmod{p}\\).
-    - Compute \\(c_B=b*c_A+\mathsf{Enc}(\beta_2)=\mathsf{Enc}(ab+\beta_2)\\) and a proof \\(\pi_B\\) certifying the correctness of \\(c_B\\) and \\(b \le p^3\\) and \\(\beta_2 \le p^7\\). Finally, send \\((c_B,\pi_B)\\) to \\(P_1\\).
-3. \\(P_1\\) verifies \\(\pi_B\\) and aborts if it fails to verify.  Otherwise, it computes \\(\alpha=\mathsf{Dec}(c_B)=ab+\beta_2=ab-\beta \pmod{p}\\)  
 
 #### Zero Knowledge Proofs
 
-In Step 3 of the key generation protocol, a participant who broadcasts \\(pk_i=g^{sk_i}\\) must prove the knowledge of \\(sk_i\\) using Schnorr protocol. Schnorr protocol can be described as follow:
+**Schnorr Protocol:**
+
+In Step 3 of the initial key generation process, a participant who broadcasts \\(pk_i=g^{sk_i}\\) must prove the knowledge of \\(sk_i\\) using Schnorr protocol. Schnorr protocol can be described as follow:
 
 1. The prover chooses \\(a \in \mathbb{Z}_p\\) and sends \\(\alpha=g^a\\).
+
 2. The verifier sends a challenge \\(c \in \mathbb{Z}_p\\).
+
 3. The prover sends \\(u=a+c\sigma\\).
+
 4. The verifier checks if \\(g^u=\alpha\cdot pk_i^c\\).
 
-In Step 3 of the signing protocol, a participant who broadcasts \\(T=g^{\sigma}h^\ell\\) must prove the knowledge of \\(\sigma,\ell\\). The interactive protocol proceeds as follow:
+**Schnorr Protocol for Ring:**
 
-1. The prover chooses \\(a,b \in \mathbb{Z}_p\\) and sends \\(\alpha=g^ah^b\\).
-2. The verifier sends a challenge \\(c \in \mathbb{Z}_p\\).
-3. The prover sends \\(u=a+c\sigma\\) and \\(v=b+c\ell\\).
-4. The verifier checks if \\(g^uh^v=\alpha T^c\\).
+In Step 3.3 of the key refresh process, a participant who broadcasts \\(h_1,h_2\\) must prove that there is a value \\(s\\) such that \\(h_2=h_1^s \pmod{N}\\) The protocol can be described as follow:
+
+1. For each \\(i=1,\dots,\lambda\\), the prover chooses \\(a_1 \in \mathbb{Z_{\phi(N)}}\\) and sends \\(A_i=h_1^{a_i} \pmod{N}\\) to the verifier.
+
+2. The verifier sends a challenge \\(e_i \in {0,1}\\) for each \\(i=1,\dots,\lambda\\).
+
+3. For each \\(i=1,\dots,\lambda\\), the prover sends \\(z_i=a_i+e_i s \pmod{\phi(N)}\\) and send \\(z_i\\) to the verifier.
+
+4. The verifier checks if \\(h_1^{z_i}=A_i\cdot h_2^c \pmod{N}\\) for each \\(i=1,\dots,\lambda\\).
 
 
-In Step 6 of the signing protocol, a participant who broadcasts \\(S=R^{\sigma}, T=g^\sigma h^\ell\\) must prove the knowledge of \\(\sigma,\ell\\). The interactive protocol proceeds as follow:
 
-1. The prover chooses \\(a,b \in \mathbb{Z}_p\\) and sends \\(\alpha=g^ah^b\\) and \\(\beta=R^a\\).
-2. The verifier sends a challenge \\(c \in \mathbb{Z}_p\\).
-3. The prover sends \\(u=a+c\sigma\\) and \\(v=b+c\ell\\).
-4. The verifier checks if \\(g^uh^v=\alpha T^c\\) and \\(R^u=\beta S^c\\).
+**Proof of Product of Two Primes:**
+
+In Step 3.3 of the key refresh process, a participant must prove that the RSA modulus \\(N\\) is a product of two primes \\(p,q\\) such that \\(N=pq\\) and \\(p \equiv q \equiv 3 \pmod{4}\\) and \\(gcd(N,\phi(N))=1\\). The protocol process as follow:
+
+1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(()\\) denotes the Jacobian symbol.
+
+2. The verifier samples \\(y_1,\dots,y_{\lambda} \in \mathbb{Z_N}\\) and send them to the prover.
+
+3. The prover proceed as follow:
+
+    - Set \\(x_i=(y_i')^{1/4} \pmod{N}\\) where \\(y_i'=(-1)^{a_i}w^{b_i}y_i\\) such that \\(x_i\\) is well defined.
+
+    - Compute \\(z_i=y_i^{-N} \pmod{N}\\)
+
+    - Send \\((x_i,a_i,b_i,z_i)_{i=1}^\lambda\\) to verifier.
+
+4. The verifier check that \\(N\\) is not a prime, \\(z_i^N \equiv y_i \pmod{N}\\) and \\(x_i^4 \equiv (-1)^{a_i}w^{b_i}y_i \pmod{N}\\). Accept if and only if all checks pass.
+
+**Pallier Encryption Range Proof:** 
+
+In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}(k_i)\\) has to provide a proof \\(pi\\) certifying \\(k_i<2^{\lambda+\epsilon}\\). The protocol for providing \\(pi\\)  proceeds as follow:
+
+1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
+
+2. The prover sample \\(\alpha \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\), \\(\delta \in [-2^{\lambda+\epsilon}\cdot N,\dots,2^{\lambda+\epsilon}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
+
+3. The prover compute \\(S=h_1^k h_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^{N_1} \pmod {N_1^2}\\) and \\(C=h_1^\alpha h_2^\delta \pmod{N}\\)
+
+4. The prover sends \\((S,A,C)\\) to the verifier.
+
+5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
+
+6. The prover computes \\(z_1=\alpha+ek\\), \\(z_2=r\rho^e \pmod{N_1}\\) and \\(z_3=\delta+eu\\)
+
+7. The prover sends \\(\pi=(z_1,z_2,z_3)\\) to the verifier
+
+8. The verifier check if \\((1+N_1)^{z_1}z_2^{N_1}=AK^e \pmod{N_1^2}\\) and \\(h_1^{z_1}h_2^{z_3}=CS^e \pmod{N}\\)
+
+9 The verifier check that \\(z_i \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\)
+
+**Proof of Paillier Encryption given Group Commitment:**
+
+In Step 2.4 of the signing process, each participant has public input \\((C,X,F)\\) and secret input \\(x\\) and has to provide a proof \\(\pi\\) for the relation
+
+\\(\mathcal{R}=\\{((C,X),(x,y))~|~\land~X=g^{x}~\land~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{\lambda+\epsilon}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+
+1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
+
+2. The prover sample \\(\alpha \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\), \\(\delta \in [-2^{\lambda+\epsilon}\cdot N,\dots,2^{\lambda+\epsilon}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
+
+3. The prover compute \\(S=h_1^xh_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^N_1 \pmod{N_1^2}\\), \\(Y=g^\alpha\\), \\(D=h_1^\alpha h_2^\gamma \pmod{N}\\)
+4. The prover sends \\(S,A,Y,D,F\\) to the verifier.
+5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
+6. The prover computes \\(z_1=\alpha+ek\\), \\(z_2=r\rho^e \pmod{N_1}\\) and \\(z_3=\gamma+eu\\)
+7. The prover sends \\(\pi=(z_1,z_2,z_3\\) to the verifier.
+8. The verifier checks that \\((1+N_1)^{z_1}z_2^{N_1}=AC^e \pmod{N_1^2}\\), \\(g^{z_1}=YX^e\\) and \\(h_1^{z_1}h_2^{z_3}=DS^e \pmod{N}\\)
+9. The verifier check that \\(z_1 \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\)
+
+**Proof of Paillier Operation given Group Commitment:**
+
+In Step 2.5 and 2.6 of the signing process, each participant has public input \\((C,X,K,F)\\) and secret input \\((x,y)\\) and has to provide a proof \\(\pi\\) for the relation
+
+\\(\mathcal{R}=\\{((C,X,K,Y),(x,y))~|~C=x\cdot K-\mathsf{Enc_1}(y)~\land~X=g^{x}~\land~Y=\mathsf{Enc_2}(y)~\land~y \le 2^{\lambda+\epsilon}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+
+1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
+
+2. The prover sample \\(\alpha,\beta \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\), \\(\gamma, \delta \in [-2^{\lambda+\epsilon}\cdot N,\dots,2^{\lambda+\epsilon}\cdot N]\\), \\(m, u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\) and \\(r_y \in \mathbb{Z_{N_2}}\\)
+
+3. The prover compute \\(A=K^\alpha((1+N_1)^\beta r^{N_1}) \pmod {N_1^2}\\), \\(B_x=g^\alpha\\), \\(B_y=(1+N_2)^\beta r_y\\), \\(E=h_1^\alpha h_2^\gamma \pmod{N}\\), \\(F=h_1^\beta h_2^\gamma \pmod{N}\\), \\(S=h_1^xh_2^m \pmod{N}\\), \\(T=h_1^yh_2^u \pmod{N}\\)
+4. The prover sends \\(S,T,A,B_x,B_y,E,F\\) to the verifier.
+5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
+6. The prover compute \\(z_1=\alpha+ex\\), \\(z_2=\beta+ey\\), \\(z_3=\gamma+em\\), \\(z_4=\delta+eu\\), \\(w=r \rho^e \pmod{N_1}\\), \\(w_y=r \rho_y^e \pmod{N_2}\\)
+7. The prover sends \\(\pi=(z_1,z_2,z_3,z_4,w,w_y\\) to the verifier.
+8. The verifier checks that \\(K^{z_1}(1+N_1)^{z_2}w^{N_1} = A C^e \pmod{N}\\), \\(g^{z_1}=B_xX^e\\), \\((1+N_2)^{z_2}w_y^{N_2}=B_yY^e \pmod{N_2}\\), \\(h_1^{z_1}h_2^{z_3}=ES^e \pmod{N}\\), \\(h_1^{z_2}h_2^{z_4}=FT^e \pmod{N}\\)
+9. The verifier check that \\(z_1,z_2 \in [-2^{\lambda+\epsilon},\dots,2^{\lambda+\epsilon}]\\)
+
 
 #### Commitment Scheme
 
-In Step 1 of the Key Generation and Signing protocol, we require participants to commit their messages using a commitment scheme \\(\mathsf{Com}\\). In practice, one can use a cryptographic hash function \\(\mathsf{H}\\) and define the commitment of \\(X\\) to be \\(\mathsf{H}(X,r)\\) where \\(r\\) is chosen uniformly. 
+In Step 1 of the Key Generation protocol, we require participants to commit their messages using a commitment scheme \\(\mathsf{Com}\\). In practice, one can use a cryptographic hash function \\(\mathsf{H}\\) and define the commitment of \\(X\\) to be \\(\mathsf{H}(X,r)\\) where \\(r\\) is chosen uniformly. 
