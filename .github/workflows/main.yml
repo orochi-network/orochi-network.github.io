@@ -17,7 +17,7 @@ jobs:
       - name: Install latest mdbook
         run: cargo install mdbook && cargo install mdbook-bib
       - name: Deploy GitHub Pages
-			  env:
+        env:
           CNAME: ${{ secrets.CNAME }}
         run: |
           mdbook build
