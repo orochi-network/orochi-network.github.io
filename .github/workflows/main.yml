@@ -17,6 +17,8 @@ jobs:
       - name: Install latest mdbook
         run: cargo install mdbook && cargo install mdbook-bib
       - name: Deploy GitHub Pages
+        env:
+          CNAME: ${{ secrets.CNAME }}
         run: |
           mdbook build
           git worktree add gh-pages
@@ -27,6 +29,8 @@ jobs:
           git update-ref -d refs/heads/gh-pages
           rm -rf *
           mv ../book/* .
+          echo "$CNAME" > ./CNAME
+          sudo chmod 600 ./CNAME
           git add .
           git commit -m "Deploy $GITHUB_SHA to gh-pages"
           git push --force --set-upstream origin gh-pages
