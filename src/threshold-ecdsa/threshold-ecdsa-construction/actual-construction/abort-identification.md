@@ -1,13 +1,13 @@
 ## Identifying Aborts
 
-Identifying misbehaving participants efficiently is a key contribution of “GG20”. An abort will happen if any player deviates from the protocol in a clearly identifiable way by not complying with instructions. In the case of such an abort, the guilty party would have to be identified and removed. In this section, we analyse how the protocol can identify abortion and remove mmisbehaving participants.
+Identifying misbehaving participants efficiently is a key contribution of “CGGMP21”. An abort will happen if any player deviates from the protocol in a clearly identifiable way by not complying with instructions. In the case of such an abort, the guilty party would have to be identified and removed. In this section, we analyse how the protocol can identify abortion and remove mmisbehaving participants.
 
 ### Abort Instances
 Within the signing protocol, there are 3 instances that the protocol can abort. They can be summarized as follow.
 
-1. In step 2 of the signing process, when an invalid proof \\(pi_i\\) is detected.
+1. In step 2 of the signing process, when an invalid proof \\(\pi_i\\) is detected.
 
-2. In step 3 of the signing process, when an invalid proof \\(pi_i^1\\) or \\(pi_j^2\\) or \\(pi_k^3\\) is detected for some \\(i,j,k\\).
+2. In step 3 of the signing process, when an invalid proof \\(\pi_i^1\\) or \\(\pi_j^2\\) or \\(\pi_k^3\\) is detected for some \\(i,j,k\\).
 
 3. In step 5 of the signing proces, when \\(g^{\delta}=\sum_i\Delta_i\\)
 

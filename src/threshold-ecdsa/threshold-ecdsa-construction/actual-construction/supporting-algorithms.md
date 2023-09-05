@@ -83,7 +83,7 @@ In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}
 
 In Step 2.4 of the signing process, each participant has public input \\((C,X)\\) and secret input \\(x\\) and has to provide a proof \\(\pi\\) which proves that \\(((C,X),x) \in \mathcal{R}\\), where
 
-\\(\mathcal{R}=\\{((C,X),x)~|~\land~X=g^{x}~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X),x)~|~X=g^{x}~\land~C=\mathsf{Enc_1}(x)~\land~x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
@@ -93,7 +93,7 @@ In Step 2.4 of the signing process, each participant has public input \\((C,X)\\
 4. The prover sends \\(S,A,Y,D,F\\) to the verifier.
 5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
 6. The prover computes \\(z_1=\alpha+ek\\), \\(z_2=r\rho^e \pmod{N_1}\\) and \\(z_3=\gamma+eu\\)
-7. The prover sends \\(\pi=(z_1,z_2,z_3\\) to the verifier.
+7. The prover sends \\(\pi=(z_1,z_2,z_3)\\) to the verifier.
 8. The verifier checks that \\((1+N_1)^{z_1}z_2^{N_1}=AC^e \pmod{N_1^2}\\), \\(g^{z_1}=YX^e\\) and \\(h_1^{z_1}h_2^{z_3}=DS^e \pmod{N}\\)
 9. The verifier check that \\(z_1 \in [-2^{3\lambda},\dots,2^{3\lambda}]\\)
 
@@ -111,7 +111,7 @@ In Step 2.5 and 2.6 of the signing process, each participant has public input \\
 4. The prover sends \\(S,T,A,B_x,B_y,E,F\\) to the verifier.
 5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
 6. The prover compute \\(z_1=\alpha+ex\\), \\(z_2=\beta+ey\\), \\(z_3=\gamma+em\\), \\(z_4=\delta+eu\\), \\(w=r \rho^e \pmod{N_1}\\), \\(w_y=r \rho_y^e \pmod{N_2}\\)
-7. The prover sends \\(\pi=(z_1,z_2,z_3,z_4,w,w_y\\) to the verifier.
+7. The prover sends \\(\pi=(z_1,z_2,z_3,z_4,w,w_y)\\) to the verifier.
 8. The verifier checks that \\(K^{z_1}(1+N_1)^{z_2}w^{N_1} = A C^e \pmod{N}\\), \\(g^{z_1}=B_xX^e\\), \\((1+N_2)^{z_2}w_y^{N_2}=B_yY^e \pmod{N_2}\\), \\(h_1^{z_1}h_2^{z_3}=ES^e \pmod{N}\\), \\(h_1^{z_2}h_2^{z_4}=FT^e \pmod{N}\\)
 9. The verifier check that \\(z_1 \in [-2^{3\lambda},\dots,2^{3\lambda}]\\) and \\(z_1 \in [-2^{7\lambda},\dots,2^{7\lambda}]\\)
 

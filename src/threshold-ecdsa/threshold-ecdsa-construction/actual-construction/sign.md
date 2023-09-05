@@ -35,7 +35,7 @@ In this section, we describe the signing process of the protocol. For any set \\
         - \\(\gamma_i \le 2^{3\lambda} \\)
  
 
-    The generation of \\(\pi_2^i\\) can be seen in [Supporting Protocols](./supporting-algorithms.md).
+    The generation of \\(\pi_i^2\\) can be seen in [Supporting Protocols](./supporting-algorithms.md).
      
 
     6. Compute the proof \\(\pi_i^3\\), which prove that \\((C_{ji}',\Gamma_i,K_j,F_{ji}',w_i,v_{ij})\\) satisfy the following relations 
@@ -45,9 +45,9 @@ In this section, we describe the signing process of the protocol. For any set \\
         - \\(v_{ij}<2^{7\lambda} \\)
         - \\(w_i \le 2^{3\lambda}  \\)
     
-    The generation of \\(\pi_3^i\\) can be seen in [Supporting Protocols](./supporting-algorithms.md).
+    The generation of \\(\pi_i^3\\) can be seen in [Supporting Protocols](./supporting-algorithms.md).
 
-    7. Sends \\(C_{ji},C_{ji}',F_{ji},F_{ji}',\Gamma_i,\pi_i^1,\pi_i^2, \pi_i^3\\) to all participants.
+    7. Send \\(C_{ji},C_{ji}',F_{ji},F_{ji}',\Gamma_i,\pi_i^1,\pi_i^2, \pi_i^3\\) to all participants.
 
 3. For each \\(j \neq i\\), each participant \\(P_i\\) do the following:
 
