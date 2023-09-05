@@ -29,7 +29,7 @@ The key refreshment process is executed after a certain number of epochs wheneve
 3. Finally, each participant do the following:
     1. Use Schnorr's protocol to prove in zero knowledge that he knows the new secret key \\(sk_i'\\).
 
-    2. Prove that \\(N_i\\) is a product of two primes \\(p_i,q_i\\) s.t \\(p_i \equiv q_i \equiv 3 \pmod {4}\\) and \\(N_i\\) admits no factors (see [Supporting Protocols](./supporting-algorithms.md))
+    2. Prove that \\(N_i\\) is a product of two primes \\(p_i,q_i\\) s.t \\(p_i \equiv q_i \equiv 3 \pmod {4}\\) and \\(N_i\\) admits no small factors (see [Supporting Protocols](./supporting-algorithms.md))
 
     3. Prove that \\((h_{i1},h_{i2})\\) generates the same multiplicative group modulo \\(N_i\\) using Schnorr protocol for Ring (see [Supporting Protocols](./supporting-algorithms.md)).
  

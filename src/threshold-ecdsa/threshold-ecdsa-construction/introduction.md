@@ -1,6 +1,6 @@
 ## Gennaro's Construction
 
-In this section we briefly describe the threshold ECDSA protocol of Gennaro etal in {{#cite GG20}}, in which we assume that the readers have some familiarity to ECDSA signature scheme. Now, let us back to the description of scheme. Recall that the ordinary ECDSA signature scheme \\(\sigma=(r,s)\\) of a message \\(M\\) is generated as follow
+In this section we briefly describe the threshold ECDSA protocol of Gennaro etal in {{#cite CGGMP21}}, in which we assume that the readers have some familiarity to ECDSA signature scheme. Now, let us back to the description of scheme. Recall that the ordinary ECDSA signature scheme \\(\sigma=(r,s)\\) of a message \\(M\\) is generated as follow
 
 $$r=R.\mathsf{x},~R=g^{k^{-1}},~m=H(M)~\text{and}~s=k(m+r\cdot sk)$$
 

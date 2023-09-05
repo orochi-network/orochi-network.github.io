@@ -7,6 +7,6 @@ title = "Orochi Network's Cookbook"
 [output.html]
 mathjax-support = true
 [output.html.fold]
-enable = true
+enable = false
 [preprocessor.bib]
 bibliography = "refs.bib"
