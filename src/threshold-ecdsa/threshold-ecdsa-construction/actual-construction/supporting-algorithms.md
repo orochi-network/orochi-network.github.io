@@ -43,7 +43,7 @@ In Step 3.3 of the key refresh process, a participant who broadcasts \\(h_1,h_2\
 
 In Step 3.2 of the key refresh process, a participant must prove that the RSA modulus \\(N\\) is a product of two primes \\(p,q\\) such that \\(N=pq\\) and \\(p \equiv q \equiv 3 \pmod{4}\\) and \\(gcd(N,\phi(N))=1\\). The protocol process as follow:
 
-1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(()\\) denotes the Jacobian symbol.
+1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(\left(\dfrac{w}{N}\right)\\) denotes the Jacobian symbol.
 
 2. The verifier samples \\(y_1,\dots,y_{\lambda} \in \mathbb{Z_N}\\) and send them to the prover.
 
