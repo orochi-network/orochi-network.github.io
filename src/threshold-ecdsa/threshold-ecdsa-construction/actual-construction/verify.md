@@ -6,7 +6,7 @@ Recall that the verification algorithm in threshold ECDSA remain identical to an
 
 1. Compute \\(m=\mathsf{H}(M)\\).
 
-2. Compute \\(u_1=m\cdot s^{-1}\\) and \\(u_2=r\cdot s^{-1}\\).
+2. Compute \\(u_1=m\cdot s^{-1} \pmod{p}\\) and \\(u_2=r\cdot s^{-1} \pmod{p}\\).
 
 3. Compute \\(R=g^{u_1}pk^{u_2}\\).
 
