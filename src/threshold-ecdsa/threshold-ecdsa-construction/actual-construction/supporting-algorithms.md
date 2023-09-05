@@ -43,7 +43,7 @@ In Step 3.3 of the key refresh process, a participant who broadcasts \\(h_1,h_2\
 
 In Step 3.2 of the key refresh process, a participant must prove that the RSA modulus \\(N\\) is a product of two primes \\(p,q\\) such that \\(N=pq\\) and \\(p \equiv q \equiv 3 \pmod{4}\\) and \\(gcd(N,\phi(N))=1\\). The protocol process as follow:
 
-1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(()\\) denotes the Jacobian symbol.
+1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(\left(\dfrac{w}{N}\right)\\) denotes the Jacobian symbol.
 
 2. The verifier samples \\(y_1,\dots,y_{\lambda} \in \mathbb{Z_N}\\) and send them to the prover.
 
@@ -83,7 +83,7 @@ In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}
 
 In Step 2.4 of the signing process, each participant has public input \\((C,X)\\) and secret input \\(x\\) and has to provide a proof \\(\pi\\) which proves that \\(((C,X),x) \in \mathcal{R}\\), where
 
-\\(\mathcal{R}=\\{((C,X),x)\ |\ X=g^{x}\ \land\ C=\mathsf{Enc_1}(x)\ \land\ x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X),(x,\rho))\ |\ X=g^{x}\ \land\ C=\mathsf{Enc_1}(x,\rho)\ \land\ x \le 2^{3\lambda}\\}\\). The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
@@ -101,7 +101,7 @@ In Step 2.4 of the signing process, each participant has public input \\((C,X)\\
 
 In Step 2.5 and 2.6 of the signing process, each participant has public input \\((C,X,K,Y)\\) and secret input \\((x,y)\\) and has to provide a proof \\(\pi\\) which proves that \\(((C,X,K,Y),(x,y)) \in \mathcal{R}\\), where
 
-\\(\mathcal{R}=\\{((C,X,K,Y),(x,y))\ |\ C=x\cdot K-\mathsf{Enc_1}(y)\ \land\ X=g^{x}\ \land\ Y=\mathsf{Enc_2}(y)\ \land\ x<2^{3\lambda}\ \land \ y \le 2^{7\lambda}\\}\\) The protocol for providing \\(\pi\\) proceeds as follow:
+\\(\mathcal{R}=\\{((C,X,K,Y),(x,y,\rho,\rho_y))\ |\ C=x\cdot K-\mathsf{Enc_1}(y,\rho)\ \land\ X=g^{x}\ \land\ Y=\mathsf{Enc_2}(y,\rho_y)\ \land\ x<2^{3\lambda}\ \land \ y \le 2^{7\lambda}\\}\\) The protocol for providing \\(\pi\\) proceeds as follow:
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
