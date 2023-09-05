@@ -21,6 +21,7 @@ jobs:
           CNAME: ${{ secrets.CNAME }}
         run: |
           mdbook build
+          sed -i 's/\<\/head\>/\    <script async src="https:\/\/pagead2.googlesyndication.com\/pagead\/js\/adsbygoogle.js?client=ca-pub-6478560064360588" crossorigin="anonymous"\>\<\/script\>\n    \<\/head\>/' ./book/index.html
           git worktree add gh-pages
           git config user.name "Deploy from CI"
           git config user.email ""
