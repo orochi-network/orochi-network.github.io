@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install latest mdbook
-        run: cargo install mdbook && cargo install mdbook-bib
+        run: cargo install mdbook --vers "0.4.34" --locked && cargo install mdbook-bib
       - name: Deploy GitHub Pages
         env:
           CNAME: ${{ secrets.CNAME }}
