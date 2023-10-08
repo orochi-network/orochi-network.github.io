@@ -6,7 +6,7 @@
 - \(p=0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed\)
 - \(a=0x76d06\)
 - \(b=0x01\)
-- \(order=0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed\)
+- \(n=0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed\)
 
 
-Technically, the curve can also be used in threshold ECDSA, hence we intend to support the choice of sr25519 in our implementation version.
+ For security, ccording to, this is also a safe curve. Hence, the curve can also be used in threshold ECDSA, hence we intend to support the choice of sr25519 in our implementation version.

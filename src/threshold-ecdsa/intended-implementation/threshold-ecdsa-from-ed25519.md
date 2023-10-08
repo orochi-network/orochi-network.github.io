@@ -7,5 +7,5 @@
  - \(b=0x52036cee2b6ffe738cc740797779e89800700a4d4141d8ab75eb4dca135978a3\)
  - \(n=	0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed\)
  
- For security and efficiency analysis,
+ For security and efficiency analysis, it is well known that ed25519 is a safe curve, according to . Because in threshold ecdsa, we only require that the discrete log problem is hard , hence, the threshold ecdsa can be safely implemented using the curve.
  Thus, our implelemtation also intend to support this curve. 
