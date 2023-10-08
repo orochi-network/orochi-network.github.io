@@ -3,7 +3,7 @@
 
  - **secp256k1:** This is the curve used by Bitcoin as well as Ethereum for signing, it is also the first curve we will support in our implementation.
  The curve parameters \(E:y^2=x^3+ax+b\) defined over \(\mathbb{F}_p\) are as follows:
- - \(p=0xFFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFC2F\)
+ - \(p=0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f\)
  - \(a=0x00\)
  - \(b=0x07\)
  
