@@ -11,8 +11,8 @@ In this chapter, we give an overview of threshold signatures and describe the th
 
 - Finally, we briefly specify our implementation and analyse the security for the threshold ECDSA construction of Canetti et al using  **secp256k1** parameters and FROST threshold signature construction using **ed25519** and **sr25519** parameters as follows:
 
-    - In [Threhold signature for secp256k1 parameters](./intended-implementation/threshold-ecdsa-from-secp256k1.md), we analyse the security of the threshold ECDSA signature of Canneti et al. using the parameters of **secp256k1**.
+    - In [Threhold signature for secp256k1 parameters](./intended-implementation/threshold-ecdsa-from-secp256k1.md), we discuss and analyse the security of the threshold ECDSA signature of Canneti et al. when instatiated using the parameters of **secp256k1**.
 
-    - In  [Threhold signature for ed25519 parameters](./intended-implementation/threshold-ecdsa-from-ed25519.md) we analyse the security of the FROST threshold signature using the parameters of **ed25519** using probabilistic nonce generation.
+    - In  [Threhold signature for ed25519 parameters](./intended-implementation/threshold-ecdsa-from-ed25519.md) we discuss and analyse the security of the FROST threshold signature when instatiated using the parameters of **ed25519** using probabilistic nonce generation.
 
-    - In [Threhold signature for sr25519 parameters](./intended-implementation/threshold-ecdsa-from-sr-25519.md) we analyse the security of the FROST threshold signature using the parameters of **sr25519**.
+    - In [Threhold signature for sr25519 parameters](./intended-implementation/threshold-ecdsa-from-sr-25519.md) we discuss and analyse the security of the FROST threshold signature when instatiated using the parameters of **sr25519**.
