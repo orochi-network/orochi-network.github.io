@@ -18,6 +18,6 @@ The **sr25519** scheme supports both forms of **curve25519**, i.e, its twisted E
 
 - \\(G=(0x09,0x20ae19a1b8a086b4e01edd2c7748d14c923d4d7e6d7c61b229e9c5a27eced3d9)\\)
 
- For security analysis, recall that the curve curve25519 achieves \\(128\\) bit security level, as specified in the previous Section. However, since sr25519 additionally uses the point compression due to Ristretto, it is safe from the bug could lead to a double spend expoit of [Monero](./https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html)
+ For security analysis, recall that the curve **curve25519** achieves \\(128\\) bit security level, as specified in the previous Section. However, since **sr25519** additionally uses the point compression due to Ristretto, it is safe from the bug could lead to a double spend expoit of [Monero](./https://www.getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html)
  
-As **sr25519 is actually the Schnorr signature instatiatied with the  curve25519**, we can instatiate the FROST threshold signature scheme of {{#cite KG20}} with the parameters of sr25519 described in  to achieve the threshold version of sr25519.
+As **sr25519 is actually the Schnorr signature instatiatied with the  curve25519**, we can instatiate the FROST threshold signature scheme of {{#cite KG20}} with the parameters of **sr25519** described in  to achieve the threshold version of **sr25519**.

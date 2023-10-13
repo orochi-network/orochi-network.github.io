@@ -1,6 +1,6 @@
 # Threshold Signature
 
-In this chapter, we give an overview of threshold signatures and describe the threshold ECDSA construction of Canetti et al in {{#cite CGGMP21}} and the FROST threshold signature scheme in {{#cite KG20}}, which is a threshold version of Schnorr signature scheme, including its variant EDDSA. The chapter is separated into \\(5\\) major parts below:
+In this chapter, we give an overview of threshold signatures and describe the threshold ECDSA construction of Canetti et al in {{#cite CGGMP21}} and the FROST threshold signature scheme in {{#cite KG20}}, which is a threshold version of Schnorr signature scheme, including its EDDSA (or **ed25519**) instatiation. The chapter is separated into \\(5\\) major parts below:
 - First, we give a brief introduction to threshold signatures and state its syntax and security properties in [Introduction](./threshold-ecdsa-introduction/introduction.md). 
 
 - Second, we state the syntax and security properties of threshold signatures in [Definition and Security](./threshold-ecdsa-introduction/definition.md)
