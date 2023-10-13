@@ -1,7 +1,5 @@
 ##  Implementation Guideline
-In this section, we are going to briefly our implementation. First, we will specify the supported curves of our implementation as well as their supporting libraries. Then we will discuss 
-some security concerns when implementing the protocol.
-
+In this section, we are going to briefly our implementation. More specifically, we will specify the our implementation supporting **secp256k1**, **ed25519** and **sr25519** as well as their supporting libraries. 
 
 
 
