@@ -36,9 +36,9 @@
     - [Signing](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.md)
     - [Verification](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.md)
     - [Supporting Algorithms](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.md)
-  
+    - [Identifying Aborts](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/abort-identification.md)
     - [Security Consideration](./threshold-ecdsa/threshold-ecdsa-construction/actual-construction/security-consideration.md)
-  - [FROST's Construction](./threshold-ecdsa/frost-construction/keygen.md)
+  - [FROST's Construction](./threshold-ecdsa/frost-construction/introduction.md)
     - [Key Generation](./threshold-ecdsa/frost-construction/keygen.md)
     - [Signing](./threshold-ecdsa/frost-construction/sign.md)
     - [Verification](./threshold-ecdsa/frost-construction/verify.md)

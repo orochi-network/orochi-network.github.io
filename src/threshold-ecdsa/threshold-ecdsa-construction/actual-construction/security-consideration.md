@@ -1,7 +1,7 @@
 
 ### Security Consideration
 
-Finally, we would like to discuss several concerns that should be noted when implementing the threshold ECDSA protocol. 
+Finally, since there has been numerous pracical attacks performed on threshold ECDSA implementations, we would like to discuss several concerns that should be noted when implementing the threshold ECDSA protocol. 
 
 - **Proving the Discrete Log Relation in Composite Modulus:** Recall that in Step 3 of the key refresh process, we require the participants \\(P_i\\) to prove the discrete log relation between \\(h_{i1}\\) and \\(h_{i2}\\) in modulo \\(N_i\\). This can be done using Schnorr's protocol for Ring, as specified in (see [Supporting Protocols](./supporting-algorithms.md)). The protocol uses binary challenge \\(c \in \\{0,1\\}\\), which has soundness error \\(1/2\\). It is repeated \\(\lambda\\) times to achieve soundness error \\(1/2^\lambda\\). When the order of the group is a prime number \\(p\\), one can **extend the challenge set** to be \\(\mathbb{Z}_p\\) and execute the protocol **only once**, this is the case of an ordinary Schnorr protocol. However, we cannot do the same thing for the group \\(\mathbb{Z}^*_N\\), since its order is divisible by \\(2\\). [Verichain](https://www.verichains.io/tsshock/) showed that doing so can leak the secret key of the protocol. Hence, we need to **repeat the Schnorr protocol for Ring** \\(\lambda\\) **times when proving the discrete log relation in modulo** \\(N_i\\) for each \\(i\\).
 

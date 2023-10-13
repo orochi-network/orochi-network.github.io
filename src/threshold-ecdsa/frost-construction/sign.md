@@ -9,10 +9,12 @@ In this section, we describe the signing process of the protocol. For any set \\
    
 2. For each \\(j \neq i\\), each \\(P_i\\) uses Schnorr protocol (see [Supporting Algorithms](./supporting-algorithms.md)) to check the validity of \\((D_i,E_i)\\). If any check fails then the protocol aborts.
 
-3. Each \\(P_i\\) computes \\(\rho_j=\mathsf{H}(j,M,B)\\) for all \\(j \in S\\). Each \\(P_i\\) then computes the group commitment \\(R=\prod_{j \in S} D_jE_j^{\rho_j}\\) and the challenge \\(c=\mathsf{H}(R,\mathsf{pk},M)\\), then broadcasts \\((\rho_i,R,c)\\). If the broadcasted \\(R\\) is not the same for all participants then the protocol aborts. 
+3. Each \\(P_i\\) computes \\(\rho_j=\mathsf{H}(j,M,B)\\) for all \\(j \in S\\). Each \\(P_i\\) then computes the group commitment \\(R=\prod_{j \in S} D_jE_j^{\rho_j}\\) and the challenge \\(c=\mathsf{H}(R,\mathsf{pk},M)\\), then broadcasts \\((\rho_i,R,c)\\). 
 
 4. Each \\(P_i\\) computes \\(z_i=d_i+e_i\rho_i+\lambda_{i,S}\cdot \mathsf{sk_i} \cdot c\\) and broadcasts \\(z_i\\).
 
 5. Each \\(P_i\\) computes \\(R_i=D_iE_i^{\rho_i}\\) and broadcasts \\(R_i\\).
 
-6. For each \\(i\\), participants check if \\(R=\prod_{i\in S}R_i\\) and \\(g_i=R_i\mathsf{pk_i}^{c \lambda_{i,S}}\\). If any check fails, report the misbehaving \\(P_i\\) and the protocol is aborted. Otherwise, compute \\(z=\sum_{i \in S}z_i\\) and returns \\(\sigma=(r,s)\\).
+6. For each \\(i\\), participants check if \\(R=\prod_{i\in S}R_i\\) and \\(g_i=R_i\mathsf{pk_i}^{c \lambda_{i,S}}\\). If any check fails, report the misbehaving \\(P_i\\) and the protocol is aborted. Otherwise, compute \\(z=\sum_{i \in S}z_i\\) and returns \\(\sigma=(R,c,z)\\).
+
+For abort identification, there are 3 instances that the protocol can abort in the signing protocol

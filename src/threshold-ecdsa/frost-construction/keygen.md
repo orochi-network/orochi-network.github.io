@@ -7,8 +7,7 @@ In this section, we describe the key generation process in the construction of F
 
 **Keygen \\((1^\lambda)\langle \\{P_i\\}_{i=1}^n\rangle\\):**
 
-**Initial Key Generation:**
-The initial key generation is executed once at the beginning.
+The key generation process is executed once at the beginning.
 
 1. Each participant \\(P_i\\) select \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\).
 
