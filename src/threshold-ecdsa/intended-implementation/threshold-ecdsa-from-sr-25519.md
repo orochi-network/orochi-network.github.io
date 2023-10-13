@@ -1,5 +1,5 @@
 
-### Threshold signature for sr25519 parameters
+### Threshold signature for sr25519
 
 
 The term **sr25519** refers to the instatiation of Schnorr signature using the curve **curve25519**, the same curve as of EDDSA, which is specified in [Schnorrkel](https://github.com/w3f/schnorrkel). However, it additionally employs the method of point compression due to  [Ristretto](https://ristretto.group) to make makes Schnorr signatures over the Edward's curve more secure. Below we describe the curve parameter and its security and efficiency analysis.

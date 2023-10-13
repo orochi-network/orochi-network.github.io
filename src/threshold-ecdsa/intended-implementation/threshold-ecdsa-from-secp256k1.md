@@ -1,5 +1,5 @@
 
-### Threshold signature for secp256k1 parameters
+### Threshold signature for secp256k1
 
  Bitcoin, the first and most well-known cryptocurrency, relies on the curve **secp256k1** for its public key cryptography. Specifically, it uses the ECDSA algorithm with **secp256k1** as the underlying elliptic curve. Many other cryptocurrencies, including Ethereum have since adopted this curve for their digital signature schemes. Since the curve can be used for the orinary ECDSA algorithm, it can also be used for the threshold ECDSA version as well. Below we describe the curve parameter and its security and efficiency analysis.
 
