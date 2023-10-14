@@ -7,7 +7,7 @@ In this chapter, we give an overview of threshold signatures and describe the th
 
 - Third, we describe the threshold ECDSA construction of {{#cite CGGMP21}} in [Canetti's Construction](./threshold-ecdsa-construction/introduction.md) to support the threshold ECDSA version for the curve **secp256k1**. 
 
-- Fourth, we describe the FROST threshold signature construction of {{#cite KG20}} in [FROST Construction](./frost-construction/introduction.md) to support the threshold version of **ed25519** using probabilistic nonce generation and **sr25519**.
+- Fourth, we describe the FROST threshold signature construction of {{#cite KG20}} in [FROST Construction](./frost-construction/introduction.md) to support the threshold signature version of **ed25519** using probabilistic nonce generation and **sr25519**.
 
 - Finally, we briefly specify our instatiation and analyse the security for the threshold ECDSA construction of Canetti et al using  **secp256k1** parameters and FROST threshold signature construction using **ed25519** and **sr25519** parameters as follows:
 
