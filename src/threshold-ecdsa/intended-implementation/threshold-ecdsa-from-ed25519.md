@@ -1,7 +1,7 @@
 
 ### Threshold signature for ed25519
 
- **Ed25519** is the most popular instance of the Edwards-curve Digital Signature Algorithm (EDDSA) standardized in [RFC 8032](https://datatracker.ietf.org/doc/html/rfc8032).  In the paper, the  authors **instatiatied the Schnorr signature scheme with the curve curve25519 in its twisted Edward form** instead of an ordinary elliptic curve such as secp256k1. The used curve in the scheme is popular due to its high speed compared to other curves without sacrificing security. Below we describe the curve parameters and its security and efficiency analysis.
+ **Ed25519** is the most popular instance of the Edwards-curve Digital Signature Algorithm (EdDSA) standardized in [RFC 8032](https://datatracker.ietf.org/doc/html/rfc8032).  In the paper, the  authors **instatiatied the Schnorr signature scheme with the curve curve25519 in its twisted Edward form** instead of an ordinary elliptic curve such as secp256k1. The used curve in the scheme is popular due to its high speed compared to other curves without sacrificing security. Below we describe the curve parameters and its security and efficiency analysis.
 
 The curve parameters \\(E: ax^2+y^2=1+bx^2y^2\\) defined over \\(\mathbb{F}_p\\) with order \\(n\\), cofactor \\(f\\) and base point \\(G\\) are as follows:
 
