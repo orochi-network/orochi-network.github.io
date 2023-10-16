@@ -43,14 +43,10 @@
     - [Signing](./threshold-ecdsa/frost-construction/sign.md)
     - [Verification](./threshold-ecdsa/frost-construction/verify.md)
     - [Supporting Algorithms](./threshold-ecdsa/frost-construction/supporting-algorithms.md)
-
-
   - [Implementation Guideline](./threshold-ecdsa/intended-implementation/our-intended-implementation.md)
-    
     - [Threshold signature using secp256k1 parameters](./threshold-ecdsa/intended-implementation/threshold-ecdsa-from-secp256k1.md)
     - [Threshold signature using ed25519 parameters](./threshold-ecdsa/intended-implementation/threshold-ecdsa-from-ed25519.md)
-    - [Threshold signature using sr25519 parameters](./threshold-ecdsa/intended-implementation/threshold-ecdsa-from-sr-25519.md)
-    
+    - [Threshold signature using sr25519 parameters](./threshold-ecdsa/intended-implementation/threshold-ecdsa-from-sr-25519.md) 
 - [Isogeny Based Crypto](./isogeny-based-crypto/chapter.md)
   - [Overview of Supersingular Isogeny Graph](./isogeny-based-crypto/supersingular-isogeny-graph/chapter.md)
     - [Elliptic Curves](./isogeny-based-crypto/supersingular-isogeny-graph/background/elliptic-curve.md)
