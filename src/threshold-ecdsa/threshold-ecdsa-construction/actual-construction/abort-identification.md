@@ -1,6 +1,6 @@
 ## Identifying Aborts
 
-Identifying misbehaving participants efficiently is a key contribution of “CGGMP21”. An abort will happen if any player deviates from the protocol in a clearly identifiable way by not complying with instructions. In the case of such an abort, the guilty party would have to be identified and removed. In this section, we analyse how the protocol can identify abortion and remove mmisbehaving participants.
+Identifying misbehaving participants efficiently is a key contribution of “CGMP21”. An abort will happen if any player deviates from the protocol in a clearly identifiable way by not complying with instructions. In the case of such an abort, the guilty party would have to be identified and removed. In this section, we analyse how the protocol can identify abortion and remove mmisbehaving participants.
 
 ### Abort Instances
 Within the signing protocol, there are 3 instances that the protocol can abort. They can be summarized as follow.

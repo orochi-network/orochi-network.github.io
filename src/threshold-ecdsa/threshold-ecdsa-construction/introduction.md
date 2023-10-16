@@ -15,4 +15,3 @@ where \\(k \leftarrow \mathbb{Z}_p\\) and \\(sk\\) is the signer's secret key. C
 - **Identifiable Abort:** The protocol contains additional mechanisms that allow participants to detect any signers who fail to participate in the signing process, or deviate from it. Identifying misbehaving signers can be crucial for some applications. In most applications, being able to identify rogue servers is a convenience, allowing reboot the whole system.
 
 To see how the protocol achieve the abovementioned properties, we now move to the actual construction of Canneti and describe it.  
-
