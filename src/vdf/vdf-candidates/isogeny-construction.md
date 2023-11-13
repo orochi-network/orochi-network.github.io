@@ -17,5 +17,5 @@ Now we move to describe the VDF Construction.
 
 **\\(\mathsf{Verify}(E,E',P,Q,\phi(P),\hat{\phi(Q)})\\)**: Check that \\(\hat{\phi(Q)} \in E[N]\cap E(\mathbf{F})\\) and \\(e_N(P,\hat{\phi(Q)})=e_N(\phi(P),Q)\\).
 
-In the construction, to compute the isogeny the map \\(\hat{\phi}\\), we are expected to walk \\(t\\) times between some vertices in the isogeny graph \\(G_{F_q}(l)\\). Currently, there is efficient algorithm to find shortcut between these vertices of the graph. 
+The security of the VDF is based on the assumption that, to compute the isogeny the map \\(\hat{\phi}\\), we are expected to walk \\(t\\) times between some vertices in the isogeny graph \\(G_{F_q}(l)\\). Currently, there is no efficient algorithm to find shortcut between these vertices of the graph. Finally, while the VDF is isogeny-based, it is not completely quantum secure, due to of the relation \\(e_N(P,\hat{\phi(Q)})=e_N(\phi(P),Q)\\) of bilinear pairing.  Since Shor's algorithm can break the pairing inversion problem {{#cite FMPS19}}, it can trivially recover the output \\(\hat{\phi(Q)}\\) from the relation above.
 
