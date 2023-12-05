@@ -4,7 +4,7 @@ In this section, we describe the signing process of the protocol. For any set \\
 
 **Sign\\((M)\langle \\{P_i(sk_i)\\}_{i=1}^n\rangle\\):** 
 
-1. Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_p\\) and do the following:
+1. Each participant \\(P_i\\) choose \\(k_i,\gamma_i \in \mathbb{Z}_p\\) and does the following:
 
     1. Compute \\(K_i=\mathsf{Enc}_i(k_i), G_i=\mathsf{Enc}_i(\gamma_i)\\) 
 
@@ -15,7 +15,7 @@ In this section, we describe the signing process of the protocol. For any set \\
  Define \\(k=\sum_i k_i\\) and \\(\gamma=\sum_i \gamma_i\\). We see that 
 \\(k\gamma=\sum _{i,j} k_i \gamma_j \pmod{p}\\) and \\(k\cdot sk=\sum _{i,j} k_i w_j \pmod{p}\\).
 
-2. For each \\(j \neq i\\), each participant \\(P_i\\) do the following:
+2. For each \\(j \neq i\\), each participant \\(P_i\\) does the following:
 
     1. Verify the validity of \\(\pi_j\\). If any check fails, the protocol aborts.
 
@@ -49,7 +49,7 @@ In this section, we describe the signing process of the protocol. For any set \\
 
     7. Send \\(C_{ji},C_{ji}',F_{ji},F_{ji}',\Gamma_i,\pi_i^1,\pi_i^2, \pi_i^3\\) to all participants.
 
-3. For each \\(j \neq i\\), each participant \\(P_i\\) do the following:
+3. For each \\(j \neq i\\), each participant \\(P_i\\) does the following:
 
     1. Verify the validity of \\(\pi_j^1,\pi_j^2,\pi_j^3\\). If any check fails, then the protocol aborts.
 

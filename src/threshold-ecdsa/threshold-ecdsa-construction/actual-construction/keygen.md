@@ -6,18 +6,18 @@ The initial key generation process is executed exactly once to produce a public-
 
 **Notation:** Let \\(\lambda\\) to be the security parameter. Let \\(\mathbb{G}\\) to be a cyclic group whose order is a prime number. Let \\(p \in (2^{\lambda-1},2^\lambda)\\) to be the order of \\(\mathbb{G}\\) and let \\(g,h\\) to be two generators of \\(\mathbb{G}\\). We denote \\(\mathsf{Com}\\) to be a secure binding and information theoretic hiding commitment scheme and \\(\mathsf{H}\\) to be a cryptographic hash function. For any set \\(\mathcal{S}\\) and for any \\(i \in \mathcal{S}\\) we denote \\(\lambda_{i,S}=\prod_{j\in \mathcal{S},j \neq i}\dfrac{j}{j-i}\\) to be the Lagrange coefficient w.r.t \\(S\\).
 
-Now, the initial key generation and key-refresh process is follow.
+Now, the initial key generation and key-refresh process are as follows:
 
 **Keygen \\((1^\lambda)\langle \\{P_i\\}_{i=1}^n\rangle\\):**
 
 **Initial Key Generation:**
 The initial key generation is executed once at the beginning.
 
-1. Each participant \\(P_i\\) select \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\).
+1. Each participant \\(P_i\\) selects \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\).
 
 2. Each participant \\(P_i\\) broadcasts \\(y_i=g^{s_i}\\). The public key \\(pk\\) is set to be \\(pk=\prod_{i=1}^ny_i\\). \\(P_i\\) then performs Feldman's Verifiable Secret Sharing scheme (see [Supporting Protocols](./supporting-algorithms.md)) to share \\(s_i\\) to other participants.  Each \\(P_j\\) add the secret shares received as his secret key, i.e, \\(sk_j=\sum_i s_{ij}\\). The values \\(sk_i\\) are the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\).
 
-3. Finally, each participant use Schnorr's protocol {{#cite S91}} (see [Supporting Protocols](./supporting-algorithms.md)) to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
+3. Finally, each participant uses Schnorr's protocol {{#cite S91}} (see [Supporting Protocols](./supporting-algorithms.md)) to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
 
 **Key Refresh:**
 The key refreshment process is executed after a certain number of epochs whenever participants have to reset their partial secret keys.
@@ -26,7 +26,7 @@ The key refreshment process is executed after a certain number of epochs wheneve
 
 2. Each participant \\(P_i\\) performs Feldman's Verifiable Secret Sharing scheme to distribute the shares \\(s_{ij}'\\) of \\(0\\) to other participants. Each participant \\(P_i\\) set his new secret key to be \\(sk_i'=sk_i+\sum_i s_{ji}'\\). The secret key \\(sk\\) remains the same and are unknown to other participants and the values \\(sk_i'\\) are still the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\)
 
-3. Finally, each participant do the following:
+3. Finally, each participant does the following:
     1. Use Schnorr's protocol to prove in zero knowledge that he knows the new secret key \\(sk_i'\\).
 
     2. Prove that \\(N_i\\) is a product of two primes \\(p_i,q_i\\) s.t \\(p_i \equiv q_i \equiv 3 \pmod {4}\\) and \\(N_i\\) admits no small factors (see [Supporting Protocols](./supporting-algorithms.md))

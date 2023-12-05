@@ -4,7 +4,7 @@ In this section, we describe the signing process of the protocol. For any set \\
 
 **Sign\\((M)\langle \\{P_i(sk_i)\\}_{i=1}^n\rangle\\):** 
 
-1. Each participant \\(P_i\\) choose \\(d_{i},e_{i} \in \mathbb{Z_p}\\) and broadcasts \\((D_{i},E_{i})=(g^{d_{i},g^{e_{i}}})\\). Denote \\(B=\\{(i,D_i,E_i)\\}_{i \in S}\\).
+1. Each participant \\(P_i\\) chooses \\(d_{i},e_{i} \in \mathbb{Z_p}\\) and broadcasts \\((D_{i},E_{i})=(g^{d_{i}},g^{e_{i}})\\). Denote \\(B=\\{(i,D_i,E_i)\\}_{i \in S}\\).
 
    
 2. For each \\(j \neq i\\), each \\(P_i\\) uses Schnorr protocol (see [Supporting Algorithms](./supporting-algorithms.md)) to check the validity of \\((D_i,E_i)\\). If any check fails then the protocol aborts.
@@ -17,4 +17,3 @@ In this section, we describe the signing process of the protocol. For any set \\
 
 6. For each \\(i\\), participants check if \\(R=\prod_{i\in S}R_i\\) and \\(g_i=R_i\mathsf{pk_i}^{c \lambda_{i,S}}\\). If any check fails, report the misbehaving \\(P_i\\) and the protocol is aborted. Otherwise, compute \\(z=\sum_{i \in S}z_i\\) and returns \\(\sigma=(R,z)\\).
 
-For abort identification, there are 3 instances that the protocol can abort in the signing protocol.

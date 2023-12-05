@@ -9,11 +9,11 @@ In this section, we describe the key generation process in the construction of F
 
 The key generation process is executed once at the beginning.
 
-1. Each participant \\(P_i\\) select \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\).
+1. Each participant \\(P_i\\) selects \\(s_i \in Z_p \\) and compute \\(C_i=\mathsf{Com}(g^{s_i})\\).
 
 2. Each participant \\(P_i\\) broadcasts \\(y_i=g^{s_i}\\). The public key \\(pk\\) is set to be \\(pk=\prod_{i=1}^ny_i\\). \\(P_i\\) then performs Feldman's Verifiable Secret Sharing scheme (see [Supporting Protocols](./supporting-algorithms.md)) to share \\(s_i\\) to other participants.  Each \\(P_j\\) add the secret shares received as his secret key, i.e, \\(sk_j=\sum_i s_{ij}\\). The values \\(sk_i\\) are the shares of a \\((t-n)\\) Shamir secret sharing of the secret key \\(sk\\).
 
-3. Finally, each participant use Schnorr's protocol {{#cite S91}} (see [Supporting Protocols](./supporting-algorithms.md)) to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
+3. Finally, each participant uses Schnorr's protocol {{#cite S91}} (see [Supporting Protocols](./supporting-algorithms.md)) to prove in zero knowledge that he knows the secret key \\(sk_i\\), 
 
 
 
