@@ -43,11 +43,11 @@ In Step 3.3 of the key refresh process, a participant who broadcasts \\(h_1,h_2\
 
 In Step 3.2 of the key refresh process, a participant must prove that the RSA modulus \\(N\\) is a product of two primes \\(p,q\\) such that \\(N=pq\\) and \\(p \equiv q \equiv 3 \pmod{4}\\) and \\(gcd(N,\phi(N))=1\\). The protocol process as follow:
 
-1. The prover sample \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(\left(\dfrac{w}{N}\right)\\) denotes the Jacobian symbol.
+1. The prover samples \\(w \in \mathbb{Z_N}\\) s.t \\(\left(\dfrac{w}{N}\right)=-1\\) where \\(\left(\dfrac{w}{N}\right)\\) denotes the Jacobian symbol.
 
 2. The verifier samples \\(y_1,\dots,y_{\lambda} \in \mathbb{Z_N}\\) and send them to the prover.
 
-3. The prover proceed as follow:
+3. The prover proceed as follows:
 
     - Set \\(x_i=(y_i')^{1/4} \pmod{N}\\) where \\(y_i'=(-1)^{a_i}w^{b_i}y_i\\) such that \\(x_i\\) is well defined.
 
@@ -55,7 +55,7 @@ In Step 3.2 of the key refresh process, a participant must prove that the RSA mo
 
     - Send \\((x_i,a_i,b_i,z_i)_{i=1}^\lambda\\) to verifier.
 
-4. The verifier check that \\(N\\) is not a prime, \\(z_i^N \equiv y_i \pmod{N}\\) and \\(x_i^4 \equiv (-1)^{a_i}w^{b_i}y_i \pmod{N}\\). Accept if and only if all checks pass.
+4. The verifier checks that \\(N\\) is not a prime, \\(z_i^N \equiv y_i \pmod{N}\\) and \\(x_i^4 \equiv (-1)^{a_i}w^{b_i}y_i \pmod{N}\\). Accept if and only if all checks pass.
 
 **Pallier Encryption Range Proof:** 
 
@@ -63,9 +63,9 @@ In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
-2. The prover sample \\(\alpha \in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
+2. The prover samples \\(\alpha \in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
 
-3. The prover compute \\(S=h_1^k h_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^{N_1} \pmod {N_1^2}\\) and \\(C=h_1^\alpha h_2^\delta \pmod{N}\\)
+3. The prover computes \\(S=h_1^k h_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^{N_1} \pmod {N_1^2}\\) and \\(C=h_1^\alpha h_2^\delta \pmod{N}\\)
 
 4. The prover sends \\((S,A,C)\\) to the verifier.
 
@@ -75,9 +75,9 @@ In Step 1.2 of the signing process, each participant given \\(K_i=\mathsf{Enc_i}
 
 7. The prover sends \\(\pi=(z_1,z_2,z_3)\\) to the verifier
 
-8. The verifier check if \\((1+N_1)^{z_1}z_2^{N_1}=AK^e \pmod{N_1^2}\\) and \\(h_1^{z_1}h_2^{z_3}=CS^e \pmod{N}\\)
+8. The verifier checks if \\((1+N_1)^{z_1}z_2^{N_1}=AK^e \pmod{N_1^2}\\) and \\(h_1^{z_1}h_2^{z_3}=CS^e \pmod{N}\\)
 
-9 The verifier check that \\(z_i \in [-2^{3\lambda},\dots,2^{3\lambda}]\\)
+9 The verifier checks that \\(z_i \in [-2^{3\lambda},\dots,2^{3\lambda}]\\)
 
 **Proof of Paillier Encryption given Group Commitment:**
 
@@ -87,9 +87,9 @@ In Step 2.4 of the signing process, each participant has public input \\((C,X)\\
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
-2. The prover sample \\(\alpha \in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
+2. The prover samples \\(\alpha \in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\)
 
-3. The prover compute \\(S=h_1^xh_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^N_1 \pmod{N_1^2}\\), \\(Y=g^\alpha\\), \\(D=h_1^\alpha h_2^\gamma \pmod{N}\\)
+3. The prover computes \\(S=h_1^xh_2^u \pmod{N}\\), \\(A=(1+N_1)^\alpha r^N_1 \pmod{N_1^2}\\), \\(Y=g^\alpha\\), \\(D=h_1^\alpha h_2^\gamma \pmod{N}\\)
 4. The prover sends \\(S,A,Y,D,F\\) to the verifier.
 5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
 6. The prover computes \\(z_1=\alpha+ek\\), \\(z_2=r\rho^e \pmod{N_1}\\) and \\(z_3=\gamma+eu\\)
@@ -105,9 +105,9 @@ In Step 2.5 and 2.6 of the signing process, each participant has public input \\
 
 1. The protocol chooses \\(N,h_1,h_2\\) to be the auxiliary set-up parameter for the protocol, where \\(N\\) is a product of two safe prime and \\(h_1,h_2\\) generate the same multiplicative group modulo \\(N\\).
 
-2. The prover sample \\(\alpha\in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\beta\in [-2^{7\lambda},\dots,2^{7\lambda}]\\), \\(\gamma, \delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(m, u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\) and \\(r_y \in \mathbb{Z_{N_2}}\\)
+2. The prover samples \\(\alpha\in [-2^{3\lambda},\dots,2^{3\lambda}]\\), \\(\beta\in [-2^{7\lambda},\dots,2^{7\lambda}]\\), \\(\gamma, \delta \in [-2^{3\lambda}\cdot N,\dots,2^{3\lambda}\cdot N]\\), \\(m, u \in [-2^{\lambda}\cdot N,\dots,2^{\lambda}\cdot N]\\), \\(r \in \mathbb{Z_{N_1}}\\) and \\(r_y \in \mathbb{Z_{N_2}}\\)
 
-3. The prover compute \\(A=K^\alpha((1+N_1)^\beta r^{N_1}) \pmod {N_1^2}\\), \\(B_x=g^\alpha\\), \\(B_y=(1+N_2)^\beta r_y\\), \\(E=h_1^\alpha h_2^\gamma \pmod{N}\\), \\(F=h_1^\beta h_2^\gamma \pmod{N}\\), \\(S=h_1^xh_2^m \pmod{N}\\), \\(T=h_1^yh_2^u \pmod{N}\\)
+3. The prover computes \\(A=K^\alpha((1+N_1)^\beta r^{N_1}) \pmod {N_1^2}\\), \\(B_x=g^\alpha\\), \\(B_y=(1+N_2)^\beta r_y\\), \\(E=h_1^\alpha h_2^\gamma \pmod{N}\\), \\(F=h_1^\beta h_2^\gamma \pmod{N}\\), \\(S=h_1^xh_2^m \pmod{N}\\), \\(T=h_1^yh_2^u \pmod{N}\\)
 4. The prover sends \\(S,T,A,B_x,B_y,E,F\\) to the verifier.
 5. The verifier chooses a challenge \\(e \in [-p,\dots,p]\\) and sends \\(e\\) to the prover.
 6. The prover compute \\(z_1=\alpha+ex\\), \\(z_2=\beta+ey\\), \\(z_3=\gamma+em\\), \\(z_4=\delta+eu\\), \\(w=r \rho^e \pmod{N_1}\\), \\(w_y=r \rho_y^e \pmod{N_2}\\)

@@ -2,7 +2,7 @@
 
 Recall that the verification algorithm in threshold ECDSA remain identical to an ordinary ECDSA verification algorithm. Hence, it is sufficient to describe the **Verify** algorithm of the threshold ECDSA below.
 
-**Verify\\((M,\sigma=(r,s),pk)\\):** This is just the standard ECDSA verify algorithm, which can be publicly run by anyone. It works as follow: 
+**Verify\\((M,\sigma=(r,s),pk)\\):** This is just the standard ECDSA verify algorithm, which can be publicly run by anyone. It works as follows: 
 
 1. Compute \\(m=\mathsf{H}(M)\\).
 

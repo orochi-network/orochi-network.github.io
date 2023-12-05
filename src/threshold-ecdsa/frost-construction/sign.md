@@ -4,7 +4,7 @@ In this section, we describe the signing process of the protocol. For any set \\
 
 **Sign\\((M)\langle \\{P_i(sk_i)\\}_{i=1}^n\rangle\\):** 
 
-1. Each participant \\(P_i\\) choose \\(d_{i},e_{i} \in \mathbb{Z_p}\\) and broadcasts \\((D_{i},E_{i})=(g^{d_{i},g^{e_{i}}})\\). Denote \\(B=\\{(i,D_i,E_i)\\}_{i \in S}\\).
+1. Each participant \\(P_i\\) chooses \\(d_{i},e_{i} \in \mathbb{Z_p}\\) and broadcasts \\((D_{i},E_{i})=(g^{d_{i}},g^{e_{i}})\\). Denote \\(B=\\{(i,D_i,E_i)\\}_{i \in S}\\).
 
    
 2. For each \\(j \neq i\\), each \\(P_i\\) uses Schnorr protocol (see [Supporting Algorithms](./supporting-algorithms.md)) to check the validity of \\((D_i,E_i)\\). If any check fails then the protocol aborts.
