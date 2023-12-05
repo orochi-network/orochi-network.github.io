@@ -17,4 +17,3 @@ In this section, we describe the signing process of the protocol. For any set \\
 
 6. For each \\(i\\), participants check if \\(R=\prod_{i\in S}R_i\\) and \\(g_i=R_i\mathsf{pk_i}^{c \lambda_{i,S}}\\). If any check fails, report the misbehaving \\(P_i\\) and the protocol is aborted. Otherwise, compute \\(z=\sum_{i \in S}z_i\\) and returns \\(\sigma=(R,z)\\).
 
-For abort identification, there are 3 instances that the protocol can abort in the signing protocol.
