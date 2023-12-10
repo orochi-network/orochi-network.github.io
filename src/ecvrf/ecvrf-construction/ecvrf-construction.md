@@ -28,38 +28,38 @@ is  \\(pk=g^{sk}\\).
 
 1. Choose a value \\(k\\) uniformly in \\(\mathbb{Z}_p\\).
 
-1. Compute \\(c=\mathsf{ChallengeGeneration}(h,pk,gamma,g^k,h^k)\\)
+1. Compute \\(c=\mathsf{ChallengeGeneration}(h,pk,gamma,g^k,h^k)\\).
 
-1. Compute \\(s \equiv k-c.sk \pmod{q}\\)
+1. Compute \\(s \equiv k-c.sk \pmod{q}\\).
 
-1. The proof \\(\pi\\) of the VRF is computed as \\(\pi=(\gamma,c,s)\\) 
+1. The proof \\(\pi\\) of the VRF is computed as \\(\pi=(\gamma,c,s)\\). 
 
 
 **\\(\mathsf{ProofToHash}(gamma)\\):**  Given input \\(\gamma\\) that is calculated during the \\(\mathsf{Prove}\\) function, this function returns the output of ECVRF.
 
-1. Compute \\(gammastr=\mathsf{PointToString}(\gamma)\\)
+1. Compute \\(gammastr=\mathsf{PointToString}(\gamma)\\).
 
-1. Let \\(gammastr=PointToString(\gamma)\\)
+1. Let \\(gammastr=PointToString(\gamma)\\).
 
-1. Let \\(suite-string\\)="0x01"
+1. Let \\(suite-string\\)="0x01".
 
-1. Let \\(separator-front\\)="0x03"
+1. Let \\(separator-front\\)="0x03".
 
-1. Let \\(separator-back\\)="0x00"
+1. Let \\(separator-back\\)="0x00".
 
-1. Let Y=\\(\mathsf{keccak}(suite-string || seperator-front || gammastr || seperator-back)\\)
+1. Let \\(Y=\mathsf{keccak}(suite-string || seperator-front || gammastr || seperator-back)\\).
 
-1. Return Y
+1. Return \\(Y\\).
 
-**\\(\mathsf{Verify}(pk,X,Y,\pi)\\):** Given the public key \\(pk\\), the VRF input \\(X\\), the VRF output \\(Y\\) and its proof \\(\pi=(\gamma,c,s)\\), the verification step proceed as follow:
+**\\(\mathsf{Verify}(pk,X,Y,\pi)\\):** Given the public key \\(pk\\), the VRF input \\(X\\), the VRF output \\(Y\\) and its proof \\(\pi=(\gamma,c,s)\\), the verification step proceeds as follow:
 
-1. Check if \\(\gamma\\) and \\(pk\\) is on the curve
+1. Check if \\(\gamma\\) and \\(pk\\) is on the curve.
 
-1. Compute \\(u=pk^cg^s\\)
+1. Compute \\(u=pk^cg^s\\).
 
-1. Compute \\(h=\mathsf{EncodeToCurve}(X,pk)\\)
+1. Compute \\(h=\mathsf{EncodeToCurve}(X,pk)\\).
 
-1. Compute \\(v=\gamma^ch^s\\)
+1. Compute \\(v=\gamma^ch^s\\).
 
 1. Check if \\(c=\mathsf{ChallengeGeneration}(h,pk,gamma,g^k,h^k)\\). If the check is valid, output \\(Y=\mathsf{ProofToHash}(\gamma)\\), otherwise output \\(Invalid\\).
 

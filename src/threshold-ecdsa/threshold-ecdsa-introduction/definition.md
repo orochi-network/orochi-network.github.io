@@ -4,7 +4,7 @@ In this section, we describe the syntax and security properties of a threshold s
 
 ### Definition
 
-We describe the syntax of a threshold signature scheme. A \\((t-n)\\) threshold signature consists of two interactive protocols **KeyGen**, **Sign** and an algorithm **Verify** as follows: 
+We describe the syntax of a threshold signature scheme. A \\((n,t)\\) threshold signature consists of two interactive protocols **KeyGen**, **Sign** and an algorithm **Verify** as follows: 
 
 **Keygen \\((1^\lambda)\langle \\{P_i\\}_{i=1}^n\rangle\\):** This is an interactive protocol between \\(n\\) participants \\(P_1,P_2,\dots,P_n\\). If the interaction suceeds, each participant \\(P_i\\) receives a partial secret key \\(sk_i\\). In addition, all participants output a common public key \\(pk\\). 
 

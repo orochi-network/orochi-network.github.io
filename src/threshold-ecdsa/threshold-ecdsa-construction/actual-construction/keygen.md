@@ -1,6 +1,6 @@
 ### Key Generation
 
-In this section, we describe the key generation process in the construction of Gennaro et al. The key generation process is divided into two sub protocols: the initial key generation process and the key refresh process.
+In this section, we describe the key generation process in the construction of Canetti et al. The key generation process is divided into two sub protocols: the initial key generation process and the key refresh process.
 The initial key generation process is executed exactly once to produce a public-secret key pair \\(pk,sk\\), while the key refresh process is executed whenever participants would like to change their partial secret keys in the way that \\(pk\\) and \\(sk\\) remains the same.
  Before moving to the protocol, we provide several notations that will be used in the protocol description below.  
 

@@ -13,6 +13,6 @@ In this chapter, we give an overview of threshold signatures and describe the th
 
     - In [Threhold signature for secp256k1](./intended-implementation/threshold-ecdsa-for-secp256k1.md), we discuss and analyse the security of the threshold ECDSA signature of Canneti et al. when instatiated using the parameters of **secp256k1**.
 
-    - In  [Threhold signature for ed25519](./intended-implementation/threshold-ecdsa-for-ed25519.md) we discuss and analyse the security of the FROST threshold signature when instatiated using the parameters of **ed25519**.
+    - In  [Threhold signature for ed25519](./intended-implementation/threshold-eddsa-for-ed25519.md) we discuss and analyse the security of the FROST threshold signature when instatiated using the parameters of **ed25519**.
 
-    - In [Threhold signature for sr25519](./intended-implementation/threshold-ecdsa-for-sr-25519.md) we discuss and analyse the security of the FROST threshold signature when instatiated using the parameters of **sr25519**.
+    - In [Threhold signature for sr25519](./intended-implementation/threshold-eddsa-for-sr25519.md) we discuss and analyse the security of the FROST threshold signature when instatiated using the parameters of **sr25519**.
