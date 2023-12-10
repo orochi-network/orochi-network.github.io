@@ -12,9 +12,9 @@ For these graph, we require \\(p \equiv 1 \pmod{ 12} \\) so that we can pair an 
 
 The reason why Supersingular Isogeny Graphs are important lies in the following theorems:
 
-**Theorem**. [CGL09, Theorem 4.1] For \\(p \equiv 1 \pmod{ 12} \\) and \\(l \neq p\\) , the graph \\(\mathcal{G} _l(\mathbb{F} _{p^2})\\) is connected, and is a \\(l+1\\) regular graph.
+**Theorem**. [{{#cite CGL09}}, Theorem 4.1] For \\(p \equiv 1 \pmod{ 12} \\) and \\(l \neq p\\) , the graph \\(\mathcal{G} _l(\mathbb{F} _{p^2})\\) is connected, and is a \\(l+1\\) regular graph.
 
-**Theorem**. [CGL09, Theorem 4.2] For \\(p \equiv 1 \pmod{ 12} \\) and \\(l \neq p\\) the graph  \\(\mathcal{G} _l(\mathbb{F} _{p^2})\\) are Ramanujan graphs.
+**Theorem**. [{{#cite CGL09}}, Theorem 4.2] For \\(p \equiv 1 \pmod{ 12} \\) and \\(l \neq p\\) the graph  \\(\mathcal{G} _l(\mathbb{F} _{p^2})\\) are Ramanujan graphs.
 
 We give an overview about Ramanujan graphs. They are optimal expander graph. There are two nice properties of this type of graph. First, relatively short walk on this graph approximate the uniform distribution, which is good for a source of randomness. This can be seen by the following theorem:
 
@@ -22,7 +22,7 @@ We give an overview about Ramanujan graphs. They are optimal expander graph. The
 
 $$|Pr[j=j_2]-N_{l,p}^{-1}| \leq \left(\dfrac{2\sqrt{l}}{l+1}\right)^e$$
 
-The other nice property of Ramanujan graph is that the path-finding problem is assumed to be hard on this graph, which is good for constructing a cryptographic hash function. Two types of Ramanujan are proposed in {{#cite CGL06}}, LPS Graph and Supersingular Isogeny Graphs. However, the LPS hash function was attacked and broken in 2008 {{#cite TZ08, PLQ08}}, leaving the Supersingular Isonegy Graph as the ruling graph. 
+The other nice property of Ramanujan graph is that the path-finding problem is assumed to be hard on this graph, which is good for constructing a cryptographic hash function. Two types of Ramanujan are proposed in {{#cite CGL06}}, LPS Graph and Supersingular Isogeny Graphs. However, the LPS hash function was attacked and broken in 2008 {{#cite TZ08}} {{#cite PLQ08}}, leaving the Supersingular Isonegy Graph as the ruling graph. 
 
-The adjacency matrix of \\(\mathcal{G} _l(\mathbb{F} _{p^2})\\) is the Brandt matrix \\(B(l)\\). More informations of the matrix can be found in Voight's book. The matrix allow us to specify all primes \\(p\\) so that the graph does not have short cycles {{#cite Gha21}}, an important property to ensure the hardness of the path-finding problem of the graph ((#cite CGL06)).
+The adjacency matrix of \\(\mathcal{G} _l(\mathbb{F} _{p^2})\\) is the Brandt matrix \\(B(l)\\). More informations of the matrix can be found in Voight's book. The matrix allow us to specify all primes \\(p\\) so that the graph does not have short cycles {{#cite Gha21}}, an important property to ensure the hardness of the path-finding problem of the graph {{#cite CGL06}}.
 
