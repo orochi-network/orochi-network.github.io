@@ -2,7 +2,7 @@
 
 #### Definition
 
-[{{#cite Was08}}, Chapter XII.1] Let \\(E_1:y^2=x^3+a_1x+b_1\\) and \\(E_2:y^2=x^3+a_2x+b_2\\) be elliptic curves over a field \\(K\\). An **isogeny** from \\(E_1\\) to \\(E_2\\) is a nonconstant homorphism \\(\alpha:E_1 \rightarrow E_2\\) that is given by rational functions. 
+[{{#cite Was08}}, Chapter XII.1] Let \\(E_1:y^2=x^3+a_1x+b_1\\) and \\(E_2:y^2=x^3+a_2x+b_2\\) be elliptic curves over a field \\(K\\). An **isogeny** from \\(E_1\\) to \\(E_2\\) is a nonconstant homorphism \\(\alpha:E_1 \rightarrow E_2\\) that is given by rational functions such that \\(\alpha(O)=O\\). 
 
 This means \\(\alpha(P+Q)=\alpha(P)+\alpha(Q)\\) for all \\(P,Q \in E_1\\) and there exists rational functions \\(P, Q\\) such that if \\(\alpha(x_1, y_1)=(P(x_1, y_1),Q(x_1, y_1))\\).
 
