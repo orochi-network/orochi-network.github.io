@@ -86,3 +86,30 @@ class CalleeContract extends SmartContract {
 - This hierarchical structure is then submitted, effectively finalizing the transaction and documenting a secure, verified record of the entire interaction between the two contracts.
 
 These AccountUpdates work in tandem to create a comprehensive, secure, and verified record of the transaction, safeguarding the integrity of the process and ensuring transparency and accountability.
+
+
+## Composability: Second way
+Another approach to achieve composability is by chaining method calls from various smart contracts. This potentially could give use certain flexibility. However, the question is how can we ensure or enhance the security of such an approach?
+
+```ts
+class OneZkApp extends SmartContract {
+  @method callOne(): Field {
+    //
+  }
+}
+
+class SecondZkApp extends SmartContract {
+  @method callSecond(field: Field) {
+    //
+  }
+}
+
+Mina.transaction(feePayer, () => {
+  const result = oneZkApp.callOne();
+  secondZkApp.callSecond(result);
+});
+
+```
+
+## Resources
+- https://github.com/o1-labs/snarkyjs/issues/303
