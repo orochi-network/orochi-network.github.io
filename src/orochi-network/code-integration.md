@@ -71,6 +71,4 @@ console.log(newEpoch);
 console.log(await orandInstance.publish(newEpoch, wallet));
 ```
 
-Testing result of feeding `10` randomnesses to dice game contract [https://testnet.bscscan.com/tx/0x55c21d5c93c7ad314d25d28f49d7c6dc129bbc47a4df1c10b62dcdf579c385f2](https://testnet.bscscan.com/tx/0x55c21d5c93c7ad314d25d28f49d7c6dc129bbc47a4df1c10b62dcdf579c385f2).
-
 Don't mind to contact us on Telegram if you need support [https://t.me/OrochiNetwork](https://t.me/OrochiNetwork).
