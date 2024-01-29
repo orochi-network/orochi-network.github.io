@@ -17,18 +17,21 @@ Please take note that `@orochi-network/sdk` requires `es2018` to work as expecte
 First you might need to import `@orochi-network/sdk` to your project
 
 ```ts
-import { orand, IOrandEpoch } from "@orochi-network/sdk";
+import { Orand } from "@orochi-network/sdk";
 ```
 
 After you import the sdk, you can use our sdk in your project.
 
 ```ts
-const orandInstance = new orand.Orand({
-  url: "https://orand-test-service.orochi.network/",
-  user: "YOUR_REGISTERED_USERNAME",
-  secretKey: "YOUR_REGISTERED_HMAC_SECRET",
-  consumerAddress: "YOUR_APPLICATION_SMART_CONTRACT_ADDRESS",
-});
+let orand = await Orand.fromRPC(
+  {
+    user: "YOUR_REGISTERED_USERNAME",
+    secretKey: "YOUR_REGISTERED_USERNAME",
+    url: "https://orand-test.orochi.network",
+    consumerAddress: "YOUR_APPLICATION_SMART_CONTRACT_ADDRESS",
+  },
+  "https://rpcv2-testnet.ancient8.gg/"
+);
 ```
 
 In the example above, we initiated an instance of `Orand` which provides verifiable randomness based on [ECVRF](../ecvrf/verifiable_random_function.md).

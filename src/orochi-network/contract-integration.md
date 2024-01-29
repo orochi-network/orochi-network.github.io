@@ -8,7 +8,9 @@ pragma solidity ^0.8.0;
 
 error InvalidProvider();
 
-interface IOrandConsumerV1 {
+interface IOrandConsumerV2 {
+  // Consume the verifiable randomness from Orand provider
+  // Return false if you want to stop batching
   function consumeRandomness(uint256 randomness) external returns (bool);
 }
 ```
@@ -21,23 +23,20 @@ The game is quite easy. You roll the dice and `Orand` will give you the verifiab
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 import '@openzeppelin/contracts/access/Ownable.sol';
-import '../interfaces/IOrandConsumerV1.sol';
+import '../orand-v2/interfaces/IOrandConsumerV2.sol';
 
 error WrongGuessingValue(uint128 guessing);
 
 // Application should be an implement of IOrandConsumerV1 interface
-contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
+contract DiceGame is IOrandConsumerV2, Ownable {
   // Set new provider
   event SetProvider(address indexed oldProvider, address indexed newProvider);
 
   // Fulfill awaiting result
-  event Fulfill(uint256 indexed gameId, uint256 guessed, uint256 indexed result);
+  event Fulfilled(uint256 indexed gameId, uint256 guessed, uint256 indexed result);
 
   // New guess from player
   event NewGuess(address indexed player, uint256 indexed gameId, uint128 indexed guessed);
-
-  // Adjust maximum batching
-  event AdjustMaximumBatching(uint256 indexed maximum);
 
   // Game structure
   struct Game {
@@ -46,7 +45,7 @@ contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
   }
 
   // Provider address
-  address private orandProviderV1;
+  address private orandProvider;
 
   // Game result storage
   mapping(uint256 => Game) private gameResult;
@@ -61,36 +60,29 @@ contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
   uint256 private maximumBatching;
 
   // Only allow Orand to submit result
-  modifier onlyOrandProviderV1() {
-    if (msg.sender != orandProviderV1) {
+  modifier onlyOrandProvider() {
+    if (msg.sender != orandProvider) {
       revert InvalidProvider();
     }
     _;
   }
 
   // Constructor
-  constructor(address provider, uint256 limitBatching) {
+  constructor(address provider) {
     _setProvider(provider);
-    _setBatching(limitBatching);
   }
 
   //=======================[  Internal  ]====================
 
   // Set provider
   function _setProvider(address provider) internal {
-    emit SetProvider(orandProviderV1, provider);
-    orandProviderV1 = provider;
+    emit SetProvider(orandProvider, provider);
+    orandProvider = provider;
   }
 
   // Set provider
   function _getProvider() internal view returns (address) {
-    return orandProviderV1;
-  }
-
-  // Set max batching
-  function _setBatching(uint256 maximum) internal {
-    maximumBatching = maximum;
-    emit AdjustMaximumBatching(maximum);
+    return orandProvider;
   }
 
   //=======================[  Owner  ]====================
@@ -101,35 +93,20 @@ contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
     return true;
   }
 
-  // Set provider
-  function setMaximumBatching(uint256 maximum) external onlyOwner returns (bool) {
-    _setBatching(maximum);
-    return true;
-  }
-
   //=======================[  OrandProviderV1  ]====================
 
   // Consume the result of Orand V1 with batching feature
-  function consumeRandomness(uint256 randomness) external override onlyOrandProviderV1 returns (bool) {
-    uint256 filling = fulfilled;
-    uint256 processing = totalGame;
-
+  function consumeRandomness(uint256 randomness) external override onlyOrandProvider returns (bool) {
     // We keep batching < maximumBatching
-    if (processing - filling > maximumBatching) {
-      processing = filling + maximumBatching;
-    } else {
-      processing = totalGame;
+    if (fulfilled < totalGame) {
+      Game memory currentGame = gameResult[fulfilled];
+      currentGame.result = uint128((randomness % 6) + 1);
+      gameResult[fulfilled] = currentGame;
+      emit Fulfilled(fulfilled, currentGame.guessed, currentGame.result);
+      fulfilled += 1;
+      return true;
     }
-
-    // Starting batching
-    for (; filling < processing; filling += 1) {
-      gameResult[filling].result = uint128((randomness % 6) + 1);
-      randomness = uint256(keccak256(abi.encodePacked(randomness)));
-      emit Fulfill(filling, gameResult[filling].guessed, gameResult[filling].result);
-    }
-
-    fulfilled = filling - 1;
-    return true;
+    return false;
   }
 
   //=======================[  External  ]====================
@@ -140,8 +117,7 @@ contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
     if (guessing < 1 || guessing > 6) {
       revert WrongGuessingValue(guessing);
     }
-    Game memory currentGame = Game({ guessed: guessing, result: 0 });
-    gameResult[totalGame] = currentGame;
+    gameResult[totalGame] = Game({ guessed: guessing, result: 0 });
     emit NewGuess(msg.sender, totalGame, guessing);
     totalGame += 1;
     return true;
@@ -160,6 +136,6 @@ contract ExampleValidityProofDice is IOrandConsumerV1, Ownable {
 }
 ```
 
-In this example, the smart contract `ExampleValidityProofDice` was deployed at [0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D](https://testnet.bscscan.com/address/0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D#code)
+In this example, the smart contract `DiceGame` was deployed at [0x3fc4344b63fb1AB35a406Cb90ca7310EC8687585](https://scanv2-testnet.ancient8.gg/address/0x3fc4344b63fb1AB35a406Cb90ca7310EC8687585)
 
-The method `consumeRandomness(uint256 randomness)` should be restricted to `OrandProviderV1`. Here is its address on BNB Chain testnet [0x75C0e60Ca5771dd58627ac8c215661d0261D5D76](https://testnet.bscscan.com/address/0x75C0e60Ca5771dd58627ac8c215661d0261D5D76#code)
+The method `consumeRandomness(uint256 randomness)` should be restricted to `OrandProviderV2`. Here is its address on Ancient8 testnet [0xfB40e49d74b6f00Aad3b055D16b36912051D27EF](https://scanv2-testnet.ancient8.gg/address/0xfB40e49d74b6f00Aad3b055D16b36912051D27EF)

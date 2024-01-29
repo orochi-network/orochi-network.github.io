@@ -22,11 +22,13 @@ At Orochi Network, we believe that Verifiable Computation is a essential cryptog
 
 ## What Are We Building Toward To That vision?
 
-### zkWASM: An Universal Verifiable WebAssembly Run-time
-
-This is considered to be the core component of Orochi Network that provides semi-native executions and proves the computations in ZKPs. We booted this aspect with [zkWASM specifications](https://github.com/orochi-network/zkWASM-specs).
-
 ### zkDatabase: A Verifiable Database
+
+[zkDatabase](https://github.com/orochi-network/zkDatabase) is a database that utilizes ZKPs to prove the correctness of the data and data processing. As far as we know, every zkApp needs to manage their own on-chain and off-chain state itself. This process is costly and inefficient depending on the complexity of data's structure. We want to provide other teams the most critical component, namely, the database, to build their zkApps.
+
+### zkMemory: A Generalized Memmory Module for zkVM
+
+[zkMemory](https://github.com/orochi-network/orochimaru/tree/main/zkmemory) A modular apporach for zkVM, this module can help developer to create their own zkVM, zkCPU with a configurable instruction set.
 
 [zkDatabase](https://github.com/orochi-network/zkDatabase) is a database that utilizes ZKPs to prove the correctness of the data and data processing. As far as we know, every zkApp needs to manage their own on-chain and off-chain state itself. This process is costly and inefficient depending on the complexity of data's structure. We want to provide other teams the most critical component, namely, the database, to build their zkApps.
 

@@ -5,226 +5,212 @@
 We assume that you have an initialized instance of Orand.
 
 ```ts
-import { orand } from "@orochi-network/sdk";
+import { Orand } from "@orochi-network/sdk";
 
-const orandInstance = new orand.Orand({
-  url: "https://orand-test-service.orochi.network/",
-  user: "YOUR_REGISTERED_USERNAME",
-  secretKey: "YOUR_REGISTERED_HMAC_SECRET",
-  consumerAddress: "YOUR_APPLICATION_SMART_CONTRACT_ADDRESS",
-  chaiId: 1,
-});
+let orand = await Orand.fromRPC(
+  {
+    user: "YOUR_REGISTERED_USERNAME",
+    secretKey: "YOUR_REGISTERED_SECRET",
+    url: "https://orand-test.orochi.network",
+    consumerAddress: "YOUR_APPLICATION_SMART_CONTRACT_ADDRESS",
+  },
+  "https://rpcv2-testnet.ancient8.gg/"
+);
 ```
+
+**Properties:**
+
+Orand instance will provide following properties:
+
+- `rpcProvider`: The instance of `ethers.JsonRpcProvider` that will be used for static call and publish new epoch
+- `orandProviderV2`: The instance of `ethers.Contract` that represent for `OrandProviderV2` smart contract. You can access all static method and interactive with provider smart contract of Orand after connect wallet.
 
 **Note:**
 
-To prevent replay attack, we're required you to input `consumerAddress`. It's a smart contract address that will consume the randomness. Each `consumerAddress` will have different epoch target, you only able to to submit the epoch which has the matched epoch with target epoch on `OrandProviderV1` smart contract.
+To prevent replay attack, we're required you to input `consumerAddress`. It's a smart contract address that will consume the randomness. Each `consumerAddress` will have different epoch target, you only able to to submit the epoch which has the matched epoch with target epoch on `OrandProviderV2` smart contract.
 
 Some results will be returned in `BigInt` due to new update from `ethers.js`.
 
-### .getPublicEpoch()
-
-```ts
-await orandInstance.getPublicEpoch(0);
-```
-
-Allowed you to get a list of public epochs at the starting `epoch`, it will return an array of `IOrandEpoch`. The result will be limited to 20 records to prevent Denial of Service.
-
-Public epoch has `receiverAddress` is `0x0000000000000000000000000000000000000000`, submitting public epoch to `OrandProviderV1` won't have any affect since the consumer address is `0x0000000000000000000000000000000000000000`.
-
-**Result:**
-
-```txt
-[
-  {
-    epoch: 0,
-    alpha: '195ccc785b997579566fcac4367ee662fffba11f0d7c67d6df4cbbd318251fdd',
-    gamma: '59c6bd805ff9b9e21fe7888d1a3a2672e02f950c58814e84d7537ada90c31a7bcf64410d775ec3de37280688c1021a23a32098b590abc3b73f630378fc42c053',
-    c: 'b50167c3019820270b3708d3d586d212b4289d9b83d6b0f8350432045b8e9c4d',
-    s: 'cc13dc051aeb7cbdcc3bb4e8bfc3e92b1ab254899d503ee20813f7f77c107f7d',
-    y: '0a22386520c728455c84b21830ae0a21d56752dd27fe13ae129b0a04f599c0b2',
-    witnessAddress: '0c2971ca2f70ca924d3bfb08b94677a6cf9ab068',
-    witnessGamma: '8205aee30d8d3c8b9504c467f03b790ec7d7106125e45a8ee9e784f9670341d4429115d24958b64611f17c8d3a748951d27ce2a1c696da80c5edb56c78cf678a',
-    witnessHash: '665a9bb45478fa3391bf6308f6752ddc152288d53e4ed393230746ff74504817d71850c87edd776494f053aaf5b3e39e34b5cb05fc468e8d29553faf0e38ea62',
-    inverseZ: '60d0c2324755fd8f091c8fa690cd43899c94f0519958f8b85363d804d5f382e2',
-    signatureProof: '14d0bdf7f9457321871bc68490d23f04e8d5b394f2b43a7534f2bc01fea694d576ec3c24667d31475cf31747fccc3e79eb70823f852a420dfbf191e3a863b6de1b00000000000000000000000000000000000000000000000000000000000000000a22386520c728455c84b21830ae0a21d56752dd27fe13ae129b0a04f599c0b2',
-    createdDate: '2023-03-10 06:40:56'
-  },
-  {
-    epoch: 1,
-    alpha: '0a22386520c728455c84b21830ae0a21d56752dd27fe13ae129b0a04f599c0b2',
-    gamma: '00e995ee0917b73aea5cbcee6b5583f20e67c80666749359a8c97aa25fea97f88c4fa15d5feffd7815edc9b867c99891f26407cd53c3ad1b20fcb81c913a35a9',
-    c: '57f2d6461f1d05f7db5aca504c2b022e23854eeb638a47f56f32ca95730cf17b',
-    s: '01b4315ddb662d6bf326b64739777f47dc9a4e1e9362f380a98f9f5a41013951',
-    y: '08a5571c2c093c48c16c52dc0ec131a87073a5ff3ae75de354a5f7b66c5b5d8b',
-    witnessAddress: 'cab1927ebecfb748f021deed4e0f54acee27dd62',
-    witnessGamma: '896da8ba810f6c0412414773fa1012244f3fb0cb086702f78c4420622420ab3f71d7f20e9648c2cce7a65c57ae1f689555d15c357990e639be54a27aaa34e395',
-    witnessHash: 'ea1af5c829afdc666c448e1f2aedc4e1fe024bd5a321303cc1f71bacd94558ff23035dbf54c820ec18e6fa371ec96a5f9f0d86493e1a3b08d2be767c3b389c02',
-    inverseZ: 'ccc6ef8b4d4deee402c832cc85cc7ff12610dda57aa8a5ced90a05747f240d37',
-    signatureProof: '3386c6ba69dd850fa799af07544332f8d45b431ba65f5db34c79345839c921764f89f53a8cb2652920c9495a76804a1b2aa11c01ade58b19c78ae6621f60feaa1b000000000000000000000001000000000000000000000000000000000000000008a5571c2c093c48c16c52dc0ec131a87073a5ff3ae75de354a5f7b66c5b5d8b',
-    createdDate: '2023-03-10 06:40:58'
-  }
-]
-```
-
-### .newPrivateEpoch()
+### .newPrivateEpoch(): Promise\<OrandEpoch\>
 
 ```ts
 await orandInstance.newPrivateEpoch();
 ```
 
-Allowed you to generate a new private epoch that related to `consumerAddress`. The `consumerAddress` need to be registered on Orand V1 service.
+Allowed you to generate a new private epoch that bound to `consumerAddress`. The `consumerAddress` need to be registered on Orand V2 service.
 
 **Result:**
 
-```txt
+- `epoch`: Epoch number
+- `alpha`: Seed of new epoch, `alpha` is the result of previous epoch
+- `gamma`, `c`, `s`: Value of proof
+- `y`: Result of new epoch
+- `witnessAddress`, `witnessGamma`, `witnessHash`, `inverseZ`: Intermediate witness to prove given proof on smart contract.
+- `signatureProof`: ECDSA proof that bound to new epoch.
+
+**Output:**
+
+```js
 {
-  epoch: 3,
-  alpha: 'c9677c0884f380b1facece540fb2674590c6b004207c72d3fa3f99c6699e2401',
-  gamma: '8a3059cec8687c2d9d7048098a8484b0ebb8839d6589be070affac5a7763dd8e73a316231302534ea834e897835f610d61bc4dd8a2b75b71be35414b2fb2a2ea',
-  c: '9345c77ac9c7c1ba6d084ccf6997e2fcf623dc9cdc72e42a91855b1c8cc1c5fa',
-  s: '8457bc202e735627d5a27133744bf3bb0dd72fb5e85ce826d0716c107fd44430',
-  y: '147c78180c05d041a9e8b3bb11cf59f1c871019db940532bd38df22f8194f28c',
-  witnessAddress: '6dfb0007085713f2621380670e8578eb83df552b',
-  witnessGamma: 'a191f86cff2b88e06b38c64e4d2ddfb3c0673b32c7e229bd46f6a2262a962f700765aba72c8d225133874d0f26327a6851a67946b2deb1d7c722d4836d4cd1f4',
-  witnessHash: '0142eeaf5d41dad6a3b2f42f0a06ae8b17b47084c78bcd86f44693a264a9defb72a9b3ee2a3466810bb69e6360ca02f16b32f5f241ae7089651bc8f6a1f580c4',
-  inverseZ: '77024d6c015a9b0cbe758246843d7d8712115abaac53f761a6e1594d240a8a02',
-  signatureProof: '6f7e2c4eef8a3bbc0699971ab2d80693702356f1873d45b20829b50873943e8975f6f978d1daafc10c2c7ecda8bf3dda823485cfa7d17740398852423188f54c1b000000000000000000000003f16f07cfd6e9ac06925fcf68dd0b450f4131989d147c78180c05d041a9e8b3bb11cf59f1c871019db940532bd38df22f8194f28c',
-  createdDate: '2023-03-10 06:56:08'
+  epoch: 2,
+  alpha: '6be9719911e75d8f9a889f13e7c8c703c859d8ff9c89dcf6aa8db219d5fc2d45',
+  gamma: 'ef1408aa85d25157678b32423c467782a88fc9496a46d2adfef99019009eca3c278fa01773e51f6f72b27cf81e1eaf2e8a5855a7a705d87505734f2d1bf11e45',
+  c: '0ab76c3ae301adae9fe4f4884c58e1c959f17d6ecbe8e0b1b9ed68353eebcf36',
+  s: '2dc6a1202f37c91d373692d56754a9b8073ac298de3648080fa9483d8d5b2916',
+  y: '5ba1272ccd60a4f450ded626d643611ef9419c7e7f4c9b742aca7688f7d3aa13',
+  witnessAddress: '8495933d0449927c604dd6a855451feefa16013e',
+  witnessGamma: '8797c2ef56f31ec34064de5a3df12d36b4db15dc0a97bd62d2687fff0e8acd46000dc045b4fa0d6fbc6325da0b80a2e5dd68623ecf03f5178e6adc89a442f530',
+  witnessHash: '84b8797fad42b6851f9512be3222b10515edccd783f9a9505fe529e0aad5e96f3f6f21a38ead57ef1e61e61f95e1b5006f36a62b013db603da267c38303ce132',
+  inverseZ: '336dd6497177819a37003c4b962c2196a41caf1649d9d397e13115dadbb1e373',
+  signatureProof: '2c8d0c95decdadc5e7ebfb883956a66c3005de9beb95adc83da0d5882b0b7241086c833fde2898ea110fc86eb3d8a4fc2cd64d46c87a5966b3cb526475ced89e1b0000000000000000000000020f53d56bce68dc724687a1c89eea793fd67788811827aba56be6cb832e9eb3439919067afc8aec364399c6d155a6589cd67099b4',
+  createdDate: '2024-01-29T05:17:33.536051'
 }
 ```
 
-### .getPrivateEpoch()
+### getPrivateEpoch(epoch?: number): Promise<OrandEpoch[]>
+
+**Usage:**
 
 ```ts
-await orandInstance.getPrivateEpoch(3);
+await orandInstance.getPrivateEpoch(0);
 ```
 
-Allowed you to get a list of private epochs at the starting `epoch`, it will return an array of `IOrandEpoch`. The result will be limited to 20 records to prevent Denial of Service. These result will be bounded to `receiverAddress`.
+Get recent private epochs.
+
+**Params:**
+
+- `epoch`: Allowed you to get a list of most recent public epochs that close to `epoch`, it will return an array of `OrandEpoch`. The result will be limited to 20 records to prevent Denial of Service. If `epoch` wasn't supplied it will return latest epochs.
 
 **Result:**
 
-```txt
+It will return an array of `OrandEpoch`.
+
+```js
 [
   {
-    epoch: 3,
-    alpha: 'c9677c0884f380b1facece540fb2674590c6b004207c72d3fa3f99c6699e2401',
-    gamma: '8a3059cec8687c2d9d7048098a8484b0ebb8839d6589be070affac5a7763dd8e73a316231302534ea834e897835f610d61bc4dd8a2b75b71be35414b2fb2a2ea',
-    c: '9345c77ac9c7c1ba6d084ccf6997e2fcf623dc9cdc72e42a91855b1c8cc1c5fa',
-    s: '8457bc202e735627d5a27133744bf3bb0dd72fb5e85ce826d0716c107fd44430',
-    y: '147c78180c05d041a9e8b3bb11cf59f1c871019db940532bd38df22f8194f28c',
-    witnessAddress: '6dfb0007085713f2621380670e8578eb83df552b',
-    witnessGamma: 'a191f86cff2b88e06b38c64e4d2ddfb3c0673b32c7e229bd46f6a2262a962f700765aba72c8d225133874d0f26327a6851a67946b2deb1d7c722d4836d4cd1f4',
-    witnessHash: '0142eeaf5d41dad6a3b2f42f0a06ae8b17b47084c78bcd86f44693a264a9defb72a9b3ee2a3466810bb69e6360ca02f16b32f5f241ae7089651bc8f6a1f580c4',
-    inverseZ: '77024d6c015a9b0cbe758246843d7d8712115abaac53f761a6e1594d240a8a02',
-    signatureProof: '6f7e2c4eef8a3bbc0699971ab2d80693702356f1873d45b20829b50873943e8975f6f978d1daafc10c2c7ecda8bf3dda823485cfa7d17740398852423188f54c1b000000000000000000000003f16f07cfd6e9ac06925fcf68dd0b450f4131989d147c78180c05d041a9e8b3bb11cf59f1c871019db940532bd38df22f8194f28c',
-    createdDate: '2023-03-10 06:56:08'
-  }
-]
+    epoch: 0,
+    alpha: "e6d494bec47311a7d792ec1fdad02e8f79125ff515ceafe304e8dff27286c21a",
+    gamma:
+      "8be62be49e7ccb015e0df3e4326867f3e49187918a70b7350327f3d83d1e439022859a04162b2053f1dc7d3ce83c2be3ef1470fadfd58950d43b2031859bba64",
+    c: "fa9c9ee4923b02b1aabaacdb8b60e3f421e5e6b8930e7ee45e4d53668d18b210",
+    s: "3ed451751452a03443c46012c39ee68efedde1fd53d8ee81cb359cdae2d00b93",
+    y: "be15ac8e5bd156fe925f3a9879100593f9cd8179713b04ac0ad2ded57fc6b7e8",
+    witnessAddress: "7625d458345eba3a97b307315e517c341aa4eed4",
+    witnessGamma:
+      "9470d583d5f5c246b8be72f72ac4a905b6e89d21ebbb4362338fde837f45af0e680d0cd0885b06fde511d1eeed5078d7cef502a3ad9dd7c5bf39eacb554f0a6c",
+    witnessHash:
+      "d712ca266f9b43346aec040e61ec2be1ecf6beb9fe5276cc1e15286d37a635b919c124d8615cff81a0a8e81bf6e948e5c2b4678efc37c3febfbc71e4a0b106c6",
+    inverseZ:
+      "18537553a604b09da948eaf7a5b2aee9833f649556e6c891ddc629d380d04337",
+    signatureProof:
+      "1351bc757f1b3579afb04c60ef44b51ca9ec89da6141366bd030a3672b4928925aab4b31b4660fa3437d1ae55602c0474d9e5f0985d1a71c8b222670b3d9f7991b0000000000000000000000000f53d56bce68dc724687a1c89eea793fd677888151596c361cefc7f4781008cf9f0d044fcb2607515896666e20ab1eae18e9a63d",
+    createdDate: "2024-01-28T07:16:59.853007",
+  },
+];
 ```
 
-### .verifyECDSAProof()
+### verifyEpoch(epochECVRFProof: OrandEpoch): Promise\<VerifyEpochProofResult\>
+
+**Usage:**
 
 ```ts
-await orandInstance.verifyECDSAProof(epochData);
+await orandInstance.verifyEpoch(epoch);
 ```
 
-Allowed you to verify the ECDSA proof of any given epoch.
+Validate an epoch is valid or not, it also check current epoch link status.
+
+**Params:**
+
+- `epoch`: A epoch of Orand, it can obtain by `getPrivateEpoch()`, `newPrivateEpoch()`
 
 **Result:**
 
-```txt
+- `ecdsaProof`: Decomposed ECDSA proof
+  - `signer`: Signer address of given signature
+  - `receiverAddress`: Bound address to proof
+  - `receiverEpoch`: Bound epoch to proof
+  - `ecvrfProofDigest`: Digest of proof in `BigInt`, it can be convert to hex by `toString(16)`
+- `currentEpochNumber`: Current epoch of given receiver
+- `isEpochLinked`: Is this epoch linked to on-chain state
+- `isValidDualProof`: Validity of dual proof
+- `currentEpochResult`: On-chain epoch result, it will equal to `0n` if there is no genesis
+- `verifiedEpochResult`: Result of verifying epoch
+
+**Output:**
+
+```js
 {
-  signer: '0x7e9e03a453867a7046B0277f6cD72E1B59f67a0e',
-  receiverEpoch: 2n,
-  receiverAddress: '0xF16F07cfd6e9Ac06925FCf68dD0b450f4131989D',
-  y: 91097723859136686723473270573409338368251757405505259439091937259103551628289n
+  ecdsaProof: {
+    signer: '0xED6A792F694b7a52E7cf4b7f02dAa41a7c92f362',
+    receiverAddress: '0x3fc4344b63fb1AB35a406Cb90ca7310EC8687585',
+    receiverEpoch: 0n,
+    ecvrfProofDigest: 50338440222419549417414658096744085875859237350056663794916275947847078497254n
+  },
+  currentEpochNumber: 0n,
+  isEpochLinked: false,
+  isValidDualProof: true,
+  currentEpochResult: 0n,
+  verifiedEpochResult: 26822046345614045141848002846382424881390702704278990878694727729734354152825n
 }
 ```
 
-- `signer` MUST be equal to `await orandInstance.getOperatorAddress()` to make sure the ECDSA proof is valid.
-- `receiverEpoch` the required epoch number that need to be submit in the next publication.
-- `receiverAddress` MUST be equal to predefine `receiverAddress` in the initial stage
-- `y` Result of the current epoch
+### publish(proof: OrandEpoch, wallet: ContractRunner): Promise\<ContractTransactionResponse\>
 
-### .getActiveChain()
+**Usage:**
 
 ```ts
-await orandInstance.getActiveChain();
+const wallet = Wallet.fromPhrase(
+  "YOUR_WALLET_PASSPHRASE"
+  orandInstance.rpcProvider
+);
+
+const newEpoch = await orandInstance.newPrivateEpoch();
+console.log(newEpoch);
+console.log(await orandInstance.publish(newEpoch, wallet));
 ```
 
-Allowed you to read the data of current active chain.
+Publish a new epoch to blockchain.
+
+**Params:**
+
+- `proof`: A epoch of Orand, it can obtain by `getPrivateEpoch()`, `newPrivateEpoch()`
+- `wallet`: The wallet that going to pay for transaction fee
 
 **Result:**
 
-```txt
+This method will return `ethers.ContractTransactionResponse`.
+
+**Output:**
+
+```js
 {
-  url: 'https://data-seed-prebsc-1-s2.binance.org:8545',
-  providerAddress: '0x75C0e60Ca5771dd58627ac8c215661d0261D5D76'
+  provider: JsonRpcProvider {},
+  blockNumber: null,
+  blockHash: null,
+  index: undefined,
+  hash: '0x9c9330c9eedb694c5a7a0f16fd90484cf6b341fe3ec37064707970fb7bb0bbcb',
+  type: 2,
+  to: '0xfB40e49d74b6f00Aad3b055D16b36912051D27EF',
+  from: '0x7Ba5A9fA3f3BcCeE36f60F62a6Ef728C3856b8Bb',
+  nonce: 27,
+  gasLimit: 108996n,
+  gasPrice: undefined,
+  maxPriorityFeePerGas: 1000000n,
+  maxFeePerGas: 1000210n,
+  data: '0x7fcde1c20000000000000000000000003fc4344b63fb1ab35a406cb90ca7310ec868758516b9fc8b15a9860441e78da6667a2923c6dfb0e3b59edba90e237c216ba2e9fea8750d1a022cfb3479115336d90d8ba1392573791bb947681b755b23c8bfd0b0cc87f56c81b532b3878bcb44658ae06e2466f684c4b57dce4809e76462e0a827099620a1593ddb85f9d679649f992f4f519d8b963e2972d2ec2c0d6adbd7e1c23b4cbd80caafecc3a6da03fc49e01301bcd701f032569139c705bd9454832d79000000000000000000000000985b293668b106496f6787e540f4d5ea5ace41e9737afd298e5ef5e957781e5964c0622f76f1dc94d3447ebe0db9e3a21bfce2757a51418f22fc42d6f66ed26382577392cd48c75e77e316d43285185b4b92d09f3f102de22d018ee768af6b26c120a918993a7d740e9d10e3db3f26d1bdada402da2f3acb4e7eb037d496bb1b2ebd94c628f88bddec2324fce1f3d82d675b35184a578b8fe55e2c1ce1b0fe7181bb5a84fa50333889ff9bcc9bb86377c22f3237',
+  value: 0n,
+  chainId: 28122024n,
+  signature: Signature { r: "0xe41149214e6e78352f9b6cd371519edaecdc38684885d347458ddb2b0a7bc87d", s: "0x7be900ca6af85244aeeb887c765f2fae869803f6ce74afd4cac3b09d9307fc14", yParity: 0, networkV: null },
+  accessList: []
 }
 ```
 
-- `url` is the JSON-PRC provider, if you don't want you can use another JSON-RPC provider
-- `providerAddress` is `OrandProviderV1` address on active chain
-
-### .getOperatorAddress()
+### getPublicKey()
 
 ```ts
-await orandInstance.getOperatorAddress();
+
 ```
 
-Get the operator's address that is going to sign the ECDSA Proof.
+### static transformProof(proof: OrandEpoch): OrandProof
 
-**Result:**
-
-```txt
-0x7e9e03a453867a7046B0277f6cD72E1B59f67a0e
-```
-
-### .getReceiverAlpha()
-
-```ts
-await orandInstance.getReceiverAlpha(
-  "0xf16f07cfd6e9ac06925fcf68dd0b450f4131989d"
-);
-```
-
-Get current `alpha` of receiver, current `alpha` is previous the result of previous epoch. The next epoch MUST have the same `alpha` with current receiver's `alpha`.
-
-**Result:**
-
-```txt
-114997148547855332310731174935020155906209462858493962385407246111280193662921n
-```
-
-### .getReceiverEpoch()
-
-```ts
-await orandInstance.getReceiverEpoch(
-  "0xf16f07cfd6e9ac06925fcf68dd0b450f4131989d"
-);
-```
-
-Get current `epoch` of receiver, this value will be increased after a new epoch data submit to `OrandProviderV1`. This value MUST be equal to the epoch number of the submitting epoch.
-
-**Result:**
-
-```txt
-1n
-```
-
-### .verifyECVRFProof()
-
-```ts
-await orandInstance.verifyECVRFProof(epochData);
-```
-
-Allowed you to verify the correctness of any epoch, it will return `true` if the given epoch is valid, otherwise it will return `false`.
-
-**Result:**
-
-```txt
-true
-```
-
-**Note:** We might provide a new feature to reroll current epoch, in case the result failed to be verified on-chain. This reroll feature only change the witness but the result will be the same.
+This is a helper function that allow you to tranfor proof for smart contract parameters.
