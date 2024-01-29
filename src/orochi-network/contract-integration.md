@@ -1,6 +1,6 @@
 ## Smart Contract Integration
 
-Your smart contract that consumes Orand's randomness needs the interface of `IOrandConsumerV1` to be implemented, which was described below:
+Your smart contract that consumes Orand's randomness needs the interface of `IOrandConsumerV2` to be implemented, which was described below:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
@@ -27,7 +27,7 @@ import '../orand-v2/interfaces/IOrandConsumerV2.sol';
 
 error WrongGuessingValue(uint128 guessing);
 
-// Application should be an implement of IOrandConsumerV1 interface
+// Application should be an implement of IOrandConsumerV2 interface
 contract DiceGame is IOrandConsumerV2, Ownable {
   // Set new provider
   event SetProvider(address indexed oldProvider, address indexed newProvider);
@@ -93,9 +93,9 @@ contract DiceGame is IOrandConsumerV2, Ownable {
     return true;
   }
 
-  //=======================[  OrandProviderV1  ]====================
+  //=======================[  OrandProviderV2  ]====================
 
-  // Consume the result of Orand V1 with batching feature
+  // Consume the result of Orand V2 with batching feature
   function consumeRandomness(uint256 randomness) external override onlyOrandProvider returns (bool) {
     // We keep batching < maximumBatching
     if (fulfilled < totalGame) {
