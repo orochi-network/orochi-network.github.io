@@ -10,8 +10,8 @@ To optimize operation costs and improve security we provided following features:
 
 - **Dual Proof:** An ECDSA proof will be combined with an ECVRF proof to secure the feeding process, allowing it to be done by any third party while still guaranteeing the result to be verifiable and immutable.
 
-- **Batching:** We allow you to set the batching limit for one epoch, e.g., we can batch \\(1000\\) randomness for one single epoch which makes the cost be reduced significantly.
+- **Batching:** We allow you to set the batching limit for one epoch, e.g., we can batch \\(100\\) randomness for one single epoch which makes the cost be reduced significantly.
 
-## Orand V2
+## Orand V3
 
-Orand V2 will focus on utilizing Multi Party Computation (MPC) to secure the randomness generation, allowing the whole system to act as one random oracle. It makes the process more dispersed. In this stage, we boot up **Chaos Theory Alliance** to preventing predictability. Everything is built up toward to the vision of **Decentralized Random Number Generator**. If you believe in the vision of **Decentralized Random Number Generator**, please send drop us an email to ([contact@orochi.network](contact@orochi.network)) in order to participate in **Chaos Theory Alliance**.
+Orand V3 will focus on utilizing Multi Party Computation (MPC) to secure the randomness generation, allowing the whole system to act as one random oracle. It makes the process more dispersed. In this stage, we boot up **Chaos Theory Alliance** to preventing predictability. Everything is built up toward to the vision of **Decentralized Random Number Generator**. If you believe in the vision of **Decentralized Random Number Generator**, please send drop us an email to ([contact@orochi.network](contact@orochi.network)) in order to participate in **Chaos Theory Alliance**.

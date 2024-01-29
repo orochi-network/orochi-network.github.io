@@ -1,7 +1,7 @@
 # Summary
 
 - [Orochi Network](./orochi-network/orochi-network.md)
-  - [Orand V1](./orochi-network/orand-v1.md)
+  - [Orand V2](./orochi-network/orand-v2.md)
   - [Orochi Network SDK](./orochi-network/sdk.md)
   - [Orand Contract Integration](./orochi-network/contract-integration.md)
   - [Orand Code Integration](./orochi-network/code-integration.md)
