@@ -35,9 +35,7 @@ import { Orand } from "@orochi-network/sdk";
 
 (async () => {
   // Create an instance of Orand
-  import { Orand } from "@orochi-network/sdk";
-
-  let orand = await Orand.fromRPC(
+  let orandInstance = await Orand.fromRPC(
     {
       user: "YOUR_REGISTERED_USERNAME",
       secretKey: "YOUR_REGISTERED_SECRET",
@@ -46,6 +44,9 @@ import { Orand } from "@orochi-network/sdk";
     },
     "NETWORK_RPC_URL"
   );
+
+  const newEpoch = await orandInstance.newPrivateEpoch();
+  console.log(newEpoch);
 })();
 ```
 
