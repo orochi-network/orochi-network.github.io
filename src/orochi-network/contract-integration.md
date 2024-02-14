@@ -1,18 +1,9 @@
-## Smart Contract Integration
+### Installation
 
-Your smart contract that consumes Orand's randomness needs the interface of `IOrandConsumerV2` to be implemented, which was described below:
+Installing `@orochi-network/contracts` will help you interactive with Orochi Network Oracle and VRF (Orand) much more easier.
 
-```solidity
-// SPDX-License-Identifier: Apache-2.0
-pragma solidity ^0.8.0;
-
-error InvalidProvider();
-
-interface IOrandConsumerV2 {
-  // Consume the verifiable randomness from Orand provider
-  // Return false if you want to stop batching
-  function consumeRandomness(uint256 randomness) external returns (bool);
-}
+```bash
+npm i --save-dev @orochi-network/contracts
 ```
 
 ### Dice Game Example
@@ -23,7 +14,7 @@ The game is quite easy. You roll the dice and `Orand` will give you the verifiab
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 import '@openzeppelin/contracts/access/Ownable.sol';
-import '../orand-v2/interfaces/IOrandConsumerV2.sol';
+import '@orochi-network/contracts/IOrandConsumerV2.sol';
 
 error WrongGuessingValue(uint128 guessing);
 
