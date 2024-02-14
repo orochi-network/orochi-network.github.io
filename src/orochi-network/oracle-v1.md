@@ -143,7 +143,7 @@ contract ConsumerAssetPrice is Ownable {
   /**
    * Get price of a pair
    * @dev Token price will use 18 decimal for all token
-   * (e.g. BTC/ETH => srcToken='BTC' dstToken='src')
+   * (e.g. BTC/ETH => srcToken='BTC' dstToken='ETH')
    * @param srcToken Asset identifier of source
    * @param dstToken Asset identifier of destination
    * @return price
