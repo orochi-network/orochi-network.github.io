@@ -126,7 +126,3 @@ contract DiceGame is IOrandConsumerV2, Ownable {
   }
 }
 ```
-
-In this example, the smart contract `DiceGame` was deployed at [0x3fc4344b63fb1AB35a406Cb90ca7310EC8687585](https://scanv2-testnet.ancient8.gg/address/0x3fc4344b63fb1AB35a406Cb90ca7310EC8687585)
-
-The method `consumeRandomness(uint256 randomness)` should be restricted to `OrandProviderV2`. Here is its address on Ancient8 testnet [0xfB40e49d74b6f00Aad3b055D16b36912051D27EF](https://scanv2-testnet.ancient8.gg/address/0xfB40e49d74b6f00Aad3b055D16b36912051D27EF)
