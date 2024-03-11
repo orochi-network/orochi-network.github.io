@@ -47,7 +47,7 @@ npm i --save-dev @orochi-network/contracts
 
 ## Oracle Aggregator Overview
 
-This section describes all methods of OracleV1 that facilitate interaction from external smart contracts. To familiarize yourself with Oracle V1, the following terminology definitions may be helpful.
+This section describes all methods of Oracle V1 that facilitate interaction from external smart contracts. To familiarize yourself with Oracle V1, the following terminology definitions may be helpful.
 
 **appId:** Application ID on Oracle, our oracle support multiple applications there are two of them listed here:
 
@@ -56,7 +56,8 @@ This section describes all methods of OracleV1 that facilitate interaction from 
 | 1              | Asset Price      |
 | 2              | Cross Chain Data |
 
-**round:** Each application will have different round number, everytime a new dataset submitted the round number will be increased by
+**round:** Each application will have different round number, every time a new dataset submitted the round number will be increased by 1
+
 **identifier:** Data identifier, it's a `bytes20` used to index data on smart contract, for asset price application `identifier` is token's symbol
 
 **Note:**

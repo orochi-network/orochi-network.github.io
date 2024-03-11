@@ -26,13 +26,21 @@ After you import the sdk, you can use our sdk in your project.
 let orand = await Orand.fromRPC(
   {
     user: "YOUR_REGISTERED_USERNAME",
-    secretKey: "YOUR_REGISTERED_USERNAME",
+    secretKey: "YOUR_REGISTERED_SECRET",
     url: "https://orand-test.orochi.network",
-    consumerAddress: "YOUR_APPLICATION_SMART_CONTRACT_ADDRESS",
+    consumerAddress: "YOUR_CONSUMER_ADDRESS",
   },
   "https://rpcv2-testnet.ancient8.gg/"
 );
 ```
+
+Orochi Network is going to provide following data:
+
+- `YOUR_REGISTERED_USERNAME`: Your identify in our system
+- `YOUR_REGISTERED_SECRET`: Your HMAC-SHA256 secret key
+- `YOUR_CONSUMER_ADDRESS`: Consumer address can be any valid EVM compatible address
+
+**Note:** _for the mainnet `YOUR_CONSUMER_ADDRESS` need to be provided by you and should be a valid consumer contract that implied [IOrandConsumerV2](https://github.com/orochi-network/smart-contracts/blob/main/contracts/orand-v2/interfaces/IOrandConsumerV2.sol)_
 
 In the example above, we initiated an instance of `Orand` which provides verifiable randomness based on [ECVRF](../ecvrf/verifiable_random_function.md).
 

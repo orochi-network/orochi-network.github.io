@@ -1,3 +1,5 @@
 book
 .idea
 .DS_Store
+mermaid-init.js
+mermaid.min.js
