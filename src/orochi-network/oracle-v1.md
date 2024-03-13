@@ -29,9 +29,10 @@ Oracle V1 was deployed on following smart contract platform.
 
 ### Testnet
 
-| Network Name          | Address                                                                                                                      |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Unicorn Ultra Nebulas | [0xB563f74EA4AC302f94234Bd4C7E8e6E7cd7240E5](https://testnet.u2uscan.xyz/address/0xB563f74EA4AC302f94234Bd4C7E8e6E7cd7240E5) |
+| Network Name          | Address                                                                                                                             |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet      | [0x37fe3DeADd810aebea4289E3fC2F2dEf4630d265](https://scanv2-testnet.ancient8.gg/address/0x37fe3DeADd810aebea4289E3fC2F2dEf4630d265) |
+| Unicorn Ultra Nebulas | [0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844](https://testnet.u2uscan.xyz/address/0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844)        |
 
 ### Mainnet
 
