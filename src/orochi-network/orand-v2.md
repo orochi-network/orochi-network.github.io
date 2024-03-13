@@ -8,6 +8,7 @@ To optimize operation costs and improve security we provided following features:
 - **Self and Delegated Submission:** Orand project have flexibility in proof submission, we just generate valid ECVRF proof and you can decide how to submit them:
   - **Self Submission:** You can request from your back-end to Orand service and submit the randomness to your smart contract.
   - **Delegation Submission:** You can delegate the submission process to Orochi Network by transfer token to our operator, so the feeding process will be performed automatically.
+  - **Request Submission:** Instead of request to Orand service, you can request randomness via Oracle contract.
 - **Batching:** We allow you to set the batching limit for one epoch, e.g., we can batch `100` randomness for one single epoch which makes the cost be reduced significantly.
 
 ## Self Submission
@@ -38,15 +39,15 @@ sequenceDiagram
 
 ## Request Submission
 
-dApp will request to a application contract for the randomness, Orand service will fulfill this request and submit the randomness to Orand provider contract.
+dApp will request to Orochi Network's oracle contract for the randomness, Orand service will fulfill this request and submit the randomness to Orand provider contract.
 
 ```mermaid
 %%{init: {'theme':'base'}}%%
 sequenceDiagram
-    Game Frontend->>+Application Contract: Request randomness
+    Game Frontend->>+Oracle: Request randomness
     Orand->>+Orand: Repeating Polling Request
     Orand->>-Orand Contract: Fulfil Request
-    Orand Contract->>Game Frontend: Tx Receipt
+    Oracle->>Game Frontend: Tx Receipt
 ```
 
 ## Deployed Platform
@@ -57,8 +58,8 @@ Orand V2 was deployed on following smart contract platform.
 
 | Network Name          | Address                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0xfB40e49d74b6f00Aad3b055D16b36912051D27EF](https://scanv2-testnet.ancient8.gg/address/0xfB40e49d74b6f00Aad3b055D16b36912051D27EF) |
-| Unicorn Ultra Nebulas | [0xf33B79F915fC4A870ED1b26356C9f6EB60638DB8](https://testnet.u2uscan.xyz/address/0xf33B79F915fC4A870ED1b26356C9f6EB60638DB8)        |
+| Ancient8 Testnet      | [0x23D10462DEB4f8e3865df207d799b00682319cb8](https://scanv2-testnet.ancient8.gg/address/0x23D10462DEB4f8e3865df207d799b00682319cb8) |
+| Unicorn Ultra Nebulas | [0x761d769A184642FdDb278589Bf2bEb6e765676E3](https://testnet.u2uscan.xyz/address/0x761d769A184642FdDb278589Bf2bEb6e765676E3)        |
 
 ## Orand V3
 
