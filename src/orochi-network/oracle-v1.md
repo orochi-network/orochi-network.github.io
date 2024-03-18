@@ -4,7 +4,7 @@ Imagine building a Web3 application that thrives on real-world data, free from c
 
 Traditionally, DApps have struggled to access external data sources, relying on centralized oracles – single points of failure susceptible to manipulation and bias. Orochi's Oracle shatters these limitations, offering a decentralized, secure, and versatile solution for feeding accurate and verifiable data into your DApps.
 
-## So, what exactly can the Orochi Oracle do?
+## So, what exactly can the Orochi Oracle (Orocle) do?
 
 - **Gather Diverse Data:** Access a vast pool of information, from financial markets and weather updates to social media sentiment and IoT sensor readings. The possibilities are endless, empowering DApps with real-time, relevant data.
 - **Decentralized & Trustworthy:** Eliminate the risk of manipulation with a distributed network of nodes verifying and securing data integrity. No single entity controls the flow of information, fostering trust and transparency.
@@ -31,8 +31,8 @@ Oracle V1 was deployed on following smart contract platform.
 
 | Network Name          | Address                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0x37fe3DeADd810aebea4289E3fC2F2dEf4630d265](https://scanv2-testnet.ancient8.gg/address/0x37fe3DeADd810aebea4289E3fC2F2dEf4630d265) |
-| Unicorn Ultra Nebulas | [0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844](https://testnet.u2uscan.xyz/address/0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844)        |
+| Ancient8 Testnet      | [0x202ac5D896889fD9854Cd9a7AEc10EC410F58716](https://scanv2-testnet.ancient8.gg/address/0x202ac5D896889fD9854Cd9a7AEc10EC410F58716) |
+| Unicorn Ultra Nebulas | [0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7](https://testnet.u2uscan.xyz/address/0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7)        |
 
 ### Mainnet
 
@@ -74,38 +74,14 @@ This section describes all methods of Oracle V1 that facilitate interaction from
 
 ### Key Points:
 
-**Errors:** The contract defines several errors to handle potential issues:
+The IOrocleAggregatorV1 interface defines several methods:
 
-- `ExistedApplication`: Application ID already exists.
-- `InvalidApplication`: Invalid application ID.
-- `InvalidApplicationName`: Invalid application name.
-- `InvalidRoundNumber`: Invalid round number.
-- `UndefinedRound`: Round is not yet defined.
-- `InvalidDataLength`: Invalid data length.
-- `UnableToPublishData`: Failed to publish data.
-
-**ApplicationMetadata Struct:** Stores application information:
-
-- `name`: Bytes16 representing the application name.
-- `lastUpdate`: uint64 timestamp of the last update.
-- `round`: uint64 current round number.
-
-**Functions:**
-
-1. `getRound(uint32 appId) external view returns (uint256 round):`
-   - Returns the current round number for a given application ID.
-2. `getLastUpdate(uint32 appId) external view returns (uint256 lastUpdate):`
-   - Returns the timestamp of the last update for a given application ID.
-3. `getApplication(uint32 appId) external view returns (ApplicationMetadata memory app):`
-   - Returns application metadata, including name, last update, and round.
-4. `getData(uint32 appId, uint64 round, bytes20 identifier) external view returns (bytes32 data):`
-   - Returns data for a specific application, round, and identifier.
-5. `getDataLte(uint32 appId, uint64 targetRound, bytes20 identifier) external view returns (bytes32 data):`
-   - Returns data for a given application and identifier, where round is less than or equal to the target round.
-6. `getDataGte(uint32 appId, uint64 targetRound, bytes20 identifier) external view returns (bytes32 data):`
-   - Returns data for a given application and identifier, where round is greater than or equal to the target round.
-7. `getLatestData(uint32 appId, bytes20 identifier) external view returns (bytes32 data):`
-   - Returns the latest data for a given application and identifier.
+- `request(uint256 identifier, bytes calldata data)`: This function is used to create a new request. It takes an identifier and data as parameters and returns a boolean indicating whether the request was successful.
+- `fulfill(uint256 identifier, bytes calldata data)`: This function is used to fulfill a request. It also takes an identifier and data as parameters and returns a boolean indicating whether the fulfillment was successful.
+- `getMetadata(uint32 appId, bytes20 identifier)`: This function is used to get the metadata of a given application. It takes an application ID and an identifier as parameters and returns the round and the last update time.
+- `getData(uint32 appId, uint64 round, bytes20 identifier)`: This function is used to get the data of an application for a specific round. It takes an application ID, a round number, and an identifier as parameters and returns the data.
+- `getLatestData(uint32 appId, bytes20 identifier)`: This function is used to get the latest data of an application. It takes an application ID and an identifier as parameters and returns the data.
+- `getLatestRound(uint32 appId, bytes20 identifier)`: This function is used to get the latest round of an application. It takes an application ID and an identifier as parameters and returns the round number, the last update time, and the data.
 
 ## Example
 
@@ -134,7 +110,7 @@ contract ConsumerAssetPrice is Ownable {
 
   /**
    * Get price of an asset based USD
-   * @dev Token price will use 18 decimal for all token
+   * @dev Token price will use 9 decimal for all token
    * @param identifier Asset identifier (e.g. BTC, ETH, USDT)
    * @return price
    */
@@ -144,14 +120,14 @@ contract ConsumerAssetPrice is Ownable {
 
   /**
    * Get price of a pair
-   * @dev Token price will use 18 decimal for all token
+   * @dev Token price will use 9 decimal for all token
    * (e.g. BTC/ETH => srcToken='BTC' dstToken='ETH')
    * @param srcToken Asset identifier of source
    * @param dstToken Asset identifier of destination
    * @return price
    */
   function _getPriceOfPair(bytes20 srcToken, bytes20 dstToken) internal view returns (uint256) {
-    return (_getPrice(srcToken) * 10 ** 18) / (_getPrice(dstToken));
+    return (_getPrice(srcToken) * 10 ** 9) / (_getPrice(dstToken));
   }
 
   /**
