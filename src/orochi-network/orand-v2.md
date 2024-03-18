@@ -58,8 +58,8 @@ Orand V2 was deployed on following smart contract platform.
 
 | Network Name          | Address                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0x23D10462DEB4f8e3865df207d799b00682319cb8](https://scanv2-testnet.ancient8.gg/address/0x23D10462DEB4f8e3865df207d799b00682319cb8) |
-| Unicorn Ultra Nebulas | [0x761d769A184642FdDb278589Bf2bEb6e765676E3](https://testnet.u2uscan.xyz/address/0x761d769A184642FdDb278589Bf2bEb6e765676E3)        |
+| Ancient8 Testnet      | [0x5778CE57f49A5487D2127fd39a060D75aF694e8c](https://scanv2-testnet.ancient8.gg/address/0x5778CE57f49A5487D2127fd39a060D75aF694e8c) |
+| Unicorn Ultra Nebulas | [0x388a09a39619D5DE01a10D78D23A3bC1528b7A47](https://testnet.u2uscan.xyz/address/0x388a09a39619D5DE01a10D78D23A3bC1528b7A47)        |
 
 ## Orand V3
 
