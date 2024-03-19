@@ -31,8 +31,8 @@ Oracle V1 was deployed on following smart contract platform.
 
 | Network Name          | Address                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0x449d432F7F5F0a08205C886ED2471F2341aFb94e](https://scanv2-testnet.ancient8.gg/address/0x449d432F7F5F0a08205C886ED2471F2341aFb94e) |
-| Unicorn Ultra Nebulas | [0x674305AD68cf9c2F572D06b8b617EF3C6c74503E](https://testnet.u2uscan.xyz/address/0x674305AD68cf9c2F572D06b8b617EF3C6c74503E)        |
+| Ancient8 Testnet      | [0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c](https://scanv2-testnet.ancient8.gg/address/0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c) |
+| Unicorn Ultra Nebulas | [0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8](https://testnet.u2uscan.xyz/address/0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8)        |
 
 ### Mainnet
 
@@ -110,7 +110,7 @@ contract ConsumerAssetPrice is Ownable {
 
   /**
    * Get price of an asset based USD
-   * @dev Token price will use 9 decimal for all token
+   * @dev Token price will use 18 decimal for all token
    * @param identifier Asset identifier (e.g. BTC, ETH, USDT)
    * @return price
    */
@@ -120,7 +120,7 @@ contract ConsumerAssetPrice is Ownable {
 
   /**
    * Get price of a pair
-   * @dev Token price will use 9 decimal for all token
+   * @dev Token price will use 18 decimal for all token
    * (e.g. BTC/ETH => srcToken='BTC' dstToken='ETH')
    * @param srcToken Asset identifier of source
    * @param dstToken Asset identifier of destination
