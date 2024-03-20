@@ -54,6 +54,12 @@ sequenceDiagram
 
 Orand V2 was deployed on following smart contract platform.
 
+### Mainnet
+
+| Network Name     | Address                                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet | [0x184Ae846c6AC7F7452350AB4Fa81C2cD986c64E1](https://scan.ancient8.gg/address/0x184Ae846c6AC7F7452350AB4Fa81C2cD986c64E1) |
+
 ### Testnet
 
 | Network Name          | Address                                                                                                                             |

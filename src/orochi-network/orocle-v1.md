@@ -27,16 +27,18 @@ Ready to explore the possibilities? Dive into the world of Orochi Network and un
 
 Oracle V1 was deployed on following smart contract platform.
 
+### Mainnet
+
+| Network Name     | Address                                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet | [0x4a504B247f5200D71233437f8aE585B9309b0A1f](https://scan.ancient8.gg/address/0x4a504B247f5200D71233437f8aE585B9309b0A1f) |
+
 ### Testnet
 
 | Network Name          | Address                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Ancient8 Testnet      | [0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c](https://scanv2-testnet.ancient8.gg/address/0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c) |
 | Unicorn Ultra Nebulas | [0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8](https://testnet.u2uscan.xyz/address/0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8)        |
-
-### Mainnet
-
-N/A
 
 ### Installation
 
