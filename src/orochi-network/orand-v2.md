@@ -11,6 +11,24 @@ To optimize operation costs and improve security we provided following features:
   - **Request Submission:** Instead of request to Orand service, you can request randomness via Oracle contract.
 - **Batching:** We allow you to set the batching limit for one epoch, e.g., we can batch `100` randomness for one single epoch which makes the cost be reduced significantly.
 
+## Deployed Platform
+
+Orand V2 was deployed on following smart contract platform.
+
+### Mainnet
+
+| Network Name        | Address                                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet    | [0x184Ae846c6AC7F7452350AB4Fa81C2cD986c64E1](https://scan.ancient8.gg/address/0x184Ae846c6AC7F7452350AB4Fa81C2cD986c64E1) |
+| U2U Solaris Mainnet | [0x8131bE6F2b15Bead0B8D675db9D3d43BFcb3eA72](https://u2uscan.xyz/address/0x8131bE6F2b15Bead0B8D675db9D3d43BFcb3eA72)      |
+
+### Testnet
+
+| Network Name          | Address                                                                                                                             |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet      | [0x5778CE57f49A5487D2127fd39a060D75aF694e8c](https://scanv2-testnet.ancient8.gg/address/0x5778CE57f49A5487D2127fd39a060D75aF694e8c) |
+| Unicorn Ultra Nebulas | [0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1](https://testnet.u2uscan.xyz/address/0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1)        |
+
 ## Self Submission
 
 User will request the verifiable randomness from Orand service, they can submit the randomness themselves and control gas consumption. You must submit epoch by sequence and starting epoch or genesis must be epoch `0`.
@@ -49,23 +67,6 @@ sequenceDiagram
     Orand->>-Orand Contract: Fulfil Request
     Oracle->>Game Frontend: Tx Receipt
 ```
-
-## Deployed Platform
-
-Orand V2 was deployed on following smart contract platform.
-
-### Mainnet
-
-| Network Name     | Address                                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Mainnet | [0x184Ae846c6AC7F7452350AB4Fa81C2cD986c64E1](https://scan.ancient8.gg/address/0x184Ae846c6AC7F7452350AB4Fa81C2cD986c64E1) |
-
-### Testnet
-
-| Network Name          | Address                                                                                                                             |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0x5778CE57f49A5487D2127fd39a060D75aF694e8c](https://scanv2-testnet.ancient8.gg/address/0x5778CE57f49A5487D2127fd39a060D75aF694e8c) |
-| Unicorn Ultra Nebulas | [0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1](https://testnet.u2uscan.xyz/address/0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1)        |
 
 ## Orand V3
 

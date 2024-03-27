@@ -4,6 +4,24 @@ Imagine building a Web3 application that thrives on real-world data, free from c
 
 Traditionally, DApps have struggled to access external data sources, relying on centralized oracles – single points of failure susceptible to manipulation and bias. Orochi's Oracle shatters these limitations, offering a decentralized, secure, and versatile solution for feeding accurate and verifiable data into your DApps.
 
+## Deployed Platform
+
+Oracle V1 was deployed on following smart contract platform.
+
+### Mainnet
+
+| Network Name        | Address                                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet    | [0x4a504B247f5200D71233437f8aE585B9309b0A1f](https://scan.ancient8.gg/address/0x4a504B247f5200D71233437f8aE585B9309b0A1f) |
+| U2U Solaris Mainnet | [0xb3F1aA1F2cde3FfF87E888123D755b144e802f11](https://u2uscan.xyz/address/0xb3F1aA1F2cde3FfF87E888123D755b144e802f11)      |
+
+### Testnet
+
+| Network Name          | Address                                                                                                                             |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet      | [0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c](https://scanv2-testnet.ancient8.gg/address/0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c) |
+| Unicorn Ultra Nebulas | [0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8](https://testnet.u2uscan.xyz/address/0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8)        |
+
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 
 - **Gather Diverse Data:** Access a vast pool of information, from financial markets and weather updates to social media sentiment and IoT sensor readings. The possibilities are endless, empowering DApps with real-time, relevant data.
@@ -22,23 +40,6 @@ Traditionally, DApps have struggled to access external data sources, relying on 
 Orochi's Oracle is more than just a data feed; it's a gateway to a truly decentralized and data-driven future for Web3. By unlocking the power of real-world data, it empowers developers to build DApps that are not only innovative but also robust, secure, and truly impactful.
 
 Ready to explore the possibilities? Dive into the world of Orochi Network and unleash the full potential of your Web3 vision.
-
-## Deployed Platform
-
-Oracle V1 was deployed on following smart contract platform.
-
-### Mainnet
-
-| Network Name     | Address                                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Mainnet | [0x4a504B247f5200D71233437f8aE585B9309b0A1f](https://scan.ancient8.gg/address/0x4a504B247f5200D71233437f8aE585B9309b0A1f) |
-
-### Testnet
-
-| Network Name          | Address                                                                                                                             |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c](https://scanv2-testnet.ancient8.gg/address/0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c) |
-| Unicorn Ultra Nebulas | [0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8](https://testnet.u2uscan.xyz/address/0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8)        |
 
 ### Installation
 
