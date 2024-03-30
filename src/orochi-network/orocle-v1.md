@@ -21,6 +21,7 @@ Oracle V1 was deployed on following smart contract platform.
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Ancient8 Testnet      | [0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c](https://scanv2-testnet.ancient8.gg/address/0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c) |
 | Unicorn Ultra Nebulas | [0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8](https://testnet.u2uscan.xyz/address/0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8)        |
+| Sei Devnet            | [0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844](https://seistream.app/account/0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844)              |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 
