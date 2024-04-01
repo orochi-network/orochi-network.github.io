@@ -12,16 +12,16 @@ Oracle V1 was deployed on following smart contract platform.
 
 | Network Name        | Address                                                                                                                   |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Mainnet    | [0x4a504B247f5200D71233437f8aE585B9309b0A1f](https://scan.ancient8.gg/address/0x4a504B247f5200D71233437f8aE585B9309b0A1f) |
-| U2U Solaris Mainnet | [0xb3F1aA1F2cde3FfF87E888123D755b144e802f11](https://u2uscan.xyz/address/0xb3F1aA1F2cde3FfF87E888123D755b144e802f11)      |
+| Ancient8 Mainnet    | [0x11Af4c61D8D51016b8800EA71e42Cf7c3682Ab84](https://scan.ancient8.gg/address/0x11Af4c61D8D51016b8800EA71e42Cf7c3682Ab84) |
+| U2U Solaris Mainnet | [0xF1EE9eD597336B2a585DDb5A3DB6c5f0739cbE87](https://u2uscan.xyz/address/0xF1EE9eD597336B2a585DDb5A3DB6c5f0739cbE87)      |
 
 ### Testnet
 
 | Network Name          | Address                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet      | [0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c](https://scanv2-testnet.ancient8.gg/address/0x7A1cbb2B2B6a65a30C83292038B0fea42dA85F5c) |
-| Unicorn Ultra Nebulas | [0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8](https://testnet.u2uscan.xyz/address/0xC1cEA809E13A486bD63D4AF62c7baac05B271CA8)        |
-| Sei Devnet            | [0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844](https://seistream.app/account/0x22a47dFcE099e26C9FffBfa5e356cdfD0DC38844)              |
+| Ancient8 Testnet      | [0xBF3Ff099fb6c23296Fd192df643ad49FCeD658D0](https://scanv2-testnet.ancient8.gg/address/0xBF3Ff099fb6c23296Fd192df643ad49FCeD658D0) |
+| Unicorn Ultra Nebulas | [0xfA73F946E66eC366419c110f9Ae1AEe234eA714e](https://testnet.u2uscan.xyz/address/0xfA73F946E66eC366419c110f9Ae1AEe234eA714e)        |
+| Sei Devnet            | [0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7](https://seistream.app/account/0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7)              |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 
