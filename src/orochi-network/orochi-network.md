@@ -2,50 +2,52 @@
     <img src="../assets/orochi-network.png" alt="Orochi Network">
 </p>
 
-## What is Orochi Network?
+# Orochi Network: Building the Operating System for the Next Generation of Web
 
-Orochi Network is a project that utilizes cryptography, especially Zero-Knowledge Proofs (ZKP) to build up an operating system (UnityOS) for the next generation of the internet.
+The internet is on the cusp of a major transformation, ushering in the era of Web3. This new iteration promises a decentralized web built on blockchain technology and cryptography, empowering users and fostering a more secure and transparent online experience. However, current Web3 applications (dApps) face limitations in terms of scalability, cost, and user experience. Orochi Network is stepping up to address these challenges by developing a comprehensive suite of products designed to be the foundation for a thriving Web3 ecosystem.
+At the heart of Orochi Network lies zkOS, a cutting-edge zk-Operating System (zkOS). This system leverages the power of Zero-Knowledge Proofs (ZKPs) to create a high-performance runtime fabric for zkApps (Zero-Knowledge Applications). ZKPs allow applications to prove the validity of information without revealing the underlying data itself. This innovation empowers zkApps to operate securely and efficiently without relying on centralized servers, a major bottleneck in current dApps. Developers can then focus on building innovative applications, leaving the complexities of computation and security to zkOS.
 
-UnityOS manages a pool of computation power. It allows High Performance Decentralized Applications to be hosted and processed without any centralized server. UnityOS runs in a server-less fashion with the underlying technology that can handle almost everything. Hence, the developers only need to focus on designing the logic of their dApps. This layer is built with distributed computing using [zkWASM](https://github.com/orochi-network/zkWASM-specs).
+# More than the zkOS
 
-The dApps can be implemented by popular programming languages, e.g., C++, Rust, Go, etc, and processed with semi-native performance. Computation power will be allocated dynamically and thus, saves operational costs and computational waste.
+Orochi Network offers a range of additional products that strengthen the Web3 infrastructure:
 
-## Our Vision
+## Orocle (Decentralized Oracle Service)
 
-At Orochi Network, we believe that Verifiable Computation is a essential cryptographic system to establish Web3 and Decentralized Autonomous Economy. However, in order to reach this stage, there are still a number of major challenges of this industry to overcome.
+This service acts as a bridge between dApps/zkApps and real-world data. It provides verifiable and secure access to real-time data across various blockchain networks, ensuring data integrity and fostering trust within the Web3 ecosystem.
 
-- **The limits of computation:** _EVM cannot guarantee semi-native performance, in addition to the extremely high cost and latency to perform computations. dApps nowadays are unstable, expensive, slow and unfriendly to the mass. In other words, they are currently unusable and we cannot replace an ordinary application by a dApp yet._
+## Orand (ECVRF-based randomness generation)
 
-- **Data correctness:** _There is no way to prove the correctness of data since all data pipelines are stored in a blackbox. We have no idea how data are processed._
+Many dApps, such as provably fair games and random number generators, rely on a secure and verifiable source of randomness. Orand utilizes Elliptic Curve Verifiable Random Function (ECVRF) to generate cryptographically secure randomness that can be demonstrably fair, eliminating any doubts about manipulation.
 
-- **Data availability:** _That smart contract and application executors are isolated from the internet prevents data to be accessible from the run-time environment. One can require a third-party service to feed necessary data. This approach is broken since we cannot verify the data. Moreover, the latency from the third-party services is unacceptable._
+## Orosign (MultiSig/MPC Wallet)
 
-## What Are We Building Toward To That vision?
+This user-centric mobile wallet prioritizes user control over digital assets and identities. By employing multi-signature/threshold-signature technology, Orosign empowers users with greater authority over their digital lives within the Web3 space.
 
-### zkDatabase: A Verifiable Database
+## zkDatabase (Provable Database)
 
-[zkDatabase](https://github.com/orochi-network/zkDatabase) is a database that utilizes ZKPs to prove the correctness of the data and data processing. As far as we know, every zkApp needs to manage their own on-chain and off-chain state itself. This process is costly and inefficient depending on the complexity of data's structure. We want to provide other teams the most critical component, namely, the database, to build their zkApps.
+A noSQL database specifically designed for the Web3 space. This database integrates Zero-Knowledge Proof (ZKP) technology, allowing users to store and manage data in a distributed DAG while keeping the data confidential. zkDatabase leverages the advantages of noSQL databases for scalability and flexibility, along with ZKPs to ensure data privacy and verifiability within the Web3 ecosystem.
 
-### zkMemory: A Generalized Memmory Module for zkVM
+## zkMemory (Memory Prover)
 
-[zkMemory](https://github.com/orochi-network/orochimaru/tree/main/zkmemory) A modular apporach for zkVM, this module can help developer to create their own zkVM, zkCPU with a configurable instruction set.
+This component functions as a generic ZK module, providing the building blocks for developers to construct any type of zkVM (Zero-Knowledge Virtual Machine). zkMemory empowers developers with the flexibility to create custom virtual machines tailored to specific needs within the Web3 landscape.
 
-[zkDatabase](https://github.com/orochi-network/zkDatabase) is a database that utilizes ZKPs to prove the correctness of the data and data processing. As far as we know, every zkApp needs to manage their own on-chain and off-chain state itself. This process is costly and inefficient depending on the complexity of data's structure. We want to provide other teams the most critical component, namely, the database, to build their zkApps.
+## Orochimaru (Full-node client)
 
-### Orand: A Decentralized Random Number Generator
+Built upon the robust Substrate Framework, Orochimaru plays a critical role in ensuring network security and functionality. It achieves this by validating transactions, securing the network through participation in Orochi Consensus, an asynchronous Byzantine Fault Tolerance (aBFT) consensus mechanism. This advanced consensus protocol allows Orochimaru nodes to reach agreement on the state of the network even in the presence of potentially faulty nodes, regardless of any delays or message losses. In essence, Orochimaru acts as the backbone of Orochi Network, safeguarding its integrity and enabling smooth operation even under challenging conditions.
 
-We are conducting various research attempts around [VRF](../ecvrf/verifiable_random_function.md) and [ECVRF](../ecvrf/ecvrf_summary/introduction.md) to develop a solution for mass adoption of verifiable randomness. Verifiable randomness must be considered an essential primitive of Web3 gaming.
+## Shaping Web3 Future
 
-Orand is implemented as a core library of [Orochimaru](https://github.com/orochi-network/orochimaru), a full-node client of Orochi Network.
+In essence, Orochi Network's suite of products, anchored by the innovative zkOS, lays the groundwork for a future web built on secure, scalable, and user-friendly blockchain applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone.
 
-We are also implementing the [on-chain verification](https://github.com/orochi-network/orochimaru/tree/main/contracts) allowing the randomness to be verified without any third-party service. The verifier is implemented in `Solidity` and is EVM-compatible at the moment. In the future, we are planning to support other blockchains that support smart contracts.
-
-### Orosign: A Passport of Web3
-
-A highly secured solution based on Multi-Party Computations (MPC) that helps you secure your digital assets and digital identities. The product is available on Apple Store and Google Play.
+The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of Orochi Network's technology to shape the future of Web3.
 
 ## Orochi ❤️ Open Source
 
 All projects are open-sourced and public. We build everything for common good.
+
+- Our scientific paper about a new proof-system: [RAMenPaSTA: Parallelizable Scalable Transparent Arguments of Knowledge for RAM Programs](https://eprint.iacr.org/2024/336)
+- Our construction in Distributed ECVRF - [ORAND - A fast, publicly verifiable, scalable decentralized random number generator for blockchain-based applications](https://docsend.com/view/5y7rc5cww2juudzn)
+- Our proposal to improve security of Smart Contracts - [ERC-6366: Permission Token](https://eips.ethereum.org/EIPS/eip-6366)
+- Our proposal to improve permission and role handling - [ERC-6617: Bit Based Permission](https://eips.ethereum.org/EIPS/eip-6617)
 
 <!-- Expect us -->
