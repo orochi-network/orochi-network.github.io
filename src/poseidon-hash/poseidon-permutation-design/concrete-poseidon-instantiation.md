@@ -1,5 +1,7 @@
 # Concrete POSEIDON\\(^\pi\\) instantiation
 
+## Main instance
+
 + SBox function: \\(x^5\\) for all use cases
 + With the security level \\(M = 80, 128\\), the size of the Capacity \\(c = 255\\) bits (\\(1\\) field element). And \\(t\\) can be \\(3\\) or \\(5\\) to achieve the *2-to-1* or *4-to-1* compression functions.
 + Psudeonumber generation: The paper uses ***Grain LFSR*** in self-shrinking mode. This can be used to generate the round constants and matrices. This usage can be reminiscent to ***nothing-up-my-sleeve*** numbers.
