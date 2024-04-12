@@ -77,6 +77,7 @@
   - [A Simple Halo 2 Program](./halo2-for-dummies/simple-example/section.md)
 - [Poseidon hash for ZK Applications](./poseidon-hash/chapter.md)
   - [Cryptographic sponge functions](./poseidon-hash/cryptographic-sponge-function/cryptographic-sponge-function.md)
+  - [Overview of Poseidon Hash Function](./poseidon-hash/poseidon-hash-overview/poseidon-hash-overview.md)
   - [Poseidon permutation design](./poseidon-hash/poseidon-permutation-design/section.md)
     - [Hades design strategy](./poseidon-hash/poseidon-permutation-design/hades-design-strategy.md)
     - [Hades-based permutation design](./poseidon-hash/poseidon-permutation-design/hades-based-design.md)

@@ -1,7 +1,7 @@
 # Hades-based POSEIDON\\(^\pi\\) permutation design
 
 ## Notation
-The function takes input of \\(t \geq 2\\) words in \\(\mathbb{F}_p\\), where $p$ is a prime of size \\(p \approx 2^n > 2^{30}\\) and \\(N = nt\\) to denote the size of texts in bits.
+The function takes input of \\(t \geq 2\\) words in \\(\mathbb{F}_p\\), where \\(p\\) is a prime of size \\(p \approx 2^n > 2^{30}\\) and \\(N = nt\\) to denote the size of texts in bits.
 
 ## The SBox layer
 They focus on the setting: $$SB(x) = x^\alpha, \alpha \geq 3$$ where \\(\alpha\\) is the smallest positive integer that satisfies \\(gcd(\alpha, p - 1) = 1\\). These permutation are called "\\(x^\alpha-Poseidon^\pi\\)".

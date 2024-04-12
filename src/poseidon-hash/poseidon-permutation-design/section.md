@@ -1,8 +1,5 @@
 # Poseidon permutation design
 
-Several \\(\mathsf{Poseidon}^\pi\\) instances are provided for different use cases, but all based on the described sponge function in [Section 9.1](./../cryptographic-sponge-function/cryptographic-sponge-function.md):
-- Determine the capacity value and the input padding depending on each use cases.
-- Split the obtained input in to chunks of size \\(r\\).
-- Apply the \\(\mathsf{Poseidon}^\pi\\) permutation to the capacity element and the first chunk: \\(I_c \oplus m_1\\).
-- Add the result to the state and apply the permutation again until no more chunks are left.
-- Output \\(o\\) output elements from the bitrate part of the state.
+At the heart of the \\(\mathsf{Poseidon}\\) hash is the \\(\mathsf{Hades}\\)-based permutation \\(\mathsf{Poseidon}^\pi\\). As mentioned before, \\(\mathsf{Hades}\\) employs efficient *round functions* which is applied many times in order ti make the permutation behave like a random permutation. The same round function is applied throughout the permutation to destroy its symmetries and structural properties.
+
+This section explains in detail the \\(\mathsf{Hades}\\) [design strategy](./hades-design-strategy.md), the [detailed design](./hades-based-design.md) of \\(\mathsf{Hades}\\)-based permutation, and the [different instantiations](./concrete-poseidon-instantiation.md) of \\(\mathsf{Poseidon}^\pi\\) permutation in different use cases.
