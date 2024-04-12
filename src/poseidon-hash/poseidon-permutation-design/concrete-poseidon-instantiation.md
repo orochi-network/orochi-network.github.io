@@ -30,6 +30,6 @@ Proved in Proposition 5.1, 5.2, and 5.3 in this paper, this table represents the
 
 |         Construction         | \\(R_F\\) |        \\(R = R_F + R_P\\)            |
 | -----------------------------| --------- | ------------------------------------  |
-| \\(x^5\\)-Poseidon-\\(128\\) |     6     | \\(56 + \lceil \log_5{(t)} \rceil\\)  |
-| \\(x^5\\)-Poseidon-\\(80\\)  |     6     | \\(35 + \lceil \log_5{(t)} \rceil\\)  |
-| \\(x^5\\)-Poseidon-\\(256\\) |     6     | \\(111 + \lceil \log_5{(t)} \rceil\\) |
+| \\(x^5\\)-Poseidon-\\(128\\) |  \\(6\\)  | \\(56 + \lceil \log_5{(t)} \rceil\\)  |
+| \\(x^5\\)-Poseidon-\\(80\\)  |  \\(6\\)  | \\(35 + \lceil \log_5{(t)} \rceil\\)  |
+| \\(x^5\\)-Poseidon-\\(256\\) |  \\(6\\)  | \\(111 + \lceil \log_5{(t)} \rceil\\) |

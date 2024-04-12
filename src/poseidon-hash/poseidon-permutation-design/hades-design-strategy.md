@@ -9,9 +9,12 @@ In \\(\mathsf{Hades}\\), they mix rounds with ***full SBox layers*** and rounds 
 
 The Hades design strategy consists of \\(R_f\\) initial rounds, in which SBoxes are applied to the *full state*. After these \\(R_f\\) rounds, \\(R_p\\) partial rounds in the middle contain *a single SBox for each round*, and the rest of the state goes through the nonliner layer ***unchanged*** (you can say that the rest goes through the identity functions \\(f(x) = x\\)). Finally, \\(R_f\\) full rounds at the end are applied again:
 $$R_f \longrightarrow R_p \longrightarrow R_f$$
-![Hades](https://docs.polygon.technology/img/zkEVM/01psd-hades-based-poseidon-perm.png)
 
-This approach aims to provide arguments for the security against statistical attacks:
+An overview of the construction of the permutation can be described in the figure below:
+
+<p align="center" width="100%">
+    <img width="120%" height="120%" src="./../../assets/poseidon-hash/round-function.png">
+</p>
 
 
 ## The round function
@@ -19,7 +22,7 @@ This approach aims to provide arguments for the security against statistical att
 Each round function consists of \\(3\\) components:
 + \\(AddRoundConstants\\), denoted by \\(ARC(\cdot)\\): essentially an addition of the state with a random constant. 
 + \\(SubWords\\), denoted by \\(SBox(\cdot)\\) or \\(SB(\cdot)\\). This is simply the SBox substitution.
-+ \\(MixLayers\\), denoted by \\(M(\cdot)\\). This is the ***linear layer*** of the construction. It involves multiplication between the state and a \\(t \times t\\) ***MDS(Maximum Distance Separable) matrix***. This is used to apply the ***wide trail strategy*** (explained in) which helps provide arguments against statistical attacks.
++ \\(MixLayers\\), denoted by \\(M(\cdot)\\). This is the ***linear layer*** of the construction. It involves multiplication between the state and a \\(t \times t\\) ***MDS(Maximum Distance Separable) matrix***. This is used to apply the ***wide trail strategy*** (explained in {{#cite DJRV01}}) which helps provide arguments against statistical attacks.
 
 Note that: we can use the same number of full rounds instead of partial rounds in the construction without decreasing the security. However, this leads to significantly higher computation costs in our applications.
 

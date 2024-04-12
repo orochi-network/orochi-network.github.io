@@ -19,6 +19,6 @@ One method of constructing such a matrix introduced in this paper is using a ***
 
 ## Construct the matrix
 The paper suggest the following method to generate matrices to avoid some known vulnerabilities which this note skipped:
-+ Randomly select pairwise distinct \\(\\{x_i\\}\_{1 \leq i \leq t}\\) and \\(\\{y_i\\}\_{1 \leq i \leq t}\\).
++ Randomly select pairwise distinct \\(\\{x_i\\}\_{1 \leq i \leq t}\\) and \\(\\{y_i\\}\_{1 \leq i \leq t}\\) where \\(x_i + y_j \neq 0\\) and where \\(i \in \\{ 1,\cdots,t \\}\\) and \\(j \in \\{ 1,\cdots,t \\}\\).
 + Determine if the matrix is secure using [this test](https://extgit.iaik.tugraz.at/krypto/linear-layer-tool) introduced in {{#cite GRS20}}
 + Repeat this procedure until we find a secure matrix.

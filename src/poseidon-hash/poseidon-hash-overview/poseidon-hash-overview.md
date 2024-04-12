@@ -6,7 +6,7 @@ The main structure of \\(\mathsf{Poseidon}\\) hash is described below.
 
 ![Pic](./../../assets/poseidon-hash/Structure.png)
 
-The hash function is constructed by instantiating a sponge function with the compression function \\(f\\) being the permutation \\(\mathsf{Poseidon}^\pi\\). The hashing design strategy is based on {{#cite GLRRS20}}, which employes different *round functions* throughout the permutation to destroy all of its possible symmetries and structural properties.
+The hash function is constructed by instantiating a sponge function with the compression function \\(f\\) being the permutation \\(\mathsf{Poseidon}^\pi\\). The hashing design strategy is based on \\(\mathsf{Hades}\\) {{#cite GLRRS20}}, which employes different *round functions* throughout the permutation to destroy all of its possible symmetries and structural properties.
 
 The workflow of \\(\mathsf{Poseidon}\\) hash is described below, which is used the same in different use cases:
 - Determine the capacity value \\(c\\) and the input padding \\(pad\\) depending on each use cases.
