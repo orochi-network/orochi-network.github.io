@@ -1,6 +1,6 @@
 # Cryptographic sponge functions
 
-In this section, we look at the definitions and design of a cryptographic hash functions, before showing its applications in hash functions and other problems.
+\\(\mathsf{Poseidon}\\) is a sponge-based cryptographic hash functions, therefore it is neccessary to understand the design of such hash functions to understand the components of \\(\mathsf{Poseidon}\\). In this section, we look at the definitions and design of a sponged-based cryptographic hash functions, before showing its applications in hash functions and other problems.
 
 In 2007, the sponge construction was introduced by Guido Bertoni and others {{#cite BDPA08}}.
 
@@ -25,4 +25,4 @@ Sponge functions have both theoretical and practical uses. In theoretical crypta
 
 The sponge construction can also be used to build practical cryptographic primitives. For example, \\(\mathsf{Keccak}\\) cryptographic sponge with a \\(1600\\)-bit state has been selected by NIST as the winner in the \\(\mathsf{SHA-3}\\) competition. The strength of \\(\mathsf{Keccak}\\) derives from the intricate, multi-round permutation \\(f\\) developed by its authors. The \\(\mathsf{RC4}\\)-redesign called \\(\mathsf{Spritz}\\) {{#cite RS16}} refers to the sponge-construct to define the algorithm.
 
-In this paper, they introduced \\(\mathsf{Poseidon}\\) hash function that uses the cryptographic sponge function as its architecture with the compression function \\(f\\) being the permutation \\(\mathsf{Poseidon}^\pi\\).
+In {{#cite GKRRS21}}, they introduced \\(\mathsf{Poseidon}\\) hash function that uses the cryptographic sponge function as its architecture with the compression function \\(f\\) being the permutation \\(\mathsf{Poseidon}^\pi\\).
