@@ -4,7 +4,7 @@
 
 + SBox function: The authors proposed using \\(SB(x)=x^5\\) for all use cases
 + With the security level \\(M = 80, 128\\), the size of the Capacity \\(c = 255\\) bits (\\(1\\) field element). And \\(t\\) can be \\(3\\) or \\(5\\) to achieve the *2-to-1* or *4-to-1* compression functions.
-+ Psudeonumber generation: The paper uses ***Grain LFSR*** in self-shrinking mode. This can be used to generate the round constants and matrices. This usage can be reminiscent to ***nothing-up-my-sleeve*** numbers.
++ Psudeonumber generation: The paper uses ***Grain LFSR*** in self-shrinking mode. This can be used to generate the round constants and matrices. This usage can be reminiscent to [nothing-up-my-sleeve numbers](https://en.wikipedia.org/wiki/Nothing-up-my-sleeve_number).
 + MDS matrix: It is recommended that we should use the Cauchy matrix for the linear layer, which described in [Hades-based permutation design](./hades-based-design.md).
 
 ## The grain LFSR
@@ -28,8 +28,8 @@ Proved in Proposition 5.1, 5.2, and 5.3 in {{#cite GKRRS21}}, this table represe
 
 
 
-| Construction                 | \\(R_F\\) | \\(R = R_F + R_P\\)                   |
-| ---------------------------- | --------- | ------------------------------------- |
-| \\(x^5\\)-Poseidon-\\(128\\) | \\(6\\)   | \\(56 + \lceil \log_5{(t)} \rceil\\)  |
-| \\(x^5\\)-Poseidon-\\(80\\)  | \\(6\\)   | \\(35 + \lceil \log_5{(t)} \rceil\\)  |
-| \\(x^5\\)-Poseidon-\\(256\\) | \\(6\\)   | \\(111 + \lceil \log_5{(t)} \rceil\\) |
+|                Construction                 | \\(R_F\\) | \\(R = R_F + R_P\\)                   |
+| ------------------------------------------- | --------- | ------------------------------------- |
+| \\(x^5\\)-\\(\mathsf{Poseidon}\\)-\\(128\\) | \\(6\\)   | \\(56 + \lceil \log_5{(t)} \rceil\\)  |
+| \\(x^5\\)-\\(\mathsf{Poseidon}\\)-\\(80\\)  | \\(6\\)   | \\(35 + \lceil \log_5{(t)} \rceil\\)  |
+| \\(x^5\\)-\\(\mathsf{Poseidon}\\)-\\(256\\) | \\(6\\)   | \\(111 + \lceil \log_5{(t)} \rceil\\) |
