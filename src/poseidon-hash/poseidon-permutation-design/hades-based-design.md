@@ -7,13 +7,13 @@ The function takes input of \\(t \geq 2\\) words in \\(\mathbb{F}_p\\), where \\
 
 ## AddRoundConstants component
 
-This is the first component of the round function described in [Hades design strategy](./hades-design-strategy.md). Given the input state \\( S = \\{ S_1, S_2, \cdots, S_t \\} \\), where each of \\( S_i \\) is a word, it outputs $$ S' = AddRoundConstants(S) = S = \\{ S_1 + T_1, S_2 + T_2, \cdots, S_t + T_t \\} $$ where \\(T\\) is the ***round constant vector*** that is randomly generated in a method described in [Poseidon concrete instantiation](./concrete-poseidon-instantiation.md). Essentially, this component performs a field addition between the state and the round constant.
+This is the first component of the round function described in [Hades design strategy](./hades-design-strategy.md). Given the input state \\( S = ( S_1, S_2, \cdots, S_t ) \\), where each of \\( S_i \\) is a word, it outputs $$ S' = AddRoundConstants(S, T) = S + T = ( S_1 + T_1, S_2 + T_2, \cdots, S_t + T_t ) $$ where \\(T\\) is the ***round constant vector*** that is randomly generated in a method described in [Poseidon concrete instantiation](./concrete-poseidon-instantiation.md). Essentially, this component performs a field addition between the state and the round constant.
 
 ## The SubWords (SBox) layer
 
 This is the second component of the round function described in [Hades design strategy](./hades-design-strategy.md). ***Subtitution boxes*** (or ***S-Boxes***) are widely used in cryptography. In this context of an architecture that resembles block ciphers, SBoxes are used to ensure [Shannon's property of confusion](https://en.wikipedia.org/wiki/Confusion_and_diffusion).
 
-Given the state \\( S = \\{ S_1, S_2, \cdots, S_t \\} \\), where each of \\(S_i\\) is a word, this component outputs a new state $$ S' = SB(S) =  \\{ SB(S_1), SB(S_2), \cdots, SB(S_t) \\}.$$
+Given the state \\( S = ( S_1, S_2, \cdots, S_t ) \\), where each of \\(S_i\\) is a word, this component outputs a new state $$ S' = SB(S) =  ( SB(S_1), SB(S_2), \cdots, SB(S_t) ).$$
 
 In {{#cite GKRRS21}}, they focus on the setting: $$SB(x) = x^\alpha, \alpha \geq 3$$ where \\(\alpha\\) is the smallest positive integer that satisfies \\(gcd(\alpha, p - 1) = 1\\). These permutations are called "\\(x^\alpha-Poseidon^\pi\\)".
 
@@ -25,8 +25,8 @@ It turns out that \\(SB(x) = x^5\\) is suitable for the prime subfields of the s
 
 ## MixColumns - The linear layer
 
-This is the last layer (also called the ***linear layer***) of the round function. Given the state \\( S = \\{ S_1, S_2, \cdots, S_t \\} \\). This layer outputs 
-$$ S' = \mathcal{M} \times S^T =
+This is the last layer (also called the ***linear layer***) of the round function. Given the state \\( S = ( S_1, S_2, \cdots, S_t ) \\). This layer outputs 
+$$ S' = \mathcal{M} \times S =
 \begin{bmatrix} 
     \mathcal{M}\_{11} & \mathcal{M}\_{12} & \cdots & \mathcal{M}\_{1t} \\\ 
     \mathcal{M}\_{21} & \mathcal{M}\_{22} & \cdots & \mathcal{M}\_{2t} \\\ 
