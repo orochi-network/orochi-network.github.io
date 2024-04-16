@@ -4,7 +4,7 @@
 
 # Orochi Network: Building The Zero Knowledge Modular Data Availability Layer
 
-## Powered the Next Generation of Web3 by the first Zero Knowledge Operating System
+## Powered the next generation of the Internet by the first Zero Knowledge Operating System
 
 ## The Dawn of The New Internet
 
