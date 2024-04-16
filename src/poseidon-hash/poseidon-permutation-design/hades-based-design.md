@@ -1,6 +1,6 @@
 # Hades-based POSEIDON\\(^\pi\\) permutation design
 
-In this Section, we describe the \\(3\\) main components of the round function described in [Hades design strategy](./hades-design-strategy.md), namely \\(AddroundConstants\\), \\(SubWords\\) and \\(MixLayer\\).
+Recall in the [previous section](./hades-design-strategy.md), the \\(\mathsf{Poseidon}^\pi\\) permutation is a composition of round functions \\(AddroundConstants\\), \\(SubWords\\) and \\(MixLayer\\), each takes input a state \\(S=(S_1,S_2,\dots,S_t)\\) and produces a new state \\(S'\\). In this Section, we describe the \\(3\\) main components of the round function of \\(\mathsf{Poseidon}^\pi\\).
 
 ## Notation
 The function takes input of \\(t \geq 2\\) words in \\(\mathbb{F}_p\\), where \\(p\\) is a prime of size \\(p \approx 2^n > 2^{30}\\) and \\(N = nt\\) to denote the size of texts in bits.

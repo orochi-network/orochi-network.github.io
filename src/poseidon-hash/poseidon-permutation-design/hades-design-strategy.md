@@ -7,7 +7,7 @@ In \\(\mathsf{Hades}\\), they mix rounds with ***full SBox layers*** and rounds 
 
 ## Details
 
-The Hades design strategy consists of \\(R_f\\) initial rounds, in which SBoxes are applied to the *full state*. After these \\(R_f\\) rounds, \\(R_p\\) partial rounds in the middle contain *a single SBox for each round*, and the rest of the state goes through the nonliner layer ***unchanged*** (you can say that the rest goes through the identity functions \\(f(x) = x\\)). Finally, \\(R_f\\) full rounds at the end are applied again:
+The Hades design strategy receives input a state \\(S=(S_1,S_2,\dots,S_t)\\) and consists of \\(R_f\\) initial rounds, in which SBoxes are applied to the *full state*. After these \\(R_f\\) rounds, \\(R_p\\) partial rounds in the middle contain *a single SBox for each round*, and the rest of the state goes through the nonliner layer ***unchanged*** (you can say that the rest goes through the identity functions \\(f(x) = x\\)). Finally, \\(R_f\\) full rounds at the end are applied again:
 $$R_f \longrightarrow R_p \longrightarrow R_f$$
 
 An overview of the construction of the permutation can be described in the figure below:
@@ -19,7 +19,7 @@ An overview of the construction of the permutation can be described in the figur
 
 ## The round function
 
-Each round function consists of \\(3\\) components:
+As in the figure, in each round, several functions (illustrated as the blocks) are applied to the state \\(S\\) to transform it into a new state \\(S'\\), these functions are called **round functions**. Each round function consists of \\(3\\) components:
 + \\(AddRoundConstants\\), denoted by \\(ARC(\cdot)\\): essentially an addition of the state with a random constant. 
 + \\(SubWords\\), denoted by \\(SBox(\cdot)\\) or \\(SB(\cdot)\\). This is simply the SBox substitution.
 + \\(MixLayers\\), denoted by \\(M(\cdot)\\). This is the ***linear layer*** of the construction. It involves multiplication between the state and a \\(t \times t\\) ***MDS(Maximum Distance Separable) matrix***. This is used to apply the ***wide trail strategy*** (explained in {{#cite DJRV01}}) which helps provide arguments against statistical attacks.
