@@ -4,6 +4,7 @@
 
 # Orochi Network: Building The Zero Knowledge Modular Data Availability Layer
 
+## Powered the Next Generation of Web3 by the first Zero Knowledge Operating System
 
 ## The Dawn of The New Internet
 
@@ -114,3 +115,14 @@ As zkOS continues to develop, Orosign has the potential to become a comprehensiv
 ## The Future of Web3
 Orochi Network's zkOS is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, zkOS offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As zkOS continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
 In essence, our suite of products, anchored by the innovative zkOS, lays the groundwork for a future web built on secure, scalable, and user-friendly decentralized applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone.  The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of our technology to shape the future of Web3.
+
+## Orochi ❤️ Open Source
+
+All projects are open-sourced and public. We build everything for common good.
+
+- Our scientific paper about a new proof-system: [RAMenPaSTA: Parallelizable Scalable Transparent Arguments of Knowledge for RAM Programs](https://eprint.iacr.org/2024/336)
+- Our construction in Distributed ECVRF - [ORAND - A fast, publicly verifiable, scalable decentralized random number generator for blockchain-based applications](https://docsend.com/view/5y7rc5cww2juudzn)
+- Our proposal to improve security of Smart Contracts - [ERC-6366: Permission Token](https://eips.ethereum.org/EIPS/eip-6366)
+- Our proposal to improve permission and role handling - [ERC-6617: Bit Based Permission](https://eips.ethereum.org/EIPS/eip-6617)
+
+<!-- Expect us -->
