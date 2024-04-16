@@ -8,7 +8,7 @@
 + MDS matrix: It is recommended that we should use the Cauchy matrix for the linear layer, which described in [Hades-based permutation design](./hades-based-design.md).
 
 ## The grain LFSR
-The grain LFSR is used to generate pseudorandomnumber for the round constants and the MDS matrices described in [Hades design strategy](./hades-design-strategy.md). The technical details of the LFSR is provided in Appendix E of {{#cite GKRRS21}}. The state in Grain LFSR is \\(80\\) bits in size and is computed as follows:
+The grain LFSR is used to generate pseudorandom numbers for the round constants and the MDS matrices described in [Hades design strategy](./hades-design-strategy.md). The technical details of the LFSR is provided in Appendix E of {{#cite GKRRS21}}. The state in Grain LFSR is \\(80\\) bits in size and is computed as follows:
 1. Initialize the state with \\(80\\) bits \\(\\{b_0,b_1,\cdots,b_{79}\\}\\) as follows:
     - \\(b_0,b_1\\): describe the field.
     - \\(b_2,b_3,b_4,b_5\\): describe the SBox.

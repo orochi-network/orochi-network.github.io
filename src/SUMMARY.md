@@ -82,7 +82,6 @@
     - [Hades design strategy](./poseidon-hash/poseidon-permutation-design/hades-design-strategy.md)
     - [Hades-based permutation design](./poseidon-hash/poseidon-permutation-design/hades-based-design.md)
     - [Concrete Poseidon permutation instantiation](./poseidon-hash/poseidon-permutation-design/concrete-poseidon-instantiation.md)
-  - [Poseidon for encryption](./poseidon-hash/poseidon-hash-for-encryption/section.md)
 - [zkDatabase](./zkdatabase/chapter.md)
   - [Accumulation](./zkdatabase/accumulation/accumulation.md)
   - [B-Tree](./zkdatabase/b-tree/b-tree.md)
