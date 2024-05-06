@@ -4,7 +4,7 @@ Now that we understood the architecture of a sponge-based hash function, we are 
 
 The **overall structure** of \\(\mathsf{Poseidon}\\) hash is described in the figure below.
 
-![Pic](./../../assets/poseidon-hash/Structure.png)
+![Pic](./../../assets/poseidon-hash/structure.png)
 
 The hash function is constructed by instantiating a sponge function with the compression function \\(f\\) being the permutation \\(\mathsf{Poseidon}^\pi\\) (denoted by the block labeled \\(\mathsf{P}\\) in the figure). The hashing design strategy is based on \\(\mathsf{Hades}\\) {{#cite GLRRS20}}, which employes different *round functions* throughout the permutation to destroy all of its possible symmetries and structural properties.
 
