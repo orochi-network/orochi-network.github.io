@@ -31,6 +31,7 @@ Orand V2 was deployed on following smart contract platform.
 | Sei Devnet             | [0x1b95BCC7828719a4C2Dc74789708b70fE5EEa9Cf](https://seitrace.com/address/0x1b95BCC7828719a4C2Dc74789708b70fE5EEa9Cf)                 |
 | Moonbase Alpha TestNet | [0xf212917C9cd73E1A2860996a13AC474A70635447](https://moonbase.moonscan.io/address/0xf212917C9cd73E1A2860996a13AC474A70635447)         |
 | Saakuru TestNet        | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.testnet.oasys.games/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c) |
+| Zircuit TestNet        | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.zircuit.com/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)         |
 
 ## Self Submission
 
