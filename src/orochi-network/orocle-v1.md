@@ -25,6 +25,7 @@ Oracle V1 was deployed on following smart contract platform.
 | Moonbase Alpha TestNet | [0x23E47A2730464e6c7DcB11c8e1E82F0279c042Eb](https://moonbase.moonscan.io/address/0x23E47A2730464e6c7DcB11c8e1E82F0279c042Eb)         |
 | Saakuru TestNet        | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://explorer.testnet.oasys.games/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f) |
 | Zircuit TestNet        | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://explorer.zircuit.com/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)         |
+| ZKFair TestNet         | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://testnet-scan.zkfair.io/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)       |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 
