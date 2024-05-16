@@ -17,15 +17,16 @@ Oracle V1 was deployed on following smart contract platform.
 
 ### Testnet
 
-| Network Name           | Address                                                                                                                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet       | [0xBF3Ff099fb6c23296Fd192df643ad49FCeD658D0](https://scanv2-testnet.ancient8.gg/address/0xBF3Ff099fb6c23296Fd192df643ad49FCeD658D0)   |
-| Unicorn Ultra Nebulas  | [0xfA73F946E66eC366419c110f9Ae1AEe234eA714e](https://testnet.u2uscan.xyz/address/0xfA73F946E66eC366419c110f9Ae1AEe234eA714e)          |
-| Sei Devnet             | [0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7](https://seitrace.com/address/0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7)                 |
-| Moonbase Alpha TestNet | [0x23E47A2730464e6c7DcB11c8e1E82F0279c042Eb](https://moonbase.moonscan.io/address/0x23E47A2730464e6c7DcB11c8e1E82F0279c042Eb)         |
-| Saakuru TestNet        | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://explorer.testnet.oasys.games/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f) |
-| Zircuit TestNet        | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://explorer.zircuit.com/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)         |
-| ZKFair TestNet         | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://testnet-scan.zkfair.io/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)       |
+| Network Name           | Address                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet       | [0xBF3Ff099fb6c23296Fd192df643ad49FCeD658D0](https://scanv2-testnet.ancient8.gg/address/0xBF3Ff099fb6c23296Fd192df643ad49FCeD658D0)            |
+| Unicorn Ultra Nebulas  | [0xfA73F946E66eC366419c110f9Ae1AEe234eA714e](https://testnet.u2uscan.xyz/address/0xfA73F946E66eC366419c110f9Ae1AEe234eA714e)                   |
+| Sei Devnet             | [0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7](https://seitrace.com/address/0x2323e0098c260Fe5815e85e9EC127D53401Bd6e7)                          |
+| Moonbase Alpha TestNet | [0x23E47A2730464e6c7DcB11c8e1E82F0279c042Eb](https://moonbase.moonscan.io/address/0x23E47A2730464e6c7DcB11c8e1E82F0279c042Eb)                  |
+| Saakuru TestNet        | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://explorer.testnet.oasys.games/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)          |
+| Zircuit TestNet        | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://explorer.zircuit.com/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)                  |
+| ZKFair TestNet         | [0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f](https://testnet-scan.zkfair.io/address/0xFe514492cBFB5b1713C7f7e8fd1c474D2739195f)                |
+| X Layer TestNet        | [0xf3ff356035eaf12070a83c322af829c907be9f4a](https://www.okx.com/web3/explorer/xlayer-test/address/0xf3ff356035eaf12070a83c322af829c907be9f4a) |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 

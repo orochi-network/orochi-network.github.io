@@ -24,15 +24,16 @@ Orand V2 was deployed on following smart contract platform.
 
 ### Testnet
 
-| Network Name           | Address                                                                                                                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet       | [0x5778CE57f49A5487D2127fd39a060D75aF694e8c](https://scanv2-testnet.ancient8.gg/address/0x5778CE57f49A5487D2127fd39a060D75aF694e8c)   |
-| Unicorn Ultra Nebulas  | [0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1](https://testnet.u2uscan.xyz/address/0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1)          |
-| Sei Devnet             | [0x1b95BCC7828719a4C2Dc74789708b70fE5EEa9Cf](https://seitrace.com/address/0x1b95BCC7828719a4C2Dc74789708b70fE5EEa9Cf)                 |
-| Moonbase Alpha TestNet | [0xf212917C9cd73E1A2860996a13AC474A70635447](https://moonbase.moonscan.io/address/0xf212917C9cd73E1A2860996a13AC474A70635447)         |
-| Saakuru TestNet        | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.testnet.oasys.games/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c) |
-| Zircuit TestNet        | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.zircuit.com/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)         |
-| ZKFair TestNet         | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://testnet-scan.zkfair.io/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)       |
+| Network Name           | Address                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet       | [0x5778CE57f49A5487D2127fd39a060D75aF694e8c](https://scanv2-testnet.ancient8.gg/address/0x5778CE57f49A5487D2127fd39a060D75aF694e8c)            |
+| Unicorn Ultra Nebulas  | [0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1](https://testnet.u2uscan.xyz/address/0xe97FE633EC2021A71214D5d9BfF9f337dD1db5c1)                   |
+| Sei Devnet             | [0x1b95BCC7828719a4C2Dc74789708b70fE5EEa9Cf](https://seitrace.com/address/0x1b95BCC7828719a4C2Dc74789708b70fE5EEa9Cf)                          |
+| Moonbase Alpha TestNet | [0xf212917C9cd73E1A2860996a13AC474A70635447](https://moonbase.moonscan.io/address/0xf212917C9cd73E1A2860996a13AC474A70635447)                  |
+| Saakuru TestNet        | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.testnet.oasys.games/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)          |
+| Zircuit TestNet        | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.zircuit.com/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)                  |
+| ZKFair TestNet         | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://testnet-scan.zkfair.io/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)                |
+| X Layer TestNet        | [0xB633A07B448B23704474B4326DA370255075dA89](https://www.okx.com/web3/explorer/xlayer-test/address/0xB633A07B448B23704474B4326DA370255075dA89) |
 
 ## Self Submission
 
