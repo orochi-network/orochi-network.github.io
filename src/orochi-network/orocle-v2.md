@@ -14,6 +14,7 @@ Oracle V2 was deployed on following smart contract platform.
 
 | Network Name             | Address                                                                                                                                        |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet         | [0xd26Ea014930305B498C5826cF0712F877CCAF93f](https://scanv2-testnet.ancient8.gg/address/0xd26Ea014930305B498C5826cF0712F877CCAF93f)            |
 | Unicorn Ultra Nebulas    | [0x70523434ee6a9870410960E2615406f8F9850676](https://testnet.u2uscan.xyz/address/0x70523434ee6a9870410960E2615406f8F9850676)                   |
 | Sei Devnet               | [0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7](https://seitrace.com/address/0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7)                          |
 | Saakuru TestNet          | [0xA346Ed72C477F5007866D6B9edCb1563af8cC23d](https://explorer.testnet.oasys.games/address/0xA346Ed72C477F5007866D6B9edCb1563af8cC23d)          |
