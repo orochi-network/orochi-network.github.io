@@ -31,6 +31,7 @@ Orand V3 was deployed on following smart contract platform.
 | ZKLink Nova              | [0xf9338096bb1bCdBDB83E5a237F198A60A48395a2](https://sepolia.explorer.zklink.io/address/0xf9338096bb1bCdBDB83E5a237F198A60A48395a2)            |
 | Bsc Testnet              | [0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556](https://testnet.bscscan.com/address/0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556)                   |
 | Arbitrum Sepolia Testnet | [0x398027eA740de745FE4Be768e6e5744A6C58514C](https://sepolia.arbiscan.io/address/0x398027eA740de745FE4Be768e6e5744A6C58514C)                   |
+| Moonbase Alpha TestNet   | [0xb368A56355707bC23321C85a9f2f1773B09a5a22](https://moonbase.moonscan.io/address/0xb368A56355707bC23321C85a9f2f1773B09a5a22)                  |
 
 ## Self Submission
 

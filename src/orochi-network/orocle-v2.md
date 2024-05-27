@@ -24,6 +24,7 @@ Oracle V2 was deployed on following smart contract platform.
 | ZKLink Nova              | [0xb0b5fFeF72c6ea620689CF947C0458fAD5cF58da](https://sepolia.explorer.zklink.io/address/0xb0b5fFeF72c6ea620689CF947C0458fAD5cF58da)            |
 | Bsc Testnet              | [0xbC792147B026F2B998A97d6BC9718569Df79ec65](https://testnet.bscscan.com/address/0xbC792147B026F2B998A97d6BC9718569Df79ec65)                   |
 | Arbitrum Sepolia Testnet | [0x4ec4C6E856d0ce4D4bc57b50B9234DcD7c6c31BE](https://sepolia.arbiscan.io/address/0x4ec4C6E856d0ce4D4bc57b50B9234DcD7c6c31BE)                   |
+| Moonbase Alpha TestNet   | [0xCe4defA26b1820026136D71F2e00e291C479D656](https://moonbase.moonscan.io/address/0xCe4defA26b1820026136D71F2e00e291C479D656)                  |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 
