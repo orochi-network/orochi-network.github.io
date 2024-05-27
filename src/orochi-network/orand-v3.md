@@ -17,6 +17,10 @@ Orand V3 was deployed on following smart contract platform.
 
 ### Mainnet
 
+| Network Name | Address                                                                                                              |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- |
+| BNB Chain    | [0x4DB03CC56421A81EC1398279913d8D55E62f5328](https://bscscan.com/address/0x4DB03CC56421A81EC1398279913d8D55E62f5328) |
+
 ### Testnet
 
 | Network Name             | Address                                                                                                                                        |
