@@ -10,9 +10,10 @@ Oracle V2 was deployed on following smart contract platform.
 
 ### Mainnet
 
-| Network Name | Address                                                                                                              |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| BNB Chain    | [0xcE978D96f761a0AE9Dd252E666504482B74A4713](https://bscscan.com/address/0xce978d96f761a0ae9dd252e666504482b74a4713) |
+| Network Name    | Address                                                                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| BNB Chain       | [0xcE978D96f761a0AE9Dd252E666504482B74A4713](https://bscscan.com/address/0xce978d96f761a0ae9dd252e666504482b74a4713)                      |
+| X Layer mainnet | [0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285](https://www.okx.com/web3/explorer/xlayer/address/0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285) |
 
 ### Testnet
 
