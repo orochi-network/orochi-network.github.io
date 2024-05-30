@@ -4,8 +4,6 @@
 
 # Orochi Network: Building The Zero Knowledge Modular Data Availability Layer
 
-## Powered the next generation of the Internet by the first Zero Knowledge Operating System
-
 ## The Dawn of The New Internet
 
 The internet is on the cusp of a major transformation, ushering in the era of Web3. This new iteration promises a decentralized web built on blockchain technology and cryptography, empowering users and fostering a more secure and transparent online experience. However, current Web3 applications (dApps) face limitations in terms of scalability, cost, and user experience. We are stepping up to address these challenges by developing a comprehensive suite of products designed to be the foundation for a thriving Web3 ecosystem.
