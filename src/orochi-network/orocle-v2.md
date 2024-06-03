@@ -10,10 +10,13 @@ Oracle V2 was deployed on following smart contract platform.
 
 ### Mainnet
 
-| Network Name    | Address                                                                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| BNB Chain       | [0xcE978D96f761a0AE9Dd252E666504482B74A4713](https://bscscan.com/address/0xce978d96f761a0ae9dd252e666504482b74a4713)                      |
-| X Layer mainnet | [0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285](https://www.okx.com/web3/explorer/xlayer/address/0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285) |
+| Network Name        | Address                                                                                                                                   |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet    | [0x80011aA6171B433d33c46B59A619FD338c155161](https://scan.ancient8.gg/address/0x80011aA6171B433d33c46B59A619FD338c155161)                 |
+| U2U Solaris Mainnet | [0x6eFAA86dD3177d75d161A99e2c103409927f3C49](https://u2uscan.xyz/address/0x6eFAA86dD3177d75d161A99e2c103409927f3C49)                      |
+| BNB Chain           | [0xcE978D96f761a0AE9Dd252E666504482B74A4713](https://bscscan.com/address/0xce978d96f761a0ae9dd252e666504482b74a4713)                      |
+| X Layer mainnet     | [0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285](https://www.okx.com/web3/explorer/xlayer/address/0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285) |
+| Saakuru (L2)        | [0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15](https://explorer.saakuru.network/address/0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15)         |
 
 ### Testnet
 
