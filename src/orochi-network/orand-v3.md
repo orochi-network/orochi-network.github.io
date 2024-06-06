@@ -27,19 +27,20 @@ Orand V3 was deployed on following smart contract platform.
 
 ### Testnet
 
-| Network Name             | Address                                                                                                                                        |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Testnet         | [0xD7a2643c1d9C3E6069f90DbAabd9D58825C7A2b9](https://scanv2-testnet.ancient8.gg/address/0xD7a2643c1d9C3E6069f90DbAabd9D58825C7A2b9)            |
-| Unicorn Ultra Nebulas    | [0x3eAF9da360dA944105599cdB7833712346af6DF1](https://testnet.u2uscan.xyz/address/0x3eAF9da360dA944105599cdB7833712346af6DF1)                   |
-| Sei Devnet               | [0x2182fD816A3fCeCDeD390452524cfA8f21142A88](https://seitrace.com/address/0x2182fD816A3fCeCDeD390452524cfA8f21142A88)                          |
-| Saakuru TestNet          | [0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f](https://explorer.testnet.oasys.games/address/0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f)          |
-| Zircuit TestNet          | [0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2](https://explorer.zircuit.com/address/0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2)                  |
-| ZKFair TestNet           | [0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4](https://testnet-scan.zkfair.io/address/0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4)                |
-| X Layer TestNet          | [0x50C72F5bea0757c8052daa6402568d4bbf2336Fb](https://www.okx.com/web3/explorer/xlayer-test/address/0x50C72F5bea0757c8052daa6402568d4bbf2336Fb) |
-| ZKLink Nova              | [0xf9338096bb1bCdBDB83E5a237F198A60A48395a2](https://sepolia.explorer.zklink.io/address/0xf9338096bb1bCdBDB83E5a237F198A60A48395a2)            |
-| Bsc Testnet              | [0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556](https://testnet.bscscan.com/address/0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556)                   |
-| Arbitrum Sepolia Testnet | [0x398027eA740de745FE4Be768e6e5744A6C58514C](https://sepolia.arbiscan.io/address/0x398027eA740de745FE4Be768e6e5744A6C58514C)                   |
-| Moonbase Alpha TestNet   | [0xb368A56355707bC23321C85a9f2f1773B09a5a22](https://moonbase.moonscan.io/address/0xb368A56355707bC23321C85a9f2f1773B09a5a22)                  |
+| Network Name                  | Address                                                                                                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Testnet              | [0xD7a2643c1d9C3E6069f90DbAabd9D58825C7A2b9](https://scanv2-testnet.ancient8.gg/address/0xD7a2643c1d9C3E6069f90DbAabd9D58825C7A2b9)                     |
+| Unicorn Ultra Nebulas         | [0x3eAF9da360dA944105599cdB7833712346af6DF1](https://testnet.u2uscan.xyz/address/0x3eAF9da360dA944105599cdB7833712346af6DF1)                            |
+| Sei Devnet                    | [0x2182fD816A3fCeCDeD390452524cfA8f21142A88](https://seitrace.com/address/0x2182fD816A3fCeCDeD390452524cfA8f21142A88)                                   |
+| Saakuru TestNet               | [0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f](https://explorer.testnet.oasys.games/address/0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f)                   |
+| Zircuit TestNet               | [0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2](https://explorer.zircuit.com/address/0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2)                           |
+| ZKFair TestNet                | [0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4](https://testnet-scan.zkfair.io/address/0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4)                         |
+| X Layer TestNet               | [0x50C72F5bea0757c8052daa6402568d4bbf2336Fb](https://www.okx.com/web3/explorer/xlayer-test/address/0x50C72F5bea0757c8052daa6402568d4bbf2336Fb)          |
+| ZKLink Nova                   | [0xf9338096bb1bCdBDB83E5a237F198A60A48395a2](https://sepolia.explorer.zklink.io/address/0xf9338096bb1bCdBDB83E5a237F198A60A48395a2)                     |
+| Bsc Testnet                   | [0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556](https://testnet.bscscan.com/address/0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556)                            |
+| Arbitrum Sepolia Testnet      | [0x398027eA740de745FE4Be768e6e5744A6C58514C](https://sepolia.arbiscan.io/address/0x398027eA740de745FE4Be768e6e5744A6C58514C)                            |
+| Moonbase Alpha TestNet        | [0xb368A56355707bC23321C85a9f2f1773B09a5a22](https://moonbase.moonscan.io/address/0xb368A56355707bC23321C85a9f2f1773B09a5a22)                           |
+| Manta Pacific Sepolia TestNet | [0x060b6352406f6a22a5BAfCB372EDa87a3B077D23](https://pacific-explorer.sepolia-testnet.manta.network/address/0x060b6352406f6a22a5BAfCB372EDa87a3B077D23) |
 
 ## Self Submission
 
