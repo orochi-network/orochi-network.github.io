@@ -2,11 +2,12 @@
     <img src="../assets/orochi-network.png" alt="Orochi Network">
 </p>
 
-# Orochi Network: Building The Zero Knowledge Modular Data Availability Layer
+# Orochi Network: The Zero Knowledge Modular Data Availability Layer
 
 ## Challenges
 
 **Data Integrity:** In a truly decentralized Web3, data integrity would be maintained through a distributed network of validators. Each node would be able to verify the correctness of data independently. But In many Web3 solutions today, some level of trust in third-party oracles is necessary. Oracles are essentially data feeds that bridge the gap between the blockchain and the real world. They provide external data to smart contracts, which can then be used to trigger actions based on real-world events.
+
 
 **Data Availability:** Smart contracts execute within isolated environment, the smart contract runtime (e.g: EVM, WASM) on the blockchain. This isolation/virtualization protects them from malicious attacks but also restricts their ability to interact directly with external data sources, like those in the real world. And also as the number of users and transactions on a blockchain network increases, storing and accessing all data on-chain becomes difficult and expensive.
 
