@@ -41,6 +41,7 @@ Orand V3 was deployed on following smart contract platform.
 | Arbitrum Sepolia Testnet      | [0x398027eA740de745FE4Be768e6e5744A6C58514C](https://sepolia.arbiscan.io/address/0x398027eA740de745FE4Be768e6e5744A6C58514C)                            |
 | Moonbase Alpha TestNet        | [0xb368A56355707bC23321C85a9f2f1773B09a5a22](https://moonbase.moonscan.io/address/0xb368A56355707bC23321C85a9f2f1773B09a5a22)                           |
 | Manta Pacific Sepolia TestNet | [0x060b6352406f6a22a5BAfCB372EDa87a3B077D23](https://pacific-explorer.sepolia-testnet.manta.network/address/0x060b6352406f6a22a5BAfCB372EDa87a3B077D23) |
+| Kroma Sepolia TestNet         | [0xabD720eaf47339150E0d0dF379307a17A68092Ac](https://sepolia.etherscan.io/address/0xabD720eaf47339150E0d0dF379307a17A68092Ac)                           |
 
 ## Self Submission
 
