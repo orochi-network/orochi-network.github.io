@@ -34,6 +34,7 @@ Oracle V2 was deployed on following smart contract platform.
 | Arbitrum Sepolia Testnet      | [0x4ec4C6E856d0ce4D4bc57b50B9234DcD7c6c31BE](https://sepolia.arbiscan.io/address/0x4ec4C6E856d0ce4D4bc57b50B9234DcD7c6c31BE)                            |
 | Moonbase Alpha TestNet        | [0xCe4defA26b1820026136D71F2e00e291C479D656](https://moonbase.moonscan.io/address/0xCe4defA26b1820026136D71F2e00e291C479D656)                           |
 | Manta Pacific Sepolia TestNet | [0xc069da03509222325f9d51239E9F8E6F8cB953Eb](https://pacific-explorer.sepolia-testnet.manta.network/address/0xc069da03509222325f9d51239E9F8E6F8cB953Eb) |
+| Kroma Sepolia TestNet         | [0x8519243FaeDcC4292c0b0ebB63b84020158bBE68](https://sepolia.etherscan.io/address/0x8519243FaeDcC4292c0b0ebB63b84020158bBE68)                           |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 
