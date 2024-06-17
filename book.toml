@@ -1,5 +1,6 @@
 [book]
 authors = ["Chiro Hiro"]
+description = "At the heart of Orochi Network lies Zero-Knowledge Modular Data Availability Layer (ZK Modular DA Layer - zkMDAL)"
 language = "en"
 multilingual = false
 src = "src"
