@@ -1,3 +1,8 @@
+---
+title: "Orochi Network's Cook Book"
+description: "At the heart of Orochi Network lies Zero-Knowledge Modular Data Availability Layer (ZK Modular DA Layer - zkMDAL)"
+---
+
 # Summary
 
 - [Orochi Network](./orochi-network/orochi-network.md)
