@@ -1,16 +1,41 @@
 ## Memory Consistency Constraints
 
-For an execution trace \\(tr=(addr_i,t_i,op_i,val_i)_{i=1}^n\\), one known method to prove the correctness of \\(tr\\) is to use the **sorting technique**. At a high level, we create a new trace \\(tr'\\), which is a sorted version of \\(tr\\). The elements of \\(tr'\\) is sorted in **increasing order** by its address, then time log.  We prove that the elements of \\(tr'\\) satisfy some specified constraints, then prove that \\(tr\\) and \\(tr'\\) are permutation of each other.
+### Handling the Constraints using Sorting Technique
 
-First, let us delve into the detail of the constraints in \\(tr'\\). The constraints are as follows:
+For an array of execution traces \\(tr=(addr_i,t_i,op_i,val_i)_{i=1}^n\\), one known method to prove the correctness of \\(tr\\) is to use the **sorting technique**, which can be found in {{#cite FKLO0W21}}. At a high level, we create a new array \\(tr'\\), which is a sorted version of \\(tr\\). The elements of \\(tr'\\) are sorted in **increasing order** by its address, then time log.  We prove that the elements of \\(tr'\\) satisfy some specified constraints, then prove that \\(tr\\) and \\(tr'\\) are permutations of each other.
 
-\begin{equation}
-\begin{cases}
-   time_i time_{i+1}\\
-   (op_{i+1}=1) \lor (addr_i'=addr_{i+1}')  \\
-   (addr_i' addr_{i+1}' ) \lor ((addr_i' addr_{i+1}') \land (time_i'  time_{i+1}'))\\
-   (op_{i+1}=1) \lor (val_i'=val_{i+1}') \lor (addr_{i}' \neq addr_{i+1}')\\
+First, let us delve into the details of the constraints in \\(tr'\\). The constraints are as follows:
+
+ $$
+\begin{cases} 
+    time_i \lt time_{i+1}, \\\\
+   (op_{i+1}=1) \lor (addr_i'=addr_{i+1}'), \\\\
+   (addr_i' \lt addr_{i+1}' ) \lor ((addr_i'= addr_{i+1}') \land (time_i' \lt time_{i+1}')),\\\\
+   (op_{i+1}=1) \lor (val_i'=val_{i+1}') \lor (addr_{i}' \neq addr_{i+1}').\\\\
 \end{cases}
-\end{equation}
+$$
 
-Let us explain the above constraints: Recall that in memory consistency, we simply need to prove that, for each memory cell, the value of the current step is equal to the value in the last step it was written. With this idea, we need to
+Let us explain the above constraints: Recall that in memory consistency, we simply need to prove that, for each memory cell, the value of the current step is equal to the value in the last step it was written. With this idea, we could sort the trace by their address first, then time and check them via the constraint \\((addr_i' \le addr_{i+1}' ) \lor ((addr_i'= addr_{i+1}') \land (time_i' \le time_{i+1}'))\\). In this way, we can divide the array into consecutive ''blocks'' where each block contains the traces with the same address. In each block and each trace of it, we consider the time when the value is written (determined by \\(val\\) and \\(op\\)). We see that, if the value is written in the current step (\\(op=1\\)), then there is nothing to consider because we are writing a new value. Otherwise  (\\(op=0\\)) meaning that we are reading from the cell, then the value \\(val\\) must be equal to the value of the previous trace in the block, and this can be captured by the constraint \\(  (op_{i+1}=1) \lor (val_i'=val_{i+1}') \lor (addr_{i}' \neq addr_{i+1}').\\). Moreover, we need to ensure that the first time we access a memory cell, then the operation must be WRITE, which can be constrained by \\( (op_{i+1}=1) \lor (addr_i'=addr_{i+1}')\\), meaning that in every first trace in each block, the opcode of the trace must be \\(1\\). Finally, we need the original array to be sorted in ascending time, which can be captured via the constraint \\( time_i \le time_{i+1}\\). Thus, these constraints together are sufficient to check the consistency of the memory.
+
+### Integrating Halo2
+
+In this Section, we give a brief overview of handling constraints using Halo2. For readers who are new to Halo2, we refer to [halo2](./halo2-for-dummies/chapter.md). With the execution trace, we define our witness table where each row has the following config:
+ 
+ $$(addr,time,op,val,addr',dif,inv,time',op',val')$$
+
+and the constraints (each must be equal to \\(0\\)) are rewritten in Halo2 as follows:
+
+$$
+\begin{cases}
+C(time_i,time_{i+1})=0,  \\\\
+(op_{i+1}-1)\cdot (addr_{i}'-addr_{i+1}')=0,  \\\\
+C(addr_{i}'||time_{i}',addr_{i+1}'||time_{i+1}')=0, \\\\
+(op_{i+1}'-1)\cdot (val_{i+1}'-val_i') \cdot ((addr_{i+1}'-addr_{i}') \cdot inv_{i+1} -1)=0.  \\\\
+\end{cases}
+$$
+
+In the constraints above, we denote \\(C\\) to be the expression such that \\(C(a,b)=0\\) iff \\(a \lt b\\). The idea for construction this expression can be found in [here](https://github.com/privacy-scaling-explorations/zkevm-circuits/blob/main/zkevm-circuits/src/state_circuit/lexicographic_ordering.rs). At a high level, we parse \\(a\\) and \\(b\\) into \\(256\\)-bit chunks \\((a_i)\\) and \\((b_i)\\) for \\(i=\\{1,2\dots,32\\}\\) and look for the smallest \\(j\\) such that \\(a_j \neq b_j\\). Hence, it is equivalent to prove that \\((b_j-a_j) \in \\{1,\dots,255\\}\\) and \\(a_i=b_i\\) for all \\(1\leq i
+leq j-1\\). With this, the expression \\(C\\) can be written in high level as \\(C=\mathsf{lookup}(b_j-a_j,\\{1,\dots,255\\})+\beta \cdot (\sum_{i=1}^{j-1}(b_i-a_i)\cdot \alpha^i )\\) where \\(\alpha ,\beta\\) are random challenges generated by verifier, and \\(\mathsf{lookup}(c,\\{1,\dots,255\\})\\) is an expression that returns \\(0\\) if and only if \\(c \in \\{1,2\dots, 255\\}\\). Note that by Schwartz-Zippel lemma, we can see that if \\(a \geq b\\), then the expression \\(C\\) above does not return \\(0\\) with overwhelming probability.
+In addition, for proving that \\(tr\\) and \\(tr'\\) are permutation of each other, we simply use the shuffle API from [here](https://github.com/privacy-scaling-explorations/halo2/blob/9b33f9ce524dbb9133fc8b9638b2afd0571659a8/halo2_proofs/examples/shuffle_api.rs)
+
+Finally, with the constraints above, we could support proving memory consistency using Halo2. Our implementation for this can be found [here](https://github.com/orochi-network/orochimaru/tree/main/zkmemory/src/constraints).
