@@ -4,7 +4,7 @@ Now that we have described several well known VDF constructions, we would like t
 
 | Construction   | Eval Time                             | Eval Time (parallel)                           | Verification Time         | Proof Size                   |
 | -------------- | ------------------------------------- | ---------------------------------------------- | ------------------------- | ---------------------------- |
-| Dwork and Naor | \\(\mathcal{O}(t)\\)                  | \\(\mathcal{O}(t^{2/3})\\)                     | \\(\mathcal{O}(1)\\)      | \\(\mathcal{O}(\lambda)\\)   |
-| Pietrzak       | \\(\mathcal{O}(t+\sqrt{t})\\)         | \\(\mathcal{O}(t+\frac{\sqrt{t}}{P})\\)        | \\(\mathcal{O}(\log t)\\) | \\(\mathcal{O}(\log t)\\)    |
-| Wesolowski     | \\(\mathcal{O}(t+\frac{t}{\log t})\\) | \\(\mathcal{O}(t+\frac{\sqrt{t}}{P \log t})\\) | \\(\lambda^4\\)           | \\(\mathcal{O}(\lambda^3)\\) |
-| Feo et al.     | \\(\mathcal{O}(t)\\)                  | \\(\mathcal{O}(t)\\)                           | \\(\lambda^4\\)           | \\(\mathcal{O}(\lambda)\\)   |
+| Dwork and Naor | \\(O(t)\\)                  | \\(O(t^{2/3})\\)                     | \\(O(1)\\)      | \\(O(\lambda)\\)   |
+| Pietrzak       | \\(O(t+\sqrt{t})\\)         | \\(O(t+\frac{\sqrt{t}}{P})\\)        | \\(O(\log t)\\) | \\(O(\log t)\\)    |
+| Wesolowski     | \\(O(t+\frac{t}{\log t})\\) | \\(O(t+\frac{\sqrt{t}}{P \log t})\\) | \\(\lambda^4\\)           | \\(O(\lambda^3)\\) |
+| Feo et al.     | \\(O(t)\\)                  | \\(O(t)\\)                           | \\(\lambda^4\\)           | \\(O(\lambda)\\)   |
