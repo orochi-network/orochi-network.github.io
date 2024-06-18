@@ -6,7 +6,10 @@ src = "src"
 title = "Orochi Network's Cookbook"
 [output.html]
 mathjax-support = true
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
 [output.html.fold]
-enable = true
+enable = false
 [preprocessor.bib]
 bibliography = "refs.bib"
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
