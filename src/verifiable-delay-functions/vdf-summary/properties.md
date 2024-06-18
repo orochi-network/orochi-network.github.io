@@ -12,5 +12,5 @@ We require a VDF to have the following security properties:
 
 - \\((ek,vk) \leftarrow \mathsf{Gen}(1^{\lambda})\\)
 - \\(X {\stackrel{\$}{\leftarrow}} \mathcal{X}\\)
-- \\ ((Y,\pi) \leftarrow \mathcal{A}(X,ek,vk)\\)
+- \\((Y,\pi) \leftarrow \mathcal{A}(X,ek,vk)\\)
 - Return \\((Y,\pi)==\mathsf{Eval}(X,ek,t)\\)
