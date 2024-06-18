@@ -16,7 +16,7 @@ We need a VRF to satisfy the following properties:
 - \\((X^*,st) \leftarrow \mathcal{A}^{\mathcal{O_{VRF}}(.)}(pk)\\)
 - \\(Y_0 \leftarrow \mathsf{Eval}(X*,sk)\\)
 - \\(Y_1 \leftarrow \\{0,1\\}^{out(\lambda)}\\)
-- \\(\\{0,1\\} {\stackrel{\$}{\leftarrow}} b\\)
+- \\(b {\stackrel{\$}{\leftarrow}} \\{0,1\\}\\)
 - \\(b' \leftarrow \mathcal{A}(Y_b,st)\\)
 - Return \\(b=b'\\)
 
