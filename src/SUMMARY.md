@@ -94,3 +94,7 @@
     - [IPFS](./zkdatabase/distributed-storage-engine/ipfs.md)
     - [Storage-Engine](./zkdatabase/distributed-storage-engine/storage-engine.md)
   - [Merkle-Tree](./zkdatabase/merkle-tree/merkle-tree.md)
+- [zkMemory](./zk-memory/chapter.md)
+  - [Execution Trace](./zk-memory/execution-trace/execution-trace.md)
+  - [Commitment Schemes](./zk-memory/commitment/commitment.md)
+  - [Memory Consistency Constraints](./zk-memory/constraints/constraints.md)
