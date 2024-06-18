@@ -44,6 +44,8 @@ Orand V3 was deployed on following smart contract platform.
 | Kroma Sepolia TestNet         | [0xabD720eaf47339150E0d0dF379307a17A68092Ac](https://sepolia.etherscan.io/address/0xabD720eaf47339150E0d0dF379307a17A68092Ac)                           |
 | Fantom TestNet                | [0xc3A7a16304D08002c27441e9e2Cb6366E97862B2](https://testnet.ftmscan.com/address/0xc3A7a16304D08002c27441e9e2Cb6366E97862B2)                            |
 | LayerEdge TestNet             | [0x5978ad998cc1b30079fCFFf18fe56346225dde74](https://testnet-explorer.layeredge.io/address/0x5978ad998cc1b30079fCFFf18fe56346225dde74)                  |
+| Base Sepolia TestNet          | [0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432](https://base-sepolia.blockscout.com/address/0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432)                    |
+| Optimism Sepolia TestNet      | [0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1](https://sepolia-optimistic.etherscan.io/address/0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1)                |
 
 ## Self Submission
 
