@@ -1,4 +1,4 @@
-## Unlocking the Web3 Universe: Orochi Network's Orocle Service
+## Unlocking the Web3 Universe: Orochi Network's Oracle Service
 
 Imagine building a Web3 application that thrives on real-world data, free from centralized control. This is the vision behind Orochi Network's Oracle service, a powerful tool poised to revolutionize the way DApps interact with the external world.
 
