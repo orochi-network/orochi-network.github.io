@@ -39,6 +39,9 @@ Oracle V2 was deployed on following smart contract platform.
 | LayerEdge TestNet             | [0x3F9F0A72499Bb8FDe026669003408F8748f492A1](https://testnet-explorer.layeredge.io/address/0x3F9F0A72499Bb8FDe026669003408F8748f492A1)                  |
 | Base Sepolia TestNet          | [0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672](https://base-sepolia.blockscout.com/address/0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672)                    |
 | Optimism Sepolia TestNet      | [0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3](https://sepolia-optimistic.etherscan.io/address/0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3)                |
+| Wanchain TestNet              | [0x5ad07a162a56E8e4621544fA5D9243CA83264053](https://testnet.wanscan.org/address/0x5ad07a162a56E8e4621544fA5D9243CA83264053)                            |
+| Scroll Sepolia TestNet        | [0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e](https://sepolia.scrollscan.dev/address/0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e)                         |
+| Morph Holesky TestNet         | [0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740](https://explorer-holesky.morphl2.io/address/0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740)                    |
 
 ## So, what exactly can the Orochi Oracle (Orocle) do?
 

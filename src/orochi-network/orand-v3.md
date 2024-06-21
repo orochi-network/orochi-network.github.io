@@ -46,6 +46,9 @@ Orand V3 was deployed on following smart contract platform.
 | LayerEdge TestNet             | [0x5978ad998cc1b30079fCFFf18fe56346225dde74](https://testnet-explorer.layeredge.io/address/0x5978ad998cc1b30079fCFFf18fe56346225dde74)                  |
 | Base Sepolia TestNet          | [0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432](https://base-sepolia.blockscout.com/address/0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432)                    |
 | Optimism Sepolia TestNet      | [0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1](https://sepolia-optimistic.etherscan.io/address/0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1)                |
+| Wanchain TestNet              | [0xD682B35eB08cC3cb74F690f6B8fFAE087625a158](https://testnet.wanscan.org/address/0xD682B35eB08cC3cb74F690f6B8fFAE087625a158)                            |
+| Scroll Sepolia TestNet        | [0x25fa439D1030540FCd9B2E67F0e8A704ad078226](https://sepolia.scrollscan.dev/address/0x25fa439D1030540FCd9B2E67F0e8A704ad078226)                         |
+| Morph Holesky TestNet         | [0x6d660F6e9bC72709c96448dEe00D0c08cfD77577](https://explorer-holesky.morphl2.io/address/0x6d660F6e9bC72709c96448dEe00D0c08cfD77577)                    |
 
 ## Self Submission
 
