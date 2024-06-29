@@ -19,7 +19,7 @@ Let us explain the above constraints: Recall that in memory consistency, we simp
 
 ### Integrating Halo2
 
-In this Section, we give a brief overview of handling constraints using Halo2. For readers who are new to Halo2, we refer to [halo2](./halo2-for-dummies/chapter.md). With the execution trace, we define our witness table where each row has the following config:
+In this Section, we give a brief overview of handling constraints using Halo2. For readers who are new to Halo2, we refer to [halo2](./../../halo2-for-dummies/chapter.md). With the execution trace, we define our witness table where each row has the following config:
 
 $$(addr,time,op,val,addr',dif,inv,time',op',val')$$
 
