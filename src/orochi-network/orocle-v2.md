@@ -1,22 +1,23 @@
-## Unlocking the Web3 Universe: Orochi Network's Oracle Service
+## Unlocking the Web3 Universe: Orochi Network's Orocle Service
 
-Imagine building a Web3 application that thrives on real-world data, free from centralized control. This is the vision behind Orochi Network's Oracle service, a powerful tool poised to revolutionize the way DApps interact with the external world.
+Imagine building a Web3 application that thrives on real-world data, free from centralized control. This is the vision behind Orochi Network's Orocle service, a powerful tool poised to revolutionize the way DApps interact with the external world.
 
-Traditionally, DApps have struggled to access external data sources, relying on centralized oracles – single points of failure susceptible to manipulation and bias. Orochi's Oracle shatters these limitations, offering a decentralized, secure, and versatile solution for feeding accurate and verifiable data into your DApps.
+Traditionally, DApps have struggled to access external data sources, relying on centralized oracles – single points of failure susceptible to manipulation and bias. Orochi's Orocle shatters these limitations, offering a decentralized, secure, and versatile solution for feeding accurate and verifiable data into your DApps.
 
 ## Deployed Platform
 
-Oracle V2 was deployed on following smart contract platform.
+Orocle V2 was deployed on following smart contract platform.
 
 ### Mainnet
 
-| Network Name        | Address                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Mainnet    | [0x80011aA6171B433d33c46B59A619FD338c155161](https://scan.ancient8.gg/address/0x80011aA6171B433d33c46B59A619FD338c155161)                 |
-| U2U Solaris Mainnet | [0x6eFAA86dD3177d75d161A99e2c103409927f3C49](https://u2uscan.xyz/address/0x6eFAA86dD3177d75d161A99e2c103409927f3C49)                      |
-| BNB Chain           | [0xcE978D96f761a0AE9Dd252E666504482B74A4713](https://bscscan.com/address/0xce978d96f761a0ae9dd252e666504482b74a4713)                      |
-| X Layer mainnet     | [0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285](https://www.okx.com/web3/explorer/xlayer/address/0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285) |
-| Saakuru (L2)        | [0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15](https://explorer.saakuru.network/address/0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15)         |
+| Network Name         | Address                                                                                                                                   |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet     | [0x80011aA6171B433d33c46B59A619FD338c155161](https://scan.ancient8.gg/address/0x80011aA6171B433d33c46B59A619FD338c155161)                 |
+| U2U Solaris Mainnet  | [0x6eFAA86dD3177d75d161A99e2c103409927f3C49](https://u2uscan.xyz/address/0x6eFAA86dD3177d75d161A99e2c103409927f3C49)                      |
+| BNB Chain            | [0xcE978D96f761a0AE9Dd252E666504482B74A4713](https://bscscan.com/address/0xce978d96f761a0ae9dd252e666504482b74a4713)                      |
+| X Layer Mainnet      | [0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285](https://www.okx.com/web3/explorer/xlayer/address/0x5cb715ddb32d0facd9c5b9e3a10f2ffceba93285) |
+| Saakuru (L2) Mainnet | [0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15](https://explorer.saakuru.network/address/0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15)         |
+| Sei Mainnet          | [0x5C27491559b3E438b18024A2d5C6f307fBD9Ba15](https://seitrace.com/address/0xbA7f3cb53aA2De189b60c815Bca11ad9AEb2BA7E?chain=pacific-1)     |
 
 ### Testnet
 
@@ -24,26 +25,26 @@ Oracle V2 was deployed on following smart contract platform.
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ancient8 Testnet              | [0xd26Ea014930305B498C5826cF0712F877CCAF93f](https://scanv2-testnet.ancient8.gg/address/0xd26Ea014930305B498C5826cF0712F877CCAF93f)                     |
 | Unicorn Ultra Nebulas         | [0x70523434ee6a9870410960E2615406f8F9850676](https://testnet.u2uscan.xyz/address/0x70523434ee6a9870410960E2615406f8F9850676)                            |
-| Sei Devnet                    | [0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7](https://seitrace.com/address/0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7)                                   |
-| Saakuru TestNet               | [0xA346Ed72C477F5007866D6B9edCb1563af8cC23d](https://explorer.testnet.oasys.games/address/0xA346Ed72C477F5007866D6B9edCb1563af8cC23d)                   |
-| Zircuit TestNet               | [0x9eF4E958A94375436bA4071599BDF47f81E1d96f](https://explorer.zircuit.com/address/0x9eF4E958A94375436bA4071599BDF47f81E1d96f)                           |
-| ZKFair TestNet                | [0x4A9f4f5acF2E11eb4795f228805c6577876559e1](https://testnet-scan.zkfair.io/address/0x4A9f4f5acF2E11eb4795f228805c6577876559e1)                         |
-| X Layer TestNet               | [0x471434636bE5da937d401971267Dd56C1696C073](https://www.okx.com/web3/explorer/xlayer-test/address/0x471434636bE5da937d401971267Dd56C1696C073)          |
+| Sei Devnet                    | [0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7](https://seitrace.com/address/0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7?chain=arctic-1)                    |
+| Saakuru Testnet               | [0xA346Ed72C477F5007866D6B9edCb1563af8cC23d](https://explorer.testnet.oasys.games/address/0xA346Ed72C477F5007866D6B9edCb1563af8cC23d)                   |
+| Zircuit Testnet               | [0x9eF4E958A94375436bA4071599BDF47f81E1d96f](https://explorer.zircuit.com/address/0x9eF4E958A94375436bA4071599BDF47f81E1d96f)                           |
+| ZKFair Testnet                | [0x4A9f4f5acF2E11eb4795f228805c6577876559e1](https://testnet-scan.zkfair.io/address/0x4A9f4f5acF2E11eb4795f228805c6577876559e1)                         |
+| X Layer Testnet               | [0x471434636bE5da937d401971267Dd56C1696C073](https://www.okx.com/web3/explorer/xlayer-test/address/0x471434636bE5da937d401971267Dd56C1696C073)          |
 | ZKLink Nova                   | [0xb0b5fFeF72c6ea620689CF947C0458fAD5cF58da](https://sepolia.explorer.zklink.io/address/0xb0b5fFeF72c6ea620689CF947C0458fAD5cF58da)                     |
-| Bsc Testnet                   | [0xbC792147B026F2B998A97d6BC9718569Df79ec65](https://testnet.bscscan.com/address/0xbC792147B026F2B998A97d6BC9718569Df79ec65)                            |
+| BNB Chain Testnet             | [0xbC792147B026F2B998A97d6BC9718569Df79ec65](https://testnet.bscscan.com/address/0xbC792147B026F2B998A97d6BC9718569Df79ec65)                            |
 | Arbitrum Sepolia Testnet      | [0x4ec4C6E856d0ce4D4bc57b50B9234DcD7c6c31BE](https://sepolia.arbiscan.io/address/0x4ec4C6E856d0ce4D4bc57b50B9234DcD7c6c31BE)                            |
-| Moonbase Alpha TestNet        | [0xCe4defA26b1820026136D71F2e00e291C479D656](https://moonbase.moonscan.io/address/0xCe4defA26b1820026136D71F2e00e291C479D656)                           |
-| Manta Pacific Sepolia TestNet | [0xc069da03509222325f9d51239E9F8E6F8cB953Eb](https://pacific-explorer.sepolia-testnet.manta.network/address/0xc069da03509222325f9d51239E9F8E6F8cB953Eb) |
-| Kroma Sepolia TestNet         | [0x8519243FaeDcC4292c0b0ebB63b84020158bBE68](https://sepolia.etherscan.io/address/0x8519243FaeDcC4292c0b0ebB63b84020158bBE68)                           |
-| Fantom TestNet                | [0xf20f36FBec4C592367D807112ddBd44275a1B2df](https://testnet.ftmscan.com/address/0xf20f36FBec4C592367D807112ddBd44275a1B2df)                            |
-| LayerEdge TestNet             | [0x3F9F0A72499Bb8FDe026669003408F8748f492A1](https://testnet-explorer.layeredge.io/address/0x3F9F0A72499Bb8FDe026669003408F8748f492A1)                  |
-| Base Sepolia TestNet          | [0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672](https://base-sepolia.blockscout.com/address/0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672)                    |
-| Optimism Sepolia TestNet      | [0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3](https://sepolia-optimistic.etherscan.io/address/0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3)                |
-| Wanchain TestNet              | [0x5ad07a162a56E8e4621544fA5D9243CA83264053](https://testnet.wanscan.org/address/0x5ad07a162a56E8e4621544fA5D9243CA83264053)                            |
-| Scroll Sepolia TestNet        | [0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e](https://sepolia.scrollscan.dev/address/0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e)                         |
-| Morph Holesky TestNet         | [0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740](https://explorer-holesky.morphl2.io/address/0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740)                    |
+| Moonbase Alpha Testnet        | [0xCe4defA26b1820026136D71F2e00e291C479D656](https://moonbase.moonscan.io/address/0xCe4defA26b1820026136D71F2e00e291C479D656)                           |
+| Manta Pacific Sepolia Testnet | [0xc069da03509222325f9d51239E9F8E6F8cB953Eb](https://pacific-explorer.sepolia-testnet.manta.network/address/0xc069da03509222325f9d51239E9F8E6F8cB953Eb) |
+| Kroma Sepolia Testnet         | [0x8519243FaeDcC4292c0b0ebB63b84020158bBE68](https://sepolia.etherscan.io/address/0x8519243FaeDcC4292c0b0ebB63b84020158bBE68)                           |
+| Fantom Testnet                | [0xf20f36FBec4C592367D807112ddBd44275a1B2df](https://testnet.ftmscan.com/address/0xf20f36FBec4C592367D807112ddBd44275a1B2df)                            |
+| LayerEdge Testnet             | [0x3F9F0A72499Bb8FDe026669003408F8748f492A1](https://testnet-explorer.layeredge.io/address/0x3F9F0A72499Bb8FDe026669003408F8748f492A1)                  |
+| Base Sepolia Testnet          | [0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672](https://base-sepolia.blockscout.com/address/0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672)                    |
+| Optimism Sepolia Testnet      | [0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3](https://sepolia-optimistic.etherscan.io/address/0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3)                |
+| Wanchain Testnet              | [0x5ad07a162a56E8e4621544fA5D9243CA83264053](https://testnet.wanscan.org/address/0x5ad07a162a56E8e4621544fA5D9243CA83264053)                            |
+| Scroll Sepolia Testnet        | [0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e](https://sepolia.scrollscan.dev/address/0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e)                         |
+| Morph Holesky Testnet         | [0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740](https://explorer-holesky.morphl2.io/address/0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740)                    |
 
-## So, what exactly can the Orochi Oracle (Orocle) do?
+## So, what exactly can the Orochi Orocle (Oracle) do?
 
 - **Gather Diverse Data:** Access a vast pool of information, from financial markets and weather updates to social media sentiment and IoT sensor readings. The possibilities are endless, empowering DApps with real-time, relevant data.
 - **Decentralized & Trustworthy:** Eliminate the risk of manipulation with a distributed network of nodes verifying and securing data integrity. No single entity controls the flow of information, fostering trust and transparency.
@@ -58,23 +59,23 @@ Oracle V2 was deployed on following smart contract platform.
 - **Supply chain management:** Track goods movement and environmental conditions transparently across complex supply chains.
 - **Gaming & Entertainment:** Create immersive experiences that react to real-world events and user behavior.
 
-Orochi's Oracle is more than just a data feed; it's a gateway to a truly decentralized and data-driven future for Web3. By unlocking the power of real-world data, it empowers developers to build DApps that are not only innovative but also robust, secure, and truly impactful.
+Orochi's Orocle is more than just a data feed; it's a gateway to a truly decentralized and data-driven future for Web3. By unlocking the power of real-world data, it empowers developers to build DApps that are not only innovative but also robust, secure, and truly impactful.
 
 Ready to explore the possibilities? Dive into the world of Orochi Network and unleash the full potential of your Web3 vision.
 
 ### Installation
 
-Installing `@orochi-network/contracts` will help you interactive with Orochi Network Oracle and VRF (Orand) much more easier.
+Installing `@orochi-network/contracts` will help you interactive with Orochi Network Orocle and VRF (Orand) much more easier.
 
 ```bash
 npm i --save-dev @orochi-network/contracts
 ```
 
-## Oracle Aggregator Overview
+## Orocle Aggregator Overview
 
-This section describes all methods of Oracle V1 that facilitate interaction from external smart contracts. To familiarize yourself with Oracle V1, the following terminology definitions may be helpful.
+This section describes all methods of Orocle V2 that facilitate interaction from external smart contracts. To familiarize yourself with Orocle V2, the following terminology definitions may be helpful.
 
-**appId:** Application ID on Oracle, our oracle support multiple applications there are two of them listed here:
+**appId:** Application ID on Orocle, our oracle support multiple applications there are two of them listed here:
 
 | Application ID | Description      |
 | -------------- | ---------------- |
@@ -98,7 +99,7 @@ This section describes all methods of Oracle V1 that facilitate interaction from
 
 ### Key Points:
 
-The IOrocleAggregatorV1 interface defines several methods:
+The IOrocleAggregatorV2 interface defines several methods:
 
 - `request(uint256 identifier, bytes calldata data)`: This function is used to create a new request. It takes an identifier and data as parameters and returns a boolean indicating whether the request was successful.
 - `fulfill(uint256 identifier, bytes calldata data)`: This function is used to fulfill a request. It also takes an identifier and data as parameters and returns a boolean indicating whether the fulfillment was successful.
@@ -116,20 +117,20 @@ Here is an example of `AssetPrice` consumer:
 pragma solidity ^0.8.0;
 
 import '@openzeppelin/contracts/access/Ownable.sol';
-import '@orochi-network/contracts/IOracleAggregatorV1.sol';
+import '@orochi-network/contracts/IOrocleAggregatorV2.sol';
 
 contract ConsumerAssetPrice is Ownable {
-  IOracleAggregatorV1 private oracle;
+  IOrocleAggregatorV2 private orocle;
 
-  event SetOracle(address indexed oldOracle, address indexed newOracle);
+  event SetOrocle(address indexed oldOrocle, address indexed newOrocle);
 
-  constructor(address oracleAddress) {
-    _setOracle(oracleAddress);
+  constructor(address orocleAddress) {
+    _setOrocle(orocleAddress);
   }
 
-  function _setOracle(address newOracle) internal {
-    emit SetOracle(address(oracle), newOracle);
-    oracle = IOracleAggregatorV1(newOracle);
+  function _setOrocle(address newOrocle) internal {
+    emit SetOrocle(address(orocle), newOrocle);
+    orocle = IOrocleAggregatorV2(newOrocle);
   }
 
   /**
@@ -139,7 +140,7 @@ contract ConsumerAssetPrice is Ownable {
    * @return price
    */
   function _getPrice(bytes20 identifier) internal view returns (uint256) {
-    return uint256(oracle.getLatestData(1, identifier));
+    return uint256(orocle.getLatestData(1, identifier));
   }
 
   /**
@@ -155,12 +156,12 @@ contract ConsumerAssetPrice is Ownable {
   }
 
   /**
-   * Allow owner to set new Oracle address
-   * @param newOracle new Oracle address
+   * Allow owner to set new Orocle address
+   * @param newOrocle new Orocle address
    * @return success
    */
-  function setOracle(address newOracle) external onlyOwner returns (bool) {
-    _setOracle(newOracle);
+  function setOrocle(address newOrocle) external onlyOwner returns (bool) {
+    _setOrocle(newOrocle);
     return true;
   }
 }
