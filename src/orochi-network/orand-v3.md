@@ -17,14 +17,15 @@ Orand V3 was deployed on following smart contract platform.
 
 ### Mainnet
 
-| Network Name        | Address                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Ancient8 Mainnet    | [0x970FD01B4427Ec1b48a8105aee7A3fc4E70E5FE5](https://scan.ancient8.gg/address/0x970FD01B4427Ec1b48a8105aee7A3fc4E70E5FE5)                 |
-| U2U Solaris Mainnet | [0x635eB277805AFADDd720B873dfE87F8fc01b24e4](https://u2uscan.xyz/address/0x635eB277805AFADDd720B873dfE87F8fc01b24e4)                      |
-| BNB Chain           | [0x4DB03CC56421A81EC1398279913d8D55E62f5328](https://bscscan.com/address/0x4DB03CC56421A81EC1398279913d8D55E62f5328)                      |
-| X Layer Mainnet     | [0x6254c96c3d96653FCD4A7133Ff138F97656522B7](https://www.okx.com/web3/explorer/xlayer/address/0x6254c96c3d96653FCD4A7133Ff138F97656522B7) |
-| Saakuru (L2)        | [0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303](https://explorer.saakuru.network/address/0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303)         |
-| Sei Mainnet         | [0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13](https://seitrace.com/address/0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13?chain=pacific-1)     |
+| Network Name            | Address                                                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Ancient8 Mainnet        | [0x970FD01B4427Ec1b48a8105aee7A3fc4E70E5FE5](https://scan.ancient8.gg/address/0x970FD01B4427Ec1b48a8105aee7A3fc4E70E5FE5)                 |
+| U2U Solaris Mainnet     | [0x635eB277805AFADDd720B873dfE87F8fc01b24e4](https://u2uscan.xyz/address/0x635eB277805AFADDd720B873dfE87F8fc01b24e4)                      |
+| BNB Chain               | [0x4DB03CC56421A81EC1398279913d8D55E62f5328](https://bscscan.com/address/0x4DB03CC56421A81EC1398279913d8D55E62f5328)                      |
+| X Layer Mainnet         | [0x6254c96c3d96653FCD4A7133Ff138F97656522B7](https://www.okx.com/web3/explorer/xlayer/address/0x6254c96c3d96653FCD4A7133Ff138F97656522B7) |
+| Saakuru (L2)            | [0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303](https://explorer.saakuru.network/address/0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303)         |
+| Sei Mainnet             | [0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13](https://seitrace.com/address/0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13?chain=pacific-1)     |
+| Manta Pacific L2 Rollup | [0x2578F22C7488E08B6D8ED3Bb042b70a3444BF111](https://pacific-explorer.manta.network/address/0x2578F22C7488E08B6D8ED3Bb042b70a3444BF111)   |
 
 ### Testnet
 
