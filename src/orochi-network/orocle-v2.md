@@ -44,6 +44,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Wanchain Testnet              | [0x5ad07a162a56E8e4621544fA5D9243CA83264053](https://testnet.wanscan.org/address/0x5ad07a162a56E8e4621544fA5D9243CA83264053)                            |
 | Scroll Sepolia Testnet        | [0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e](https://sepolia.scrollscan.dev/address/0xC385AbA69909502B439670Bc2d81FF6B4b30AD6e)                         |
 | Morph Holesky Testnet         | [0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740](https://explorer-holesky.morphl2.io/address/0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740)                    |
+| LightLink Pegasus Testnet     | [0x9CB1bDc8D01841F1887f62a8F61813472B0cf1e4](https://pegasus.lightlink.io/address/0x9CB1bDc8D01841F1887f62a8F61813472B0cf1e4)                           |
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 

@@ -51,6 +51,7 @@ Orand V3 was deployed on following smart contract platform.
 | Wanchain Testnet              | [0xD682B35eB08cC3cb74F690f6B8fFAE087625a158](https://testnet.wanscan.org/address/0xD682B35eB08cC3cb74F690f6B8fFAE087625a158)                            |
 | Scroll Sepolia Testnet        | [0x25fa439D1030540FCd9B2E67F0e8A704ad078226](https://sepolia.scrollscan.dev/address/0x25fa439D1030540FCd9B2E67F0e8A704ad078226)                         |
 | Morph Holesky Testnet         | [0x6d660F6e9bC72709c96448dEe00D0c08cfD77577](https://explorer-holesky.morphl2.io/address/0x6d660F6e9bC72709c96448dEe00D0c08cfD77577)                    |
+| LightLink Pegasus Testnet     | [0x591749260B0dEc690976ce1dDFbd71694578b99e](https://pegasus.lightlink.io/address/0x591749260B0dEc690976ce1dDFbd71694578b99e)                           |
 
 ## Self Submission
 
