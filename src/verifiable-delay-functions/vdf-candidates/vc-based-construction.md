@@ -1,6 +1,6 @@
 ## Possible IVC based construction
 
-Apart from the previous well known constructions, we now discuss another possible direction to construct a VDF is to use Incrementially Verifiable Computation (IVC) {{#cite BBBF18}}. The basic idea of IVC is that after each computation step, the prover can produce a proof of the current state. The proof can also be updated after each step to produce a new proof for the corresponding step. The definition and properties of IVC can be found in {{#cite Pa08}}.
+Apart from the previous well-known constructions, we now discuss another possible direction to construct a VDF is to use Incrementally Verifiable Computation (IVC) {{#cite BBBF18}}. The basic idea of IVC is that after each computation step, the prover can produce a proof of the current state. The proof can also be updated after each step to produce a new proof for the corresponding step. The definition and properties of IVC can be found in {{#cite Pa08}}.
 Now, consider a IVC system **\\((\mathsf{IVC.Setup}, \mathsf{IVC.Prove}, \mathsf{IVC.Verify})\\)** for a function \\(f\\), it is possible to construct a VDF as follow:
 
 **\\(\mathsf{Gen}(1^\lambda,t)\\)**: Run \\((ek,vk) \leftarrow\\) **\\(\mathsf{IVC.Gen}(1^\lambda,f,t)\\)**.
