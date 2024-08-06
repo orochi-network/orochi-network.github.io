@@ -35,7 +35,7 @@ Orand V3 was deployed on following smart contract platform.
 | Unicorn Ultra Nebulas         | [0x3eAF9da360dA944105599cdB7833712346af6DF1](https://testnet.u2uscan.xyz/address/0x3eAF9da360dA944105599cdB7833712346af6DF1)                            |
 | Sei Devnet                    | [0x2182fD816A3fCeCDeD390452524cfA8f21142A88](https://seitrace.com/address/0x2182fD816A3fCeCDeD390452524cfA8f21142A88?chain=arctic-1)                    |
 | Saakuru Testnet               | [0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f](https://explorer.testnet.oasys.games/address/0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f)                   |
-| Zircuit Testnet               | [0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2](https://explorer.zircuit.com/address/0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2)                           |
+| Zircuit Testnet               | [0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2](https://explorer.testnet.zircuit.com/address/0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2)                   |
 | ZKFair Testnet                | [0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4](https://testnet-scan.zkfair.io/address/0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4)                         |
 | X Layer Testnet               | [0x50C72F5bea0757c8052daa6402568d4bbf2336Fb](https://www.okx.com/web3/explorer/xlayer-test/address/0x50C72F5bea0757c8052daa6402568d4bbf2336Fb)          |
 | ZKLink Nova                   | [0xf9338096bb1bCdBDB83E5a237F198A60A48395a2](https://sepolia.explorer.zklink.io/address/0xf9338096bb1bCdBDB83E5a237F198A60A48395a2)                     |
