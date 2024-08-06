@@ -28,7 +28,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Unicorn Ultra Nebulas         | [0x70523434ee6a9870410960E2615406f8F9850676](https://testnet.u2uscan.xyz/address/0x70523434ee6a9870410960E2615406f8F9850676)                            |
 | Sei Devnet                    | [0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7](https://seitrace.com/address/0x2cC3DF2fC577237A3Fa00634c3d90910211bdAc7?chain=arctic-1)                    |
 | Saakuru Testnet               | [0xA346Ed72C477F5007866D6B9edCb1563af8cC23d](https://explorer.testnet.oasys.games/address/0xA346Ed72C477F5007866D6B9edCb1563af8cC23d)                   |
-| Zircuit Testnet               | [0x9eF4E958A94375436bA4071599BDF47f81E1d96f](https://explorer.zircuit.com/address/0x9eF4E958A94375436bA4071599BDF47f81E1d96f)                           |
+| Zircuit Testnet               | [0x9eF4E958A94375436bA4071599BDF47f81E1d96f](https://explorer.testnet.zircuit.com/address/0x9eF4E958A94375436bA4071599BDF47f81E1d96f)                   |
 | ZKFair Testnet                | [0x4A9f4f5acF2E11eb4795f228805c6577876559e1](https://testnet-scan.zkfair.io/address/0x4A9f4f5acF2E11eb4795f228805c6577876559e1)                         |
 | X Layer Testnet               | [0x471434636bE5da937d401971267Dd56C1696C073](https://www.okx.com/web3/explorer/xlayer-test/address/0x471434636bE5da937d401971267Dd56C1696C073)          |
 | ZKLink Nova                   | [0xb0b5fFeF72c6ea620689CF947C0458fAD5cF58da](https://sepolia.explorer.zklink.io/address/0xb0b5fFeF72c6ea620689CF947C0458fAD5cF58da)                     |
