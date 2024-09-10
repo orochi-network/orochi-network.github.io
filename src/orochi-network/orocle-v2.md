@@ -21,7 +21,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Manta Pacific L2 Rollup | [0x155bF6a23e5551b431cfb716D2c62409e49B03dd](https://pacific-explorer.manta.network/address/0x155bF6a23e5551b431cfb716D2c62409e49B03dd)   |
 | ZKsync Era Mainnet      | [0x4e12287584A3a506755f8212311f6165336f98a9](https://explorer.zksync.io/address/0x4e12287584A3a506755f8212311f6165336f98a9)               |
 | Scroll Mainnet          | [0x59bcAa1fB8D336CE6103Ed95BD0929e78a1fcEf6](https://scrollscan.com/address/0x59bcAa1fB8D336CE6103Ed95BD0929e78a1fcEf6)                   |
-| Zircuit Mainnet         | [0x59bcAa1fB8D336CE6103Ed95BD0929e78a1fcEf6](https://explorer.zircuit.com/address/0xCB50b75b5CaF2F8A58e4842238475384fb6d5Ee6)             |
+| Zircuit Mainnet         | [0xCB50b75b5CaF2F8A58e4842238475384fb6d5Ee6](https://explorer.zircuit.com/address/0xCB50b75b5CaF2F8A58e4842238475384fb6d5Ee6)             |
 | Phoenix Mainnet         | [0x9A19D4065b91FE61664fE5C50f20048969729D74](https://phoenix.lightlink.io/address/0x9A19D4065b91FE61664fE5C50f20048969729D74)             |
 
 ### Testnet
