@@ -26,6 +26,10 @@ Orand V3 was deployed on following smart contract platform.
 | Saakuru (L2)            | [0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303](https://explorer.saakuru.network/address/0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303)         |
 | Sei Mainnet             | [0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13](https://seitrace.com/address/0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13?chain=pacific-1)     |
 | Manta Pacific L2 Rollup | [0x2578F22C7488E08B6D8ED3Bb042b70a3444BF111](https://pacific-explorer.manta.network/address/0x2578F22C7488E08B6D8ED3Bb042b70a3444BF111)   |
+| ZKsync Era Mainnet      | [0x29ca057761732432bcA26109A291291a365755b4](https://explorer.zksync.io/address/0x29ca057761732432bcA26109A291291a365755b4)               |
+| Scroll Mainnet          | [0x4e7dc620996e58A2BCba128c6b0C7e9e2De103dC](https://scrollscan.com/address/0x4e7dc620996e58A2BCba128c6b0C7e9e2De103dC)                   |
+| Zircuit Mainnet         | [0x99C2b1CcA077ceA2c84Fdc160aAc1A7f64ecf6be](https://explorer.zircuit.com/address/0x99C2b1CcA077ceA2c84Fdc160aAc1A7f64ecf6be)             |
+| Phoenix Mainnet         | [0x0b226bf21B67A691775F9eDbc529D244FC79ab49](https://phoenix.lightlink.io/address/0x0b226bf21B67A691775F9eDbc529D244FC79ab49)             |
 
 ### Testnet
 
