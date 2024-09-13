@@ -57,6 +57,12 @@ Orand V3 was deployed on following smart contract platform.
 | Morph Holesky Testnet         | [0x6d660F6e9bC72709c96448dEe00D0c08cfD77577](https://explorer-holesky.morphl2.io/address/0x6d660F6e9bC72709c96448dEe00D0c08cfD77577)                    |
 | LightLink Pegasus Testnet     | [0x591749260B0dEc690976ce1dDFbd71694578b99e](https://pegasus.lightlink.io/address/0x591749260B0dEc690976ce1dDFbd71694578b99e)                           |
 | Metis Sepolia Testnet         | [0xD2Aaf6e041596431D7df35aC95e7BA74735266cD](https://sepolia-explorer.metisdevops.link/address/0xD2Aaf6e041596431D7df35aC95e7BA74735266cD)              |
+| B² Testnet                    | [0xE21Bc6E404A4133119A164352477C1439205Af27](https://testnet-explorer.bsquared.network/address/0xE21Bc6E404A4133119A164352477C1439205Af27)              |
+| StratoVM Sepolia Testnet      | [0x2f685A31c47a0C9141EB5B2aF52cC2987a336B70](https://explorer.stratovm.io/address/0x2f685A31c47a0C9141EB5B2aF52cC2987a336B70)                           |
+| Core Blockchain Testnet       | [0x396BBaA9eFfDFFa790e53b1a6b93AA161d65Cb75](https://scan.test.btcs.network/address/0x396BBaA9eFfDFFa790e53b1a6b93AA161d65Cb75)                         |
+| Linea Testnet                 | [0x9FC1eE65D0485F2CFeeC5237D765DE5Af3f3f31c](https://sepolia.lineascan.build/address/0x9FC1eE65D0485F2CFeeC5237D765DE5Af3f3f31c)                        |
+| Lumia Testnet                 | [0x5379742183018F098c160EeEf7DBe3187a23AA3A](https://testnet-explorer.lumia.org/address/0x5379742183018F098c160EeEf7DBe3187a23AA3A)                     |
+| Etherlink Testnet             | [0x3e84eB29Df33832DE7c0E65BE3cC23F07Cb2fBdf](https://testnet.explorer.etherlink.com/address/0x3e84eB29Df33832DE7c0E65BE3cC23F07Cb2fBdf)                 |
 
 ## Self Submission
 
