@@ -50,6 +50,12 @@ Orocle V2 was deployed on following smart contract platform.
 | Morph Holesky Testnet         | [0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740](https://explorer-holesky.morphl2.io/address/0xa43Df8eE133946f4f9e455722D7Ec9cb29A08740)                    |
 | LightLink Pegasus Testnet     | [0x9CB1bDc8D01841F1887f62a8F61813472B0cf1e4](https://pegasus.lightlink.io/address/0x9CB1bDc8D01841F1887f62a8F61813472B0cf1e4)                           |
 | Metis Sepolia Testnet         | [0xc02C419c3416484E088A8A96B59859D0Ea9d7e89](https://sepolia-explorer.metisdevops.link/address/0xc02C419c3416484E088A8A96B59859D0Ea9d7e89)              |
+| B² Testnet                    | [0xD1159958Fb9d174230dD4B9Ae506AC2F518FD4Cf](https://testnet-explorer.bsquared.network/address/0xD1159958Fb9d174230dD4B9Ae506AC2F518FD4Cf)              |
+| StratoVM Sepolia Testnet      | [0xf48537f499c9bE20D5D261d765bECb4c20110bd2](https://explorer.stratovm.io/address/0xf48537f499c9bE20D5D261d765bECb4c20110bd2)                           |
+| Core Blockchain Testnet       | [0x08f5A19CAE906E6851E38e6A1f1848464548D9ff](https://scan.test.btcs.network/address/0x08f5A19CAE906E6851E38e6A1f1848464548D9ff)                         |
+| Linea Testnet                 | [0x08f5A19CAE906E6851E38e6A1f1848464548D9ff](https://sepolia.lineascan.build/address/0x4D214560D73215ec2a967B995aa4Afd69A4Bd470)                        |
+| Lumia Testnet                 | [0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a](https://testnet-explorer.lumia.org/address/0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a)                     |
+| Etherlink Testnet             | [0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a](https://testnet-explorer.lumia.org/address/0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a)                     |
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
