@@ -30,6 +30,7 @@ Orand V3 was deployed on following smart contract platform.
 | Scroll Mainnet          | [0x4e7dc620996e58A2BCba128c6b0C7e9e2De103dC](https://scrollscan.com/address/0x4e7dc620996e58A2BCba128c6b0C7e9e2De103dC)                   |
 | Zircuit Mainnet         | [0x99C2b1CcA077ceA2c84Fdc160aAc1A7f64ecf6be](https://explorer.zircuit.com/address/0x99C2b1CcA077ceA2c84Fdc160aAc1A7f64ecf6be)             |
 | Phoenix Mainnet         | [0x0b226bf21B67A691775F9eDbc529D244FC79ab49](https://phoenix.lightlink.io/address/0x0b226bf21B67A691775F9eDbc529D244FC79ab49)             |
+| Etherlink Mainnet       | [0xbaD95Bd46411785c1189a8dd06C1C354DE805170](https://explorer.etherlink.com/address/0xbaD95Bd46411785c1189a8dd06C1C354DE805170)           |
 
 ### Testnet
 
