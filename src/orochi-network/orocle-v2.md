@@ -57,6 +57,9 @@ Orocle V2 was deployed on following smart contract platform.
 | Linea Testnet                 | [0x08f5A19CAE906E6851E38e6A1f1848464548D9ff](https://sepolia.lineascan.build/address/0x4D214560D73215ec2a967B995aa4Afd69A4Bd470)                        |
 | Lumia Testnet                 | [0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a](https://testnet-explorer.lumia.org/address/0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a)                     |
 | Etherlink Testnet             | [0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a](https://testnet-explorer.lumia.org/address/0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a)                     |
+| IoTeX Testnet                 | [0xF49c2DFb6789C8643B772F8dd039E6cF5fdaF6CE](https://testnet.iotexscan.io/address/0xf49c2dfb6789c8643b772f8dd039e6cf5fdaf6ce)                           |
+| Chiado Testnet                | [0xf40931591640833969ee404F1FFfc2C722eE402F](https://gnosis-chiado.blockscout.com/address/0xf40931591640833969ee404F1FFfc2C722eE402F)                   |
+| Minato Testnet                | [0x544FE7b51EF279c15f82B2037e524eeCa1E610C3](https://explorer-testnet.soneium.org/address/0x544FE7b51EF279c15f82B2037e524eeCa1E610C3)                   |
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
