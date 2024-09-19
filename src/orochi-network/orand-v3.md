@@ -64,6 +64,9 @@ Orand V3 was deployed on following smart contract platform.
 | Linea Testnet                 | [0x9FC1eE65D0485F2CFeeC5237D765DE5Af3f3f31c](https://sepolia.lineascan.build/address/0x9FC1eE65D0485F2CFeeC5237D765DE5Af3f3f31c)                        |
 | Lumia Testnet                 | [0x5379742183018F098c160EeEf7DBe3187a23AA3A](https://testnet-explorer.lumia.org/address/0x5379742183018F098c160EeEf7DBe3187a23AA3A)                     |
 | Etherlink Testnet             | [0x3e84eB29Df33832DE7c0E65BE3cC23F07Cb2fBdf](https://testnet.explorer.etherlink.com/address/0x3e84eB29Df33832DE7c0E65BE3cC23F07Cb2fBdf)                 |
+| IoTeX Testnet                 | [0xB7a2e1ffa0Aaef491d381ABA2e07668f98B02C49](https://testnet.iotexscan.io/address/0xB7a2e1ffa0Aaef491d381ABA2e07668f98B02C49)                           |
+| Chiado Testnet                | [0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22](https://gnosis-chiado.blockscout.com/address/0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22)                   |
+| Minato Testnet                | [0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7](https://explorer-testnet.soneium.org/address/0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7)                   |
 
 ## Self Submission
 
