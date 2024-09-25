@@ -50,7 +50,6 @@ Orand V3 was deployed on following smart contract platform.
 | Manta Pacific Sepolia Testnet | [0x060b6352406f6a22a5BAfCB372EDa87a3B077D23](https://pacific-explorer.sepolia-testnet.manta.network/address/0x060b6352406f6a22a5BAfCB372EDa87a3B077D23) |
 | Kroma Sepolia Testnet         | [0xabD720eaf47339150E0d0dF379307a17A68092Ac](https://sepolia.etherscan.io/address/0xabD720eaf47339150E0d0dF379307a17A68092Ac)                           |
 | Fantom Testnet                | [0xc3A7a16304D08002c27441e9e2Cb6366E97862B2](https://testnet.ftmscan.com/address/0xc3A7a16304D08002c27441e9e2Cb6366E97862B2)                            |
-| LayerEdge Testnet             | [0x5978ad998cc1b30079fCFFf18fe56346225dde74](https://testnet-explorer.layeredge.io/address/0x5978ad998cc1b30079fCFFf18fe56346225dde74)                  |
 | Base Sepolia Testnet          | [0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432](https://base-sepolia.blockscout.com/address/0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432)                    |
 | Optimism Sepolia Testnet      | [0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1](https://sepolia-optimistic.etherscan.io/address/0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1)                |
 | Wanchain Testnet              | [0xD682B35eB08cC3cb74F690f6B8fFAE087625a158](https://testnet.wanscan.org/address/0xD682B35eB08cC3cb74F690f6B8fFAE087625a158)                            |
@@ -67,6 +66,7 @@ Orand V3 was deployed on following smart contract platform.
 | IoTeX Testnet                 | [0xB7a2e1ffa0Aaef491d381ABA2e07668f98B02C49](https://testnet.iotexscan.io/address/0xB7a2e1ffa0Aaef491d381ABA2e07668f98B02C49)                           |
 | Chiado Testnet                | [0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22](https://gnosis-chiado.blockscout.com/address/0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22)                   |
 | Minato Testnet                | [0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7](https://explorer-testnet.soneium.org/address/0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7)                   |
+| AILayer Testnet               | [0x2210b037302Ea78CD424f484d70Db1a8E1118FfB](https://testnet-explorer.ailayer.xyz/address/0x2210b037302Ea78CD424f484d70Db1a8E1118FfB)                   |
 
 ## Self Submission
 
