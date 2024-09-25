@@ -43,7 +43,6 @@ Orocle V2 was deployed on following smart contract platform.
 | Manta Pacific Sepolia Testnet | [0xc069da03509222325f9d51239E9F8E6F8cB953Eb](https://pacific-explorer.sepolia-testnet.manta.network/address/0xc069da03509222325f9d51239E9F8E6F8cB953Eb) |
 | Kroma Sepolia Testnet         | [0x8519243FaeDcC4292c0b0ebB63b84020158bBE68](https://sepolia.etherscan.io/address/0x8519243FaeDcC4292c0b0ebB63b84020158bBE68)                           |
 | Fantom Testnet                | [0xf20f36FBec4C592367D807112ddBd44275a1B2df](https://testnet.ftmscan.com/address/0xf20f36FBec4C592367D807112ddBd44275a1B2df)                            |
-| LayerEdge Testnet             | [0x3F9F0A72499Bb8FDe026669003408F8748f492A1](https://testnet-explorer.layeredge.io/address/0x3F9F0A72499Bb8FDe026669003408F8748f492A1)                  |
 | Base Sepolia Testnet          | [0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672](https://base-sepolia.blockscout.com/address/0xC6b292b2c1bBDbFfbb0c415D3880DEd376dAd672)                    |
 | Optimism Sepolia Testnet      | [0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3](https://sepolia-optimistic.etherscan.io/address/0xCc00d46197FBee69d7C79661e2F89c17b12FFFf3)                |
 | Wanchain Testnet              | [0x5ad07a162a56E8e4621544fA5D9243CA83264053](https://testnet.wanscan.org/address/0x5ad07a162a56E8e4621544fA5D9243CA83264053)                            |
@@ -60,6 +59,7 @@ Orocle V2 was deployed on following smart contract platform.
 | IoTeX Testnet                 | [0xF49c2DFb6789C8643B772F8dd039E6cF5fdaF6CE](https://testnet.iotexscan.io/address/0xf49c2dfb6789c8643b772f8dd039e6cf5fdaf6ce)                           |
 | Chiado Testnet                | [0xf40931591640833969ee404F1FFfc2C722eE402F](https://gnosis-chiado.blockscout.com/address/0xf40931591640833969ee404F1FFfc2C722eE402F)                   |
 | Minato Testnet                | [0x544FE7b51EF279c15f82B2037e524eeCa1E610C3](https://explorer-testnet.soneium.org/address/0x544FE7b51EF279c15f82B2037e524eeCa1E610C3)                   |
+| AILayer Testnet               | [0x4995936C82D23c682DB5a6C811E06d8526914d45](https://testnet-explorer.ailayer.xyz/address/0x4995936C82D23c682DB5a6C811E06d8526914d45)                   |
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
