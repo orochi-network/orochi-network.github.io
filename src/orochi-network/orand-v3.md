@@ -67,6 +67,7 @@ Orand V3 was deployed on following smart contract platform.
 | Chiado Testnet                | [0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22](https://gnosis-chiado.blockscout.com/address/0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22)                   |
 | Minato Testnet                | [0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7](https://explorer-testnet.soneium.org/address/0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7)                   |
 | AILayer Testnet               | [0x2210b037302Ea78CD424f484d70Db1a8E1118FfB](https://testnet-explorer.ailayer.xyz/address/0x2210b037302Ea78CD424f484d70Db1a8E1118FfB)                   |
+| Polygon Amoy Testnet          | [0xD7a077a983986D9B948FF76C2151ba7e9ADA0b91](https://amoy.polygonscan.com/address/0xd7a077a983986d9b948ff76c2151ba7e9ada0b91)                           |
 
 ## Self Submission
 
