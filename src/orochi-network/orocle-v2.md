@@ -60,6 +60,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Chiado Testnet                | [0xf40931591640833969ee404F1FFfc2C722eE402F](https://gnosis-chiado.blockscout.com/address/0xf40931591640833969ee404F1FFfc2C722eE402F)                   |
 | Minato Testnet                | [0x544FE7b51EF279c15f82B2037e524eeCa1E610C3](https://explorer-testnet.soneium.org/address/0x544FE7b51EF279c15f82B2037e524eeCa1E610C3)                   |
 | AILayer Testnet               | [0x4995936C82D23c682DB5a6C811E06d8526914d45](https://testnet-explorer.ailayer.xyz/address/0x4995936C82D23c682DB5a6C811E06d8526914d45)                   |
+| Polygon Amoy Testnet          | [0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a](https://amoy.polygonscan.com/address/0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a)                           |
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
