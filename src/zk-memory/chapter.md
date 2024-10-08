@@ -13,3 +13,5 @@ Proving memory consistency is an important sub-component for handling the correc
 - In [Commitment Schemes](./commitment/commitment.md), we describe several commitment schemes for committing the execution trace that we support.
   
 - In [Memory Consistency Constraints](./constraints/constraints.md), we show how to prove the consistency of memory given the execution trace and how do we integrate Halo2 for the constraint.
+
+- In [Nova Variants](./nova-variant/nova-variant.md), we show how to prove the consistency of memory with two Nova variants, Nova and SuperNova. This implementation to experiment the capacity of Nova, SuperNova for zkVM.

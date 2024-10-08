@@ -109,3 +109,4 @@
   - [Execution Trace](./zk-memory/execution-trace/execution-trace.md)
   - [Commitment Schemes](./zk-memory/commitment/commitment.md)
   - [Memory Consistency Constraints](./zk-memory/constraints/constraints.md)
+  - [Nova Variants](./zk-memory/nova-variant/nova-variant.md)
