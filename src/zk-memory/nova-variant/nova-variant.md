@@ -1,6 +1,6 @@
 # Nova and SuperNova
 
-For Nova variants {{#cite cryptoeprint:2022/1758}}, we aren't commit the execution trace to a polynomial, instead we commit value of each Memory cell \\(M[add_j]\\) in steps circuit to prove the memory consistency.
+For Nova variants {{#cite KS22}}, we don't commit the execution trace to a polynomial, instead we commit value of each Memory cell \\(M[add_j]\\) in steps circuit to prove the memory consistency.
 
 Given an initial memory \\(M\\) and a execution trace list \\(tr\\): 
 
