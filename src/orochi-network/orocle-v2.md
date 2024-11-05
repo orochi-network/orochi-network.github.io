@@ -55,12 +55,16 @@ Orocle V2 was deployed on following smart contract platform.
 | Core Blockchain Testnet       | [0x08f5A19CAE906E6851E38e6A1f1848464548D9ff](https://scan.test.btcs.network/address/0x08f5A19CAE906E6851E38e6A1f1848464548D9ff)                         |
 | Linea Testnet                 | [0x08f5A19CAE906E6851E38e6A1f1848464548D9ff](https://sepolia.lineascan.build/address/0x4D214560D73215ec2a967B995aa4Afd69A4Bd470)                        |
 | Lumia Testnet                 | [0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a](https://testnet-explorer.lumia.org/address/0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a)                     |
-| Etherlink Testnet             | [0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a](https://testnet-explorer.lumia.org/address/0x4231579Bb5DB91d9ACB5A54482A1FA7Bbc08132a)                     |
+| Etherlink Testnet             | [0x6Fc8fcE9061977131A87D95458De69b9b4e36B1e](https://testnet.explorer.etherlink.com/address/0x6Fc8fcE9061977131A87D95458De69b9b4e36B1e)                     |
 | IoTeX Testnet                 | [0xF49c2DFb6789C8643B772F8dd039E6cF5fdaF6CE](https://testnet.iotexscan.io/address/0xf49c2dfb6789c8643b772f8dd039e6cf5fdaf6ce)                           |
 | Chiado Testnet                | [0xf40931591640833969ee404F1FFfc2C722eE402F](https://gnosis-chiado.blockscout.com/address/0xf40931591640833969ee404F1FFfc2C722eE402F)                   |
 | Minato Testnet                | [0x544FE7b51EF279c15f82B2037e524eeCa1E610C3](https://explorer-testnet.soneium.org/address/0x544FE7b51EF279c15f82B2037e524eeCa1E610C3)                   |
 | AILayer Testnet               | [0x4995936C82D23c682DB5a6C811E06d8526914d45](https://testnet-explorer.ailayer.xyz/address/0x4995936C82D23c682DB5a6C811E06d8526914d45)                   |
 | Polygon Amoy Testnet          | [0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a](https://amoy.polygonscan.com/address/0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a)                           |
+| Boba Sepolia Testnet          | [0x595Dc78B75c58EE62335C787ceBf9B6791123126](https://testnet.bobascan.com/address/0x595Dc78B75c58EE62335C787ceBf9B6791123126)                           |
+| NERO testnet                  | [0x702D504980A4cE8dd468ae68d5090A2022415bd2](https://testnet.neroscan.io/address/0x702d504980a4ce8dd468ae68d5090a2022415bd2)                           |
+| Camp Network Testnet V2       | [0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a](https://camp-network-testnet.blockscout.com/address/0x84877d49B4AAB22E1ddB710b209D647EDe9014df)                           |
+
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
