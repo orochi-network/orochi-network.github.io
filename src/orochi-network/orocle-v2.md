@@ -64,7 +64,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Boba Sepolia Testnet          | [0x595Dc78B75c58EE62335C787ceBf9B6791123126](https://testnet.bobascan.com/address/0x595Dc78B75c58EE62335C787ceBf9B6791123126)                           |
 | NERO Testnet                  | [0x702D504980A4cE8dd468ae68d5090A2022415bd2](https://testnet.neroscan.io/address/0x702d504980a4ce8dd468ae68d5090a2022415bd2)                            |
 | Camp Network Testnet V2       | [0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a](https://camp-network-testnet.blockscout.com/address/0x84877d49B4AAB22E1ddB710b209D647EDe9014df)            |
-| 5ire Testnet                  | [0x3E36123bAE1d9EB392C32849324D093a45CEDd7F](https://testnet.5irescan.io/contract/evm/0x3E36123bAE1d9EB392C32849324D093a45CEDd7F)                       |
+| 5ireChain Testnet             | [0x3E36123bAE1d9EB392C32849324D093a45CEDd7F](https://testnet.5irescan.io/contract/evm/0x3E36123bAE1d9EB392C32849324D093a45CEDd7F)                       |
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
