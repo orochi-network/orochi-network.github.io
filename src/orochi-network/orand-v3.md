@@ -69,8 +69,9 @@ Orand V3 was deployed on following smart contract platform.
 | AILayer Testnet               | [0x2210b037302Ea78CD424f484d70Db1a8E1118FfB](https://testnet-explorer.ailayer.xyz/address/0x2210b037302Ea78CD424f484d70Db1a8E1118FfB)                   |
 | Polygon Amoy Testnet          | [0xD7a077a983986D9B948FF76C2151ba7e9ADA0b91](https://amoy.polygonscan.com/address/0xd7a077a983986d9b948ff76c2151ba7e9ada0b91)                           |
 | Boba Sepolia Testnet          | [0xebEA88C5462f434174599dcE51D061695296543d](https://testnet.bobascan.com/address/0xebEA88C5462f434174599dcE51D061695296543d)                           |
-| NERO testnet                  | [0x38453d36e5152feca8a44cd020c3c607bb68a436](https://testnet.neroscan.io/address/0x38453d36e5152feca8a44cd020c3c607bb68a436)                            |
+| NERO Testnet                  | [0x38453d36e5152feca8a44cd020c3c607bb68a436](https://testnet.neroscan.io/address/0x38453d36e5152feca8a44cd020c3c607bb68a436)                            |
 | Camp Network Testnet V2       | [0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A](https://camp-network-testnet.blockscout.com/address/0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A)            |
+| 5ire Testnet                  | [0x756887E2E85339822b97A943Fc750F7E5f354F26](https://testnet.5irescan.io/contract/evm/0x756887E2E85339822b97A943Fc750F7E5f354F26)                       |
 
 ## Self Submission
 
