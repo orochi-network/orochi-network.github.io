@@ -24,6 +24,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Zircuit Mainnet         | [0xCB50b75b5CaF2F8A58e4842238475384fb6d5Ee6](https://explorer.zircuit.com/address/0xCB50b75b5CaF2F8A58e4842238475384fb6d5Ee6)             |
 | Phoenix Mainnet         | [0x9A19D4065b91FE61664fE5C50f20048969729D74](https://phoenix.lightlink.io/address/0x9A19D4065b91FE61664fE5C50f20048969729D74)             |
 | Etherlink Mainnet       | [0xF971965E35b8923DF33332561f69ce74547c3fE3](https://explorer.etherlink.com/address/0xF971965E35b8923DF33332561f69ce74547c3fE3)           |
+| 5ireChain Mainnet       | [0xcAfEc24Fdb365e278bCF873B674CCC340734AE4f](https://5irescan.io/contract/evm/0xcAfEc24Fdb365e278bCF873B674CCC340734AE4f)                 |
 
 ### Testnet
 
