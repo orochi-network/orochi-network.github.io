@@ -73,6 +73,7 @@ Orand V3 was deployed on following smart contract platform.
 | NERO Testnet                  | [0x38453d36e5152feca8a44cd020c3c607bb68a436](https://testnet.neroscan.io/address/0x38453d36e5152feca8a44cd020c3c607bb68a436)                            |
 | Camp Network Testnet V2       | [0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A](https://camp-network-testnet.blockscout.com/address/0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A)            |
 | 5ireChain Testnet             | [0x756887E2E85339822b97A943Fc750F7E5f354F26](https://testnet.5irescan.io/contract/evm/0x756887E2E85339822b97A943Fc750F7E5f354F26)                       |
+| Matchain Testnet              | [0x59904eBEE55bea1B683eC34D68134585671BedB9](https://testnet.matchscan.io/address/0x59904eBEE55bea1B683eC34D68134585671BedB9)                           |
 
 ## Self Submission
 
