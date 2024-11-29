@@ -74,7 +74,8 @@ Orand V3 was deployed on following smart contract platform.
 | Camp Network Testnet V2       | [0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A](https://camp-network-testnet.blockscout.com/address/0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A)            |
 | 5ireChain Testnet             | [0x756887E2E85339822b97A943Fc750F7E5f354F26](https://testnet.5irescan.io/contract/evm/0x756887E2E85339822b97A943Fc750F7E5f354F26)                       |
 | Matchain Testnet              | [0x59904eBEE55bea1B683eC34D68134585671BedB9](https://testnet.matchscan.io/address/0x59904eBEE55bea1B683eC34D68134585671BedB9)                           |
-
+| Neo X Testnet T4              | [0xD5C278C3b58d6789Af4972cECBB5953c3837c2Cd](https://xt4scan.ngd.network/address/0xD5C278C3b58d6789Af4972cECBB5953c3837c2Cd)                           |
+| Berachain bArtio              | [0x4811Ad0B55f04f8DFD35d1C167ba5F3A22EA4561](https://bartio.beratrail.io/address/0x4811Ad0B55f04f8DFD35d1C167ba5F3A22EA4561)                           |
 ## Self Submission
 
 User will request the verifiable randomness from Orand service, they can submit the randomness themselves and control gas consumption. You must submit epoch by sequence and starting epoch or genesis must be epoch `0`.
