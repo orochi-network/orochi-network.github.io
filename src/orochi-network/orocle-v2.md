@@ -67,6 +67,10 @@ Orocle V2 was deployed on following smart contract platform.
 | Camp Network Testnet V2       | [0xE4d4A21d13d55a8d3c2E2A90672ECb96557f1b6a](https://camp-network-testnet.blockscout.com/address/0x84877d49B4AAB22E1ddB710b209D647EDe9014df)            |
 | 5ireChain Testnet             | [0x3E36123bAE1d9EB392C32849324D093a45CEDd7F](https://testnet.5irescan.io/contract/evm/0x3E36123bAE1d9EB392C32849324D093a45CEDd7F)                       |
 | Matchain Testnet              | [0x146a21217749E2Caf89dC8d558A604ED0556811A](https://testnet.matchscan.io/address/0x146a21217749E2Caf89dC8d558A604ED0556811A)                           |
+| Neo X Testnet T4              | [0x9Cbf2e0f820447e57D510AB6ECd8A12510228cD1](https://xt4scan.ngd.network/address/0x9Cbf2e0f820447e57D510AB6ECd8A12510228cD1)                            |
+| Berachain bArtio              | [0xA650a9cb01b86F8Ee6Af302E1BC7DC3e636cF384](https://bartio.beratrail.io/address/0xA650a9cb01b86F8Ee6Af302E1BC7DC3e636cF384)                            |
+| Xprotocol Testnet             | [0x4BF82218F6245a377B55ec3d550452BfC9462E1e](https://explorer.testnet.xprotocol.org/address/0x4BF82218F6245a377B55ec3d550452BfC9462E1e)                 |
+
 
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
