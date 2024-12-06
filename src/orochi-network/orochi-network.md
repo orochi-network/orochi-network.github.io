@@ -2,85 +2,151 @@
     <img src="../assets/orochi-network.png" alt="Orochi Network">
 </p>
 
-# Orochi Network: The Zero Knowledge Modular Data Availability Layer
+# Orochi Network: ZKP Centric DA Layer - zkDA Layer
 
 ## Challenges
 
-**Data Integrity:** In a truly decentralized Web3, data integrity would be maintained through a distributed network of validators. Each node would be able to verify the correctness of data independently. But in many Web3 solutions today, some level of trust in third-party oracles is necessary. Oracles are essentially data feeds that bridge the gap between the blockchain and the real world. They provide external data to smart contracts, which can then be used to trigger actions based on real-world events.
+### Data Integrity
 
-**Data Availability:** Smart contracts execute within an isolated environment, the smart contract runtime (e.g., EVM, WASM) on the blockchain. This isolation/virtualization protects them from malicious attacks but also restricts their ability to interact directly with external data sources, like those in the real world. Also, as the number of users and transactions on a blockchain network increases, storing and accessing all data on-chain becomes difficult and expensive.
+In a truly decentralized Web3 ecosystem, data integrity would be ensured through a distributed network of aggregators. Each node could independently prove the correctness of data using cryptographic protocols.
+
+However, many Web3 solutions today still rely on oracles, which are fundamentally flawed and unable to guarantee data authenticity. Consequently, smart contracts are often unable to confirm the legitimacy of third-party provided data. This vulnerability leads to potential losses and fraudulent activities.
+
+### Data Availability
+
+Smart contracts run in an isolated environment, such as the EVM or WASM runtime on the blockchain. While this isolation allow smart contract to be executed seamlessly regardless the differences of the architecture, it also limits their ability to directly interact with external data sources, like those in the real world.
+
+Additionally, as the number of users and transactions on a blockchain network grows, storing and accessing all data on-chain becomes increasingly impractical and costly.
+
+### Interoperability
+
+Interoperability is a critical aspect of any decentralized Web3 ecosystem. However, many existing solutions struggle with interoperability due to the lack of standardization and compatibility between different architectures.
+
+Existing DA Layer solution is just a combination of blockchain and commitment schemes and it is failed to prove the DA state to on-chain contracts in a single succinct proof.
+
+### Scalability
+
+Nowadays DA Layers are leveraging existing technical stack that mean they are also inherits issues of existing blockchains, namely finality and scalability. They can not deallocate resource that store on their system and unable to reach instant finality with BFT consensus.
 
 ## Our Solutions
 
-At the heart of Orochi Network lies the **Zero-Knowledge Modular Data Availability Layer (ZK Modular DA Layer - zkMDAL)**. Our system leverages the power of Zero-Knowledge Proofs (ZKPs) to create a high-performance **Verifiable Data Pipeline** for zkApps (Zero-Knowledge Applications), dApps (Decentralized Applications), and smart contract platforms. ZKPs allow us to prove the validity of every step of data processing without revealing any other information. This innovation allows zkApps, dApps, and smart contract platforms to access an unlimited number of off-chain states securely and efficiently in a verifiable manner. Developers can then focus on building innovative applications, leaving the complexities of **Data Integrity** and **Data Availability** to zkMDAL. But what exactly is zkMDAL, and how does it solve Web3's problems?
+### Orochi Network: ZKP Centric DA Layer (zkDA Layer)
 
-### zkDatabase: Verifiable Data Pipeline
+Orochi Network positions as the first zkDA Layer, emphasizing the use of ZKPs for secure and verifiable data processing. This focus on ZKPs caters to applications, platforms requiring high levels of privacy, security and decentralized. Here's a breakdown of our key features and potential of our ZKP centric approach:
 
-While ordinary Data Availability Layers focus on storing and guaranteeing the accessibility of data, zkDatabase goes a step further. It acts as a **Verifiable Data Pipeline**, the first of its kind for Web3. This pipeline offers several key advantages:
+- **Native ZK-data-rollups:** Unlike other DA Layers, Orochi Network natively supports ZKPs and perform the rollups on the data. This allows for efficient on-chain verification of data with one single succinct proof, this approach potentially improving scalability and privacy for decentralized applications.
+- **Verifiable Data Pipeline:** Orochi Network goes beyond just data availability. We offers cryptographic proofs at every step of data processing – from sampling to storage and retrieval. Our solution is only reply on cryptography protocols that helps to take down third party trust and helping to transform **Real World Data** to **Provable Data** which can be read and verified by smart contracts.
+- **Utilizes Merkle Directed Acyclic Graph (Merkle DAG):** Orochi Network leverages Merkle DAG technology, potentially offering advantages over traditional blockchain structures in terms of scalability and performance.
+- **Succinct Hybrid aBFT Consensus:** This consensus mechanism allows for asynchronous finalization of states, potentially improving efficiency compared to synchronous approaches used by some competitors.
+- **Proof-System Agnostic:** Orochi Network can work with various ZKP systems like Plonky3, Halo2, Nova, and Pickles, offering developers flexibility in choosing the most suitable proof system for their needs.
+- **Blockchain Agnostic:** Orochi Network is designed to be blockchain-agnostic by leveraging ZKPs to improve interoperability between different blockchains, potentially enabling integration with diverse blockchain platforms.
 
-- **Verifiable Data Integrity:** Unlike other Data Availability Layers which are a combination of distributed storage and commitment schemes, zkDatabase ensures data integrity by employing ZKPs. These ZKPs guarantee that the information processed satisfies the constraints required in the database, hasn't been tampered with, and the proof is succinct, hence it can be verified on other blockchains effectively.
-- **Proof-of-Everything of Data:** We do not just focus on verifying the data itself. zkDatabase aims to generate proofs encompassing everything related to the data – its origin, storage location, and any transformations it undergoes. This comprehensive approach fosters unparalleled trust and accuracy.
-- **ZK-rollups for Interoperability:** Unlike some ordinary Data Availability Layers that cannot bundle queries, zkDatabase leverages ZK-rollups to perform rollups on data. This approach allows zkDatabase to bundle multiple database queries in one single succinct proof. This interoperability eliminates the need for centralized oracles and reduces fees to verify the database's proof.
+#### Overview
 
-In essence, zkDatabase transcends the limitations of existing Data Availability Layers. It provides a comprehensive Verifiable Data Pipeline, offering verifiable data integrity, proof-of-everything for enhanced trust, and interoperability through zk-rollups. This combination empowers developers to build secure and reliable Web3 applications with confidence.
+zk-SNARK is used as a succinct proof for on-chain and off-chain interoperability; it establishes cryptographic verification. We also use this advantage to perform layer-to-layer interactions. Our zkDA Layer supports ZKPs natively, for each blockchain we will use commitment schemes and ZKPs that are most compatible with a given platform. This approach allows a huge leap in performance adn compatibility.
 
-### zkMemory: A Generic Memory Prover in Zero-Knowledge Proof
+```
+                                ┌──────────────────────┐
+                                │    Execution Layer   │
+                                └──────────▲───────────┘
+                                           │
+                                           │Data & ZKP
+                      Verifiable           │
+ ┌───────────────────┐ Sampling ┌──────────┴───────────┐
+ │  Real World Data  ┼──────────►      zkDA Layer      │
+ └───────────────────┘          └──────────┬───────────┘
+                                           │
+                                           │Commit
+                                           │
+                                ┌──────────▼───────────┐
+                                │   Settlement Layer   │
+                                └──────────────────────┘
+```
 
-zkMemory is a key innovation within Orochi's zkMDAL. It represents a modular memory prover, designed to be agnostic to specific proof systems. This means zkMemory can potentially work with various zero-knowledge proof systems, offering greater flexibility and adaptability for Orochi's zkMDAL.
+#### Verifiable Data Pipeline
 
-- **Proof-System Agnostic:** As mentioned earlier, zkMemory's modular design allows it to function with different proof systems. This enhances the overall adaptability of Orochi's zkMDAL.
-- **Future-Proof Design:** A modular approach like zkMemory positions Orochi's zkMDAL to embrace advancements in zero-knowledge proof systems as they emerge.
+We not only support ZKPs natively, but also generate cryptographic proof of data integrity. We solve the most challenging problem where **Real World Data** isn’t provable to smart contracts and dApps. **Verifiable Data Pipeline** opens the door to the future of **Provable Data**.
 
-zkMemory is not only a back-end of zkMDAL but also a powerful building block for creating secure and efficient Zero-Knowledge Virtual Machines (zkVMs). Its modular design allows developers to integrate zkMemory into their zkVM architecture. This component acts as a dedicated memory prover, handling the zk-proof generation for memory operations within the zkVM. By leveraging zkMemory's modularity, developers can design zkVM applications with customized instruction sets and architecture, enabling them to tailor the virtual machine to specific needs. This flexibility, coupled with zkMemory's potential efficiency gains in proof generation, paves the way for a new generation of zkVM applications within the Web3 landscape.
+```
 
-### Other Web3 Products as a Service
+  ┌────────────┐                    ┌────────────┐
+  │            │                    │            │
+  │ Verifiable │      Sampling      │ Verifiable │
+  │  Sampling  ├───────────────────►│ Processing │
+  │            │                    │            │
+  └────────────┘                    └──────┬─────┘
+                                           │
+                                           │
+                                           │ Store
+                                           │
+                                           │
+                                    ┌──────▼─────┐
+                                    │            │
+                        ┌───────────┤ Immutable  ◄────────────┐
+                        │           │  Storage   │            │
+                        │           │            │            │
+                        │           └────────────┘            │
+                        │ Lookup                              │ Update data with ZKP
+                        │                                     │
+                        │                                     │
+                        │                                     │
+                 ┌──────▼─────┐                        ┌──────┴─────┐
+                 │            │                        │            │
+                 │   Lookup   │                        │ Transform  │
+                 │   Prover   │                        │   Prover   │
+                 │            │                        │            │
+                 └──────┬─────┘                        └──────▲─────┘
+                        │                                     │
+                        │                                     │
+      Read data and ZKP │                                     │ Update data & schema
+                        │  ┌──────────────────────────────┐   │
+                        │  │                              │   │
+                        └──►        Execution Layer       ├───┘
+                           │                              │
+                           └──────────────────────────────┘
+```
 
-#### Orand: Unleashing Verifiable Randomness for Secure Web3 Applications
+#### ZK-data-rollups
 
-Orand tackles this challenge head-on by providing a mechanism for generating **Verifiable Randomness**. Here's how Orand makes a difference:
+We all have witnessed ZK-rollups in action. Many projects are utilizing ZKPs to build ZK-rollups and succeed bundle thousands of transactions/executions in one single succinct proof that can be efficiently verified on-chain, we utilized the same property of ZK-rollups to apply on data.
 
-- **Eliminates Trusted Third Parties:** Unlike traditional methods, Orand eliminates the need for relying on a single entity to generate random numbers. This removes a potential point of failure and strengthens the overall security of the system.
-- **Verifiable Randomness:** Orand doesn't just generate random numbers; it also provides cryptographic proofs that the random output is computed correctly and hasn't been tampered with. This verifiable aspect fosters trust and transparency in dApps that rely on randomness for fair play and security-critical operations.
-- **Wide Range of Applications:** Verifiable randomness from Orand can be utilized across various Web3 applications. Imagine dApps for provably fair gaming, secure lotteries, or unpredictable elements within the metaverse – Orand empowers developers to build these applications with confidence in the integrity of the randomness used.
+```
+ ┌───┬───────────────────┐ x
+ │ W │ Data transaction  │ xxx
+ └───┴───────────────────┘    xxxxx
+ ┌───┬───────────────────┐        xxxxx   ┌───┬───┐
+ │ U │ Data transaction  │            xxx │ W │ U │
+ └───┴───────────────────┘                ├───┼───┤
+ ┌───┬───────────────────┐            xxx │ R │ D │
+ │ R │ Data transaction  │        xxxxx   └───┴───┘
+ └───┴───────────────────┘    xxxxx        zk-SNARK
+ ┌───┬───────────────────┐ xxx              Proof
+ │ D │ Data transaction  │ x
+ └───┴───────────────────┘
 
-By providing a secure and verifiable source of randomness, Orand empowers developers to build robust and trustworthy Web3 applications. This fosters a more secure and transparent online ecosystem for everyone.
-
-#### Orosign: The Secure Gateway to Your Web3 Assets
-
-Orosign acts as the secure front-end for Orochi Network and blockchains, providing a user-friendly interface for interacting with the decentralized world. Here's what makes Orosign unique:
-
-- **Secure Digital Asset Management:** Orosign functions as a secure wallet for your digital assets. It utilizes multi-signature/threshold-signature functionality, allowing for shared control over your assets. This means multiple parties need to approve transactions, adding an extra layer of security and reducing the risk of unauthorized access.
-- **Enhanced Protection:** Orosign integrates seamlessly with core principles of Web3. This means that even within Orosign, critical operations can be verified cryptographically.
-
-**Beyond a Simple Wallet:**
-
-Orosign goes beyond the functionalities of a traditional crypto wallet. It acts as a secure gateway, empowering users to:
-
-- **Interact with dApps:** Orosign allows users to seamlessly interact with decentralized applications (dApps). With verifiable computation integrated, users can have greater confidence in the validity and security of their interactions with these dApps.
-- **Manage Identity in a Decentralized World:** Orosign can potentially evolve into a tool for managing your digital identity within the Web3 space. By leveraging ZKP, Orosign could provide a secure and verifiable way to prove ownership of credentials or control access to specific information.
-
-**The Future of Orosign:**
-
-As Orochi Network continues to develop, Orosign has the potential to become a comprehensive and secure platform for managing your digital assets and identity in the decentralized future. Orosign aims to empower users to navigate the Web3 landscape with confidence and control.
-
-#### Orocle: Decentralized Oracle Service
-
-In the realm of Web3, where smart contracts reign supreme, traditional data sources are often inaccessible due to the isolated nature of blockchains. Here's where Decentralized Oracle Services (DOs) step in to bridge the gap. Unlike their centralized counterparts, DOs eliminate the single point of failure by relying on a distributed network of nodes. These nodes work collaboratively to gather and verify real-world data, ensuring its accuracy and reliability. This empowers smart contracts to access the external data they need to function as intended, unlocking a wider range of possibilities within the decentralized world. DOs represent a crucial step towards achieving a truly trustless and secure Web3 ecosystem.
-
-#### Orochimaru: Orochi Network Full-node client
-
-Built upon the robust Substrate Framework, Orochimaru plays a critical role in ensuring network security and functionality. It achieves this by validating transactions, securing the network through participation in Orochi Consensus, an asynchronous Byzantine Fault Tolerance (aBFT) consensus mechanism. This advanced consensus protocol allows Orochimaru nodes to reach agreement on the state of the network even in the presence of potentially faulty nodes, regardless of any delays or message losses. In essence, Orochimaru acts as the backbone of Orochi Network, safeguarding its integrity and enabling smooth operation even under challenging conditions.
+```
 
 ## The Future of Web3
 
-Orochi Network's zkMDAL is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, zkMDAL offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As zkMDAL continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
-In essence, our suite of products, anchored by the innovative zkMDAL, lays the groundwork for a future web built on secure, scalable, and user-friendly decentralized applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone. The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of our technology to shape the future of Web3.
+Orochi Network's zkDA Layer is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, zkDA Layer offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As zkDA Layer continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
+
+In essence, our suite of products, anchored by the innovative zkDA Layer, lays the groundwork for a future web built on secure, scalable, and user-friendly decentralized applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone. The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of our technology to shape the future of Web3.
 
 ## Orochi ❤️ Open Source
 
 All projects are open-sourced and public. We build everything for the common good.
 
-- Our scientific paper about a new proof-system: [RAMenPaSTA: Parallelizable Scalable Transparent Arguments of Knowledge for RAM Programs](https://eprint.iacr.org/2024/336)
-- Our construction in Distributed ECVRF - [ORAND - A fast, publicly verifiable, scalable decentralized random number generator for blockchain-based applications](https://docsend.com/view/5y7rc5cww2juudzn)
+- Our scientific paper that proposes Conditional Folding Scheme: [RAMenPaSTA: Parallelizable Scalable Transparent Arguments of Knowledge for RAM Programs](https://eprint.iacr.org/2024/336)
+- Our construction in Distributed ECVRF - [Orand - A fast, publicly verifiable, scalable decentralized random number generator for blockchain-based applications](https://docsend.com/view/5y7rc5cww2juudzn)
+- Our zkDatabase - [zkDatabase - Self-proving Database](https://github.com/orochi-network/zkDatabase)
+- Our zkVM framework PoC - [zkMemory - An universal memory prover in Zero-Knowledge Proof](https://github.com/orochi-network/orochimaru/tree/main/zkmemory)
 - Our proposal to improve security of Smart Contracts - [ERC-6366: Permission Token](https://eips.ethereum.org/EIPS/eip-6366)
 - Our proposal to improve permission and role handling - [ERC-6617: Bit Based Permission](https://eips.ethereum.org/EIPS/eip-6617)
+
+#### Other Products of Orochi Network
+
+- [zkDatabase - Self-proving Database](../zkdatabase/chapter.md)
+- [zkMemory - An Universal Memory Prover Module](../zk-memory/chapter.md)
+- [Orocle and Orand](./orand-orocle.md)
+
+_built with ❤️ and 🦀_
