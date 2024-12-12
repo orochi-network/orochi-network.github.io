@@ -77,6 +77,7 @@ Orand V3 was deployed on following smart contract platform.
 | Neo X Testnet T4              | [0xD5C278C3b58d6789Af4972cECBB5953c3837c2Cd](https://xt4scan.ngd.network/address/0xD5C278C3b58d6789Af4972cECBB5953c3837c2Cd)                            |
 | Berachain bArtio              | [0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a](https://bartio.beratrail.io/address/0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a)                            |
 | Xprotocol Testnet             | [0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a](https://explorer.testnet.xprotocol.org/address/0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a)                 |
+| Taiko Hekla                   | [0xe199ed86eC10AA7d11B90A0bC9D43886756B556C](https://hekla.taikoscan.io/address/0xe199ed86eC10AA7d11B90A0bC9D43886756B556C)                             |
 
 
 ## Self Submission
