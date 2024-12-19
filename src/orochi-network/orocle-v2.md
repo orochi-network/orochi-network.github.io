@@ -71,7 +71,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Berachain bArtio              | [0xA650a9cb01b86F8Ee6Af302E1BC7DC3e636cF384](https://bartio.beratrail.io/address/0xA650a9cb01b86F8Ee6Af302E1BC7DC3e636cF384)                            |
 | Xprotocol Testnet             | [0x4BF82218F6245a377B55ec3d550452BfC9462E1e](https://explorer.testnet.xprotocol.org/address/0x4BF82218F6245a377B55ec3d550452BfC9462E1e)                 |
 | Taiko Hekla                   | [0x50FD6cc6B5432D4500c4A1ee1e718CF90fbdd879](https://hekla.taikoscan.io/address/0x50FD6cc6B5432D4500c4A1ee1e718CF90fbdd879)                             |
-
+| Zytron Testnet                | [0xd8E292643EA59e2CaE49de0e059485672cd70670](https://explorer-testnet.zypher.network/address/0xd8E292643EA59e2CaE49de0e059485672cd70670)                |
 
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
