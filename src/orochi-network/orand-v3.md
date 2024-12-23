@@ -32,6 +32,7 @@ Orand V3 was deployed on following smart contract platform.
 | Phoenix Mainnet         | [0x0b226bf21B67A691775F9eDbc529D244FC79ab49](https://phoenix.lightlink.io/address/0x0b226bf21B67A691775F9eDbc529D244FC79ab49)             |
 | Etherlink Mainnet       | [0xbaD95Bd46411785c1189a8dd06C1C354DE805170](https://explorer.etherlink.com/address/0xbaD95Bd46411785c1189a8dd06C1C354DE805170)           |
 | 5ireChain Mainnet       | [0x53d56D3da563678f92CD87622fa72C1ae5c0876B](https://5irescan.io/contract/evm/0x53d56D3da563678f92CD87622fa72C1ae5c0876B)                 |
+| Zytron Mainnet          | [0x9bf3a59CDBb244f33bf40993e41893992624E665](https://explorer.zypher.network/address/0x9bf3a59CDBb244f33bf40993e41893992624E665)          |
 
 ### Testnet
 
@@ -79,8 +80,6 @@ Orand V3 was deployed on following smart contract platform.
 | Xprotocol Testnet             | [0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a](https://explorer.testnet.xprotocol.org/address/0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a)                 |
 | Taiko Hekla                   | [0xe199ed86eC10AA7d11B90A0bC9D43886756B556C](https://hekla.taikoscan.io/address/0xe199ed86eC10AA7d11B90A0bC9D43886756B556C)                             |
 | Zytron Testnet                | [0x85c06130E58EEC77694f9b968B533121F0D828dC](https://explorer-testnet.zypher.network/address/0x85c06130E58EEC77694f9b968B533121F0D828dC)                |
-
-
 
 ## Self Submission
 

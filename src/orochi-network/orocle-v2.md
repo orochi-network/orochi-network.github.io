@@ -25,6 +25,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Phoenix Mainnet         | [0x9A19D4065b91FE61664fE5C50f20048969729D74](https://phoenix.lightlink.io/address/0x9A19D4065b91FE61664fE5C50f20048969729D74)             |
 | Etherlink Mainnet       | [0xF971965E35b8923DF33332561f69ce74547c3fE3](https://explorer.etherlink.com/address/0xF971965E35b8923DF33332561f69ce74547c3fE3)           |
 | 5ireChain Mainnet       | [0xcAfEc24Fdb365e278bCF873B674CCC340734AE4f](https://5irescan.io/contract/evm/0xcAfEc24Fdb365e278bCF873B674CCC340734AE4f)                 |
+| Zytron Mainnet          | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.zypher.network/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)          |
 
 ### Testnet
 
@@ -72,7 +73,6 @@ Orocle V2 was deployed on following smart contract platform.
 | Xprotocol Testnet             | [0x4BF82218F6245a377B55ec3d550452BfC9462E1e](https://explorer.testnet.xprotocol.org/address/0x4BF82218F6245a377B55ec3d550452BfC9462E1e)                 |
 | Taiko Hekla                   | [0x50FD6cc6B5432D4500c4A1ee1e718CF90fbdd879](https://hekla.taikoscan.io/address/0x50FD6cc6B5432D4500c4A1ee1e718CF90fbdd879)                             |
 | Zytron Testnet                | [0xd8E292643EA59e2CaE49de0e059485672cd70670](https://explorer-testnet.zypher.network/address/0xd8E292643EA59e2CaE49de0e059485672cd70670)                |
-
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
