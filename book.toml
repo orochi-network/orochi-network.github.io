@@ -13,3 +13,5 @@ enable = false
 bibliography = "refs.bib"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
+[preprocessor.katex]
+after = ["links"]
