@@ -83,6 +83,8 @@ Orand V3 was deployed on following smart contract platform.
 | Taiko Hekla                   | [0xe199ed86eC10AA7d11B90A0bC9D43886756B556C](https://hekla.taikoscan.io/address/0xe199ed86eC10AA7d11B90A0bC9D43886756B556C)                             |
 | Zytron Testnet                | [0x85c06130E58EEC77694f9b968B533121F0D828dC](https://explorer-testnet.zypher.network/address/0x85c06130E58EEC77694f9b968B533121F0D828dC)                |
 | Celo Testnet                  | [0x1F2AFb2Ac6c0517f3896F095ED15f77bF9621388](https://celo-alfajores.blockscout.com/address/0x1F2AFb2Ac6c0517f3896F095ED15f77bF9621388)                  |
+| Creator Testnet               | [0xb4fa8033b3Ce474898a0874c3684D5f206949ee4](https://explorer.creatorchain.io/address/0xb4fa8033b3Ce474898a0874c3684D5f206949ee4)                       |
+
 
 ## Self Submission
 
