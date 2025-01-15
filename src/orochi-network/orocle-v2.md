@@ -28,6 +28,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Zytron Mainnet          | [0xEaC801617D35A62f6782Ce11f0E935DC5960817c](https://explorer.zypher.network/address/0xEaC801617D35A62f6782Ce11f0E935DC5960817c)          |
 | Matchain Mainnet        | [0x5e0b469B7EfdECc5C781BC6FA2FFaBA1c2737a39](https://matchscan.io/address/0x5e0b469B7EfdECc5C781BC6FA2FFaBA1c2737a39)                     |
 | Tangle Mainnet          | [0x8905422631B948c9B461a6b210142c3E3361E983](https://explorer.tangle.tools/address/0x8905422631B948c9B461a6b210142c3E3361E983)            |
+| Soneium Mainnet         | [0x1039Cd6d58e05ce4797E7fA971Fa9d332f96210d](https://soneium.blockscout.com/address/0x1039Cd6d58e05ce4797E7fA971Fa9d332f96210d)           |
 
 ### Testnet
 
@@ -78,7 +79,6 @@ Orocle V2 was deployed on following smart contract platform.
 | Celo Testnet                  | [0x0CA11ab5588D74d3a5eE61f3105D58D02298C029](https://celo-alfajores.blockscout.com/address/0x0CA11ab5588D74d3a5eE61f3105D58D02298C029)                  |
 | Creator Testnet               | [0xF159141Af20209b1d5539CFD2b073d4bc9EB6614](https://explorer.creatorchain.io/address/0xF159141Af20209b1d5539CFD2b073d4bc9EB6614)                       |
 | Monad Devnet                  | [0x6b214283b49255aDD892CBd84fBe6B11Eb7993d4](https://explorer.monad-devnet.devnet101.com/address/0x6b214283b49255aDD892CBd84fBe6B11Eb7993d4)            |
-
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
