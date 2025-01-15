@@ -84,6 +84,7 @@ Orand V3 was deployed on following smart contract platform.
 | Zytron Testnet                | [0x85c06130E58EEC77694f9b968B533121F0D828dC](https://explorer-testnet.zypher.network/address/0x85c06130E58EEC77694f9b968B533121F0D828dC)                |
 | Celo Testnet                  | [0x1F2AFb2Ac6c0517f3896F095ED15f77bF9621388](https://celo-alfajores.blockscout.com/address/0x1F2AFb2Ac6c0517f3896F095ED15f77bF9621388)                  |
 | Creator Testnet               | [0xb4fa8033b3Ce474898a0874c3684D5f206949ee4](https://explorer.creatorchain.io/address/0xb4fa8033b3Ce474898a0874c3684D5f206949ee4)                       |
+| Monad Devnet                  | [0xCfCE087475c599D960c5e98d7Bba2bA6F039B894](https://explorer.monad-devnet.devnet101.com/address/0xCfCE087475c599D960c5e98d7Bba2bA6F039B894)            |
 
 
 ## Self Submission
