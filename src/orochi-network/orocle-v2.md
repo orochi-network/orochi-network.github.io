@@ -80,6 +80,8 @@ Orocle V2 was deployed on following smart contract platform.
 | Creator Testnet               | [0xF159141Af20209b1d5539CFD2b073d4bc9EB6614](https://explorer.creatorchain.io/address/0xF159141Af20209b1d5539CFD2b073d4bc9EB6614)                       |
 | Monad Devnet                  | [0x6b214283b49255aDD892CBd84fBe6B11Eb7993d4](https://explorer.monad-devnet.devnet101.com/address/0x6b214283b49255aDD892CBd84fBe6B11Eb7993d4)            |
 | 0G Testnet                    | [0x18BB67E1695bCd1715eE60B323ac2A71aA61b805](https://chainscan-newton.0g.ai/address/0x18bb67e1695bcd1715ee60b323ac2a71aa61b805)                         |
+| Plume Devnet                  | [0x892B1d1FE2F0b6AeA7E1eb3133480ec349F571bb](https://test-explorer.plumenetwork.xyz/address/0x892B1d1FE2F0b6AeA7E1eb3133480ec349F571bb)                 |
+
 
 ## So, what exactly can the Orochi Orocle (Oracle) do?
 
