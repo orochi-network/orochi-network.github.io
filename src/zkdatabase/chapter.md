@@ -1,6 +1,6 @@
 # zkDatabase: Self-proving Database
 
-zkDatabase inherits the technology from zkDA Layer and zkMemory, this branch of product intents to fill the gap between enterprise and ZK technology. It opens new possibilities for FinTech, Insurance, Gaming, etc. For the first time, off-chain data can be verified independently by any party. Let's check the use cases of zkDatabase:
+zkDatabase inherits the technology from Verifiable Data Infrastructure and zkMemory, this branch of product intents to fill the gap between enterprise and ZK technology. It opens new possibilities for FinTech, Insurance, Gaming, etc. For the first time, off-chain data can be verified independently by any party. Let's check the use cases of zkDatabase:
 
 **FinTech**
 
