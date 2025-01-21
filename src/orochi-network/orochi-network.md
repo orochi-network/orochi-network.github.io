@@ -2,7 +2,7 @@
     <img src="../assets/orochi-network.png" alt="Orochi Network">
 </p>
 
-# Orochi Network: ZKP Centric DA Layer - zkDA Layer
+# Orochi Network: Verifiable Data Infrastructure
 
 ## Challenges
 
@@ -30,9 +30,9 @@ Nowadays DA Layers are leveraging existing technical stack that mean they are al
 
 ## Our Solutions
 
-### Orochi Network: ZKP Centric DA Layer (zkDA Layer)
+### Orochi Network: Verifiable Data Infrastructure
 
-Orochi Network positions as the first zkDA Layer, emphasizing the use of ZKPs for secure and verifiable data processing. This focus on ZKPs caters to applications, platforms requiring high levels of privacy, security and decentralized. Here's a breakdown of our key features and potential of our ZKP centric approach:
+Orochi Network positions as the first Verifiable Data Infrastructure, emphasizing the use of ZKPs for secure and verifiable data processing. This focus on ZKPs caters to applications, platforms requiring high levels of privacy, security and decentralized. Here's a breakdown of our key features and potential of our ZKP centric approach:
 
 - **Native ZK-data-rollups:** Unlike other DA Layers, Orochi Network natively supports ZKPs and perform the rollups on the data. This allows for efficient on-chain verification of data with one single succinct proof, this approach potentially improving scalability and privacy for decentralized applications.
 - **Verifiable Data Pipeline:** Orochi Network goes beyond just data availability. We offers cryptographic proofs at every step of data processing – from sampling to storage and retrieval. Our solution is only reply on cryptography protocols that helps to take down third party trust and helping to transform **Real World Data** to **Provable Data** which can be read and verified by smart contracts.
@@ -43,7 +43,7 @@ Orochi Network positions as the first zkDA Layer, emphasizing the use of ZKPs fo
 
 #### Overview
 
-zk-SNARK is used as a succinct proof for on-chain and off-chain interoperability; it establishes cryptographic verification. We also use this advantage to perform layer-to-layer interactions. Our zkDA Layer supports ZKPs natively, for each blockchain we will use commitment schemes and ZKPs that are most compatible with a given platform. This approach allows a huge leap in performance adn compatibility.
+zk-SNARK is used as a succinct proof for on-chain and off-chain interoperability; it establishes cryptographic verification. We also use this advantage to perform layer-to-layer interactions. Our Verifiable Data Infrastructure supports ZKPs natively, for each blockchain we will use commitment schemes and ZKPs that are most compatible with a given platform. This approach allows a huge leap in performance adn compatibility.
 
 ```
                                 ┌──────────────────────┐
@@ -53,7 +53,7 @@ zk-SNARK is used as a succinct proof for on-chain and off-chain interoperability
                                            │Data & ZKP
                       Verifiable           │
  ┌───────────────────┐ Sampling ┌──────────┴───────────┐
- │  Real World Data  ┼──────────►      zkDA Layer      │
+ │  Real World Data  ┼──────────►          VDI*        │
  └───────────────────┘          └──────────┬───────────┘
                                            │
                                            │Commit
@@ -61,6 +61,8 @@ zk-SNARK is used as a succinct proof for on-chain and off-chain interoperability
                                 ┌──────────▼───────────┐
                                 │   Settlement Layer   │
                                 └──────────────────────┘
+
+(*): Verifiable Data Infrastructure
 ```
 
 #### Verifiable Data Pipeline
@@ -128,9 +130,9 @@ We all have witnessed ZK-rollups in action. Many projects are utilizing ZKPs to 
 
 ## The Future of Web3
 
-Orochi Network's zkDA Layer is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, zkDA Layer offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As zkDA Layer continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
+Orochi Network's Verifiable Data Infrastructure is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, Verifiable Data Infrastructure offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As Verifiable Data Infrastructure continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
 
-In essence, our suite of products, anchored by the innovative zkDA Layer, lays the groundwork for a future web built on secure, scalable, and user-friendly decentralized applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone. The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of our technology to shape the future of Web3.
+In essence, our suite of products, anchored by the innovative Verifiable Data Infrastructure, lays the groundwork for a future web built on secure, scalable, and user-friendly decentralized applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone. The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of our technology to shape the future of Web3.
 
 ## Orochi ❤️ Open Source
 
