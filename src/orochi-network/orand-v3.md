@@ -36,6 +36,7 @@ Orand V3 was deployed on following smart contract platform.
 | Matchain Mainnet        | [0x707dc1041dc702a83F7a0af57dDe1a3cdAC9643e](https://matchscan.io/address/0x707dc1041dc702a83F7a0af57dDe1a3cdAC9643e)                     |
 | Tangle Mainnet          | [0xE41Bf77f68c37090364c1Fe73AF28d2CeF49C41d](https://explorer.tangle.tools/address/0xE41Bf77f68c37090364c1Fe73AF28d2CeF49C41d)            |
 | Soneium Mainnet         | [0x73a801b1438Bb41839504dd3Eaa2492989A902cf](https://soneium.blockscout.com/address/0x73a801b1438Bb41839504dd3Eaa2492989A902cf)           |
+| Plume Mainnet           | [0xC9395c0D17f4Ae1fFa0171b51a9eB189F7237e25](https://explorer.plumenetwork.xyz/address/0xC9395c0D17f4Ae1fFa0171b51a9eB189F7237e25)        |
 
 ### Testnet
 
