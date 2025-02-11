@@ -29,6 +29,7 @@ Orocle V2 was deployed on following smart contract platform.
 | Matchain Mainnet        | [0x5e0b469B7EfdECc5C781BC6FA2FFaBA1c2737a39](https://matchscan.io/address/0x5e0b469B7EfdECc5C781BC6FA2FFaBA1c2737a39)                     |
 | Tangle Mainnet          | [0x8905422631B948c9B461a6b210142c3E3361E983](https://explorer.tangle.tools/address/0x8905422631B948c9B461a6b210142c3E3361E983)            |
 | Soneium Mainnet         | [0x1039Cd6d58e05ce4797E7fA971Fa9d332f96210d](https://soneium.blockscout.com/address/0x1039Cd6d58e05ce4797E7fA971Fa9d332f96210d)           |
+| Plume Mainnet           | [0x5a0EFE35dEBbC924f029f44653b8c32288C18175](https://explorer.plumenetwork.xyz/address/0x5a0EFE35dEBbC924f029f44653b8c32288C18175)        |
 
 ### Testnet
 
