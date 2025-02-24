@@ -90,7 +90,7 @@ Orand V3 was deployed on following smart contract platform.
 | Monad Devnet                  | [0xCfCE087475c599D960c5e98d7Bba2bA6F039B894](https://explorer.monad-devnet.devnet101.com/address/0xCfCE087475c599D960c5e98d7Bba2bA6F039B894)            |
 | 0G Testnet                    | [0x17Aa53215cf8F2B6Ad7e63Eaa3a1B00c58f993A0](https://chainscan-newton.0g.ai/address/0x17Aa53215cf8F2B6Ad7e63Eaa3a1B00c58f993A0)                         |
 | Plume Devnet                  | [0x9fa70a7f324b5ABf35b05De590489F9B9474550a](https://test-explorer.plumenetwork.xyz/address/0x9fa70a7f324b5ABf35b05De590489F9B9474550a)                 |
-| Monad Testnet                 | [0xb655a0A5278Ce89F1E5Dc7EF2e44Affdca416f67](https://explorer.monad-testnet.category.xyz/address/0xb655a0A5278Ce89F1E5Dc7EF2e44Affdca416f67)            |
+| Monad Testnet                 | [0x75Db90AC980B9f93fF7Ab54cE5F5BbF479DC86dA](https://testnet.monadexplorer.com/address/0x75Db90AC980B9f93fF7Ab54cE5F5BbF479DC86dA)                      |
 
 
 ## Self Submission
