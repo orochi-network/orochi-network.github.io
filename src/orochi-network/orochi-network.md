@@ -128,6 +128,28 @@ We all have witnessed ZK-rollups in action. Many projects are utilizing ZKPs to 
 
 ```
 
+## Token Utilities
+
+The native token of Orochi Network, referred to as $ON, serves as the cornerstone of its Verifiable Data Infrastructure, enabling a secure and efficient ecosystem. The token fulfills several critical functions, outlined below:
+
+### 1.Incentivizing Validators
+
+Validators ensure the network’s security and integrity by staking $ON to participate in the consensus process. They are rewarded with $ON based on their contributions, fostering a reliable and decentralized system.
+
+### 2.Distributed Storage
+
+Users can utilize $ON to lease space on Orochi’s distributed storage network, supporting secure and verifiable data management. Fees compensate providers who maintain this infrastructure.
+
+### 3.Rewarding ZK Sequencers
+
+Zero-Knowledge (ZK) sequencers, responsible for processing transactions and ensuring privacy, receive $ON as compensation for their computational efforts, enhancing network scalability.
+
+### 4.Transaction Fees
+
+$ON is used to cover fees for transactions and network interactions, ensuring operational sustainability while providing access to Orochi’s advanced features.
+
+_Through these utilities, $ON drives participation and sustains the Orochi Network, aligning the interests of validators, storage providers, sequencers, and users within a robust economic framework._
+
 ## The Future of Web3
 
 Orochi Network's Verifiable Data Infrastructure is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, Verifiable Data Infrastructure offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As Verifiable Data Infrastructure continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
