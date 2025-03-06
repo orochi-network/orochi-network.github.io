@@ -38,6 +38,7 @@ Orand V3 was deployed on following smart contract platform.
 | Soneium Mainnet         | [0x73a801b1438Bb41839504dd3Eaa2492989A902cf](https://soneium.blockscout.com/address/0x73a801b1438Bb41839504dd3Eaa2492989A902cf)           |
 | Plume Mainnet           | [0xC9395c0D17f4Ae1fFa0171b51a9eB189F7237e25](https://explorer.plumenetwork.xyz/address/0xC9395c0D17f4Ae1fFa0171b51a9eB189F7237e25)        |
 | Base Mainnet            | [0xa56013BDCC663B63C12f5ebddd0C754bF4fEf096](https://base.blockscout.com/address/0xa56013BDCC663B63C12f5ebddd0C754bF4fEf096)              |
+| Abstract Mainnet        | [0x5b837C70feAD3ddCE3a1FA3049940e39dD16Bb2a](https://abscan.org/address/0x5b837C70feAD3ddCE3a1FA3049940e39dD16Bb2a)                       |
 
 ### Testnet
 
@@ -93,7 +94,6 @@ Orand V3 was deployed on following smart contract platform.
 | Monad Testnet                 | [0x75Db90AC980B9f93fF7Ab54cE5F5BbF479DC86dA](https://testnet.monadexplorer.com/address/0x75Db90AC980B9f93fF7Ab54cE5F5BbF479DC86dA)                      |
 | Solo Testnet                  | [0x4C56588BA8a3948D699D11e86cC97Ce97746795C](https://solo-testnet.explorer.caldera.xyz/address/0x4C56588BA8a3948D699D11e86cC97Ce97746795C)              |
 | Abstract Testnet              | [0xEE33B2502b2c0eE8d7e646ac78e668Ce198F49e5](https://sepolia.abscan.org/address/0xEE33B2502b2c0eE8d7e646ac78e668Ce198F49e5)                             |
-
 
 ## Self Submission
 
