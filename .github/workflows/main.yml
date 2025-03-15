@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install 4.34 mdbook
-        run: cargo install mdbook --vers "0.4.34" --locked && cargo install mdbook-bib && cargo install mdbook-mermaid && mdbook-mermaid install `pwd`
+        run: cargo install mdbook --vers "0.4.34" --locked && cargo install mdbook-bib && cargo add mdbook-toc && cargo install mdbook-mermaid && mdbook-mermaid install `pwd`
       - name: Deploy GitHub Pages
         env:
           CNAME: ${{ secrets.CNAME }}
