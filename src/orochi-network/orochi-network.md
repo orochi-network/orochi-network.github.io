@@ -2,7 +2,34 @@
     <img src="../assets/orochi-network.png" alt="Orochi Network">
 </p>
 
-# Orochi Network: Verifiable Data Infrastructure
+# What is Orochi Network?
+
+<!-- toc -->
+
+**Orochi Network** is a **Verifiable Data Infrastructure** designed to ensure data integrity and privacy through advanced cryptographic techniques. Orochi Network provides a secure infrastructure for processing and proving data without compromising confidentiality. This combination of cutting-edge cryptographic primitives allows users to trust the system’s outputs while keeping sensitive information protected, making it a powerful solution for applications requiring both transparency and privacy.
+
+## Introduction
+
+**Orochi Network** is an innovative **Verifiable Data Infrastructure** that redefines how data is handled in the digital age. Built on the principles of security and trustless, it utilizes advanced cryptographic tools like **Zero-Knowledge Proofs (ZKP)**, **Fully Homomorphic Encryption (FHE)**, and **Trusted Execution Environments (TEE)** to guarantee data integrity and privacy. Whether for businesses, developers, or individuals, Orochi Network offers a robust platform where data can be processed and verified securely, ensuring transparency without sacrificing confidentiality. It’s a forward-thinking solution for a world increasingly reliant on trustworthy and private data systems.
+
+At the core of Orochi Network lies its **Verifiable Data Pipeline** and **ZK-Data-Rollups**, two pivotal components that elevate data integrity to new heights. The Verifiable Data Pipeline ensures that every step of data processing is transparent and tamper-proof, while ZK-Data-Rollups harness Zero-Knowledge Proofs to compress and validate data efficiently without revealing sensitive details. Together, these innovations provide a robust foundation for secure, scalable, and privacy-preserving data management, making Orochi Network a trailblazer in delivering trust and reliability in the digital ecosystem.
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart TD
+    A[Orochi Network] --> B[Real World Data]
+    C[zkVM] --> A
+    D[zkML/AI] --> A
+    E[zkApp/dApp] --> A
+    F[Fintech/DeFi] --> A
+    G[Blockchain] --> A
+    H[IoT/DePIN] --> A
+    J[ID/KYC] --> A
+```
+
+<p align="center">
+    </br><b>Figure 1:</b> Orochi Network turn <b>data</b> to <b>verifiable data</b>, and operating as the backbone of the new internet
+</p>
 
 ## Challenges
 
@@ -41,93 +68,6 @@ Orochi Network positions as the first Verifiable Data Infrastructure, emphasizin
 - **Proof-System Agnostic:** Orochi Network can work with various ZKP systems like Plonky3, Halo2, Nova, and Pickles, offering developers flexibility in choosing the most suitable proof system for their needs.
 - **Blockchain Agnostic:** Orochi Network is designed to be blockchain-agnostic by leveraging ZKPs to improve interoperability between different blockchains, potentially enabling integration with diverse blockchain platforms.
 
-#### Overview
-
-zk-SNARK is used as a succinct proof for on-chain and off-chain interoperability; it establishes cryptographic verification. We also use this advantage to perform layer-to-layer interactions. Our Verifiable Data Infrastructure supports ZKPs natively, for each blockchain we will use commitment schemes and ZKPs that are most compatible with a given platform. This approach allows a huge leap in performance adn compatibility.
-
-```
-                                ┌──────────────────────┐
-                                │    Execution Layer   │
-                                └──────────▲───────────┘
-                                           │
-                                           │Data & ZKP
-                      Verifiable           │
- ┌───────────────────┐ Sampling ┌──────────┴───────────┐
- │  Real World Data  ┼──────────►          VDI*        │
- └───────────────────┘          └──────────┬───────────┘
-                                           │
-                                           │Commit
-                                           │
-                                ┌──────────▼───────────┐
-                                │   Settlement Layer   │
-                                └──────────────────────┘
-
-(*): Verifiable Data Infrastructure
-```
-
-#### Verifiable Data Pipeline
-
-We not only support ZKPs natively, but also generate cryptographic proof of data integrity. We solve the most challenging problem where **Real World Data** isn’t provable to smart contracts and dApps. **Verifiable Data Pipeline** opens the door to the future of **Provable Data**.
-
-```
-
-  ┌────────────┐                    ┌────────────┐
-  │            │                    │            │
-  │ Verifiable │      Sampling      │ Verifiable │
-  │  Sampling  ├───────────────────►│ Processing │
-  │            │                    │            │
-  └────────────┘                    └──────┬─────┘
-                                           │
-                                           │
-                                           │ Store
-                                           │
-                                           │
-                                    ┌──────▼─────┐
-                                    │            │
-                        ┌───────────┤ Immutable  ◄────────────┐
-                        │           │  Storage   │            │
-                        │           │            │            │
-                        │           └────────────┘            │
-                        │ Lookup                              │ Update data with ZKP
-                        │                                     │
-                        │                                     │
-                        │                                     │
-                 ┌──────▼─────┐                        ┌──────┴─────┐
-                 │            │                        │            │
-                 │   Lookup   │                        │ Transform  │
-                 │   Prover   │                        │   Prover   │
-                 │            │                        │            │
-                 └──────┬─────┘                        └──────▲─────┘
-                        │                                     │
-                        │                                     │
-      Read data and ZKP │                                     │ Update data & schema
-                        │  ┌──────────────────────────────┐   │
-                        │  │                              │   │
-                        └──►        Execution Layer       ├───┘
-                           │                              │
-                           └──────────────────────────────┘
-```
-
-#### ZK-data-rollups
-
-We all have witnessed ZK-rollups in action. Many projects are utilizing ZKPs to build ZK-rollups and succeed bundle thousands of transactions/executions in one single succinct proof that can be efficiently verified on-chain, we utilized the same property of ZK-rollups to apply on data.
-
-```
- ┌───┬───────────────────┐ x
- │ W │ Data transaction  │ xxx
- └───┴───────────────────┘    xxxxx
- ┌───┬───────────────────┐        xxxxx   ┌───┬───┐
- │ U │ Data transaction  │            xxx │ W │ U │
- └───┴───────────────────┘                ├───┼───┤
- ┌───┬───────────────────┐            xxx │ R │ D │
- │ R │ Data transaction  │        xxxxx   └───┴───┘
- └───┴───────────────────┘    xxxxx        zk-SNARK
- ┌───┬───────────────────┐ xxx              Proof
- │ D │ Data transaction  │ x
- └───┴───────────────────┘
-
-```
-
 ## Token Utilities
 
 The native token of Orochi Network, referred to as $ON, serves as the cornerstone of its Verifiable Data Infrastructure, enabling a secure and efficient ecosystem. The token fulfills several critical functions, outlined below:
@@ -152,25 +92,8 @@ _Through these utilities, $ON drives participation and sustains the Orochi Netwo
 
 ## The Future of Web3
 
-Orochi Network's Verifiable Data Infrastructure is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, Verifiable Data Infrastructure offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As Verifiable Data Infrastructure continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
+Our **Verifiable Data Infrastructure** is a promising step towards a more secure, scalable, and user-friendly Web3. By leveraging the power of Zero-Knowledge Proofs, our Verifiable Data Infrastructure offers solutions to some of the most pressing challenges facing the decentralized future of the internet. As Verifiable Data Infrastructure continues to evolve, it has the potential to be a game-changer for Web3, ushering in a new era of innovation and user adoption.
 
 In essence, our suite of products, anchored by the innovative Verifiable Data Infrastructure, lays the groundwork for a future web built on secure, scalable, and user-friendly decentralized applications. By addressing the limitations of current dApps, Orochi Network has the potential to unlock the true potential of Web3, paving the way for a more decentralized and empowering online experience for everyone. The promise of Orochi Network has been recognized by leading organizations within the blockchain space. Orochi Network is a grantee of the **Ethereum Foundation**, **Web3 Foundation**, **Mina Protocol**, and **Aleo**. This recognition underscores the potential of our technology to shape the future of Web3.
-
-## Orochi ❤️ Open Source
-
-All projects are open-sourced and public. We build everything for the common good.
-
-- Our scientific paper that proposes Conditional Folding Scheme: [RAMenPaSTA: Parallelizable Scalable Transparent Arguments of Knowledge for RAM Programs](https://eprint.iacr.org/2024/336)
-- Our construction in Distributed ECVRF - [Orand - A fast, publicly verifiable, scalable decentralized random number generator for blockchain-based applications](https://docsend.com/view/5y7rc5cww2juudzn)
-- Our zkDatabase - [zkDatabase - Self-proving Database](https://github.com/orochi-network/zkDatabase)
-- Our zkVM framework PoC - [zkMemory - An universal memory prover in Zero-Knowledge Proof](https://github.com/orochi-network/orochimaru/tree/main/zkmemory)
-- Our proposal to improve security of Smart Contracts - [ERC-6366: Permission Token](https://eips.ethereum.org/EIPS/eip-6366)
-- Our proposal to improve permission and role handling - [ERC-6617: Bit Based Permission](https://eips.ethereum.org/EIPS/eip-6617)
-
-#### Other Products of Orochi Network
-
-- [zkDatabase - Self-proving Database](../zkdatabase/chapter.md)
-- [zkMemory - An Universal Memory Prover Module](../zk-memory/chapter.md)
-- [Orocle and Orand](./orand-orocle.md)
 
 _built with ❤️ and 🦀_

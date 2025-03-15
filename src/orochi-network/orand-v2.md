@@ -39,7 +39,7 @@ Orand V2 was deployed on following smart contract platform.
 User will request the verifiable randomness from Orand service, they can submit the randomness themselves and control gas consumption. You must submit epoch by sequence and starting epoch or genesis must be epoch `0`.
 
 ```mermaid
-%%{init: {'theme':'base'}}%%
+%%{init: {'theme':'neutral'}}%%
 sequenceDiagram
     Game Backend->>+Orand: Request randomness
     Orand->>-Game Backend: VRF Epoch
@@ -52,7 +52,7 @@ sequenceDiagram
 User will delegate the submission process to Orochi Network, first they need to deposit native token to operator address that provided by Orochi Network.
 
 ```mermaid
-%%{init: {'theme':'base'}}%%
+%%{init: {'theme':'neutral'}}%%
 sequenceDiagram
     Game Backend->>+Orand: Request randomness
     Orand->>+Orand Contract: Publish VRF Epoch
@@ -65,7 +65,7 @@ sequenceDiagram
 dApp will request to Orochi Network's oracle contract for the randomness, Orand service will fulfill this request and submit the randomness to Orand provider contract.
 
 ```mermaid
-%%{init: {'theme':'base'}}%%
+%%{init: {'theme':'neutral'}}%%
 sequenceDiagram
     Game Frontend->>+Oracle: Request randomness
     Orand->>+Orand: Repeating Polling Request
