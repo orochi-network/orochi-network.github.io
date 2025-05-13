@@ -1,0 +1,37 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # To push a branch
+      pull-requests: write # To create a PR from that branch
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install 4.34 mdbook
+        run: cargo install mdbook --vers "0.4.34" --locked && cargo install mdbook-bib && cargo install mdbook-toc && cargo install mdbook-mermaid && mdbook-mermaid install `pwd`
+      - name: Deploy GitHub Pages
+        env:
+          CNAME: ${{ secrets.CNAME }}
+        run: |
+          mdbook build
+          sed -i 's/\<\/head\>/\    <script async src="https:\/\/pagead2.googlesyndication.com\/pagead\/js\/adsbygoogle.js?client=ca-pub-6478560064360588" crossorigin="anonymous"\>\<\/script\>\n    \<\/head\>/' ./book/index.html
+          git worktree add gh-pages
+          git config user.name "Deploy from CI"
+          git config user.email ""
+          cd gh-pages
+          # Delete the ref to avoid keeping history.
+          git update-ref -d refs/heads/gh-pages
+          rm -rf *
+          mv ../book/* .
+          echo "$CNAME" > ./CNAME
+          sudo chmod 600 ./CNAME
+          git add .
+          git commit -m "Deploy $GITHUB_SHA to gh-pages"
+          git push --force --set-upstream origin gh-pages

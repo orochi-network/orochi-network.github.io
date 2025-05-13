@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>B-Tree - Orochi Network&#x27;s Cookbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO -->
+        <meta name="description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:title" content="Cookbook | Orochi Network">
+        <meta property="og:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="315">
+        <meta property="og:image" content="https://docs.orochi.network/assets/cookbook-facebook.png?v2">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Cookbook | Orochi Network">
+        <meta name="twitter:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta name="twitter:image:type" content="image/png">
+        <meta name="twitter:image:width" content="800">
+        <meta name="twitter:image:height" content="418">
+        <meta name="twitter:image" content="https://docs.orochi.network/assets/cookbook-twitter.png?v2">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../orochi-network/orochi-network.html"><strong aria-hidden="true">1.</strong> What is Orochi Network?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../orochi-network/verifiable-data-pipeline.html"><strong aria-hidden="true">1.1.</strong> What is Verifiable Data Pipeline?</a></li><li class="chapter-item expanded "><a href="../../orochi-network/zk-data-rollups.html"><strong aria-hidden="true">1.2.</strong> What is ZK-data-rollups?</a></li><li class="chapter-item expanded "><a href="../../orochi-network/use-cases.html"><strong aria-hidden="true">1.3.</strong> Use cases</a></li><li class="chapter-item expanded "><a href="../../orochi-network/architecture.html"><strong aria-hidden="true">1.4.</strong> Architecture</a></li></ol></li><li class="chapter-item expanded "><a href="../../orochi-network/products.html"><strong aria-hidden="true">2.</strong> Products</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zkdatabase/chapter.html"><strong aria-hidden="true">2.1.</strong> zkDatabase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zkdatabase/accumulation/accumulation.html"><strong aria-hidden="true">2.1.1.</strong> Accumulation</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/b-tree/b-tree.html" class="active"><strong aria-hidden="true">2.1.2.</strong> B-Tree</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/composability/composability.html"><strong aria-hidden="true">2.1.3.</strong> Composability</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/serialization/serialization.html"><strong aria-hidden="true">2.1.4.</strong> Serialization</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/data-collection/data-collection.html"><strong aria-hidden="true">2.1.5.</strong> Data Collection</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/distributed-storage-engine/section.html"><strong aria-hidden="true">2.1.6.</strong> Distributed-Storage-Engine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zkdatabase/distributed-storage-engine/ipfs.html"><strong aria-hidden="true">2.1.6.1.</strong> IPFS</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/distributed-storage-engine/storage-engine.html"><strong aria-hidden="true">2.1.6.2.</strong> Storage-Engine</a></li></ol></li><li class="chapter-item expanded "><a href="../../zkdatabase/merkle-tree/merkle-tree.html"><strong aria-hidden="true">2.1.7.</strong> Merkle-Tree</a></li></ol></li><li class="chapter-item expanded "><a href="../../zk-memory/chapter.html"><strong aria-hidden="true">2.2.</strong> zkMemory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zk-memory/execution-trace/execution-trace.html"><strong aria-hidden="true">2.2.1.</strong> Execution Trace</a></li><li class="chapter-item expanded "><a href="../../zk-memory/commitment/commitment.html"><strong aria-hidden="true">2.2.2.</strong> Commitment Schemes</a></li><li class="chapter-item expanded "><a href="../../zk-memory/constraints/constraints.html"><strong aria-hidden="true">2.2.3.</strong> Memory Consistency Constraints</a></li><li class="chapter-item expanded "><a href="../../zk-memory/nova-variant/nova-variant.html"><strong aria-hidden="true">2.2.4.</strong> Nova Variants</a></li></ol></li><li class="chapter-item expanded "><a href="../../orochi-network/orand-orocle.html"><strong aria-hidden="true">2.3.</strong> Orand & Orocle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../orochi-network/orocle-v2.html"><strong aria-hidden="true">2.3.1.</strong> Orocle V2</a></li><li class="chapter-item expanded "><a href="../../orochi-network/orand-v3.html"><strong aria-hidden="true">2.3.2.</strong> Orand V3</a></li><li class="chapter-item expanded "><a href="../../orochi-network/contract-integration.html"><strong aria-hidden="true">2.3.3.</strong> Orand Contract Integration</a></li><li class="chapter-item expanded "><a href="../../orochi-network/api-reference.html"><strong aria-hidden="true">2.3.4.</strong> API Reference</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../ecvrf/verifiable-random-function.html"><strong aria-hidden="true">3.</strong> Verifiable Random Function (VRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/overview-of-vrf.html"><strong aria-hidden="true">3.1.</strong> Overview of VRF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/introduction.html"><strong aria-hidden="true">3.1.1.</strong> Introduction to VRF</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/vrf-syntax.html"><strong aria-hidden="true">3.1.2.</strong> VRF Algorithms</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/vrf-properties.html"><strong aria-hidden="true">3.1.3.</strong> VRF Security Properties</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/vrf-history.html"><strong aria-hidden="true">3.1.4.</strong> History of VRF</a></li></ol></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/vrf-based-on-elliptic-curve.html"><strong aria-hidden="true">3.2.</strong> VRF Based on Elliptic Curve (ECVRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/why-using-ecvrf.html"><strong aria-hidden="true">3.2.1.</strong> Why using ECVRF</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/ecvrf-construction.html"><strong aria-hidden="true">3.2.2.</strong> ECVRF Construction</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/ecvrf-auxiliary-function.html"><strong aria-hidden="true">3.2.3.</strong> ECVRF Auxiliary Function</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/implementation-python.html"><strong aria-hidden="true">3.2.4.</strong> Implementation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../dkg/dkg.html"><strong aria-hidden="true">4.</strong> Distributed Key Generation (DKG)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/dkg-summary/chapter.html"><strong aria-hidden="true">4.1.</strong> Overview of DKG</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/dkg-summary/dkg-properties.html"><strong aria-hidden="true">4.1.1.</strong> DKG Properties</a></li><li class="chapter-item expanded "><a href="../../dkg/dkg-summary/dkg-application.html"><strong aria-hidden="true">4.1.2.</strong> DKG Application</a></li></ol></li><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/chapter.html"><strong aria-hidden="true">4.2.</strong> Verifiable Secret Sharing (VSS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/introduction.html"><strong aria-hidden="true">4.2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/syntax.html"><strong aria-hidden="true">4.2.2.</strong> Syntax and Properties</a></li><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/pedersen-construction.html"><strong aria-hidden="true">4.2.3.</strong> Pedersen's Construction</a></li></ol></li><li class="chapter-item expanded "><a href="../../dkg/dkg-construction/chapter.html"><strong aria-hidden="true">4.3.</strong> Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/dkg-construction/why-gennaro.html"><strong aria-hidden="true">4.3.1.</strong> Why Gennaro et al's Construction?</a></li><li class="chapter-item expanded "><a href="../../dkg/dkg-construction/dkg-construction.html"><strong aria-hidden="true">4.3.2.</strong> Gennaro et al's Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/chapter.html"><strong aria-hidden="true">5.</strong> Threshold Signature</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-introduction/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-introduction/definition.html"><strong aria-hidden="true">5.2.</strong> Definition and Security</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/introduction.html"><strong aria-hidden="true">5.3.</strong> Canneti et al 's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/keygen.html"><strong aria-hidden="true">5.3.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.html"><strong aria-hidden="true">5.3.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.html"><strong aria-hidden="true">5.3.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.html"><strong aria-hidden="true">5.3.4.</strong> Supporting Algorithms</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/abort-identification.html"><strong aria-hidden="true">5.3.5.</strong> Identifying Aborts</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/security-consideration.html"><strong aria-hidden="true">5.3.6.</strong> Security Consideration</a></li></ol></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/introduction.html"><strong aria-hidden="true">5.4.</strong> FROST's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/keygen.html"><strong aria-hidden="true">5.4.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/sign.html"><strong aria-hidden="true">5.4.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/verify.html"><strong aria-hidden="true">5.4.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/supporting-algorithms.html"><strong aria-hidden="true">5.4.4.</strong> Supporting Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/our-intended-implementation.html"><strong aria-hidden="true">5.5.</strong> Implementation Guideline</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/threshold-ecdsa-for-secp256k1.html"><strong aria-hidden="true">5.5.1.</strong> Threshold signature using secp256k1 parameters</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/threshold-eddsa-for-ed25519.html"><strong aria-hidden="true">5.5.2.</strong> Threshold signature using ed25519 parameters</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/threshold-eddsa-for-sr25519.html"><strong aria-hidden="true">5.5.3.</strong> Threshold signature using sr25519 parameters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/chapter.html"><strong aria-hidden="true">6.</strong> Isogeny Based Crypto</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html"><strong aria-hidden="true">6.1.</strong> Overview of Supersingular Isogeny Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/background/elliptic-curve.html"><strong aria-hidden="true">6.1.1.</strong> Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html"><strong aria-hidden="true">6.1.2.</strong> Isogenies</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/background/supersingular-elliptic-curve.html"><strong aria-hidden="true">6.1.3.</strong> Supersingular Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/graph/supersingular-isogeny-graph.html"><strong aria-hidden="true">6.1.4.</strong> Supersingular Isogeny Graph (Pizer Graphs)</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/graph/application.html"><strong aria-hidden="true">6.1.5.</strong> Applications of Pizer Graphs</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/chapter.html"><strong aria-hidden="true">7.</strong> KZG Polynomial Commitment Scheme</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/pcs-definition/section.html"><strong aria-hidden="true">7.1.</strong> Polynomial Commitment Scheme - Definition</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/pcs-definition/syntax.html"><strong aria-hidden="true">7.1.1.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/pcs-definition/security-requirement.html"><strong aria-hidden="true">7.1.2.</strong> Security Requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/section.html"><strong aria-hidden="true">7.2.</strong> Technical Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/commitment-without-hiding.html"><strong aria-hidden="true">7.2.1.</strong> Commitment to Polynomial Without Hiding Property</a></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html"><strong aria-hidden="true">7.2.2.</strong> Correct Evaluation from the Commitment</a></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/dealing-with-hiding.html"><strong aria-hidden="true">7.2.3.</strong> Dealing with Hiding</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../plonk/chapter.html"><strong aria-hidden="true">8.</strong> PlonK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../plonk/arithmetization/section.html"><strong aria-hidden="true">8.1.</strong> PlonK's Arithmetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../plonk/arithmetization/circuit-specification.html"><strong aria-hidden="true">8.1.1.</strong> Circuit Specification</a></li><li class="chapter-item expanded "><a href="../../plonk/arithmetization/breaking-circuit.html"><strong aria-hidden="true">8.1.2.</strong> Breaking Circuit</a></li><li class="chapter-item expanded "><a href="../../plonk/arithmetization/gate-constraints.html"><strong aria-hidden="true">8.1.3.</strong> Gate Constraints</a></li><li class="chapter-item expanded "><a href="../../plonk/arithmetization/copy-constraints.html"><strong aria-hidden="true">8.1.4.</strong> Copy Constraints</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../halo2-for-dummies/chapter.html"><strong aria-hidden="true">9.</strong> Halo 2 for Dummies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../halo2-for-dummies/plonkish/section.html"><strong aria-hidden="true">9.1.</strong> PLONKish Arithemetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../halo2-for-dummies/plonkish/simple-arithmetic-circuit.html"><strong aria-hidden="true">9.1.1.</strong> A Simple Arithmetic Circuit</a></li><li class="chapter-item expanded "><a href="../../halo2-for-dummies/plonkish/transforming-to-plonkish-arithmetization.html"><strong aria-hidden="true">9.1.2.</strong> Transforming to PLONKish Arithmetization</a></li></ol></li><li class="chapter-item expanded "><a href="../../halo2-for-dummies/simple-example/section.html"><strong aria-hidden="true">9.2.</strong> A Simple Halo 2 Program</a></li></ol></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/chapter.html"><strong aria-hidden="true">10.</strong> Verifiable Delay Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/introduction.html"><strong aria-hidden="true">10.1.</strong> Introduction to VDF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/definition.html"><strong aria-hidden="true">10.1.1.</strong> VDF Algorithms</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/properties.html"><strong aria-hidden="true">10.1.2.</strong> VDF Properties</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/application.html"><strong aria-hidden="true">10.1.3.</strong> VDF Applications</a></li></ol></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/existing-construction.html"><strong aria-hidden="true">10.2.</strong> A survey of VDF constructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/squaring-construction.html"><strong aria-hidden="true">10.2.1.</strong> Modular Square Root based Construction</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/rsa-time-lock-construction.html"><strong aria-hidden="true">10.2.2.</strong> Group of Unknown Order based Construction</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/isogeny-construction.html"><strong aria-hidden="true">10.2.3.</strong> Isogeny based Construction</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/comparision.html"><strong aria-hidden="true">10.2.4.</strong> Comparision</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/vc-based-construction.html"><strong aria-hidden="true">10.2.5.</strong> Possible IVC based Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../poseidon-hash/chapter.html"><strong aria-hidden="true">11.</strong> Poseidon hash for ZK Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../poseidon-hash/cryptographic-sponge-function/cryptographic-sponge-function.html"><strong aria-hidden="true">11.1.</strong> Cryptographic sponge functions</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-hash-overview/poseidon-hash-overview.html"><strong aria-hidden="true">11.2.</strong> Overview of Poseidon Hash Function</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/section.html"><strong aria-hidden="true">11.3.</strong> Poseidon permutation design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/hades-design-strategy.html"><strong aria-hidden="true">11.3.1.</strong> Hades design strategy</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/hades-based-design.html"><strong aria-hidden="true">11.3.2.</strong> Hades-based permutation design</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/concrete-poseidon-instantiation.html"><strong aria-hidden="true">11.3.3.</strong> Concrete Poseidon permutation instantiation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.</strong> Deprecated</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.1.</strong> Orocle V1 (deprecated)</a></li><li class="chapter-item expanded "><a href="../../orochi-network/orand-v2.html"><strong aria-hidden="true">12.2.</strong> Orand V2 (deprecated)</a></li><li class="chapter-item expanded "><a href="../../orochi-network/sdk.html"><strong aria-hidden="true">12.3.</strong> Orochi Network SDK</a></li><li class="chapter-item expanded "><a href="../../orochi-network/code-integration.html"><strong aria-hidden="true">12.4.</strong> Orand Code Integration</a></li></ol></li><li class="chapter-item expanded "><a href="../../bibliography.html">Bibliography</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Orochi Network&#x27;s Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="b-tree"><a class="header" href="#b-tree">B-tree</a></h1>
+<p>A B-tree is a type of self-balancing search tree that maintains sorted data in a manner that allows for efficient insertion, deletion, and search operations. It is commonly used in database and file systems where large amounts of data need to be stored and retrieved efficiently.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
+<p>The main features of a B-tree are:</p>
+<ol>
+<li>All leaves are at the same level, making the tree perfectly balanced.</li>
+<li>Each node in the B-tree contains a certain number of keys and pointers. The keys act as separation values which divide its subtrees. When we insert a new key into a B-tree, and if the node we want to insert into is already full, we perform a split operation. Similarly, deletion might cause a node to be less than half full, violating the properties of the B-tree. In this case, we perform a merge operation.</li>
+<li>For a B-tree of order m (where m is a positive integer), every node in the tree contains a maximum of m children and a minimum of ⌈m/2⌉ children (except for the root which can have fewer children).</li>
+<li>The keys within a node are ordered.</li>
+<li>The subtree between two keys k1 and k2 consists of all keys that are greater than or equal to k1 and less than k2.</li>
+</ol>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<ul>
+<li>Insertion</li>
+<li>Deletion</li>
+<li>Search</li>
+<li>Split and merge</li>
+</ul>
+<h3 id="split-and-merge-operations"><a class="header" href="#split-and-merge-operations">Split and Merge Operations</a></h3>
+<p>When we insert a new key into a B-tree, it's possible that the node we want to insert into is already full. In this case, we have to split the node. Here is a high-level overview of how the split operation works:</p>
+<ol>
+<li>The node to be split is full and contains m-1 keys, where m is the order of the B-tree.</li>
+<li>A new node is created, and approximately half of the keys from the original node are moved to this new node.</li>
+<li>A key from the original node is moved up into the node's parent to act as a separator between the original node and the new node. If the original node was the root and has no parent, a new root is created.</li>
+<li>The new node and the original node are now siblings.</li>
+</ol>
+<p>The split operation maintains the property that all leaf nodes are at the same level since all splits start at the leaf level and work their way up the tree.</p>
+<p>Conversely, deletion from a B-tree might cause a node to be less than half full, violating the properties of the B-tree. In such cases, we perform a merge operation. Here's a simplified view of the merge process:</p>
+<ol>
+<li>Two sibling nodes, each with less than ⌈m/2⌉ keys, are combined into a single node.</li>
+<li>A key from the parent node, which separates these two nodes, is moved down into the merged node.</li>
+<li>If the parent node becomes less than half full as a result, it may also be merged with a sibling and so on.</li>
+</ol>
+<h3 id="time-complexity"><a class="header" href="#time-complexity">Time complexity</a></h3>
+<p>Each operation runs in logarithmic time - <strong>O(log n)</strong>, making B-trees useful for systems that read and write large blocks of data, such as databases and filesystems.</p>
+<h2 id="indexes"><a class="header" href="#indexes">Indexes</a></h2>
+<p>Database indexing is a data structure technique to efficiently retrieve records from the database files based on some attributes on which the indexing has been done. Indexing in databases works similarly to an index in a book.</p>
+<p>Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records.</p>
+<p>The two main types of database indexes are:</p>
+<ul>
+<li>
+<p><strong>Clustered Index</strong>: A clustered index determines the physical order of data in a table. Because the physical order of data in a table and the logical (index) order are the same, there can only be one clustered index per table.</p>
+</li>
+<li>
+<p><strong>Non-clustered Index</strong>: A non-clustered index doesn’t sort the physical data inside the table. Instead, it creates a separate object within a table that contains the column(s) included in the index. The non-clustered index contains the column(s) values and the address of the record that the column(s) value corresponds to.</p>
+</li>
+</ul>
+<h3 id="difference-between-clustered-and-non-clustered-indexes"><a class="header" href="#difference-between-clustered-and-non-clustered-indexes">Difference between Clustered and Non-Clustered Indexes</a></h3>
+<p>In a clustered index, the leaf nodes of the B-tree structure contain the actual data rows. This is why there can only be one clustered index per table because it actually determines the physical order of data in the table.</p>
+<p>In a non-clustered index, the leaf nodes contain a pointer or reference to the data rows, not the data itself. The data can be stored anywhere else in the database, and this pointer helps to quickly locate the actual data when needed.</p>
+<p>Additional considerations when choosing between a Clustered and Non-Clustered Index include the order of data, frequency of updates, width of the table, and the need for multiple indexes. For instance, if the data in a table is accessed sequentially, a clustered index can be beneficial. If a table requires access via multiple different key columns, non-clustered indexes could be a good solution as you can create multiple non-clustered indexes on a single table.</p>
+<div class="table-wrapper"><table><thead><tr><th>S.No</th><th></th><th>Clustered Indexes</th><th>Non-Clustered Indexes</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>Data sorting</strong></td><td>Defines the order or sorts the table or arranges the data by alphabetical order just like a dictionary.</td><td>Collects the data at one place and records at another place.</td></tr>
+<tr><td>2</td><td><strong>Speed</strong></td><td>Generally faster for retrieving data in the sorted order or range of values.</td><td>Generally slower than the clustered index.</td></tr>
+<tr><td>3</td><td><strong>Memory usage</strong></td><td>Demands less memory to execute the operation.</td><td>Demands more memory to execute the operations.</td></tr>
+<tr><td>4</td><td><strong>Storage</strong></td><td>Permits you to save data sheets in the leaf nodes of the index.</td><td>Does not save data sheets in the leaf nodes of the index.</td></tr>
+<tr><td>5</td><td><strong>Number per table</strong></td><td>A single table can consist of a sole clustered index.</td><td>A table can consist of multiple non-clustered indexes.</td></tr>
+<tr><td>6</td><td><strong>Data storage</strong></td><td>Has the natural ability to store data on the disk.</td><td>Does not have the natural ability to store data on the disk.</td></tr>
+</tbody></table>
+</div>
+<p>Resources: <a href="https://byjus.com/gate/difference-between-clustered-and-non-clustered-index/#:~:text=1-,A%20clustered%20index%20is%20used%20to%20define%20the%20order%20or,and%20records%20at%20another%20place.">Difference between Clustered and Non-Clustered Index</a></p>
+<h3 id="choosing-between-clustered-and-non-clustered-indexes"><a class="header" href="#choosing-between-clustered-and-non-clustered-indexes">Choosing Between Clustered and Non-Clustered Indexes</a></h3>
+<p>The choice between a clustered index and a non-clustered index often depends on the specific use case, the nature of the data, and the types of queries the database will be serving</p>
+<ul>
+<li><strong>Order of Data</strong>: If the data in a table is accessed sequentially, then a <strong>clustered index</strong> is typically the better choice because it physically stores the row data in sorted order. This can significantly speed up range queries and ordered access.</li>
+<li><strong>Frequent Updates</strong>: If the indexed columns are updated frequently, <strong>non-clustered indexes</strong> can be a better choice. This is because any change to the data value of a clustered index requires physically rearranging the rows in the database, which can be an expensive operation.</li>
+<li><strong>Wide Tables</strong>: In wide tables, where each row has a lot of data, <strong>non-clustered indexes</strong> can be beneficial. This is because non-clustered indexes only store the indexed columns and a pointer to the rest of the data, reducing the amount of data that needs to be read from disk for each query.</li>
+<li><strong>Multiple Indexes</strong>: If a table needs to be accessed by multiple different key columns, <strong>non-clustered indexe</strong> can be a good solution because you can create multiple non-clustered indexes on a single table. Each non-clustered index will be optimized for access by its specific key column(s).</li>
+</ul>
+<p><strong>Clustered Indexes</strong>:</p>
+<ol>
+<li><strong>Primary Key</strong>: If a column is a unique identifier for rows in a table (like an ID), it should typically have a clustered index. The primary key of a table is a good candidate for a clustered index.</li>
+<li><strong>Range Queries</strong>: Clustered indexes are beneficial for range queries that return a large range of ordered data, and queries where you expect to retrieve the data sorted by the indexed columns. The database can read the data off the disk in one continuous disk scan.</li>
+<li><strong>Frequently Accessed Tables</strong>: If a table is frequently accessed by other database operations, like a foreign key relationship, a clustered index can help speed these operations.</li>
+</ol>
+<p>Resources: (Clustered Index)[https://vladmihalcea.com/clustered-index/]</p>
+<p><strong>Non-Clustered Indexes</strong>:</p>
+<ol>
+<li><strong>Non-Unique Columns</strong>: If a column is not unique or has a high level of duplication, a non-clustered index can be a better choice.</li>
+<li><strong>Specific Columns</strong>: If only specific columns are frequently accessed, a non-clustered index can provide quicker lookups since it doesn’t need to go through the entire row.</li>
+<li><strong>Covering Indexes</strong>: For queries that can be covered by an index, a non-clustered index that includes all the necessary data can be highly efficient.</li>
+<li><strong>Frequently Updated or Inserted Tables</strong>: If a table's data is frequently updated or if new data is often inserted, using non-clustered indexes can be beneficial as they can be less resource-intensive to maintain.</li>
+</ol>
+<h3 id="multiple-different-keys"><a class="header" href="#multiple-different-keys">Multiple different keys</a></h3>
+<p>If you need to optimize access based on multiple different keys, it is more common to create multiple B-trees (i.e., multiple indexes), each with its own key. This way, you maintain the efficient logarithmic time complexity for searching, inserting, and deleting nodes in each tree.</p>
+<h2 id="storing-data-raws"><a class="header" href="#storing-data-raws">Storing data raws</a></h2>
+<p>A concise overview of data persistence:</p>
+<ol>
+<li>When we insert records into a table with a clustered index (typically created on the primary key), the database management system stores the records directly within the leaf nodes of the B-tree structure for this index. The records are sorted in the B-tree based on the values of the primary key.</li>
+<li>We can create additional non-clustered indexes on the same table. These non-clustered indexes also use a B-tree structure, but they work slightly differently. Instead of storing the full record within the leaf nodes, they store the index key (which could be any column or combination of columns, not necessarily the primary key) and a reference (like a pointer) to the actual record in the clustered index.</li>
+<li>When we perform a lookup using a non-clustered index, the database management system first locates the index key in the B-tree of the non-clustered index, finds the reference to the actual record, then uses that reference to retrieve the record from the B-tree of the clustered index.</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../zkdatabase/accumulation/accumulation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../zkdatabase/composability/composability.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../zkdatabase/accumulation/accumulation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../zkdatabase/composability/composability.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../mermaid.min.js"></script>
+        <script src="../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

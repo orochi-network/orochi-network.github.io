@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dealing with Hiding - Orochi Network&#x27;s Cookbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO -->
+        <meta name="description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:title" content="Cookbook | Orochi Network">
+        <meta property="og:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="315">
+        <meta property="og:image" content="https://docs.orochi.network/assets/cookbook-facebook.png?v2">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Cookbook | Orochi Network">
+        <meta name="twitter:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta name="twitter:image:type" content="image/png">
+        <meta name="twitter:image:width" content="800">
+        <meta name="twitter:image:height" content="418">
+        <meta name="twitter:image" content="https://docs.orochi.network/assets/cookbook-twitter.png?v2">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../orochi-network/orochi-network.html"><strong aria-hidden="true">1.</strong> What is Orochi Network?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../orochi-network/verifiable-data-pipeline.html"><strong aria-hidden="true">1.1.</strong> What is Verifiable Data Pipeline?</a></li><li class="chapter-item expanded "><a href="../../orochi-network/zk-data-rollups.html"><strong aria-hidden="true">1.2.</strong> What is ZK-data-rollups?</a></li><li class="chapter-item expanded "><a href="../../orochi-network/use-cases.html"><strong aria-hidden="true">1.3.</strong> Use cases</a></li><li class="chapter-item expanded "><a href="../../orochi-network/architecture.html"><strong aria-hidden="true">1.4.</strong> Architecture</a></li></ol></li><li class="chapter-item expanded "><a href="../../orochi-network/products.html"><strong aria-hidden="true">2.</strong> Products</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zkdatabase/chapter.html"><strong aria-hidden="true">2.1.</strong> zkDatabase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zkdatabase/accumulation/accumulation.html"><strong aria-hidden="true">2.1.1.</strong> Accumulation</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/b-tree/b-tree.html"><strong aria-hidden="true">2.1.2.</strong> B-Tree</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/composability/composability.html"><strong aria-hidden="true">2.1.3.</strong> Composability</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/serialization/serialization.html"><strong aria-hidden="true">2.1.4.</strong> Serialization</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/data-collection/data-collection.html"><strong aria-hidden="true">2.1.5.</strong> Data Collection</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/distributed-storage-engine/section.html"><strong aria-hidden="true">2.1.6.</strong> Distributed-Storage-Engine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zkdatabase/distributed-storage-engine/ipfs.html"><strong aria-hidden="true">2.1.6.1.</strong> IPFS</a></li><li class="chapter-item expanded "><a href="../../zkdatabase/distributed-storage-engine/storage-engine.html"><strong aria-hidden="true">2.1.6.2.</strong> Storage-Engine</a></li></ol></li><li class="chapter-item expanded "><a href="../../zkdatabase/merkle-tree/merkle-tree.html"><strong aria-hidden="true">2.1.7.</strong> Merkle-Tree</a></li></ol></li><li class="chapter-item expanded "><a href="../../zk-memory/chapter.html"><strong aria-hidden="true">2.2.</strong> zkMemory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../zk-memory/execution-trace/execution-trace.html"><strong aria-hidden="true">2.2.1.</strong> Execution Trace</a></li><li class="chapter-item expanded "><a href="../../zk-memory/commitment/commitment.html"><strong aria-hidden="true">2.2.2.</strong> Commitment Schemes</a></li><li class="chapter-item expanded "><a href="../../zk-memory/constraints/constraints.html"><strong aria-hidden="true">2.2.3.</strong> Memory Consistency Constraints</a></li><li class="chapter-item expanded "><a href="../../zk-memory/nova-variant/nova-variant.html"><strong aria-hidden="true">2.2.4.</strong> Nova Variants</a></li></ol></li><li class="chapter-item expanded "><a href="../../orochi-network/orand-orocle.html"><strong aria-hidden="true">2.3.</strong> Orand & Orocle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../orochi-network/orocle-v2.html"><strong aria-hidden="true">2.3.1.</strong> Orocle V2</a></li><li class="chapter-item expanded "><a href="../../orochi-network/orand-v3.html"><strong aria-hidden="true">2.3.2.</strong> Orand V3</a></li><li class="chapter-item expanded "><a href="../../orochi-network/contract-integration.html"><strong aria-hidden="true">2.3.3.</strong> Orand Contract Integration</a></li><li class="chapter-item expanded "><a href="../../orochi-network/api-reference.html"><strong aria-hidden="true">2.3.4.</strong> API Reference</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../ecvrf/verifiable-random-function.html"><strong aria-hidden="true">3.</strong> Verifiable Random Function (VRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/overview-of-vrf.html"><strong aria-hidden="true">3.1.</strong> Overview of VRF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/introduction.html"><strong aria-hidden="true">3.1.1.</strong> Introduction to VRF</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/vrf-syntax.html"><strong aria-hidden="true">3.1.2.</strong> VRF Algorithms</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/vrf-properties.html"><strong aria-hidden="true">3.1.3.</strong> VRF Security Properties</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-summary/vrf-history.html"><strong aria-hidden="true">3.1.4.</strong> History of VRF</a></li></ol></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/vrf-based-on-elliptic-curve.html"><strong aria-hidden="true">3.2.</strong> VRF Based on Elliptic Curve (ECVRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/why-using-ecvrf.html"><strong aria-hidden="true">3.2.1.</strong> Why using ECVRF</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/ecvrf-construction.html"><strong aria-hidden="true">3.2.2.</strong> ECVRF Construction</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/ecvrf-auxiliary-function.html"><strong aria-hidden="true">3.2.3.</strong> ECVRF Auxiliary Function</a></li><li class="chapter-item expanded "><a href="../../ecvrf/ecvrf-construction/implementation-python.html"><strong aria-hidden="true">3.2.4.</strong> Implementation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../dkg/dkg.html"><strong aria-hidden="true">4.</strong> Distributed Key Generation (DKG)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/dkg-summary/chapter.html"><strong aria-hidden="true">4.1.</strong> Overview of DKG</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/dkg-summary/dkg-properties.html"><strong aria-hidden="true">4.1.1.</strong> DKG Properties</a></li><li class="chapter-item expanded "><a href="../../dkg/dkg-summary/dkg-application.html"><strong aria-hidden="true">4.1.2.</strong> DKG Application</a></li></ol></li><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/chapter.html"><strong aria-hidden="true">4.2.</strong> Verifiable Secret Sharing (VSS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/introduction.html"><strong aria-hidden="true">4.2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/syntax.html"><strong aria-hidden="true">4.2.2.</strong> Syntax and Properties</a></li><li class="chapter-item expanded "><a href="../../dkg/verifiable-secret-sharing/pedersen-construction.html"><strong aria-hidden="true">4.2.3.</strong> Pedersen's Construction</a></li></ol></li><li class="chapter-item expanded "><a href="../../dkg/dkg-construction/chapter.html"><strong aria-hidden="true">4.3.</strong> Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dkg/dkg-construction/why-gennaro.html"><strong aria-hidden="true">4.3.1.</strong> Why Gennaro et al's Construction?</a></li><li class="chapter-item expanded "><a href="../../dkg/dkg-construction/dkg-construction.html"><strong aria-hidden="true">4.3.2.</strong> Gennaro et al's Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/chapter.html"><strong aria-hidden="true">5.</strong> Threshold Signature</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-introduction/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-introduction/definition.html"><strong aria-hidden="true">5.2.</strong> Definition and Security</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/introduction.html"><strong aria-hidden="true">5.3.</strong> Canneti et al 's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/keygen.html"><strong aria-hidden="true">5.3.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.html"><strong aria-hidden="true">5.3.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.html"><strong aria-hidden="true">5.3.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.html"><strong aria-hidden="true">5.3.4.</strong> Supporting Algorithms</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/abort-identification.html"><strong aria-hidden="true">5.3.5.</strong> Identifying Aborts</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/security-consideration.html"><strong aria-hidden="true">5.3.6.</strong> Security Consideration</a></li></ol></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/introduction.html"><strong aria-hidden="true">5.4.</strong> FROST's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/keygen.html"><strong aria-hidden="true">5.4.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/sign.html"><strong aria-hidden="true">5.4.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/verify.html"><strong aria-hidden="true">5.4.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/frost-construction/supporting-algorithms.html"><strong aria-hidden="true">5.4.4.</strong> Supporting Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/our-intended-implementation.html"><strong aria-hidden="true">5.5.</strong> Implementation Guideline</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/threshold-ecdsa-for-secp256k1.html"><strong aria-hidden="true">5.5.1.</strong> Threshold signature using secp256k1 parameters</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/threshold-eddsa-for-ed25519.html"><strong aria-hidden="true">5.5.2.</strong> Threshold signature using ed25519 parameters</a></li><li class="chapter-item expanded "><a href="../../threshold-ecdsa/intended-implementation/threshold-eddsa-for-sr25519.html"><strong aria-hidden="true">5.5.3.</strong> Threshold signature using sr25519 parameters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/chapter.html"><strong aria-hidden="true">6.</strong> Isogeny Based Crypto</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html"><strong aria-hidden="true">6.1.</strong> Overview of Supersingular Isogeny Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/background/elliptic-curve.html"><strong aria-hidden="true">6.1.1.</strong> Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html"><strong aria-hidden="true">6.1.2.</strong> Isogenies</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/background/supersingular-elliptic-curve.html"><strong aria-hidden="true">6.1.3.</strong> Supersingular Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/graph/supersingular-isogeny-graph.html"><strong aria-hidden="true">6.1.4.</strong> Supersingular Isogeny Graph (Pizer Graphs)</a></li><li class="chapter-item expanded "><a href="../../isogeny-based-crypto/supersingular-isogeny-graph/graph/application.html"><strong aria-hidden="true">6.1.5.</strong> Applications of Pizer Graphs</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/chapter.html"><strong aria-hidden="true">7.</strong> KZG Polynomial Commitment Scheme</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/pcs-definition/section.html"><strong aria-hidden="true">7.1.</strong> Polynomial Commitment Scheme - Definition</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/pcs-definition/syntax.html"><strong aria-hidden="true">7.1.1.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/pcs-definition/security-requirement.html"><strong aria-hidden="true">7.1.2.</strong> Security Requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/section.html"><strong aria-hidden="true">7.2.</strong> Technical Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/commitment-without-hiding.html"><strong aria-hidden="true">7.2.1.</strong> Commitment to Polynomial Without Hiding Property</a></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html"><strong aria-hidden="true">7.2.2.</strong> Correct Evaluation from the Commitment</a></li><li class="chapter-item expanded "><a href="../../kzg-polynomial-commitment-scheme/technical-overview/dealing-with-hiding.html" class="active"><strong aria-hidden="true">7.2.3.</strong> Dealing with Hiding</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../plonk/chapter.html"><strong aria-hidden="true">8.</strong> PlonK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../plonk/arithmetization/section.html"><strong aria-hidden="true">8.1.</strong> PlonK's Arithmetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../plonk/arithmetization/circuit-specification.html"><strong aria-hidden="true">8.1.1.</strong> Circuit Specification</a></li><li class="chapter-item expanded "><a href="../../plonk/arithmetization/breaking-circuit.html"><strong aria-hidden="true">8.1.2.</strong> Breaking Circuit</a></li><li class="chapter-item expanded "><a href="../../plonk/arithmetization/gate-constraints.html"><strong aria-hidden="true">8.1.3.</strong> Gate Constraints</a></li><li class="chapter-item expanded "><a href="../../plonk/arithmetization/copy-constraints.html"><strong aria-hidden="true">8.1.4.</strong> Copy Constraints</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../halo2-for-dummies/chapter.html"><strong aria-hidden="true">9.</strong> Halo 2 for Dummies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../halo2-for-dummies/plonkish/section.html"><strong aria-hidden="true">9.1.</strong> PLONKish Arithemetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../halo2-for-dummies/plonkish/simple-arithmetic-circuit.html"><strong aria-hidden="true">9.1.1.</strong> A Simple Arithmetic Circuit</a></li><li class="chapter-item expanded "><a href="../../halo2-for-dummies/plonkish/transforming-to-plonkish-arithmetization.html"><strong aria-hidden="true">9.1.2.</strong> Transforming to PLONKish Arithmetization</a></li></ol></li><li class="chapter-item expanded "><a href="../../halo2-for-dummies/simple-example/section.html"><strong aria-hidden="true">9.2.</strong> A Simple Halo 2 Program</a></li></ol></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/chapter.html"><strong aria-hidden="true">10.</strong> Verifiable Delay Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/introduction.html"><strong aria-hidden="true">10.1.</strong> Introduction to VDF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/definition.html"><strong aria-hidden="true">10.1.1.</strong> VDF Algorithms</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/properties.html"><strong aria-hidden="true">10.1.2.</strong> VDF Properties</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-summary/application.html"><strong aria-hidden="true">10.1.3.</strong> VDF Applications</a></li></ol></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/existing-construction.html"><strong aria-hidden="true">10.2.</strong> A survey of VDF constructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/squaring-construction.html"><strong aria-hidden="true">10.2.1.</strong> Modular Square Root based Construction</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/rsa-time-lock-construction.html"><strong aria-hidden="true">10.2.2.</strong> Group of Unknown Order based Construction</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/isogeny-construction.html"><strong aria-hidden="true">10.2.3.</strong> Isogeny based Construction</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/comparision.html"><strong aria-hidden="true">10.2.4.</strong> Comparision</a></li><li class="chapter-item expanded "><a href="../../verifiable-delay-functions/vdf-candidates/vc-based-construction.html"><strong aria-hidden="true">10.2.5.</strong> Possible IVC based Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../poseidon-hash/chapter.html"><strong aria-hidden="true">11.</strong> Poseidon hash for ZK Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../poseidon-hash/cryptographic-sponge-function/cryptographic-sponge-function.html"><strong aria-hidden="true">11.1.</strong> Cryptographic sponge functions</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-hash-overview/poseidon-hash-overview.html"><strong aria-hidden="true">11.2.</strong> Overview of Poseidon Hash Function</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/section.html"><strong aria-hidden="true">11.3.</strong> Poseidon permutation design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/hades-design-strategy.html"><strong aria-hidden="true">11.3.1.</strong> Hades design strategy</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/hades-based-design.html"><strong aria-hidden="true">11.3.2.</strong> Hades-based permutation design</a></li><li class="chapter-item expanded "><a href="../../poseidon-hash/poseidon-permutation-design/concrete-poseidon-instantiation.html"><strong aria-hidden="true">11.3.3.</strong> Concrete Poseidon permutation instantiation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.</strong> Deprecated</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.1.</strong> Orocle V1 (deprecated)</a></li><li class="chapter-item expanded "><a href="../../orochi-network/orand-v2.html"><strong aria-hidden="true">12.2.</strong> Orand V2 (deprecated)</a></li><li class="chapter-item expanded "><a href="../../orochi-network/sdk.html"><strong aria-hidden="true">12.3.</strong> Orochi Network SDK</a></li><li class="chapter-item expanded "><a href="../../orochi-network/code-integration.html"><strong aria-hidden="true">12.4.</strong> Orand Code Integration</a></li></ol></li><li class="chapter-item expanded "><a href="../../bibliography.html">Bibliography</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Orochi Network&#x27;s Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="dealing-with-hiding"><a class="header" href="#dealing-with-hiding">Dealing with Hiding</a></h1>
+<p>In the previous sections, namely, <a href="./commitment_without_hiding.html">Commitment to Polynomial Without Hiding Property</a> and <a href="./correct_evaluation_from_commitment.html">Correct Evaluation from the Commitment</a>, we discussed the high level idea of the construction of algorithms as well as the polynomial and evaluation binding properties. One remaining thing is the hiding property. In [<a href="../../bibliography.html#KZG10">KZG10</a>], the authors proposed \(2\) constructions from discrete logarithm assumption, for conditional hiding, and Pedersen commitment, for unconditional hiding.</p>
+<blockquote>
+<p><strong>Remark.</strong> We now make clear the \(2\) notions here, namely, conditional hiding and unconditional hiding.</p>
+<p>Conditional hiding of a commitment \(c\) to a polynomial \(f(X)\) is the property protecting the polynomial \(f(X)\) from being compromised with a condition that some assumption employed is assumed to be hard. Usually, the hardness of the assumption is against probabilistic polynomial-time adversaries. Here, probabilistic polynomial-time adversaries stand for the machines that attack the scheme with limited amount of time, and this amount of time is upper-bounded by a polynomial on input the security parameter given to the scheme. Probabilistic polynomial time is a notion in the theory of computation. If you would like to know more about the detail, we prefer to check some textbooks. For example, we prefer [<a href="../../bibliography.html#Sipser2012-introduction-to-theory-of-computation">Sipser2012-introduction-to-theory-of-computation</a>] in this blog.</p>
+<p>On the other hand, unconditional hiding means that we cannot extract any information about the polynomial behind. For example, if \(f(X) = a_0 + a_1X + \dots + a_dX^d\) and \(r(X) = r_0 + r_1X + \dots + r_dX^d\), given that \(r_0, \dots, r_d\) are independently and uniformly sampled from \(\mathbb{F}\), then \(f(X) + r(X) = (a_0 + r_0) + (a_1 + r_1)X + \dots + (a_d + r_d)X^d\) completely hides \(f(X)\) since \(a_0 + r_0, a_1 + r_1, \dots, a_d + r_d\) are uniform in \(\mathbb{F}\).</p>
+</blockquote>
+<h2 id="conditional-hiding-from-discrete-logarithm-assumption"><a class="header" href="#conditional-hiding-from-discrete-logarithm-assumption">Conditional hiding from discrete logarithm assumption</a></h2>
+<p>The former, namely, discrete logarithm assumption, guarantees the hiding by its own hardness assumption. In particular, given \(g\) and \(g^v\) for some secret integer \(v\), there is no way to extract any piece of information about \(v\) from \(g\) and \(g^v\) due to hardness of discrete logarithm problem. Therefore, the hiding here is conditional, i.e., discrete logarithm assumption is hard. </p>
+<h2 id="unconditional-hiding-from-pedersen-commitment"><a class="header" href="#unconditional-hiding-from-pedersen-commitment">Unconditional hiding from Pedersen commitment</a></h2>
+<p>The latter, namely, using Pedersen commitment, exploits the use of an additional part to achieve unconditional hiding property, which is secure against powerful adversaries and not limited to PPT ones. Roughly speaking, the external part can be informally thought of as a commitment to a random polynomial with conditional hiding. To perform this, we extend the commitment key \(ck\) to contain additional elements \(h^1, h^x, \dots, h^{x^d}\) where \(h\) is another generator of \(\mathbb{G}\) different from \(g\). Hence, the commitment key \(ck\) now is the tuple \((g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\). Therefore, whenever committing to a polynomial \(f(X) = a_0 + a_1X + \dots + a_dX^d\), we additionally sample a polynomial \(r(X) = r_0 + r_1X + \dots + r_dX^d\in \mathbb{F}[X]\). The sampling process can be conducted easily by sampling each \(r_i\) uniformly and independently from \(\mathbb{Z}_{|F|} = \{0, \dots, |F| - 1\}\).</p>
+<p>The algorithm \(\textsf{Commit}\) now can be evaluated by computing
+$$
+c = \prod_{i = 0}^d (g^{x^i})^{a_i} \cdot \prod_{i = 0}^d (h^{x^i})^{r_i} = g^{f(x)}\cdot h^{r(x)},
+$$
+namely, the original conditional-hiding commitment to \(f(X)\) multiplying with the condition-hiding commitment to random polynomial \(r(X)\) becomes an unconditional commitment \(c\) where auxiliary information \(\textsf{aux}\) can be set to be the tuple \((f(X), r(X))\). Hence, now, the adversary knows nothing about the evaluations of any index in \(\mathbb{F}\). We can see clearly that the commitment \(c\) hides \(f(X)\) unconditionally since \(r_0\) is chosen uniformly from \(\mathbb{Z}_{|\mathbb{F}|}\) and, hence, \((h^{x^0})^{r_0}\) is uniform in \(\mathbb{F}\). It also implies that \(c\) is uniform in \(\mathbb{F}\).</p>
+<p>Since \(c = g^{f(x)}\cdot h^{r(x)}\), we can say that \(c\) is the multiplication of two parts, namely, the message part \(g^{f(x)}\) and the randomness part \(h^{r(x)}\).</p>
+<p>We now discuss how algorithms \(\textsf{CreateWitness}\) and \(\textsf{VerifyEval}\) work with respect to introductory of the additional part, namely, \(h^{r(x)}\). </p>
+<!-- Then, we discuss the unconditional hiding once at most \\(d\\) evaluations of \\(f(X)\\) with respective witnesses are known. -->
+<h3 id="creating-witness-in-unconditional-hiding-mode"><a class="header" href="#creating-witness-in-unconditional-hiding-mode">Creating witness in unconditional hiding mode</a></h3>
+<p>For a given index \(i\), the witness output by algorithm \(\textsf{CreateWitness}\) is also a multiplication of \(2\) parts. We simply call the message evaluation and randomness evaluation parts. </p>
+<p>The message evaluation part is computed identically to the conditional version of the commitment scheme. That is, we compute the formula \(g^{\psi(x)}\) where \(\psi(X) = \frac{f(X) - f(i)}{X - i}\).</p>
+<p>The randomness evaluation part is also conducted similarly. Notice that, since we employ \(r(X)\) as a polynomial of degree \(d\), we can compute witness for the correct evaluation on the same index \(i\), namely, \(r(i)\). This randomness evaluation part is equal to \(h^{\varphi(x)}\) where \(\varphi(X) = \frac{r(X) - r(i)}{X - i}\).</p>
+<blockquote>
+<p><strong>Remark.</strong> As previously said, \(x\) is unknown to committer. Therefore, the computation of \(g^{\psi(x)}\) and \(h^{\varphi(x)}\) must depend on the commitment key \(ck\) by employing the elements \(g^1, \dots, g^{x^{d - 1}}, h^1, \dots, h^{x^{d - 1}}\). Notice that we do not you \(g^{x^d}\) and \(h^{x^d}\) since \(\psi(X)\) and \(\varphi(X)\) are polynomials of degrees at most \(d - 1\).</p>
+</blockquote>
+<p>The output of algorithm \(\textsf{CreateWitness}\) is then equal to \(w_i = (w^\star_i, s_i)\) where \(w^\star_i = g^{\psi(x)} \cdot h^{\varphi(x)}\) is the multiplication of message evaluation and randomness evaluation parts and \(s_i = r(i)\). Notice that \(r(i)\) is attached to witness in order to help the evaluation verification algorithm, to be described below, work.</p>
+<h3 id="verifying-correct-evaluation-in-unconditional-mode"><a class="header" href="#verifying-correct-evaluation-in-unconditional-mode">Verifying correct evaluation in unconditional mode</a></h3>
+<p>The evaluation verification algorithm \(\textsf{VerifyEval}\) receives as inputs the commitment key \(ck = (g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\), commitment \(c\) to \(f(X)\), index \(i\), value \(v_i \in \mathbb{F}\) assumed to be equal to \(f(i)\) and \(w_i = (w^\star_i, s_i)\). This algorithm is expected to return \(1\) is \(v_i\) is equal to \(f(i)\) with the use of associated witness \(w_i\).</p>
+<p>To verify whether \(v_i = f(i)\), it is worth to verify both correct computations of \(f(i)\) and \(r(i)\). More precisely, verifier needs to confirm that \(v_i = f(i)\) and \(s_i = r(i)\). To this end, again, we imitate the verification process of the conditional hiding case. Hence, we employ again bilinear pairing \(e : \mathbb{G}\times \mathbb{G} \to \mathbb{G}_T\) which maps \((g^a, g^b)\) to \(e(g, g)^{ab}\). However, there is an obstacle here. Observe that, in this pairing, we use only \(1\) generator \(g\) while our commitment employs \(2\) different generators \(g\) and \(h\) both generating \(G\). In order to enable the bilinear pairing, we enforce \(h = g^\gamma\) for some hidden \(\gamma\). This enforcement works because \(g\) is the generator of \(\mathbb{G}\) and \(h\) belongs to \(\mathbb{G}\). Hence, our commitment \(c\) can be alternatively written as 
+$$
+c = g^{f(x)}\cdot h^{r(x)} = g^{f(x)}\cdot g^{\gamma \cdot r(x)} = g^{f(x) + \gamma\cdot r(x)}
+$$
+which is a conditional commitment to \(f(X) + \gamma\cdot r(X)\) with \(\gamma\) unknown to both committer and verifier.</p>
+<p>Moreover, the witness \(w^\star_i = g^{\psi(x)}\cdot h^{\varphi(x)}\) can also be interpreted as 
+$$
+w^\star_i = g^{\psi(x)}\cdot h^{\varphi(x)}=g^{\psi(x)} \cdot g^{\gamma\cdot \varphi(x)} = g^{\psi(x) + \gamma\cdot \varphi(x)}
+$$ 
+which is also a witness for correct evaluation at index \(i\) with respect to polynomial \(f(X) + \gamma\cdot r(X)\) whose \(\gamma\) is not known to both parties, namely, committer and verifier.</p>
+<p>We now observe that \(\psi(X) + \gamma\cdot \varphi(X) = \frac{f(X) - f(i)}{X - i} + \gamma\cdot \frac{r(X) - r(i)}{X - i}\). Hence, it is worth to guarantee the following equation holds:
+$$
+\left(\frac{f(X) - f(i)}{X - i} + \gamma\cdot \frac{r(X) - r(i)}{X - i}\right)\cdot\left(X - i\right) - (f(i) + \gamma\cdot r(i)) = f(X) + \gamma \cdot r(X).
+$$</p>
+<p>We now describe the process for verifying the above equation by employing the bilinear pairing function \(g : \mathbb{G}\times \mathbb{G} \to \mathbb{G}_T\). Since the above equation has a multiplication, we apply the bilinear pairing by checking 
+$$
+e\left(g^{\frac{f(x) - v_i}{x - i} + \gamma\cdot \frac{r(x) - s_i}{x - i}}, g^{x - i}\right)\cdot e\left(g^{-\left(v_i + \gamma\cdot s_i\right)}, g\right) = e\left(g^{f(x) + \gamma\cdot r(x)},g\right)
+$$
+where \(x\) and \(\gamma\) are unknown to both parties. Since \(x\) and \(\gamma\) are not known to both parties, it is inconvenient to evaluate the bilinear pairing function. However, since \(ck = (g^1, \dots, g^{x^d}, h^1, \dots, h^{x^d})\) and \(h = g^\gamma\) are public inputs, we can replace the appearances of \(x\) and \(\gamma\) in the above equation by those of \(ck\) and \(h\). The above computation of bilinear pairing hence becomes
+$$
+e\left(w^\star, g^x / g^i\right)\cdot e\left(g^{-v_i}\cdot h^{-s_i}, g\right) = e(c, g)
+$$
+since \(c = g^{f(x)}\cdot h^{r(x)} = g^{f(x) + \gamma\cdot r(x)}\).</p>
+<!-- ### Unconditional hiding once at most \\(d\\) evaluations are known -->
+<!-- We now assume that the committer allows the adversary to know \\(d\\) different evaluations on \\(f(X)\\), i.e., the evaluations are
+$$ \\{(i_1, f(i_1), w_1), \dots, (i_d, f(i_d), w_d)\\}$$
+where, for each \\(j \in \\{1, \dots, d\\}\\), \\(\textsf{VerifyEval}(ck, c, i_j, f(i_j), w_j) = 1\\) and \\(w_j = (w_j^\star, s_j)\\).
+
+As we discussed previously, if we know at least \\(d + 1\\) evaluations of \\(f(X)\\) of distinct indices, we can recover \\(f(X)\\) entirely, e.g., by using Lagrange interpolation. On the other hand, knowing evaluations of at most \\(d\\) different indices is insufficient for predicting evaluations of other indices. The unrevealed evaluation of any index, other than those \\(d\\) different indices, would look uniform in \\(\mathbb{F}\\). Hence, since adversary knows at \\(d + 1\\) evaluations of \\(f(X)\\) and the corresponding witnesses \\(w_1, \dots, w_d\\), adversary also knows \\(d + 1\\) different evaluations of \\(r(X)\\). Assume that \\(i_{d + 1} \not\in \\{i_1, \dots, i_d\\}\\). We argue that \\(f(i_{d + 1})\\) and \\(r(i_{d + 1})\\) are unknown to adversary. In fact, assume that there exist \\(f'(X) \not= f(X)\\) and \\(r'(X) \not= r(X)\\) satisfying
+$$
+    f'(i_j) = f(i_j) = v_j \text{ and } r'(i_j) = r(i_j) = s_j 
+$$
+for all \\(j \in \\{1, \dots, d\\}\\). Roughly speaking, \\(f'(X)\\) is different from \\(f(X)\\) yet shares the same evaluations at those queried indices, namely, \\(i_1, \dots, i_d\\). A similar explanation applies to \\(r'(X)\\) and \\(r(X)\\). Hence, we argue that \\(w_1, \dots, w_d\\) are the same both pairs \\((f(X), r(X))\\) and \\((f'(X), r'(X))\\) for \\(x\\) fixed in advance. In fact, for any \\(j \in \\{1, \dots, d\\}\\), let's consider the equation described above, with \\(X\\) and \\(i\\) replaced by \\(x\\) and \\(i_j\\), respectively, 
+$$
+    \left(\frac{f(x) - f(i_j)}{x - i_j} + \gamma\cdot \frac{r(x) - r(i_j)}{x - i_j}\right)\cdot\left(x - i_j\right) - (f(i_j) + \gamma\cdot r(i_j)) = f(x) + \gamma \cdot r(x).
+$$
+We see clearly that \\(\frac{f(x) - f(i_j)}{x - i_j} + \gamma\cdot \frac{r(x) - r(i_j)}{x - i_j}\\) is uniquely determined by computing 
+$$\begin{align}
+\frac{f(x) + \gamma\cdot r(x) + f(i_j) + \gamma\cdot r(i_j)}{x - i_j} \&= \frac{f(x) - \gamma\cdot r(x) + v_j + \gamma\cdot s_j}{x - i_j}\\\\
+\&= \frac{f'(x) + \gamma\cdot r'(x) + f(i_j) + \gamma\cdot r(i_j)}{x - i_j}
+\end{align}$$<span style="color:red">continue here</span> -->
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../plonk/chapter.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../plonk/chapter.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../mermaid.min.js"></script>
+        <script src="../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Orand V3 - Orochi Network&#x27;s Cookbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO -->
+        <meta name="description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:title" content="Cookbook | Orochi Network">
+        <meta property="og:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="315">
+        <meta property="og:image" content="https://docs.orochi.network/assets/cookbook-facebook.png?v2">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Cookbook | Orochi Network">
+        <meta name="twitter:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta name="twitter:image:type" content="image/png">
+        <meta name="twitter:image:width" content="800">
+        <meta name="twitter:image:height" content="418">
+        <meta name="twitter:image" content="https://docs.orochi.network/assets/cookbook-twitter.png?v2">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../orochi-network/orochi-network.html"><strong aria-hidden="true">1.</strong> What is Orochi Network?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../orochi-network/verifiable-data-pipeline.html"><strong aria-hidden="true">1.1.</strong> What is Verifiable Data Pipeline?</a></li><li class="chapter-item expanded "><a href="../orochi-network/zk-data-rollups.html"><strong aria-hidden="true">1.2.</strong> What is ZK-data-rollups?</a></li><li class="chapter-item expanded "><a href="../orochi-network/use-cases.html"><strong aria-hidden="true">1.3.</strong> Use cases</a></li><li class="chapter-item expanded "><a href="../orochi-network/architecture.html"><strong aria-hidden="true">1.4.</strong> Architecture</a></li></ol></li><li class="chapter-item expanded "><a href="../orochi-network/products.html"><strong aria-hidden="true">2.</strong> Products</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zkdatabase/chapter.html"><strong aria-hidden="true">2.1.</strong> zkDatabase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zkdatabase/accumulation/accumulation.html"><strong aria-hidden="true">2.1.1.</strong> Accumulation</a></li><li class="chapter-item expanded "><a href="../zkdatabase/b-tree/b-tree.html"><strong aria-hidden="true">2.1.2.</strong> B-Tree</a></li><li class="chapter-item expanded "><a href="../zkdatabase/composability/composability.html"><strong aria-hidden="true">2.1.3.</strong> Composability</a></li><li class="chapter-item expanded "><a href="../zkdatabase/serialization/serialization.html"><strong aria-hidden="true">2.1.4.</strong> Serialization</a></li><li class="chapter-item expanded "><a href="../zkdatabase/data-collection/data-collection.html"><strong aria-hidden="true">2.1.5.</strong> Data Collection</a></li><li class="chapter-item expanded "><a href="../zkdatabase/distributed-storage-engine/section.html"><strong aria-hidden="true">2.1.6.</strong> Distributed-Storage-Engine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zkdatabase/distributed-storage-engine/ipfs.html"><strong aria-hidden="true">2.1.6.1.</strong> IPFS</a></li><li class="chapter-item expanded "><a href="../zkdatabase/distributed-storage-engine/storage-engine.html"><strong aria-hidden="true">2.1.6.2.</strong> Storage-Engine</a></li></ol></li><li class="chapter-item expanded "><a href="../zkdatabase/merkle-tree/merkle-tree.html"><strong aria-hidden="true">2.1.7.</strong> Merkle-Tree</a></li></ol></li><li class="chapter-item expanded "><a href="../zk-memory/chapter.html"><strong aria-hidden="true">2.2.</strong> zkMemory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zk-memory/execution-trace/execution-trace.html"><strong aria-hidden="true">2.2.1.</strong> Execution Trace</a></li><li class="chapter-item expanded "><a href="../zk-memory/commitment/commitment.html"><strong aria-hidden="true">2.2.2.</strong> Commitment Schemes</a></li><li class="chapter-item expanded "><a href="../zk-memory/constraints/constraints.html"><strong aria-hidden="true">2.2.3.</strong> Memory Consistency Constraints</a></li><li class="chapter-item expanded "><a href="../zk-memory/nova-variant/nova-variant.html"><strong aria-hidden="true">2.2.4.</strong> Nova Variants</a></li></ol></li><li class="chapter-item expanded "><a href="../orochi-network/orand-orocle.html"><strong aria-hidden="true">2.3.</strong> Orand & Orocle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../orochi-network/orocle-v2.html"><strong aria-hidden="true">2.3.1.</strong> Orocle V2</a></li><li class="chapter-item expanded "><a href="../orochi-network/orand-v3.html" class="active"><strong aria-hidden="true">2.3.2.</strong> Orand V3</a></li><li class="chapter-item expanded "><a href="../orochi-network/contract-integration.html"><strong aria-hidden="true">2.3.3.</strong> Orand Contract Integration</a></li><li class="chapter-item expanded "><a href="../orochi-network/api-reference.html"><strong aria-hidden="true">2.3.4.</strong> API Reference</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../ecvrf/verifiable-random-function.html"><strong aria-hidden="true">3.</strong> Verifiable Random Function (VRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/overview-of-vrf.html"><strong aria-hidden="true">3.1.</strong> Overview of VRF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/introduction.html"><strong aria-hidden="true">3.1.1.</strong> Introduction to VRF</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/vrf-syntax.html"><strong aria-hidden="true">3.1.2.</strong> VRF Algorithms</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/vrf-properties.html"><strong aria-hidden="true">3.1.3.</strong> VRF Security Properties</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/vrf-history.html"><strong aria-hidden="true">3.1.4.</strong> History of VRF</a></li></ol></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/vrf-based-on-elliptic-curve.html"><strong aria-hidden="true">3.2.</strong> VRF Based on Elliptic Curve (ECVRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/why-using-ecvrf.html"><strong aria-hidden="true">3.2.1.</strong> Why using ECVRF</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/ecvrf-construction.html"><strong aria-hidden="true">3.2.2.</strong> ECVRF Construction</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/ecvrf-auxiliary-function.html"><strong aria-hidden="true">3.2.3.</strong> ECVRF Auxiliary Function</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/implementation-python.html"><strong aria-hidden="true">3.2.4.</strong> Implementation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../dkg/dkg.html"><strong aria-hidden="true">4.</strong> Distributed Key Generation (DKG)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/dkg-summary/chapter.html"><strong aria-hidden="true">4.1.</strong> Overview of DKG</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/dkg-summary/dkg-properties.html"><strong aria-hidden="true">4.1.1.</strong> DKG Properties</a></li><li class="chapter-item expanded "><a href="../dkg/dkg-summary/dkg-application.html"><strong aria-hidden="true">4.1.2.</strong> DKG Application</a></li></ol></li><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/chapter.html"><strong aria-hidden="true">4.2.</strong> Verifiable Secret Sharing (VSS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/introduction.html"><strong aria-hidden="true">4.2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/syntax.html"><strong aria-hidden="true">4.2.2.</strong> Syntax and Properties</a></li><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/pedersen-construction.html"><strong aria-hidden="true">4.2.3.</strong> Pedersen's Construction</a></li></ol></li><li class="chapter-item expanded "><a href="../dkg/dkg-construction/chapter.html"><strong aria-hidden="true">4.3.</strong> Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/dkg-construction/why-gennaro.html"><strong aria-hidden="true">4.3.1.</strong> Why Gennaro et al's Construction?</a></li><li class="chapter-item expanded "><a href="../dkg/dkg-construction/dkg-construction.html"><strong aria-hidden="true">4.3.2.</strong> Gennaro et al's Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/chapter.html"><strong aria-hidden="true">5.</strong> Threshold Signature</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-introduction/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-introduction/definition.html"><strong aria-hidden="true">5.2.</strong> Definition and Security</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/introduction.html"><strong aria-hidden="true">5.3.</strong> Canneti et al 's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/keygen.html"><strong aria-hidden="true">5.3.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.html"><strong aria-hidden="true">5.3.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.html"><strong aria-hidden="true">5.3.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.html"><strong aria-hidden="true">5.3.4.</strong> Supporting Algorithms</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/abort-identification.html"><strong aria-hidden="true">5.3.5.</strong> Identifying Aborts</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/security-consideration.html"><strong aria-hidden="true">5.3.6.</strong> Security Consideration</a></li></ol></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/introduction.html"><strong aria-hidden="true">5.4.</strong> FROST's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/keygen.html"><strong aria-hidden="true">5.4.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/sign.html"><strong aria-hidden="true">5.4.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/verify.html"><strong aria-hidden="true">5.4.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/supporting-algorithms.html"><strong aria-hidden="true">5.4.4.</strong> Supporting Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/our-intended-implementation.html"><strong aria-hidden="true">5.5.</strong> Implementation Guideline</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/threshold-ecdsa-for-secp256k1.html"><strong aria-hidden="true">5.5.1.</strong> Threshold signature using secp256k1 parameters</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/threshold-eddsa-for-ed25519.html"><strong aria-hidden="true">5.5.2.</strong> Threshold signature using ed25519 parameters</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/threshold-eddsa-for-sr25519.html"><strong aria-hidden="true">5.5.3.</strong> Threshold signature using sr25519 parameters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/chapter.html"><strong aria-hidden="true">6.</strong> Isogeny Based Crypto</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html"><strong aria-hidden="true">6.1.</strong> Overview of Supersingular Isogeny Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/background/elliptic-curve.html"><strong aria-hidden="true">6.1.1.</strong> Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html"><strong aria-hidden="true">6.1.2.</strong> Isogenies</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/background/supersingular-elliptic-curve.html"><strong aria-hidden="true">6.1.3.</strong> Supersingular Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/graph/supersingular-isogeny-graph.html"><strong aria-hidden="true">6.1.4.</strong> Supersingular Isogeny Graph (Pizer Graphs)</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/graph/application.html"><strong aria-hidden="true">6.1.5.</strong> Applications of Pizer Graphs</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/chapter.html"><strong aria-hidden="true">7.</strong> KZG Polynomial Commitment Scheme</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/pcs-definition/section.html"><strong aria-hidden="true">7.1.</strong> Polynomial Commitment Scheme - Definition</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/pcs-definition/syntax.html"><strong aria-hidden="true">7.1.1.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/pcs-definition/security-requirement.html"><strong aria-hidden="true">7.1.2.</strong> Security Requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/section.html"><strong aria-hidden="true">7.2.</strong> Technical Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/commitment-without-hiding.html"><strong aria-hidden="true">7.2.1.</strong> Commitment to Polynomial Without Hiding Property</a></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html"><strong aria-hidden="true">7.2.2.</strong> Correct Evaluation from the Commitment</a></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/dealing-with-hiding.html"><strong aria-hidden="true">7.2.3.</strong> Dealing with Hiding</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../plonk/chapter.html"><strong aria-hidden="true">8.</strong> PlonK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../plonk/arithmetization/section.html"><strong aria-hidden="true">8.1.</strong> PlonK's Arithmetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../plonk/arithmetization/circuit-specification.html"><strong aria-hidden="true">8.1.1.</strong> Circuit Specification</a></li><li class="chapter-item expanded "><a href="../plonk/arithmetization/breaking-circuit.html"><strong aria-hidden="true">8.1.2.</strong> Breaking Circuit</a></li><li class="chapter-item expanded "><a href="../plonk/arithmetization/gate-constraints.html"><strong aria-hidden="true">8.1.3.</strong> Gate Constraints</a></li><li class="chapter-item expanded "><a href="../plonk/arithmetization/copy-constraints.html"><strong aria-hidden="true">8.1.4.</strong> Copy Constraints</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../halo2-for-dummies/chapter.html"><strong aria-hidden="true">9.</strong> Halo 2 for Dummies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../halo2-for-dummies/plonkish/section.html"><strong aria-hidden="true">9.1.</strong> PLONKish Arithemetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../halo2-for-dummies/plonkish/simple-arithmetic-circuit.html"><strong aria-hidden="true">9.1.1.</strong> A Simple Arithmetic Circuit</a></li><li class="chapter-item expanded "><a href="../halo2-for-dummies/plonkish/transforming-to-plonkish-arithmetization.html"><strong aria-hidden="true">9.1.2.</strong> Transforming to PLONKish Arithmetization</a></li></ol></li><li class="chapter-item expanded "><a href="../halo2-for-dummies/simple-example/section.html"><strong aria-hidden="true">9.2.</strong> A Simple Halo 2 Program</a></li></ol></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/chapter.html"><strong aria-hidden="true">10.</strong> Verifiable Delay Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/introduction.html"><strong aria-hidden="true">10.1.</strong> Introduction to VDF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/definition.html"><strong aria-hidden="true">10.1.1.</strong> VDF Algorithms</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/properties.html"><strong aria-hidden="true">10.1.2.</strong> VDF Properties</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/application.html"><strong aria-hidden="true">10.1.3.</strong> VDF Applications</a></li></ol></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/existing-construction.html"><strong aria-hidden="true">10.2.</strong> A survey of VDF constructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/squaring-construction.html"><strong aria-hidden="true">10.2.1.</strong> Modular Square Root based Construction</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/rsa-time-lock-construction.html"><strong aria-hidden="true">10.2.2.</strong> Group of Unknown Order based Construction</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/isogeny-construction.html"><strong aria-hidden="true">10.2.3.</strong> Isogeny based Construction</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/comparision.html"><strong aria-hidden="true">10.2.4.</strong> Comparision</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/vc-based-construction.html"><strong aria-hidden="true">10.2.5.</strong> Possible IVC based Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../poseidon-hash/chapter.html"><strong aria-hidden="true">11.</strong> Poseidon hash for ZK Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poseidon-hash/cryptographic-sponge-function/cryptographic-sponge-function.html"><strong aria-hidden="true">11.1.</strong> Cryptographic sponge functions</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-hash-overview/poseidon-hash-overview.html"><strong aria-hidden="true">11.2.</strong> Overview of Poseidon Hash Function</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/section.html"><strong aria-hidden="true">11.3.</strong> Poseidon permutation design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/hades-design-strategy.html"><strong aria-hidden="true">11.3.1.</strong> Hades design strategy</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/hades-based-design.html"><strong aria-hidden="true">11.3.2.</strong> Hades-based permutation design</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/concrete-poseidon-instantiation.html"><strong aria-hidden="true">11.3.3.</strong> Concrete Poseidon permutation instantiation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.</strong> Deprecated</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.1.</strong> Orocle V1 (deprecated)</a></li><li class="chapter-item expanded "><a href="../orochi-network/orand-v2.html"><strong aria-hidden="true">12.2.</strong> Orand V2 (deprecated)</a></li><li class="chapter-item expanded "><a href="../orochi-network/sdk.html"><strong aria-hidden="true">12.3.</strong> Orochi Network SDK</a></li><li class="chapter-item expanded "><a href="../orochi-network/code-integration.html"><strong aria-hidden="true">12.4.</strong> Orand Code Integration</a></li></ol></li><li class="chapter-item expanded "><a href="../bibliography.html">Bibliography</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Orochi Network&#x27;s Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orand-v3"><a class="header" href="#orand-v3">Orand V3</a></h1>
+<p>Orand project was built based on Elliptic Curve Verifiable Random Function (ECVRF). It is deterministic, verifiable and secured based on assumptions from elliptic curves. Administrators of Orochi Network are unable to manipulate the results.</p>
+<p>To optimize operation costs and improve security we provided following features:</p>
+<ul>
+<li><strong>Verifiable:</strong> An Orand's epoch can be verified independently outside our system or can be verified by smart contracts.</li>
+<li><strong>Self and Delegated Submission:</strong> Orand project have flexibility in proof submission, we just generate valid ECVRF proof and you can decide how to submit them:
+<ul>
+<li><strong>Self Submission:</strong> You can request from your back-end to Orand service and submit the randomness to your smart contract.</li>
+<li><strong>Delegation Submission:</strong> You can delegate the submission process to Orochi Network by transfer token to our operator, so the feeding process will be performed automatically.</li>
+<li><strong>Request Submission:</strong> Instead of request to Orand service, you can request randomness via Oracle contract.</li>
+</ul>
+</li>
+<li><strong>Batching:</strong> We allow you to set the batching limit for one epoch, e.g., we can batch <code>100</code> randomness for one single epoch which makes the cost be reduced significantly.</li>
+</ul>
+<h2 id="deployed-platform"><a class="header" href="#deployed-platform">Deployed Platform</a></h2>
+<p>Orand V3 was deployed on following smart contract platform.</p>
+<h3 id="mainnet"><a class="header" href="#mainnet">Mainnet</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Network Name</th><th>Address</th></tr></thead><tbody>
+<tr><td>Ancient8 Mainnet</td><td><a href="https://scan.ancient8.gg/address/0x970FD01B4427Ec1b48a8105aee7A3fc4E70E5FE5">0x970FD01B4427Ec1b48a8105aee7A3fc4E70E5FE5</a></td></tr>
+<tr><td>U2U Solaris Mainnet</td><td><a href="https://u2uscan.xyz/address/0x635eB277805AFADDd720B873dfE87F8fc01b24e4">0x635eB277805AFADDd720B873dfE87F8fc01b24e4</a></td></tr>
+<tr><td>BNB Chain</td><td><a href="https://bscscan.com/address/0x4DB03CC56421A81EC1398279913d8D55E62f5328">0x4DB03CC56421A81EC1398279913d8D55E62f5328</a></td></tr>
+<tr><td>X Layer Mainnet</td><td><a href="https://www.okx.com/web3/explorer/xlayer/address/0x6254c96c3d96653FCD4A7133Ff138F97656522B7">0x6254c96c3d96653FCD4A7133Ff138F97656522B7</a></td></tr>
+<tr><td>Saakuru (L2)</td><td><a href="https://explorer.saakuru.network/address/0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303">0x3CEA68A48c01Ff0759C3df54324b4E3B6F284303</a></td></tr>
+<tr><td>Sei Mainnet</td><td><a href="https://seitrace.com/address/0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13?chain=pacific-1">0x6f24d4da6b9bBdbE4d5F2e3C663c8F1C617bdf13</a></td></tr>
+<tr><td>Manta Pacific L2 Rollup</td><td><a href="https://pacific-explorer.manta.network/address/0x2578F22C7488E08B6D8ED3Bb042b70a3444BF111">0x2578F22C7488E08B6D8ED3Bb042b70a3444BF111</a></td></tr>
+<tr><td>ZKsync Era Mainnet</td><td><a href="https://explorer.zksync.io/address/0x29ca057761732432bcA26109A291291a365755b4">0x29ca057761732432bcA26109A291291a365755b4</a></td></tr>
+<tr><td>Scroll Mainnet</td><td><a href="https://scrollscan.com/address/0x4e7dc620996e58A2BCba128c6b0C7e9e2De103dC">0x4e7dc620996e58A2BCba128c6b0C7e9e2De103dC</a></td></tr>
+<tr><td>Zircuit Mainnet</td><td><a href="https://explorer.zircuit.com/address/0x99C2b1CcA077ceA2c84Fdc160aAc1A7f64ecf6be">0x99C2b1CcA077ceA2c84Fdc160aAc1A7f64ecf6be</a></td></tr>
+<tr><td>Phoenix Mainnet</td><td><a href="https://phoenix.lightlink.io/address/0x0b226bf21B67A691775F9eDbc529D244FC79ab49">0x0b226bf21B67A691775F9eDbc529D244FC79ab49</a></td></tr>
+<tr><td>Etherlink Mainnet</td><td><a href="https://explorer.etherlink.com/address/0xbaD95Bd46411785c1189a8dd06C1C354DE805170">0xbaD95Bd46411785c1189a8dd06C1C354DE805170</a></td></tr>
+<tr><td>5ireChain Mainnet</td><td><a href="https://5irescan.io/contract/evm/0x53d56D3da563678f92CD87622fa72C1ae5c0876B">0x53d56D3da563678f92CD87622fa72C1ae5c0876B</a></td></tr>
+<tr><td>Zytron Mainnet</td><td><a href="https://explorer.zypher.network/address/0x9bf3a59CDBb244f33bf40993e41893992624E665">0x9bf3a59CDBb244f33bf40993e41893992624E665</a></td></tr>
+<tr><td>Matchain Mainnet</td><td><a href="https://matchscan.io/address/0x707dc1041dc702a83F7a0af57dDe1a3cdAC9643e">0x707dc1041dc702a83F7a0af57dDe1a3cdAC9643e</a></td></tr>
+<tr><td>Tangle Mainnet</td><td><a href="https://explorer.tangle.tools/address/0xE41Bf77f68c37090364c1Fe73AF28d2CeF49C41d">0xE41Bf77f68c37090364c1Fe73AF28d2CeF49C41d</a></td></tr>
+<tr><td>Soneium Mainnet</td><td><a href="https://soneium.blockscout.com/address/0x73a801b1438Bb41839504dd3Eaa2492989A902cf">0x73a801b1438Bb41839504dd3Eaa2492989A902cf</a></td></tr>
+<tr><td>Plume Mainnet</td><td><a href="https://explorer.plumenetwork.xyz/address/0xC9395c0D17f4Ae1fFa0171b51a9eB189F7237e25">0xC9395c0D17f4Ae1fFa0171b51a9eB189F7237e25</a></td></tr>
+<tr><td>Base Mainnet</td><td><a href="https://base.blockscout.com/address/0xa56013BDCC663B63C12f5ebddd0C754bF4fEf096">0xa56013BDCC663B63C12f5ebddd0C754bF4fEf096</a></td></tr>
+<tr><td>Abstract Mainnet</td><td><a href="https://abscan.org/address/0x5b837C70feAD3ddCE3a1FA3049940e39dD16Bb2a">0x5b837C70feAD3ddCE3a1FA3049940e39dD16Bb2a</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="testnet"><a class="header" href="#testnet">Testnet</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Network Name</th><th>Address</th></tr></thead><tbody>
+<tr><td>Ancient8 Testnet</td><td><a href="https://scanv2-testnet.ancient8.gg/address/0xD7a2643c1d9C3E6069f90DbAabd9D58825C7A2b9">0xD7a2643c1d9C3E6069f90DbAabd9D58825C7A2b9</a></td></tr>
+<tr><td>Unicorn Ultra Nebulas</td><td><a href="https://testnet.u2uscan.xyz/address/0x3eAF9da360dA944105599cdB7833712346af6DF1">0x3eAF9da360dA944105599cdB7833712346af6DF1</a></td></tr>
+<tr><td>Sei Devnet</td><td><a href="https://seitrace.com/address/0x2182fD816A3fCeCDeD390452524cfA8f21142A88?chain=arctic-1">0x2182fD816A3fCeCDeD390452524cfA8f21142A88</a></td></tr>
+<tr><td>Saakuru Testnet</td><td><a href="https://explorer.testnet.oasys.games/address/0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f">0xA117B152a7bB8fAa9920e2C51B1Fb95452D2936f</a></td></tr>
+<tr><td>Zircuit Testnet</td><td><a href="https://explorer.testnet.zircuit.com/address/0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2">0x1Ae52e0Ef3f78F015AEF13AbCB4776333fb073C2</a></td></tr>
+<tr><td>ZKFair Testnet</td><td><a href="https://testnet-scan.zkfair.io/address/0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4">0xE733CaC2c60effe593587E595Ef6F98dA44a7cf4</a></td></tr>
+<tr><td>X Layer Testnet</td><td><a href="https://www.okx.com/web3/explorer/xlayer-test/address/0x50C72F5bea0757c8052daa6402568d4bbf2336Fb">0x50C72F5bea0757c8052daa6402568d4bbf2336Fb</a></td></tr>
+<tr><td>ZKLink Nova</td><td><a href="https://sepolia.explorer.zklink.io/address/0xf9338096bb1bCdBDB83E5a237F198A60A48395a2">0xf9338096bb1bCdBDB83E5a237F198A60A48395a2</a></td></tr>
+<tr><td>BNB Chain Testnet</td><td><a href="https://testnet.bscscan.com/address/0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556">0xA9aA047CaA5C24A4fC390F3887C98b20bc4e6556</a></td></tr>
+<tr><td>Arbitrum Sepolia Testnet</td><td><a href="https://sepolia.arbiscan.io/address/0x398027eA740de745FE4Be768e6e5744A6C58514C">0x398027eA740de745FE4Be768e6e5744A6C58514C</a></td></tr>
+<tr><td>Moonbase Alpha Testnet</td><td><a href="https://moonbase.moonscan.io/address/0xb368A56355707bC23321C85a9f2f1773B09a5a22">0xb368A56355707bC23321C85a9f2f1773B09a5a22</a></td></tr>
+<tr><td>Manta Pacific Sepolia Testnet</td><td><a href="https://pacific-explorer.sepolia-testnet.manta.network/address/0x060b6352406f6a22a5BAfCB372EDa87a3B077D23">0x060b6352406f6a22a5BAfCB372EDa87a3B077D23</a></td></tr>
+<tr><td>Kroma Sepolia Testnet</td><td><a href="https://sepolia.etherscan.io/address/0xabD720eaf47339150E0d0dF379307a17A68092Ac">0xabD720eaf47339150E0d0dF379307a17A68092Ac</a></td></tr>
+<tr><td>Fantom Testnet</td><td><a href="https://testnet.ftmscan.com/address/0xc3A7a16304D08002c27441e9e2Cb6366E97862B2">0xc3A7a16304D08002c27441e9e2Cb6366E97862B2</a></td></tr>
+<tr><td>Base Sepolia Testnet</td><td><a href="https://base-sepolia.blockscout.com/address/0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432">0x6240Cb830Ab06cd872827b92D6E9Fe9cA8Eac432</a></td></tr>
+<tr><td>Optimism Sepolia Testnet</td><td><a href="https://sepolia-optimistic.etherscan.io/address/0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1">0x518fF0Ad9549BbB38000459C6F70bc78718cC0B1</a></td></tr>
+<tr><td>Wanchain Testnet</td><td><a href="https://testnet.wanscan.org/address/0xD682B35eB08cC3cb74F690f6B8fFAE087625a158">0xD682B35eB08cC3cb74F690f6B8fFAE087625a158</a></td></tr>
+<tr><td>Scroll Sepolia Testnet</td><td><a href="https://sepolia.scrollscan.dev/address/0x25fa439D1030540FCd9B2E67F0e8A704ad078226">0x25fa439D1030540FCd9B2E67F0e8A704ad078226</a></td></tr>
+<tr><td>Morph Holesky Testnet</td><td><a href="https://explorer-holesky.morphl2.io/address/0x6d660F6e9bC72709c96448dEe00D0c08cfD77577">0x6d660F6e9bC72709c96448dEe00D0c08cfD77577</a></td></tr>
+<tr><td>LightLink Pegasus Testnet</td><td><a href="https://pegasus.lightlink.io/address/0x591749260B0dEc690976ce1dDFbd71694578b99e">0x591749260B0dEc690976ce1dDFbd71694578b99e</a></td></tr>
+<tr><td>Metis Sepolia Testnet</td><td><a href="https://sepolia-explorer.metisdevops.link/address/0xD2Aaf6e041596431D7df35aC95e7BA74735266cD">0xD2Aaf6e041596431D7df35aC95e7BA74735266cD</a></td></tr>
+<tr><td>B² Testnet</td><td><a href="https://testnet-explorer.bsquared.network/address/0xE21Bc6E404A4133119A164352477C1439205Af27">0xE21Bc6E404A4133119A164352477C1439205Af27</a></td></tr>
+<tr><td>StratoVM Sepolia Testnet</td><td><a href="https://explorer.stratovm.io/address/0x2f685A31c47a0C9141EB5B2aF52cC2987a336B70">0x2f685A31c47a0C9141EB5B2aF52cC2987a336B70</a></td></tr>
+<tr><td>Core Blockchain Testnet</td><td><a href="https://scan.test.btcs.network/address/0x396BBaA9eFfDFFa790e53b1a6b93AA161d65Cb75">0x396BBaA9eFfDFFa790e53b1a6b93AA161d65Cb75</a></td></tr>
+<tr><td>Linea Testnet</td><td><a href="https://sepolia.lineascan.build/address/0x9FC1eE65D0485F2CFeeC5237D765DE5Af3f3f31c">0x9FC1eE65D0485F2CFeeC5237D765DE5Af3f3f31c</a></td></tr>
+<tr><td>Lumia Testnet</td><td><a href="https://testnet-explorer.lumia.org/address/0x5379742183018F098c160EeEf7DBe3187a23AA3A">0x5379742183018F098c160EeEf7DBe3187a23AA3A</a></td></tr>
+<tr><td>Etherlink Testnet</td><td><a href="https://testnet.explorer.etherlink.com/address/0x3e84eB29Df33832DE7c0E65BE3cC23F07Cb2fBdf">0x3e84eB29Df33832DE7c0E65BE3cC23F07Cb2fBdf</a></td></tr>
+<tr><td>IoTeX Testnet</td><td><a href="https://testnet.iotexscan.io/address/0xB7a2e1ffa0Aaef491d381ABA2e07668f98B02C49">0xB7a2e1ffa0Aaef491d381ABA2e07668f98B02C49</a></td></tr>
+<tr><td>Chiado Testnet</td><td><a href="https://gnosis-chiado.blockscout.com/address/0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22">0xE161A02Da435F36EC5EbfEAE84a0B81616Fa5F22</a></td></tr>
+<tr><td>Minato Testnet</td><td><a href="https://explorer-testnet.soneium.org/address/0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7">0x219Eed0551cB8BCf55b61e1CFB353f4Ad1F5bcF7</a></td></tr>
+<tr><td>AILayer Testnet</td><td><a href="https://testnet-explorer.ailayer.xyz/address/0x2210b037302Ea78CD424f484d70Db1a8E1118FfB">0x2210b037302Ea78CD424f484d70Db1a8E1118FfB</a></td></tr>
+<tr><td>Polygon Amoy Testnet</td><td><a href="https://amoy.polygonscan.com/address/0xd7a077a983986d9b948ff76c2151ba7e9ada0b91">0xD7a077a983986D9B948FF76C2151ba7e9ADA0b91</a></td></tr>
+<tr><td>Boba Sepolia Testnet</td><td><a href="https://testnet.bobascan.com/address/0xebEA88C5462f434174599dcE51D061695296543d">0xebEA88C5462f434174599dcE51D061695296543d</a></td></tr>
+<tr><td>NERO Testnet</td><td><a href="https://testnet.neroscan.io/address/0x38453d36e5152feca8a44cd020c3c607bb68a436">0x38453d36e5152feca8a44cd020c3c607bb68a436</a></td></tr>
+<tr><td>Camp Network Testnet V2</td><td><a href="https://camp-network-testnet.blockscout.com/address/0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A">0x0b43fc1C8fc373D3abDE9bb6bb8B7CfDc0Beb72A</a></td></tr>
+<tr><td>5ireChain Testnet</td><td><a href="https://testnet.5irescan.io/contract/evm/0x756887E2E85339822b97A943Fc750F7E5f354F26">0x756887E2E85339822b97A943Fc750F7E5f354F26</a></td></tr>
+<tr><td>Matchain Testnet</td><td><a href="https://testnet.matchscan.io/address/0x59904eBEE55bea1B683eC34D68134585671BedB9">0x59904eBEE55bea1B683eC34D68134585671BedB9</a></td></tr>
+<tr><td>Neo X Testnet T4</td><td><a href="https://xt4scan.ngd.network/address/0xD5C278C3b58d6789Af4972cECBB5953c3837c2Cd">0xD5C278C3b58d6789Af4972cECBB5953c3837c2Cd</a></td></tr>
+<tr><td>Berachain bArtio</td><td><a href="https://bartio.beratrail.io/address/0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a">0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a</a></td></tr>
+<tr><td>Xprotocol Testnet</td><td><a href="https://explorer.testnet.xprotocol.org/address/0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a">0xf1284bb2e359Bf04ccca4FB3eBE4385376C2941a</a></td></tr>
+<tr><td>Taiko Hekla</td><td><a href="https://hekla.taikoscan.io/address/0xe199ed86eC10AA7d11B90A0bC9D43886756B556C">0xe199ed86eC10AA7d11B90A0bC9D43886756B556C</a></td></tr>
+<tr><td>Zytron Testnet</td><td><a href="https://explorer-testnet.zypher.network/address/0x85c06130E58EEC77694f9b968B533121F0D828dC">0x85c06130E58EEC77694f9b968B533121F0D828dC</a></td></tr>
+<tr><td>Celo Testnet</td><td><a href="https://celo-alfajores.blockscout.com/address/0x1F2AFb2Ac6c0517f3896F095ED15f77bF9621388">0x1F2AFb2Ac6c0517f3896F095ED15f77bF9621388</a></td></tr>
+<tr><td>Creator Testnet</td><td><a href="https://explorer.creatorchain.io/address/0xb4fa8033b3Ce474898a0874c3684D5f206949ee4">0xb4fa8033b3Ce474898a0874c3684D5f206949ee4</a></td></tr>
+<tr><td>Monad Devnet</td><td><a href="https://explorer.monad-devnet.devnet101.com/address/0xCfCE087475c599D960c5e98d7Bba2bA6F039B894">0xCfCE087475c599D960c5e98d7Bba2bA6F039B894</a></td></tr>
+<tr><td>0G Testnet</td><td><a href="https://chainscan-newton.0g.ai/address/0x17Aa53215cf8F2B6Ad7e63Eaa3a1B00c58f993A0">0x17Aa53215cf8F2B6Ad7e63Eaa3a1B00c58f993A0</a></td></tr>
+<tr><td>Plume Devnet</td><td><a href="https://test-explorer.plumenetwork.xyz/address/0x9fa70a7f324b5ABf35b05De590489F9B9474550a">0x9fa70a7f324b5ABf35b05De590489F9B9474550a</a></td></tr>
+<tr><td>Monad Testnet</td><td><a href="https://testnet.monadexplorer.com/address/0x75Db90AC980B9f93fF7Ab54cE5F5BbF479DC86dA">0x75Db90AC980B9f93fF7Ab54cE5F5BbF479DC86dA</a></td></tr>
+<tr><td>Solo Testnet</td><td><a href="https://solo-testnet.explorer.caldera.xyz/address/0x4C56588BA8a3948D699D11e86cC97Ce97746795C">0x4C56588BA8a3948D699D11e86cC97Ce97746795C</a></td></tr>
+<tr><td>Abstract Testnet</td><td><a href="https://sepolia.abscan.org/address/0xEE33B2502b2c0eE8d7e646ac78e668Ce198F49e5">0xEE33B2502b2c0eE8d7e646ac78e668Ce198F49e5</a></td></tr>
+<tr><td>Lisk Testnet</td><td><a href="https://sepolia-blockscout.lisk.com/address/0x19D12695f55D8B9A26216d8807a04e1e19d9533f">0x19D12695f55D8B9A26216d8807a04e1e19d9533f</a></td></tr>
+</tbody></table>
+</div>
+<h2 id="self-submission"><a class="header" href="#self-submission">Self Submission</a></h2>
+<p>User will request the verifiable randomness from Orand service, they can submit the randomness themselves and control gas consumption. You must submit epoch by sequence and starting epoch or genesis must be epoch <code>0</code>.</p>
+<pre class="mermaid">%%{init: {'theme':'neutral'}}%%
+sequenceDiagram
+    Game Backend-&gt;&gt;+Orand: Request randomness
+    Orand-&gt;&gt;-Game Backend: VRF Epoch
+    Game Backend-&gt;&gt;+Orand Contract: Publish VRF Epoch
+    Orand Contract-&gt;&gt;-Game Backend: Transaction Receipt
+</pre>
+<h2 id="delegated-submission"><a class="header" href="#delegated-submission">Delegated Submission</a></h2>
+<p>User will delegate the submission process to Orochi Network, first they need to deposit native token to operator address that provided by Orochi Network.</p>
+<pre class="mermaid">%%{init: {'theme':'neutral'}}%%
+sequenceDiagram
+    Game Backend-&gt;&gt;+Orand: Request randomness
+    Orand-&gt;&gt;+Orand Contract: Publish VRF Epoch
+    Orand Contract-&gt;&gt;-Orand: Transaction Receipt
+    Orand-&gt;&gt;-Game Backend: VRF Epoch + Tx Receipt
+</pre>
+<h2 id="request-submission"><a class="header" href="#request-submission">Request Submission</a></h2>
+<p>dApp will request to Orochi Network's oracle contract for the randomness, Orand service will fulfill this request and submit the randomness to Orand provider contract.</p>
+<pre class="mermaid">%%{init: {'theme':'neutral'}}%%
+sequenceDiagram
+    Game Frontend-&gt;&gt;+Oracle: Request randomness
+    Orand-&gt;&gt;+Orand: Repeating Polling Request
+    Orand-&gt;&gt;-Orand Contract: Fulfil Request
+    Oracle-&gt;&gt;Game Frontend: Tx Receipt
+</pre>
+<h2 id="orand-v3-1"><a class="header" href="#orand-v3-1">Orand V3</a></h2>
+<p>Orand V3 will focus on utilizing Multi Party Computation (MPC) to secure the randomness generation, allowing the whole system to act as one random oracle. It makes the process more dispersed. In this stage, we boot up <strong>Chaos Theory Alliance</strong> to preventing predictability. Everything is built up toward to the vision of <strong>Decentralized Random Number Generator</strong>. If you believe in the vision of <strong>Decentralized Random Number Generator</strong>, please send drop us an email to (<a href="contact@orochi.network">contact@orochi.network</a>) in order to participate in <strong>Chaos Theory Alliance</strong>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../orochi-network/orocle-v2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../orochi-network/contract-integration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../orochi-network/orocle-v2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../orochi-network/contract-integration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../mermaid.min.js"></script>
+        <script src="../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

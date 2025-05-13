@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>API Reference - Orochi Network&#x27;s Cookbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO -->
+        <meta name="description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:title" content="Cookbook | Orochi Network">
+        <meta property="og:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="315">
+        <meta property="og:image" content="https://docs.orochi.network/assets/cookbook-facebook.png?v2">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Cookbook | Orochi Network">
+        <meta name="twitter:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta name="twitter:image:type" content="image/png">
+        <meta name="twitter:image:width" content="800">
+        <meta name="twitter:image:height" content="418">
+        <meta name="twitter:image" content="https://docs.orochi.network/assets/cookbook-twitter.png?v2">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../orochi-network/orochi-network.html"><strong aria-hidden="true">1.</strong> What is Orochi Network?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../orochi-network/verifiable-data-pipeline.html"><strong aria-hidden="true">1.1.</strong> What is Verifiable Data Pipeline?</a></li><li class="chapter-item expanded "><a href="../orochi-network/zk-data-rollups.html"><strong aria-hidden="true">1.2.</strong> What is ZK-data-rollups?</a></li><li class="chapter-item expanded "><a href="../orochi-network/use-cases.html"><strong aria-hidden="true">1.3.</strong> Use cases</a></li><li class="chapter-item expanded "><a href="../orochi-network/architecture.html"><strong aria-hidden="true">1.4.</strong> Architecture</a></li></ol></li><li class="chapter-item expanded "><a href="../orochi-network/products.html"><strong aria-hidden="true">2.</strong> Products</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zkdatabase/chapter.html"><strong aria-hidden="true">2.1.</strong> zkDatabase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zkdatabase/accumulation/accumulation.html"><strong aria-hidden="true">2.1.1.</strong> Accumulation</a></li><li class="chapter-item expanded "><a href="../zkdatabase/b-tree/b-tree.html"><strong aria-hidden="true">2.1.2.</strong> B-Tree</a></li><li class="chapter-item expanded "><a href="../zkdatabase/composability/composability.html"><strong aria-hidden="true">2.1.3.</strong> Composability</a></li><li class="chapter-item expanded "><a href="../zkdatabase/serialization/serialization.html"><strong aria-hidden="true">2.1.4.</strong> Serialization</a></li><li class="chapter-item expanded "><a href="../zkdatabase/data-collection/data-collection.html"><strong aria-hidden="true">2.1.5.</strong> Data Collection</a></li><li class="chapter-item expanded "><a href="../zkdatabase/distributed-storage-engine/section.html"><strong aria-hidden="true">2.1.6.</strong> Distributed-Storage-Engine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zkdatabase/distributed-storage-engine/ipfs.html"><strong aria-hidden="true">2.1.6.1.</strong> IPFS</a></li><li class="chapter-item expanded "><a href="../zkdatabase/distributed-storage-engine/storage-engine.html"><strong aria-hidden="true">2.1.6.2.</strong> Storage-Engine</a></li></ol></li><li class="chapter-item expanded "><a href="../zkdatabase/merkle-tree/merkle-tree.html"><strong aria-hidden="true">2.1.7.</strong> Merkle-Tree</a></li></ol></li><li class="chapter-item expanded "><a href="../zk-memory/chapter.html"><strong aria-hidden="true">2.2.</strong> zkMemory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../zk-memory/execution-trace/execution-trace.html"><strong aria-hidden="true">2.2.1.</strong> Execution Trace</a></li><li class="chapter-item expanded "><a href="../zk-memory/commitment/commitment.html"><strong aria-hidden="true">2.2.2.</strong> Commitment Schemes</a></li><li class="chapter-item expanded "><a href="../zk-memory/constraints/constraints.html"><strong aria-hidden="true">2.2.3.</strong> Memory Consistency Constraints</a></li><li class="chapter-item expanded "><a href="../zk-memory/nova-variant/nova-variant.html"><strong aria-hidden="true">2.2.4.</strong> Nova Variants</a></li></ol></li><li class="chapter-item expanded "><a href="../orochi-network/orand-orocle.html"><strong aria-hidden="true">2.3.</strong> Orand & Orocle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../orochi-network/orocle-v2.html"><strong aria-hidden="true">2.3.1.</strong> Orocle V2</a></li><li class="chapter-item expanded "><a href="../orochi-network/orand-v3.html"><strong aria-hidden="true">2.3.2.</strong> Orand V3</a></li><li class="chapter-item expanded "><a href="../orochi-network/contract-integration.html"><strong aria-hidden="true">2.3.3.</strong> Orand Contract Integration</a></li><li class="chapter-item expanded "><a href="../orochi-network/api-reference.html" class="active"><strong aria-hidden="true">2.3.4.</strong> API Reference</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../ecvrf/verifiable-random-function.html"><strong aria-hidden="true">3.</strong> Verifiable Random Function (VRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/overview-of-vrf.html"><strong aria-hidden="true">3.1.</strong> Overview of VRF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/introduction.html"><strong aria-hidden="true">3.1.1.</strong> Introduction to VRF</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/vrf-syntax.html"><strong aria-hidden="true">3.1.2.</strong> VRF Algorithms</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/vrf-properties.html"><strong aria-hidden="true">3.1.3.</strong> VRF Security Properties</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-summary/vrf-history.html"><strong aria-hidden="true">3.1.4.</strong> History of VRF</a></li></ol></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/vrf-based-on-elliptic-curve.html"><strong aria-hidden="true">3.2.</strong> VRF Based on Elliptic Curve (ECVRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/why-using-ecvrf.html"><strong aria-hidden="true">3.2.1.</strong> Why using ECVRF</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/ecvrf-construction.html"><strong aria-hidden="true">3.2.2.</strong> ECVRF Construction</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/ecvrf-auxiliary-function.html"><strong aria-hidden="true">3.2.3.</strong> ECVRF Auxiliary Function</a></li><li class="chapter-item expanded "><a href="../ecvrf/ecvrf-construction/implementation-python.html"><strong aria-hidden="true">3.2.4.</strong> Implementation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../dkg/dkg.html"><strong aria-hidden="true">4.</strong> Distributed Key Generation (DKG)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/dkg-summary/chapter.html"><strong aria-hidden="true">4.1.</strong> Overview of DKG</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/dkg-summary/dkg-properties.html"><strong aria-hidden="true">4.1.1.</strong> DKG Properties</a></li><li class="chapter-item expanded "><a href="../dkg/dkg-summary/dkg-application.html"><strong aria-hidden="true">4.1.2.</strong> DKG Application</a></li></ol></li><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/chapter.html"><strong aria-hidden="true">4.2.</strong> Verifiable Secret Sharing (VSS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/introduction.html"><strong aria-hidden="true">4.2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/syntax.html"><strong aria-hidden="true">4.2.2.</strong> Syntax and Properties</a></li><li class="chapter-item expanded "><a href="../dkg/verifiable-secret-sharing/pedersen-construction.html"><strong aria-hidden="true">4.2.3.</strong> Pedersen's Construction</a></li></ol></li><li class="chapter-item expanded "><a href="../dkg/dkg-construction/chapter.html"><strong aria-hidden="true">4.3.</strong> Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../dkg/dkg-construction/why-gennaro.html"><strong aria-hidden="true">4.3.1.</strong> Why Gennaro et al's Construction?</a></li><li class="chapter-item expanded "><a href="../dkg/dkg-construction/dkg-construction.html"><strong aria-hidden="true">4.3.2.</strong> Gennaro et al's Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/chapter.html"><strong aria-hidden="true">5.</strong> Threshold Signature</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-introduction/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-introduction/definition.html"><strong aria-hidden="true">5.2.</strong> Definition and Security</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/introduction.html"><strong aria-hidden="true">5.3.</strong> Canneti et al 's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/keygen.html"><strong aria-hidden="true">5.3.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.html"><strong aria-hidden="true">5.3.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.html"><strong aria-hidden="true">5.3.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.html"><strong aria-hidden="true">5.3.4.</strong> Supporting Algorithms</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/abort-identification.html"><strong aria-hidden="true">5.3.5.</strong> Identifying Aborts</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/security-consideration.html"><strong aria-hidden="true">5.3.6.</strong> Security Consideration</a></li></ol></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/introduction.html"><strong aria-hidden="true">5.4.</strong> FROST's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/keygen.html"><strong aria-hidden="true">5.4.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/sign.html"><strong aria-hidden="true">5.4.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/verify.html"><strong aria-hidden="true">5.4.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/frost-construction/supporting-algorithms.html"><strong aria-hidden="true">5.4.4.</strong> Supporting Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/our-intended-implementation.html"><strong aria-hidden="true">5.5.</strong> Implementation Guideline</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/threshold-ecdsa-for-secp256k1.html"><strong aria-hidden="true">5.5.1.</strong> Threshold signature using secp256k1 parameters</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/threshold-eddsa-for-ed25519.html"><strong aria-hidden="true">5.5.2.</strong> Threshold signature using ed25519 parameters</a></li><li class="chapter-item expanded "><a href="../threshold-ecdsa/intended-implementation/threshold-eddsa-for-sr25519.html"><strong aria-hidden="true">5.5.3.</strong> Threshold signature using sr25519 parameters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/chapter.html"><strong aria-hidden="true">6.</strong> Isogeny Based Crypto</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html"><strong aria-hidden="true">6.1.</strong> Overview of Supersingular Isogeny Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/background/elliptic-curve.html"><strong aria-hidden="true">6.1.1.</strong> Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html"><strong aria-hidden="true">6.1.2.</strong> Isogenies</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/background/supersingular-elliptic-curve.html"><strong aria-hidden="true">6.1.3.</strong> Supersingular Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/graph/supersingular-isogeny-graph.html"><strong aria-hidden="true">6.1.4.</strong> Supersingular Isogeny Graph (Pizer Graphs)</a></li><li class="chapter-item expanded "><a href="../isogeny-based-crypto/supersingular-isogeny-graph/graph/application.html"><strong aria-hidden="true">6.1.5.</strong> Applications of Pizer Graphs</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/chapter.html"><strong aria-hidden="true">7.</strong> KZG Polynomial Commitment Scheme</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/pcs-definition/section.html"><strong aria-hidden="true">7.1.</strong> Polynomial Commitment Scheme - Definition</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/pcs-definition/syntax.html"><strong aria-hidden="true">7.1.1.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/pcs-definition/security-requirement.html"><strong aria-hidden="true">7.1.2.</strong> Security Requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/section.html"><strong aria-hidden="true">7.2.</strong> Technical Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/commitment-without-hiding.html"><strong aria-hidden="true">7.2.1.</strong> Commitment to Polynomial Without Hiding Property</a></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html"><strong aria-hidden="true">7.2.2.</strong> Correct Evaluation from the Commitment</a></li><li class="chapter-item expanded "><a href="../kzg-polynomial-commitment-scheme/technical-overview/dealing-with-hiding.html"><strong aria-hidden="true">7.2.3.</strong> Dealing with Hiding</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../plonk/chapter.html"><strong aria-hidden="true">8.</strong> PlonK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../plonk/arithmetization/section.html"><strong aria-hidden="true">8.1.</strong> PlonK's Arithmetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../plonk/arithmetization/circuit-specification.html"><strong aria-hidden="true">8.1.1.</strong> Circuit Specification</a></li><li class="chapter-item expanded "><a href="../plonk/arithmetization/breaking-circuit.html"><strong aria-hidden="true">8.1.2.</strong> Breaking Circuit</a></li><li class="chapter-item expanded "><a href="../plonk/arithmetization/gate-constraints.html"><strong aria-hidden="true">8.1.3.</strong> Gate Constraints</a></li><li class="chapter-item expanded "><a href="../plonk/arithmetization/copy-constraints.html"><strong aria-hidden="true">8.1.4.</strong> Copy Constraints</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../halo2-for-dummies/chapter.html"><strong aria-hidden="true">9.</strong> Halo 2 for Dummies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../halo2-for-dummies/plonkish/section.html"><strong aria-hidden="true">9.1.</strong> PLONKish Arithemetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../halo2-for-dummies/plonkish/simple-arithmetic-circuit.html"><strong aria-hidden="true">9.1.1.</strong> A Simple Arithmetic Circuit</a></li><li class="chapter-item expanded "><a href="../halo2-for-dummies/plonkish/transforming-to-plonkish-arithmetization.html"><strong aria-hidden="true">9.1.2.</strong> Transforming to PLONKish Arithmetization</a></li></ol></li><li class="chapter-item expanded "><a href="../halo2-for-dummies/simple-example/section.html"><strong aria-hidden="true">9.2.</strong> A Simple Halo 2 Program</a></li></ol></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/chapter.html"><strong aria-hidden="true">10.</strong> Verifiable Delay Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/introduction.html"><strong aria-hidden="true">10.1.</strong> Introduction to VDF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/definition.html"><strong aria-hidden="true">10.1.1.</strong> VDF Algorithms</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/properties.html"><strong aria-hidden="true">10.1.2.</strong> VDF Properties</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-summary/application.html"><strong aria-hidden="true">10.1.3.</strong> VDF Applications</a></li></ol></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/existing-construction.html"><strong aria-hidden="true">10.2.</strong> A survey of VDF constructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/squaring-construction.html"><strong aria-hidden="true">10.2.1.</strong> Modular Square Root based Construction</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/rsa-time-lock-construction.html"><strong aria-hidden="true">10.2.2.</strong> Group of Unknown Order based Construction</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/isogeny-construction.html"><strong aria-hidden="true">10.2.3.</strong> Isogeny based Construction</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/comparision.html"><strong aria-hidden="true">10.2.4.</strong> Comparision</a></li><li class="chapter-item expanded "><a href="../verifiable-delay-functions/vdf-candidates/vc-based-construction.html"><strong aria-hidden="true">10.2.5.</strong> Possible IVC based Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../poseidon-hash/chapter.html"><strong aria-hidden="true">11.</strong> Poseidon hash for ZK Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poseidon-hash/cryptographic-sponge-function/cryptographic-sponge-function.html"><strong aria-hidden="true">11.1.</strong> Cryptographic sponge functions</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-hash-overview/poseidon-hash-overview.html"><strong aria-hidden="true">11.2.</strong> Overview of Poseidon Hash Function</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/section.html"><strong aria-hidden="true">11.3.</strong> Poseidon permutation design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/hades-design-strategy.html"><strong aria-hidden="true">11.3.1.</strong> Hades design strategy</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/hades-based-design.html"><strong aria-hidden="true">11.3.2.</strong> Hades-based permutation design</a></li><li class="chapter-item expanded "><a href="../poseidon-hash/poseidon-permutation-design/concrete-poseidon-instantiation.html"><strong aria-hidden="true">11.3.3.</strong> Concrete Poseidon permutation instantiation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.</strong> Deprecated</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.1.</strong> Orocle V1 (deprecated)</a></li><li class="chapter-item expanded "><a href="../orochi-network/orand-v2.html"><strong aria-hidden="true">12.2.</strong> Orand V2 (deprecated)</a></li><li class="chapter-item expanded "><a href="../orochi-network/sdk.html"><strong aria-hidden="true">12.3.</strong> Orochi Network SDK</a></li><li class="chapter-item expanded "><a href="../orochi-network/code-integration.html"><strong aria-hidden="true">12.4.</strong> Orand Code Integration</a></li></ol></li><li class="chapter-item expanded "><a href="../bibliography.html">Bibliography</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Orochi Network&#x27;s Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="api-reference"><a class="header" href="#api-reference">API Reference</a></h1>
+<h2 id="initial"><a class="header" href="#initial">Initial</a></h2>
+<p>We assume that you have an initialized instance of Orand.</p>
+<pre><code class="language-ts">import { Orand } from &quot;@orochi-network/sdk&quot;;
+
+let orand = await Orand.fromRPC(
+  {
+    user: &quot;YOUR_REGISTERED_USERNAME&quot;,
+    secretKey: &quot;YOUR_REGISTERED_SECRET&quot;,
+    url: &quot;https://orand-test.orochi.network&quot;,
+    consumerAddress: &quot;YOUR_APPLICATION_SMART_CONTRACT_ADDRESS&quot;,
+  },
+  &quot;https://rpcv2-testnet.ancient8.gg/&quot;
+);
+</code></pre>
+<p><strong>Properties:</strong></p>
+<p>Orand instance will provide following properties:</p>
+<ul>
+<li><code>rpcProvider</code>: The instance of <code>ethers.JsonRpcProvider</code> that will be used for static call and publish new epoch</li>
+<li><code>orandProviderV2</code>: The instance of <code>ethers.Contract</code> that represent for <code>OrandProviderV2</code> smart contract. You can access all static method and interactive with provider smart contract of Orand after connect wallet.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>To prevent replay attack, we're required you to input <code>consumerAddress</code>. It's a smart contract address that will consume the randomness. Each <code>consumerAddress</code> will have different epoch target, you only able to to submit the epoch which has the matched epoch with target epoch on <code>OrandProviderV2</code> smart contract.</p>
+<p>Some results will be returned in <code>BigInt</code> due to new update from <code>ethers.js</code>.</p>
+<h3 id="newprivateepoch-promiseorandepoch"><a class="header" href="#newprivateepoch-promiseorandepoch">.newPrivateEpoch(): Promise&lt;OrandEpoch&gt;</a></h3>
+<pre><code class="language-ts">await orandInstance.newPrivateEpoch();
+</code></pre>
+<p>Allowed you to generate a new private epoch that bound to <code>consumerAddress</code>. The <code>consumerAddress</code> need to be registered on Orand V2 service.</p>
+<p><strong>Result:</strong></p>
+<ul>
+<li><code>epoch</code>: Epoch number</li>
+<li><code>alpha</code>: Seed of new epoch, <code>alpha</code> is the result of previous epoch</li>
+<li><code>gamma</code>, <code>c</code>, <code>s</code>: Value of proof</li>
+<li><code>y</code>: Result of new epoch</li>
+<li><code>witnessAddress</code>, <code>witnessGamma</code>, <code>witnessHash</code>, <code>inverseZ</code>: Intermediate witness to prove given proof on smart contract.</li>
+<li><code>signatureProof</code>: ECDSA proof that bound to new epoch.</li>
+</ul>
+<p><strong>Output:</strong></p>
+<pre><code class="language-js">{
+  epoch: 2,
+  alpha: '6be9719911e75d8f9a889f13e7c8c703c859d8ff9c89dcf6aa8db219d5fc2d45',
+  gamma: 'ef1408aa85d25157678b32423c467782a88fc9496a46d2adfef99019009eca3c278fa01773e51f6f72b27cf81e1eaf2e8a5855a7a705d87505734f2d1bf11e45',
+  c: '0ab76c3ae301adae9fe4f4884c58e1c959f17d6ecbe8e0b1b9ed68353eebcf36',
+  s: '2dc6a1202f37c91d373692d56754a9b8073ac298de3648080fa9483d8d5b2916',
+  y: '5ba1272ccd60a4f450ded626d643611ef9419c7e7f4c9b742aca7688f7d3aa13',
+  witnessAddress: '8495933d0449927c604dd6a855451feefa16013e',
+  witnessGamma: '8797c2ef56f31ec34064de5a3df12d36b4db15dc0a97bd62d2687fff0e8acd46000dc045b4fa0d6fbc6325da0b80a2e5dd68623ecf03f5178e6adc89a442f530',
+  witnessHash: '84b8797fad42b6851f9512be3222b10515edccd783f9a9505fe529e0aad5e96f3f6f21a38ead57ef1e61e61f95e1b5006f36a62b013db603da267c38303ce132',
+  inverseZ: '336dd6497177819a37003c4b962c2196a41caf1649d9d397e13115dadbb1e373',
+  signatureProof: '2c8d0c95decdadc5e7ebfb883956a66c3005de9beb95adc83da0d5882b0b7241086c833fde2898ea110fc86eb3d8a4fc2cd64d46c87a5966b3cb526475ced89e1b0000000000000000000000020f53d56bce68dc724687a1c89eea793fd67788811827aba56be6cb832e9eb3439919067afc8aec364399c6d155a6589cd67099b4',
+  createdDate: '2024-01-29T05:17:33.536051'
+}
+</code></pre>
+<h3 id="getprivateepochepoch-number-promiseorandepoch"><a class="header" href="#getprivateepochepoch-number-promiseorandepoch">getPrivateEpoch(epoch?: number): Promise&lt;OrandEpoch[]&gt;</a></h3>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-ts">await orandInstance.getPrivateEpoch(0);
+</code></pre>
+<p>Get recent private epochs.</p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>epoch</code>: Allowed you to get a list of most recent public epochs that close to <code>epoch</code>, it will return an array of <code>OrandEpoch</code>. The result will be limited to 20 records to prevent Denial of Service. If <code>epoch</code> wasn't supplied it will return latest epochs.</li>
+</ul>
+<p><strong>Result:</strong></p>
+<p>It will return an array of <code>OrandEpoch</code>.</p>
+<pre><code class="language-js">[
+  {
+    epoch: 0,
+    alpha: &quot;e6d494bec47311a7d792ec1fdad02e8f79125ff515ceafe304e8dff27286c21a&quot;,
+    gamma:
+      &quot;8be62be49e7ccb015e0df3e4326867f3e49187918a70b7350327f3d83d1e439022859a04162b2053f1dc7d3ce83c2be3ef1470fadfd58950d43b2031859bba64&quot;,
+    c: &quot;fa9c9ee4923b02b1aabaacdb8b60e3f421e5e6b8930e7ee45e4d53668d18b210&quot;,
+    s: &quot;3ed451751452a03443c46012c39ee68efedde1fd53d8ee81cb359cdae2d00b93&quot;,
+    y: &quot;be15ac8e5bd156fe925f3a9879100593f9cd8179713b04ac0ad2ded57fc6b7e8&quot;,
+    witnessAddress: &quot;7625d458345eba3a97b307315e517c341aa4eed4&quot;,
+    witnessGamma:
+      &quot;9470d583d5f5c246b8be72f72ac4a905b6e89d21ebbb4362338fde837f45af0e680d0cd0885b06fde511d1eeed5078d7cef502a3ad9dd7c5bf39eacb554f0a6c&quot;,
+    witnessHash:
+      &quot;d712ca266f9b43346aec040e61ec2be1ecf6beb9fe5276cc1e15286d37a635b919c124d8615cff81a0a8e81bf6e948e5c2b4678efc37c3febfbc71e4a0b106c6&quot;,
+    inverseZ:
+      &quot;18537553a604b09da948eaf7a5b2aee9833f649556e6c891ddc629d380d04337&quot;,
+    signatureProof:
+      &quot;1351bc757f1b3579afb04c60ef44b51ca9ec89da6141366bd030a3672b4928925aab4b31b4660fa3437d1ae55602c0474d9e5f0985d1a71c8b222670b3d9f7991b0000000000000000000000000f53d56bce68dc724687a1c89eea793fd677888151596c361cefc7f4781008cf9f0d044fcb2607515896666e20ab1eae18e9a63d&quot;,
+    createdDate: &quot;2024-01-28T07:16:59.853007&quot;,
+  },
+];
+</code></pre>
+<h3 id="verifyepochepochecvrfproof-orandepoch-promiseverifyepochproofresult"><a class="header" href="#verifyepochepochecvrfproof-orandepoch-promiseverifyepochproofresult">verifyEpoch(epochECVRFProof: OrandEpoch): Promise&lt;VerifyEpochProofResult&gt;</a></h3>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-ts">await orandInstance.verifyEpoch(epoch);
+</code></pre>
+<p>Validate an epoch is valid or not, it also check current epoch link status.</p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>epoch</code>: A epoch of Orand, it can obtain by <code>getPrivateEpoch()</code>, <code>newPrivateEpoch()</code></li>
+</ul>
+<p><strong>Result:</strong></p>
+<ul>
+<li><code>ecdsaProof</code>: Decomposed ECDSA proof
+<ul>
+<li><code>signer</code>: Signer address of given signature</li>
+<li><code>receiverAddress</code>: Bound address to proof</li>
+<li><code>receiverEpoch</code>: Bound epoch to proof</li>
+<li><code>ecvrfProofDigest</code>: Digest of proof in <code>BigInt</code>, it can be convert to hex by <code>toString(16)</code></li>
+</ul>
+</li>
+<li><code>currentEpochNumber</code>: Current epoch of given receiver</li>
+<li><code>isEpochLinked</code>: Is this epoch linked to on-chain state</li>
+<li><code>isValidDualProof</code>: Validity of dual proof</li>
+<li><code>currentEpochResult</code>: On-chain epoch result, it will equal to <code>0n</code> if there is no genesis</li>
+<li><code>verifiedEpochResult</code>: Result of verifying epoch</li>
+</ul>
+<p><strong>Output:</strong></p>
+<pre><code class="language-js">{
+  ecdsaProof: {
+    signer: '0xED6A792F694b7a52E7cf4b7f02dAa41a7c92f362',
+    receiverAddress: '0x3fc4344b63fb1AB35a406Cb90ca7310EC8687585',
+    receiverEpoch: 0n,
+    ecvrfProofDigest: 50338440222419549417414658096744085875859237350056663794916275947847078497254n
+  },
+  currentEpochNumber: 0n,
+  isEpochLinked: false,
+  isValidDualProof: true,
+  currentEpochResult: 0n,
+  verifiedEpochResult: 26822046345614045141848002846382424881390702704278990878694727729734354152825n
+}
+</code></pre>
+<h3 id="publishproof-orandepoch-wallet-contractrunner-promisecontracttransactionresponse"><a class="header" href="#publishproof-orandepoch-wallet-contractrunner-promisecontracttransactionresponse">publish(proof: OrandEpoch, wallet: ContractRunner): Promise&lt;ContractTransactionResponse&gt;</a></h3>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-ts">const wallet = Wallet.fromPhrase(
+  &quot;YOUR_WALLET_PASSPHRASE&quot;
+  orandInstance.rpcProvider
+);
+
+const newEpoch = await orandInstance.newPrivateEpoch();
+console.log(newEpoch);
+console.log(await orandInstance.publish(newEpoch, wallet));
+</code></pre>
+<p>Publish a new epoch to blockchain.</p>
+<p><strong>Params:</strong></p>
+<ul>
+<li><code>proof</code>: A epoch of Orand, it can obtain by <code>getPrivateEpoch()</code>, <code>newPrivateEpoch()</code></li>
+<li><code>wallet</code>: The wallet that going to pay for transaction fee</li>
+</ul>
+<p><strong>Result:</strong></p>
+<p>This method will return <code>ethers.ContractTransactionResponse</code>.</p>
+<p><strong>Output:</strong></p>
+<pre><code class="language-js">{
+  provider: JsonRpcProvider {},
+  blockNumber: null,
+  blockHash: null,
+  index: undefined,
+  hash: '0x9c9330c9eedb694c5a7a0f16fd90484cf6b341fe3ec37064707970fb7bb0bbcb',
+  type: 2,
+  to: '0xfB40e49d74b6f00Aad3b055D16b36912051D27EF',
+  from: '0x7Ba5A9fA3f3BcCeE36f60F62a6Ef728C3856b8Bb',
+  nonce: 27,
+  gasLimit: 108996n,
+  gasPrice: undefined,
+  maxPriorityFeePerGas: 1000000n,
+  maxFeePerGas: 1000210n,
+  data: '0x7fcde1c20000000000000000000000003fc4344b63fb1ab35a406cb90ca7310ec868758516b9fc8b15a9860441e78da6667a2923c6dfb0e3b59edba90e237c216ba2e9fea8750d1a022cfb3479115336d90d8ba1392573791bb947681b755b23c8bfd0b0cc87f56c81b532b3878bcb44658ae06e2466f684c4b57dce4809e76462e0a827099620a1593ddb85f9d679649f992f4f519d8b963e2972d2ec2c0d6adbd7e1c23b4cbd80caafecc3a6da03fc49e01301bcd701f032569139c705bd9454832d79000000000000000000000000985b293668b106496f6787e540f4d5ea5ace41e9737afd298e5ef5e957781e5964c0622f76f1dc94d3447ebe0db9e3a21bfce2757a51418f22fc42d6f66ed26382577392cd48c75e77e316d43285185b4b92d09f3f102de22d018ee768af6b26c120a918993a7d740e9d10e3db3f26d1bdada402da2f3acb4e7eb037d496bb1b2ebd94c628f88bddec2324fce1f3d82d675b35184a578b8fe55e2c1ce1b0fe7181bb5a84fa50333889ff9bcc9bb86377c22f3237',
+  value: 0n,
+  chainId: 28122024n,
+  signature: Signature { r: &quot;0xe41149214e6e78352f9b6cd371519edaecdc38684885d347458ddb2b0a7bc87d&quot;, s: &quot;0x7be900ca6af85244aeeb887c765f2fae869803f6ce74afd4cac3b09d9307fc14&quot;, yParity: 0, networkV: null },
+  accessList: []
+}
+</code></pre>
+<h3 id="getpublickey"><a class="header" href="#getpublickey">getPublicKey()</a></h3>
+<pre><code class="language-ts">
+</code></pre>
+<h3 id="static-transformproofproof-orandepoch-orandproof"><a class="header" href="#static-transformproofproof-orandepoch-orandproof">static transformProof(proof: OrandEpoch): OrandProof</a></h3>
+<p>This is a helper function that allow you to tranfor proof for smart contract parameters.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../orochi-network/contract-integration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ecvrf/verifiable-random-function.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../orochi-network/contract-integration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ecvrf/verifiable-random-function.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../mermaid.min.js"></script>
+        <script src="../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

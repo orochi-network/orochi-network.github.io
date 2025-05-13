@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Elliptic Curves - Orochi Network&#x27;s Cookbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO -->
+        <meta name="description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:title" content="Cookbook | Orochi Network">
+        <meta property="og:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="315">
+        <meta property="og:image" content="https://docs.orochi.network/assets/cookbook-facebook.png?v2">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Cookbook | Orochi Network">
+        <meta name="twitter:description" content="Orochi Network applies Cryptography, ZKP, Multi Party Computation to create secure and scalable solutions for Blockchain, dApps, zkApps, Data, Custody, Computation and Daily life.">
+        <meta name="twitter:image:type" content="image/png">
+        <meta name="twitter:image:width" content="800">
+        <meta name="twitter:image:height" content="418">
+        <meta name="twitter:image" content="https://docs.orochi.network/assets/cookbook-twitter.png?v2">
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../orochi-network/orochi-network.html"><strong aria-hidden="true">1.</strong> What is Orochi Network?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../orochi-network/verifiable-data-pipeline.html"><strong aria-hidden="true">1.1.</strong> What is Verifiable Data Pipeline?</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/zk-data-rollups.html"><strong aria-hidden="true">1.2.</strong> What is ZK-data-rollups?</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/use-cases.html"><strong aria-hidden="true">1.3.</strong> Use cases</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/architecture.html"><strong aria-hidden="true">1.4.</strong> Architecture</a></li></ol></li><li class="chapter-item expanded "><a href="../../../orochi-network/products.html"><strong aria-hidden="true">2.</strong> Products</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../zkdatabase/chapter.html"><strong aria-hidden="true">2.1.</strong> zkDatabase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../zkdatabase/accumulation/accumulation.html"><strong aria-hidden="true">2.1.1.</strong> Accumulation</a></li><li class="chapter-item expanded "><a href="../../../zkdatabase/b-tree/b-tree.html"><strong aria-hidden="true">2.1.2.</strong> B-Tree</a></li><li class="chapter-item expanded "><a href="../../../zkdatabase/composability/composability.html"><strong aria-hidden="true">2.1.3.</strong> Composability</a></li><li class="chapter-item expanded "><a href="../../../zkdatabase/serialization/serialization.html"><strong aria-hidden="true">2.1.4.</strong> Serialization</a></li><li class="chapter-item expanded "><a href="../../../zkdatabase/data-collection/data-collection.html"><strong aria-hidden="true">2.1.5.</strong> Data Collection</a></li><li class="chapter-item expanded "><a href="../../../zkdatabase/distributed-storage-engine/section.html"><strong aria-hidden="true">2.1.6.</strong> Distributed-Storage-Engine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../zkdatabase/distributed-storage-engine/ipfs.html"><strong aria-hidden="true">2.1.6.1.</strong> IPFS</a></li><li class="chapter-item expanded "><a href="../../../zkdatabase/distributed-storage-engine/storage-engine.html"><strong aria-hidden="true">2.1.6.2.</strong> Storage-Engine</a></li></ol></li><li class="chapter-item expanded "><a href="../../../zkdatabase/merkle-tree/merkle-tree.html"><strong aria-hidden="true">2.1.7.</strong> Merkle-Tree</a></li></ol></li><li class="chapter-item expanded "><a href="../../../zk-memory/chapter.html"><strong aria-hidden="true">2.2.</strong> zkMemory</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../zk-memory/execution-trace/execution-trace.html"><strong aria-hidden="true">2.2.1.</strong> Execution Trace</a></li><li class="chapter-item expanded "><a href="../../../zk-memory/commitment/commitment.html"><strong aria-hidden="true">2.2.2.</strong> Commitment Schemes</a></li><li class="chapter-item expanded "><a href="../../../zk-memory/constraints/constraints.html"><strong aria-hidden="true">2.2.3.</strong> Memory Consistency Constraints</a></li><li class="chapter-item expanded "><a href="../../../zk-memory/nova-variant/nova-variant.html"><strong aria-hidden="true">2.2.4.</strong> Nova Variants</a></li></ol></li><li class="chapter-item expanded "><a href="../../../orochi-network/orand-orocle.html"><strong aria-hidden="true">2.3.</strong> Orand & Orocle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../orochi-network/orocle-v2.html"><strong aria-hidden="true">2.3.1.</strong> Orocle V2</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/orand-v3.html"><strong aria-hidden="true">2.3.2.</strong> Orand V3</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/contract-integration.html"><strong aria-hidden="true">2.3.3.</strong> Orand Contract Integration</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/api-reference.html"><strong aria-hidden="true">2.3.4.</strong> API Reference</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../ecvrf/verifiable-random-function.html"><strong aria-hidden="true">3.</strong> Verifiable Random Function (VRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-summary/overview-of-vrf.html"><strong aria-hidden="true">3.1.</strong> Overview of VRF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-summary/introduction.html"><strong aria-hidden="true">3.1.1.</strong> Introduction to VRF</a></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-summary/vrf-syntax.html"><strong aria-hidden="true">3.1.2.</strong> VRF Algorithms</a></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-summary/vrf-properties.html"><strong aria-hidden="true">3.1.3.</strong> VRF Security Properties</a></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-summary/vrf-history.html"><strong aria-hidden="true">3.1.4.</strong> History of VRF</a></li></ol></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-construction/vrf-based-on-elliptic-curve.html"><strong aria-hidden="true">3.2.</strong> VRF Based on Elliptic Curve (ECVRF)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-construction/why-using-ecvrf.html"><strong aria-hidden="true">3.2.1.</strong> Why using ECVRF</a></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-construction/ecvrf-construction.html"><strong aria-hidden="true">3.2.2.</strong> ECVRF Construction</a></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-construction/ecvrf-auxiliary-function.html"><strong aria-hidden="true">3.2.3.</strong> ECVRF Auxiliary Function</a></li><li class="chapter-item expanded "><a href="../../../ecvrf/ecvrf-construction/implementation-python.html"><strong aria-hidden="true">3.2.4.</strong> Implementation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../dkg/dkg.html"><strong aria-hidden="true">4.</strong> Distributed Key Generation (DKG)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../dkg/dkg-summary/chapter.html"><strong aria-hidden="true">4.1.</strong> Overview of DKG</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../dkg/dkg-summary/dkg-properties.html"><strong aria-hidden="true">4.1.1.</strong> DKG Properties</a></li><li class="chapter-item expanded "><a href="../../../dkg/dkg-summary/dkg-application.html"><strong aria-hidden="true">4.1.2.</strong> DKG Application</a></li></ol></li><li class="chapter-item expanded "><a href="../../../dkg/verifiable-secret-sharing/chapter.html"><strong aria-hidden="true">4.2.</strong> Verifiable Secret Sharing (VSS)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../dkg/verifiable-secret-sharing/introduction.html"><strong aria-hidden="true">4.2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../../dkg/verifiable-secret-sharing/syntax.html"><strong aria-hidden="true">4.2.2.</strong> Syntax and Properties</a></li><li class="chapter-item expanded "><a href="../../../dkg/verifiable-secret-sharing/pedersen-construction.html"><strong aria-hidden="true">4.2.3.</strong> Pedersen's Construction</a></li></ol></li><li class="chapter-item expanded "><a href="../../../dkg/dkg-construction/chapter.html"><strong aria-hidden="true">4.3.</strong> Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../dkg/dkg-construction/why-gennaro.html"><strong aria-hidden="true">4.3.1.</strong> Why Gennaro et al's Construction?</a></li><li class="chapter-item expanded "><a href="../../../dkg/dkg-construction/dkg-construction.html"><strong aria-hidden="true">4.3.2.</strong> Gennaro et al's Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/chapter.html"><strong aria-hidden="true">5.</strong> Threshold Signature</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-introduction/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-introduction/definition.html"><strong aria-hidden="true">5.2.</strong> Definition and Security</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/introduction.html"><strong aria-hidden="true">5.3.</strong> Canneti et al 's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/keygen.html"><strong aria-hidden="true">5.3.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/sign.html"><strong aria-hidden="true">5.3.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/verify.html"><strong aria-hidden="true">5.3.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/supporting-algorithms.html"><strong aria-hidden="true">5.3.4.</strong> Supporting Algorithms</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/abort-identification.html"><strong aria-hidden="true">5.3.5.</strong> Identifying Aborts</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/threshold-ecdsa-construction/actual-construction/security-consideration.html"><strong aria-hidden="true">5.3.6.</strong> Security Consideration</a></li></ol></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/frost-construction/introduction.html"><strong aria-hidden="true">5.4.</strong> FROST's Construction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/frost-construction/keygen.html"><strong aria-hidden="true">5.4.1.</strong> Key Generation</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/frost-construction/sign.html"><strong aria-hidden="true">5.4.2.</strong> Signing</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/frost-construction/verify.html"><strong aria-hidden="true">5.4.3.</strong> Verification</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/frost-construction/supporting-algorithms.html"><strong aria-hidden="true">5.4.4.</strong> Supporting Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/intended-implementation/our-intended-implementation.html"><strong aria-hidden="true">5.5.</strong> Implementation Guideline</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/intended-implementation/threshold-ecdsa-for-secp256k1.html"><strong aria-hidden="true">5.5.1.</strong> Threshold signature using secp256k1 parameters</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/intended-implementation/threshold-eddsa-for-ed25519.html"><strong aria-hidden="true">5.5.2.</strong> Threshold signature using ed25519 parameters</a></li><li class="chapter-item expanded "><a href="../../../threshold-ecdsa/intended-implementation/threshold-eddsa-for-sr25519.html"><strong aria-hidden="true">5.5.3.</strong> Threshold signature using sr25519 parameters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/chapter.html"><strong aria-hidden="true">6.</strong> Isogeny Based Crypto</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html"><strong aria-hidden="true">6.1.</strong> Overview of Supersingular Isogeny Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/supersingular-isogeny-graph/background/elliptic-curve.html" class="active"><strong aria-hidden="true">6.1.1.</strong> Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html"><strong aria-hidden="true">6.1.2.</strong> Isogenies</a></li><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/supersingular-isogeny-graph/background/supersingular-elliptic-curve.html"><strong aria-hidden="true">6.1.3.</strong> Supersingular Elliptic Curves</a></li><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/supersingular-isogeny-graph/graph/supersingular-isogeny-graph.html"><strong aria-hidden="true">6.1.4.</strong> Supersingular Isogeny Graph (Pizer Graphs)</a></li><li class="chapter-item expanded "><a href="../../../isogeny-based-crypto/supersingular-isogeny-graph/graph/application.html"><strong aria-hidden="true">6.1.5.</strong> Applications of Pizer Graphs</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/chapter.html"><strong aria-hidden="true">7.</strong> KZG Polynomial Commitment Scheme</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/pcs-definition/section.html"><strong aria-hidden="true">7.1.</strong> Polynomial Commitment Scheme - Definition</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/pcs-definition/syntax.html"><strong aria-hidden="true">7.1.1.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/pcs-definition/security-requirement.html"><strong aria-hidden="true">7.1.2.</strong> Security Requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/technical-overview/section.html"><strong aria-hidden="true">7.2.</strong> Technical Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/technical-overview/commitment-without-hiding.html"><strong aria-hidden="true">7.2.1.</strong> Commitment to Polynomial Without Hiding Property</a></li><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/technical-overview/correct-evaluation-from-commitment.html"><strong aria-hidden="true">7.2.2.</strong> Correct Evaluation from the Commitment</a></li><li class="chapter-item expanded "><a href="../../../kzg-polynomial-commitment-scheme/technical-overview/dealing-with-hiding.html"><strong aria-hidden="true">7.2.3.</strong> Dealing with Hiding</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../plonk/chapter.html"><strong aria-hidden="true">8.</strong> PlonK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../plonk/arithmetization/section.html"><strong aria-hidden="true">8.1.</strong> PlonK's Arithmetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../plonk/arithmetization/circuit-specification.html"><strong aria-hidden="true">8.1.1.</strong> Circuit Specification</a></li><li class="chapter-item expanded "><a href="../../../plonk/arithmetization/breaking-circuit.html"><strong aria-hidden="true">8.1.2.</strong> Breaking Circuit</a></li><li class="chapter-item expanded "><a href="../../../plonk/arithmetization/gate-constraints.html"><strong aria-hidden="true">8.1.3.</strong> Gate Constraints</a></li><li class="chapter-item expanded "><a href="../../../plonk/arithmetization/copy-constraints.html"><strong aria-hidden="true">8.1.4.</strong> Copy Constraints</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../halo2-for-dummies/chapter.html"><strong aria-hidden="true">9.</strong> Halo 2 for Dummies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../halo2-for-dummies/plonkish/section.html"><strong aria-hidden="true">9.1.</strong> PLONKish Arithemetization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../halo2-for-dummies/plonkish/simple-arithmetic-circuit.html"><strong aria-hidden="true">9.1.1.</strong> A Simple Arithmetic Circuit</a></li><li class="chapter-item expanded "><a href="../../../halo2-for-dummies/plonkish/transforming-to-plonkish-arithmetization.html"><strong aria-hidden="true">9.1.2.</strong> Transforming to PLONKish Arithmetization</a></li></ol></li><li class="chapter-item expanded "><a href="../../../halo2-for-dummies/simple-example/section.html"><strong aria-hidden="true">9.2.</strong> A Simple Halo 2 Program</a></li></ol></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/chapter.html"><strong aria-hidden="true">10.</strong> Verifiable Delay Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-summary/introduction.html"><strong aria-hidden="true">10.1.</strong> Introduction to VDF</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-summary/definition.html"><strong aria-hidden="true">10.1.1.</strong> VDF Algorithms</a></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-summary/properties.html"><strong aria-hidden="true">10.1.2.</strong> VDF Properties</a></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-summary/application.html"><strong aria-hidden="true">10.1.3.</strong> VDF Applications</a></li></ol></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-candidates/existing-construction.html"><strong aria-hidden="true">10.2.</strong> A survey of VDF constructions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-candidates/squaring-construction.html"><strong aria-hidden="true">10.2.1.</strong> Modular Square Root based Construction</a></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-candidates/rsa-time-lock-construction.html"><strong aria-hidden="true">10.2.2.</strong> Group of Unknown Order based Construction</a></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-candidates/isogeny-construction.html"><strong aria-hidden="true">10.2.3.</strong> Isogeny based Construction</a></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-candidates/comparision.html"><strong aria-hidden="true">10.2.4.</strong> Comparision</a></li><li class="chapter-item expanded "><a href="../../../verifiable-delay-functions/vdf-candidates/vc-based-construction.html"><strong aria-hidden="true">10.2.5.</strong> Possible IVC based Construction</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../poseidon-hash/chapter.html"><strong aria-hidden="true">11.</strong> Poseidon hash for ZK Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../poseidon-hash/cryptographic-sponge-function/cryptographic-sponge-function.html"><strong aria-hidden="true">11.1.</strong> Cryptographic sponge functions</a></li><li class="chapter-item expanded "><a href="../../../poseidon-hash/poseidon-hash-overview/poseidon-hash-overview.html"><strong aria-hidden="true">11.2.</strong> Overview of Poseidon Hash Function</a></li><li class="chapter-item expanded "><a href="../../../poseidon-hash/poseidon-permutation-design/section.html"><strong aria-hidden="true">11.3.</strong> Poseidon permutation design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../poseidon-hash/poseidon-permutation-design/hades-design-strategy.html"><strong aria-hidden="true">11.3.1.</strong> Hades design strategy</a></li><li class="chapter-item expanded "><a href="../../../poseidon-hash/poseidon-permutation-design/hades-based-design.html"><strong aria-hidden="true">11.3.2.</strong> Hades-based permutation design</a></li><li class="chapter-item expanded "><a href="../../../poseidon-hash/poseidon-permutation-design/concrete-poseidon-instantiation.html"><strong aria-hidden="true">11.3.3.</strong> Concrete Poseidon permutation instantiation</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.</strong> Deprecated</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../orochi-network/orocle-v1.html"><strong aria-hidden="true">12.1.</strong> Orocle V1 (deprecated)</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/orand-v2.html"><strong aria-hidden="true">12.2.</strong> Orand V2 (deprecated)</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/sdk.html"><strong aria-hidden="true">12.3.</strong> Orochi Network SDK</a></li><li class="chapter-item expanded "><a href="../../../orochi-network/code-integration.html"><strong aria-hidden="true">12.4.</strong> Orand Code Integration</a></li></ol></li><li class="chapter-item expanded "><a href="../../../bibliography.html">Bibliography</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Orochi Network&#x27;s Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="elliptic-curves"><a class="header" href="#elliptic-curves">Elliptic Curves</a></h3>
+<h4 id="definition"><a class="header" href="#definition">Definition</a></h4>
+<p>Let \(K\) be a field. An <strong>elliptic curve</strong> \(E\) is a plane curve defined over the field \(K\) as follows:
+$$E(K)=\{y^2=x^3+ax+b : (x,y) \in K^2\} \cup \{O\}$$
+where \((a,b) \in K^2\). The point \(O\) is called the infinity point of the curve. The set \(E(K)\) forms an abelian group with identity element \(O\).</p>
+<p>In addition, we need the curve to have no cusps, self-intersections, or isolated points. Algebraically, this can be defined by the condition \(4a^3+27b^2 \neq 0\) in the field \(K\).</p>
+<p>The <strong>\(j-\) invariant</strong> of an elliptic curve is defined to be \(-1728\frac{4a^3}{4a^3+27b^2}\). Two elliptic curves are isomorphic to each other if and only if they have the same \(j-\) invariant value.</p>
+<p>The <strong>endomorphism ring</strong> of \(E\) is denoted \(End(E)\). The structure of \(End(E)\) can be found in Chapter 3.9 of Silverman's book.</p>
+<p>For an integer \(n\), we define \(E[n]=\{(x,y) \in E(K) | n*(x,y)=O\}\)</p>
+<p>Over a field \(\mathbb{F}_p\), there are two types of curves: <strong>Ordinary</strong> and <strong>Supersingular</strong>, based on the set \(E[p]\). We are interested in studying Supersingular curves, since the isogeny graph on these curves has nice structure and properties. </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../isogeny-based-crypto/supersingular-isogeny-graph/chapter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../isogeny-based-crypto/supersingular-isogeny-graph/background/isogeny.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js"></script>
+        <script src="../../../mark.min.js"></script>
+        <script src="../../../searcher.js"></script>
+
+        <script src="../../../clipboard.min.js"></script>
+        <script src="../../../highlight.js"></script>
+        <script src="../../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../../mermaid.min.js"></script>
+        <script src="../../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
